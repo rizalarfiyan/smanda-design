@@ -4,6 +4,7 @@ const browserSync = require('browser-sync').create()
 const sass = require('gulp-sass')
 const postcss = require('gulp-postcss')
 const concat = require('gulp-concat')
+const del = require('del')
 
 function liveServer(done) {
   browserSync.init({
@@ -39,4 +40,8 @@ function liveWatch() {
   watch(`${config.paths.src.base}/**/*.scss`, series(CSS, liveReload))
 }
 
-exports.default = series(parallel(CSS, HTML), liveServer, liveWatch)
+function devClean() {
+  return del([config.paths.dist.base])
+}
+
+exports.default = series(devClean, parallel(CSS, HTML), liveServer, liveWatch)
