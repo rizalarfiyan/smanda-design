@@ -35,13 +35,20 @@ function CSS() {
     .pipe(dest(config.paths.dist.css))
 }
 
+function JS() {
+  return src([`${config.paths.src.js}/**/*.js`])
+    .pipe(concat({ path: 'scripts.js' }))
+    .pipe(dest(config.paths.dist.js))
+}
+
 function liveWatch() {
   watch(`${config.paths.src.base}/**/*.html`, series(HTML, liveReload))
   watch(`${config.paths.src.base}/**/*.scss`, series(CSS, liveReload))
+  watch(`${config.paths.src.js}/**/*.js`, series(JS, liveReload))
 }
 
 function devClean() {
   return del([config.paths.dist.base])
 }
 
-exports.default = series(devClean, parallel(CSS, HTML), liveServer, liveWatch)
+exports.default = series(devClean, parallel(CSS, JS, HTML), liveServer, liveWatch)
