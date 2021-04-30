@@ -49,6 +49,14 @@ function images() {
   return src(`${config.paths.src.images}/**/*.{jpg,jpeg,png,gif,tiff,svg}`).pipe(dest(config.paths.dist.images))
 }
 
+function rmFonts() {
+  return del([config.paths.dist.fonts])
+}
+
+function fonts() {
+  return src(`${config.paths.src.fonts}/**/*.{woff,woff2,eot,ttf,svg}`).pipe(dest(config.paths.dist.fonts))
+}
+
 function liveWatch() {
   watch(`${config.paths.src.base}/**/*.html`, series(HTML, liveReload))
   watch(`${config.paths.src.css}/**/*.scss`, series(CSS, liveReload))
@@ -56,6 +64,10 @@ function liveWatch() {
   watch(
     `${config.paths.src.images}/**/*.{jpg,jpeg,png,gif,tiff,svg}`,
     series(rmImages, images, liveReload)
+  )
+  watch(
+    `${config.paths.src.fonts}/**/*.{woff,woff2,eot,ttf,svg}`,
+    series(rmFonts, fonts, liveReload)
   )
 }
 
@@ -65,7 +77,7 @@ function devClean() {
 
 exports.default = series(
   devClean,
-  parallel(CSS, images, JS, HTML),
+  parallel(CSS, fonts, images, JS, HTML),
   liveServer,
   liveWatch
 )
