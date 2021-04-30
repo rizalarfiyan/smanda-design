@@ -1,6 +1,9 @@
 const { src, dest, task, watch, series, parallel } = require('gulp')
 const config = require('./config.js')
 const browserSync = require('browser-sync').create()
+const sass = require('gulp-sass')
+const postcss = require('gulp-postcss')
+const concat = require('gulp-concat')
 
 function liveServer(done) {
   browserSync.init({
@@ -12,7 +15,7 @@ function liveServer(done) {
   done()
 }
 
-function liveReload() {
+function liveReload(done) {
   browserSync.reload()
   done()
 }
@@ -23,8 +26,17 @@ function HTML() {
   )
 }
 
-function liveWatch() {
-  watch(`${config.paths.src.base}/**/*.html`, series(HTML, liveReload))
+function CSS() {
+  return src(`${config.paths.src.css}/**/*.scss`)
+    .pipe(sass().on('error', sass.logError))
+    .pipe(postcss([require('autoprefixer')]))
+    .pipe(concat({ path: 'style.css' }))
+    .pipe(dest(config.paths.dist.css))
 }
 
-exports.default = series(parallel(HTML), liveServer, liveWatch)
+function liveWatch() {
+  watch(`${config.paths.src.base}/**/*.html`, series(HTML, liveReload))
+  watch(`${config.paths.src.base}/**/*.scss`, series(CSS, liveReload))
+}
+
+exports.default = series(parallel(CSS, HTML), liveServer, liveWatch)

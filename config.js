@@ -6,9 +6,11 @@ module.exports = {
   paths: {
     src: {
       base: './src',
+      css: './src/scss',
     },
     dist: {
       base: './dist',
+      css: './dist/css',
     },
   },
 }
