@@ -41,14 +41,31 @@ function JS() {
     .pipe(dest(config.paths.dist.js))
 }
 
+function rmImages() {
+  return del([config.paths.dist.images])
+}
+
+function images() {
+  return src(`${config.paths.src.images}/**/*.{jpg,jpeg,png,gif,tiff,svg}`).pipe(dest(config.paths.dist.images))
+}
+
 function liveWatch() {
   watch(`${config.paths.src.base}/**/*.html`, series(HTML, liveReload))
-  watch(`${config.paths.src.base}/**/*.scss`, series(CSS, liveReload))
+  watch(`${config.paths.src.css}/**/*.scss`, series(CSS, liveReload))
   watch(`${config.paths.src.js}/**/*.js`, series(JS, liveReload))
+  watch(
+    `${config.paths.src.images}/**/*.{jpg,jpeg,png,gif,tiff,svg}`,
+    series(rmImages, images, liveReload)
+  )
 }
 
 function devClean() {
   return del([config.paths.dist.base])
 }
 
-exports.default = series(devClean, parallel(CSS, JS, HTML), liveServer, liveWatch)
+exports.default = series(
+  devClean,
+  parallel(CSS, images, JS, HTML),
+  liveServer,
+  liveWatch
+)
