@@ -22,20 +22,51 @@ audio, canvas, iframe, img, svg, video {
   vertical-align: middle;
 }
 
-
 html {
+  font-family: sans-serif;
   line-height: 1.15;
   -webkit-text-size-adjust: 100%;
+  -webkit-tap-highlight-color: rgba($black, 0);
 }
 
 body {
   line-height: 1;
+  margin: 0;
+  font-family: $font-family-base;
+  font-size: $font-size-base;
+  font-weight: $font-weight-base;
+  color: $body-color;
+  text-align: left;
+  background-color: $body-bg;
+}
+
+[tabindex="-1"]:focus:not(:focus-visible) {
+  outline: 0 !important;
+}
+
+p {
+  margin-top: 0;
+  margin-bottom: $paragraph-margin-bottom;
 }
 
 hr {
   box-sizing: content-box;
   height: 0;
   overflow: visible;
+}
+
+ol,
+ul,
+dl {
+  margin-top: 0;
+  margin-bottom: 1rem;
+}
+
+ol ol,
+ul ul,
+ol ul,
+ul ol {
+  margin-bottom: 0;
 }
 
 ol, ul {
@@ -55,6 +86,28 @@ table {
   border-collapse: collapse;
   border-spacing: 0;
 }
+table {
+  border-collapse: collapse;
+}
+
+caption {
+  padding-top: $table-cell-padding;
+  padding-bottom: $table-cell-padding;
+  color: $table-caption-color;
+  text-align: left;
+  caption-side: bottom;
+}
+
+th {
+  font-weight: $table-th-font-weight;
+  text-align: inherit;
+  text-align: -webkit-match-parent;
+}
+
+label {
+  display: inline-block;
+  margin-bottom: $label-margin-bottom;
+}
 
 input {
   -webkit-appearance: none;
@@ -70,15 +123,24 @@ a {
   background-color: transparent;
 }
 
-abbr[title] {
-  border-bottom: none;
+abbr[title],
+abbr[data-original-title] {
   text-decoration: underline;
   text-decoration: underline dotted;
+  cursor: help;
+  border-bottom: 0;
+  text-decoration-skip-ink: none;
+}
+
+address {
+  margin-bottom: 1rem;
+  font-style: normal;
+  line-height: inherit;
 }
 
 b,
 strong {
-  font-weight: bolder;
+  font-weight: $font-weight-bold;
 }
 
 pre,
@@ -109,8 +171,18 @@ sup {
   top: -0.5em;
 }
 
+figure {
+  margin: 0 0 1rem;
+}
+
 img {
+  vertical-align: middle;
   border-style: none;
+}
+
+svg {
+  overflow: hidden;
+  vertical-align: middle;
 }
 
 button,
@@ -124,14 +196,48 @@ textarea {
   margin: 0;
 }
 
+a {
+  color: $link-color;
+  text-decoration: $link-decoration;
+  background-color: transparent;
+
+  @include hover() {
+    color: $link-hover-color;
+    text-decoration: $link-hover-decoration;
+  }
+}
+
+a:not([href]):not([class]) {
+  color: inherit;
+  text-decoration: none;
+
+  @include hover() {
+    color: inherit;
+    text-decoration: none;
+  }
+}
+
 button,
 input {
   overflow: visible;
 }
 
+select {
+  word-wrap: normal;
+}
+
 button,
 select {
   text-transform: none;
+}
+
+button,
+[type="button"],
+[type="reset"],
+[type="submit"] {
+  &:not(:disabled) {
+    cursor: pointer;
+  }
 }
 
 button,
@@ -157,17 +263,21 @@ button:-moz-focusring,
 }
 
 fieldset {
-  border: 0;
-  margin: 0;
+  min-width: 0;
   padding: 0;
+  margin: 0;
+  border: 0;
 }
 
 legend {
-  box-sizing: border-box;
-  color: inherit;
-  display: table;
+  display: block;
+  width: 100%;
   max-width: 100%;
-  padding: 0; 
+  padding: 0;
+  margin-bottom: .5rem;
+  font-size: 1.5rem;
+  line-height: inherit;
+  color: inherit;
   white-space: normal;
 }
 
@@ -205,8 +315,13 @@ textarea {
   font: inherit;
 }
 
+output {
+  display: inline-block;
+}
+
 summary {
   display: list-item;
+  cursor: pointer;
 }
 
 .hidden,
@@ -214,6 +329,9 @@ summary {
   display: none !important;
 }
 
+template {
+  display: none;
+}
 
 .invisible {
   visibility: hidden;

@@ -1,0 +1,10 @@
+@function map-data($map, $keys...) {
+  @each $key in $keys {
+    $map: map-get($map, $key);
+  }
+  @return $map;
+}
+
+@function colors($key) {
+  @return map-get($colors, $key)
+}
