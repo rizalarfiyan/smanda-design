@@ -90,5 +90,10 @@ $headings-color: $gray-900;
 
 // small & mark
 $small-font-size: 80%;
-$mark-padding: .1em .4em;
+$mark-padding: .2em .4em;
 $mark-background: lighten(colors("warning"), 30%);
+
+// blockquote
+$blockquote-small-color: $gray-600;
+$blockquote-small-font-size: $small-font-size;
+$blockquote-font-size: $font-size-base * 1.25;
