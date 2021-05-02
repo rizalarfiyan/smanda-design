@@ -1,4 +1,6 @@
 // Colors
+$white: #fff;
+$black: #000;
 $gray-100: #f9fafb;
 $gray-200: #f3f4f6;
 $gray-300: #e5e7eb;
@@ -8,16 +10,47 @@ $gray-600: #6b7280;
 $gray-700: #4b5563;
 $gray-800: #374151;
 $gray-900: #111827;
+$main: #10b981;
+$success: #10b981;
+$danger: #ef4444;
+$warning: #f59e0b;
+$info: #3b82f6;
 
-$white: #fff;
-$black: #000;
+$main-colors: (
+  "white": $white,
+  "black": $black,
+  "mode-100": $gray-100,
+  "mode-200": $gray-200,
+  "mode-300": $gray-300,
+  "mode-400": $gray-400,
+  "mode-500": $gray-500,
+  "mode-600": $gray-600,
+  "mode-700": $gray-700,
+  "mode-800": $gray-800,
+  "mode-900": $gray-900,
+);
 
 $colors: (
-  "main": #10b981,
-  "success": #10b981,
-  "danger": #ef4444,
-  "warning": #f59e0b,
-  "info": #3b82f6,
+  "main": (
+    "base": $main,
+    "dark": darken($main, 8%),
+  ),
+  "success": (
+    "base": $success,
+    "dark": darken($success, 8%),
+  ),
+  "danger": (
+    "base": $danger,
+    "dark": darken($danger, 8%),
+  ),
+  "warning": (
+    "base": $warning,
+    "dark": darken($warning, 8%),
+  ),
+  "info": (
+    "base": $info,
+    "dark": darken($info, 8%),
+  ),
 );
 
 // Base
@@ -42,15 +75,15 @@ $font-weight-base: $font-weight-normal;
 
 $paragraph-margin-bottom: 1rem;
 
-$link-color: colors("main");
+$link-color: var-color(--main);
 $link-decoration: none;
-$link-hover-color: darken($link-color, 15%);
+$link-hover-color: var-color(--main-dark);
 $link-hover-decoration: underline;
 $link-hover-percentage: 15%;
 
 $table-cell-padding: .75rem;
 $table-th-font-weight: null;
-$table-caption-color: $gray-600;
+$table-caption-color: var-color(--mode-600);
 
 $label-margin-bottom: .5rem;
 
@@ -86,14 +119,14 @@ $headings-margin-bottom: $space / 2;
 $headings-font-family: "Roboto", sans-serif;
 $headings-font-weight: $font-weight-medium;
 $headings-line-height: 1.25;
-$headings-color: $gray-900;
+$headings-color: var(--mode-900);
 
 // small & mark
 $small-font-size: 80%;
 $mark-padding: .2em .4em;
-$mark-background: lighten(colors("warning"), 30%);
+$mark-background: lighten(map-data($colors, "warning", "base"), 30%);
 
 // blockquote
-$blockquote-small-color: $gray-600;
+$blockquote-small-color: var-color(--mode-600);
 $blockquote-small-font-size: $small-font-size;
 $blockquote-font-size: $font-size-base * 1.25;

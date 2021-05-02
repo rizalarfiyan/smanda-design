@@ -4,9 +4,28 @@
   }
 }
 
+@mixin active() {
+  &:active {
+    @content;
+  }
+}
+
+@mixin focus() {
+  &:focus {
+    @content;
+  }
+}
+
 @mixin hover-focus() {
   &:hover,
   &:focus {
+    @content;
+  }
+}
+
+@mixin focus-active() {
+  &:focus,
+  &:active {
     @content;
   }
 }

@@ -5,6 +5,7 @@ const sass = require('gulp-sass')
 const postcss = require('gulp-postcss')
 const concat = require('gulp-concat')
 const del = require('del')
+const cleanCSS = require('gulp-clean-css')
 
 function liveServer(done) {
   browserSync.init({
@@ -30,6 +31,7 @@ function HTML() {
 function CSS() {
   return src(`${config.paths.src.css}/**/*.scss`)
     .pipe(sass().on('error', sass.logError))
+    .pipe(cleanCSS())
     .pipe(postcss([require('autoprefixer')]))
     .pipe(concat({ path: 'style.css' }))
     .pipe(dest(config.paths.dist.css))
@@ -37,7 +39,7 @@ function CSS() {
 
 function JS() {
   return src([`${config.paths.src.js}/**/*.js`])
-    .pipe(concat({ path: 'scripts.js' }))
+    // .pipe(concat({ path: 'scripts.js' }))
     .pipe(dest(config.paths.dist.js))
 }
 

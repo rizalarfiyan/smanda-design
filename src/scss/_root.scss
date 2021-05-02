@@ -1,0 +1,15 @@
+// Do not forget to update getting-started/theming.md!
+:root {
+  @each $color, $value in $colors {
+    @each $theme, $val in $value {
+      @if $theme == "base" {
+        --#{$color}: #{toRgbColor($val)};
+      } @else {
+        --#{$color}-#{$theme}: #{toRgbColor($val)};
+      }
+    }
+  }
+  @each $color, $value in $main-colors {
+    --#{$color}: #{toRgbColor($value)};
+  }
+}
