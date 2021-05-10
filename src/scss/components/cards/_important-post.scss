@@ -1,0 +1,59 @@
+.important-posts {
+  flex-direction: row;
+  justify-content: space-evenly;
+  width: 100%;
+  margin-top: 3rem;
+
+  &:not(:last-child) {
+    margin-bottom: 20px;
+  }
+
+  &.reverse {
+    flex-direction: row-reverse;
+  }
+
+  .image {
+    position: relative;
+    margin: auto;
+
+    &::before {
+      content: '';
+      width: 120px;
+      height: 120px;
+      border-radius: 4px;
+      position: absolute;
+      background-color: var-color(--main);
+      top: -40px;
+      left: -40px;
+      z-index: -1;
+    }
+
+    a {
+      display: block;
+      object-fit: cover;
+      width: 280px;
+      height: 280px;
+      overflow: hidden;
+      border-radius: 8px;
+      box-shadow: 0 8px 40px rgba(0, 0, 0, 0.14);
+    }
+  }
+
+  h2 {
+    margin-bottom: .75rem;
+  }
+
+  p {
+    line-height: 1.25;
+  }
+
+  .btn {
+    margin: 4px auto auto 0;
+  }
+
+  .content {
+    max-width: 580px;
+    padding: 20px;
+    margin: auto;
+  }
+}

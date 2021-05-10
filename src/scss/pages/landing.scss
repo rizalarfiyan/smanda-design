@@ -1,0 +1,27 @@
+@import '../core';
+
+section {
+  position: relative;
+  z-index: 1;
+
+  &:not(.hero) {
+    padding: 3rem 0;
+  }
+
+  &.important-section {
+    // padding: 4.5rem 0;
+    // margin-top: 100vh;
+    border-top: 6px solid var-color(--main);
+    background: var-color(--white);
+  }
+  
+  &.access-section {
+    background: var-color(--mode-200);
+  }
+}
+
+.heading {
+  text-align: center;
+  max-width: 520px;
+  margin: 0 auto;
+}

@@ -33,7 +33,7 @@ function CSS() {
     .pipe(sass().on('error', sass.logError))
     .pipe(cleanCSS())
     .pipe(postcss([require('autoprefixer')]))
-    .pipe(concat({ path: 'style.css' }))
+    // .pipe(concat({ path: 'style.css' }))
     .pipe(dest(config.paths.dist.css))
 }
 

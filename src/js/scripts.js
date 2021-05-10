@@ -8,10 +8,6 @@ function loadScript(url, callback) {
         callback()
       }
     }
-  } else {
-    script.onload = function () {
-      callback()
-    }
   }
   script.src = url
   document.getElementsByTagName('head')[0].appendChild(script)

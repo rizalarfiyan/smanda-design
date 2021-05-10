@@ -1,0 +1,54 @@
+.fast-access {
+  flex-wrap: wrap;
+  flex-direction: row;
+
+  .card {
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: flex-start;
+    background: var-color(--white);
+    border-radius: 6px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, .14);
+    max-width: 360px;
+    min-height: 90px;
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+    margin: 10px;
+    padding: 18px 14px;
+
+    &::before {
+      content: '';
+      position: absolute;
+      width: 120px;
+      height: 120px;
+      border-radius: 50%;
+      top: -20px;
+      left: -20px;
+      background-color: var-color(--main, .1)
+    }
+  }
+
+  .content {
+    margin-left: 1rem;
+    max-width: 250px;
+  }
+
+  .image {
+    z-index: 1;
+  }
+
+  i {
+    font-size: 2rem;
+    padding: 10px;
+  }
+
+  h2 {
+    font-size: $font-size-base * 1.25;
+  }
+
+  p {
+    margin-bottom: 12px;
+    font-size: 14px;
+  }
+}
