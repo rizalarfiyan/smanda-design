@@ -1,0 +1,11 @@
+.container {
+  max-width: $container;
+  display: block;
+  margin: 0 auto;
+}
+
+@media only screen and(max-width: $container - $gutter-container) {
+  .container {
+    max-width: calc(100% - #{$gutter-container});
+  }
+}

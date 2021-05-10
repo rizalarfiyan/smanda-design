@@ -53,19 +53,31 @@ $colors: (
   ),
 );
 
+// Breakpoints
+$breakpoints: (
+  xs: 0,
+  sm: 576px,
+  md: 768px,
+  lg: 992px,
+  xl: 1200px
+);
+
 // Base
+$container: 1140px;
+$gutter-container: 20px;
+
 $font-size-base: 1rem;
 $space: 1rem;
 $body-bg: $white;
 $body-color: $gray-900;
 
-$font-family-sans-serif: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Poppins "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-$font-family-monospace: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+$font-family-sans-serif: -apple-system, "BlinkMacSystemFont", "Segoe UI", "Roboto", "Poppins" "Helvetica Neue", "Arial", "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+$font-family-monospace: "SFMono-Regular", "Menlo", "Monaco", "Consolas", "Liberation Mono", "Courier New", monospace;
 $font-family-base: $font-family-sans-serif;
 
 $font-size-base: 1rem;
 $font-size-lg: $font-size-base * 1.25;
-$font-size-sm: $font-size-base * .875;
+$font-size-sm: $font-size-base * 0.875;
 
 $font-weight-light: 300;
 $font-weight-normal: 400;
@@ -81,11 +93,11 @@ $link-hover-color: var-color(--main-dark);
 $link-hover-decoration: underline;
 $link-hover-percentage: 15%;
 
-$table-cell-padding: .75rem;
+$table-cell-padding: 0.75rem;
 $table-th-font-weight: null;
 $table-caption-color: var-color(--mode-600);
 
-$label-margin-bottom: .5rem;
+$label-margin-bottom: 0.5rem;
 
 // Heading
 $headings: (
@@ -123,7 +135,7 @@ $headings-color: var(--mode-900);
 
 // small & mark
 $small-font-size: 80%;
-$mark-padding: .2em .4em;
+$mark-padding: 0.2em 0.4em;
 $mark-background: lighten(map-data($colors, "warning", "base"), 30%);
 
 // blockquote

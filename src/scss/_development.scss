@@ -16,10 +16,10 @@ body.dev {
     justify-content: center;
     max-width: 980px;
     padding: 2rem;
-    margin: .5rem;
+    margin: 0.5rem;
     border-radius: 6px;
     background: $white;
-    box-shadow: 0 4px 16px var-color(--black, .05), 0 10px 20px var-color(--black, .06);
+    box-shadow: 0 4px 16px var-color(--black, 0.05), 0 10px 20px var-color(--black, 0.06);
   }
 
   .heading {
@@ -28,7 +28,7 @@ body.dev {
     margin-bottom: 1rem;
 
     h1 {
-      margin: 0 0 .75rem 0;
+      margin: 0 0 0.75rem 0;
       font-size: 1.75rem;
       font-weight: $font-weight-bold;
       color: var-color(--mode-900);

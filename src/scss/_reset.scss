@@ -47,6 +47,7 @@ body {
 p {
   margin-top: 0;
   margin-bottom: $paragraph-margin-bottom;
+  line-height: $headings-line-height;
 }
 
 hr {
@@ -202,7 +203,6 @@ a {
   background-color: transparent;
 
   @include hover() {
-    color: $link-hover-color;
     text-decoration: $link-hover-decoration;
   }
 }

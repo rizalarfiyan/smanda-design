@@ -9,6 +9,10 @@
   @return map-get($colors, $key);
 }
 
+@function breakpoint($key) {
+  @return map-get($breakpoints, $key);
+}
+
 @function toRgbColor($key) {
   @return round(red($key)) + ", " + round(green($key)) + ", " + round(blue($key));
 }
