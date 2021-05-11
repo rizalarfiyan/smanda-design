@@ -25,3 +25,93 @@ section {
   max-width: 520px;
   margin: 0 auto;
 }
+
+.sec {
+  display: flex;
+  flex-wrap: wrap;
+  
+  &.reverse {
+    flex-direction: row-reverse;
+  }
+}
+
+.profil-sec {
+  justify-content: space-evenly;
+
+  .image {
+    position: relative;
+    margin: auto;
+
+    &::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      right: -20px;
+      z-index: -1;
+      width: 80%;
+      height: 80%;
+      background: var-color(--main, .075);
+      border-radius: 10px;
+    }
+  }
+
+  img {
+    border-radius: 6px;
+    box-shadow: 0 10px 30px var-color(--main, .3);
+    max-width: 320px;
+    max-height: 320px;
+    margin: 40px 30px 40px 50px;
+  }
+
+  ul {
+    position: absolute;
+    bottom: 0;
+    left: 15px;
+    background: var-color(--white);
+    padding: 12px 18px;
+    border-radius: 6px;
+    box-shadow: -10px 10px 20px var-color(--main, .15);
+    color: var-color(--mode-800);
+
+    li {
+      padding: 6px;
+    }
+    
+    i {
+      margin-right: 6px;
+    }
+  }
+
+  .content {
+    max-width: 580px;
+    padding: 20px;
+    margin: auto;
+  }
+
+  h2 {
+    margin-bottom: .75rem;
+  }
+
+  p {
+    line-height: 1.25;
+  }
+
+  .btn {
+    margin: 4px auto auto 0;
+  }
+}
+
+@media (max-width: 425px) {
+  .profil-sec {
+    .image {
+      &::before {
+        right: -30px;
+        width: 100%;
+      }
+    }
+    
+    img {
+      margin: 30px 0px 50px 0;
+    }
+  }
+}
