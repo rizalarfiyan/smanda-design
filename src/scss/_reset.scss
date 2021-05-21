@@ -40,6 +40,10 @@ body {
   background-color: $body-bg;
 }
 
+span, p, button, a {
+  font-family: $body-font-family;
+}
+
 [tabindex="-1"]:focus:not(:focus-visible) {
   outline: 0 !important;
 }
