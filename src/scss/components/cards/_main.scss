@@ -35,4 +35,29 @@
   .btn {
     margin: 0 auto 0 0;
   }
+
+  .to-post {
+    background-image: radial-gradient(var-color(--black, .2), var-color(--black, .6));
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    transition: all .4s ease;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .to-icon {
+    position: absolute;
+    margin: auto;
+    z-index: 99;
+    padding: 10px;
+    border: 3px solid var-color(--white);
+    border-radius: 50%;
+    color: var-color(--white);
+    transition: all .3s ease;
+  }
 }

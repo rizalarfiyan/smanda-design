@@ -4,10 +4,28 @@
     background: var-color(--white);
     margin: 8px;
     max-width: 340px;
+    width: 100%;
     border-radius: 6px;
     box-shadow: 0 4px 30px var-color(--black, .14);
+  }
+  
+  .image {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    border-radius: 4px;
+    padding-bottom: percentage(2/3);
+    background: var-color(--mode-300);
+  }
 
-    &:hover {
+  &.featured {
+    .image {
+      padding-bottom: percentage(9/16);
+    }
+  }
+
+  &:not(.no-anim) {
+    .card:hover {
       img {
         transform: scale(1.1);
       }
@@ -21,42 +39,23 @@
         transform: scale(1);
       }
     }
-  }
-  
-  .image {
-    position: relative;
-    overflow: hidden;
-    width: 100%;
-    border-radius: 4px;
-    padding-bottom: percentage(2/3);
-  }
-  
-  .to-post {
-    opacity: 0;
-    background-image: radial-gradient(var-color(--black, .1), var-color(--black, .4));
-    display: block;
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    top: 0;
-    left: 0;
-    transition: all .4s ease;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+
+    .to-post {
+      opacity: 0;
+    }
+
+    .to-icon {
+      opacity: 0;
+      transform: scale(1.3);
+    }
   }
 
-  .to-icon {
-    position: absolute;
-    margin: auto;
-    z-index: 99;
-    padding: 10px;
-    border: 3px solid var-color(--white);
-    border-radius: 50%;
-    color: var-color(--white);
-    transition: all .3s ease;
-    opacity: 0;
-    transform: scale(1.3);
+  .fa-play {
+    margin-left: 4px;
+  }
+
+  .fa-file-alt {
+    margin: 0 3px;
   }
 
   img {
@@ -72,8 +71,14 @@
     font-size: $font-size-base * 1.5;
     font-weight: $font-weight-bold;
     margin: 0;
+    margin-bottom: 10px;
 
     @include clamp(30px, 1);
+
+    a {
+      font-family: $headings-font-family;
+      color: var-color(--mode-900);
+    }
   }
 
   p {
@@ -86,7 +91,6 @@
   .desc {
     display: flex;
     font-size: 14px;
-    margin: 10px 0 14px;
     color: var-color(--mode-600);
 
     &:not(ul) {
