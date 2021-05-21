@@ -62,6 +62,41 @@ p {
   }
 }
 
+.kepsek-sec {
+  .icon-kepsek {
+    position: absolute;
+    padding: 18px 20px;
+    background: var-color(--main);
+    border-radius: 50%;
+    right: -26px;
+    top: -26px;
+    border: 10px solid var-color(--white);
+    color: var-color(--white);
+    box-shadow: 0 5px 40px var-color(--main, .3);
+  }
+
+  .jabatan {
+    position: absolute;
+    padding: 10px 16px;
+    border-radius: 6px;
+    left: 30px;
+    bottom: -15px;
+    background: var-color(--white);
+    box-shadow: 0 5px 40px var-color(--main, .3);
+    font-size: $font-size-base * 1.25;
+    font-weight: $font-weight-semi;
+  }
+
+  image {
+    margin: 25px auto;
+  }
+  
+  img {
+    border: 10px solid var-color(--white);
+    box-shadow: 0 4px 40px var-color(--black, .12);
+  }
+}
+
 .profil-sec {
   .image {
     &::before {
