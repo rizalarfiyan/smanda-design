@@ -87,8 +87,8 @@ p {
     font-weight: $font-weight-semi;
   }
 
-  image {
-    margin: 25px auto;
+  .image {
+    margin: 40px auto 30px;
   }
   
   img {
@@ -276,6 +276,65 @@ p {
     color: var-color(--mode-600);
     font-size: $font-size-base * 1.125;
     margin: 4px auto 10px;
+  }
+}
+
+.koperasi-sec {
+  .my-data {
+    padding: 20px 20px 0;
+
+    .head-name {
+      font-weight: $font-weight-semi;
+    }
+
+    ul {
+      margin: 10px 0;
+    }
+
+    span {
+      background: var-color(--white);
+    }
+
+    .is-name {
+      padding-right: 6px;
+    }
+
+    .out {
+      padding-left: 6px;
+    }
+
+    li {
+      font-size: 12px;
+      display: flex;
+      justify-content: space-between;
+      background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='4' height='16' viewBox='0 0 4 2'%3E %3Ccircle fill='currentColor' cx='1' cy='1' r='1' /%3E %3C/svg%3E") repeat-x top;
+      margin: 6px 0;
+    }
+  }
+
+  .data-money {
+    max-width: 260px;
+    width: 1000px;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 5px 40px var-color(--black, .14);
+
+    .top {
+      text-align: center;
+      border-radius: 0 0 20px 20px;
+      padding: 26px 0;
+      background: var-color(--main);
+    }
+
+    .my-money {
+      font-size: 1.2rem;
+      font-weight: 600;
+      color: var-color(--white);
+    }
+
+    .checkout {
+      padding: 5px 20px 20px;
+    }
   }
 }
 
