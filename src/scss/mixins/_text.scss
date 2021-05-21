@@ -1,0 +1,9 @@
+@mixin clamp($height, $position) {
+  word-break: break-word;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  max-height: $height;
+  -webkit-line-clamp: $position;
+  -webkit-box-orient: vertical;
+}

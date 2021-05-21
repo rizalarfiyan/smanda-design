@@ -2,10 +2,6 @@
   flex-wrap: wrap;
   margin: 2rem 0;
 
-  a {
-    text-decoration: none;
-  }
-
   .card {
     width: 100%;
     max-width: 180px;
@@ -46,9 +42,8 @@
     font-size: $font-size-base * 1.25;
     margin-bottom: 2px;
   }
-
+  
   p {
-    margin: 0;
     font-size: 14px;
   }
 }

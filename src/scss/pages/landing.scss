@@ -16,7 +16,8 @@ section {
     background: var-color(--white);
   }
   
-  &.access-section {
+  &.access-section,
+  &.posts-section {
     background: var-color(--mode-200);
   }
 }
@@ -142,14 +143,15 @@ p {
 
   .play-button {
     position: absolute!important;
-    background: white;
+    background: var-color(--main);
     padding: 10px 15px 10px 25px;
+    border: 2px solid var-color(--white);
     border-radius: 6px;
     z-index: 1;
 
     i {
       font-size: 20px;
-      color: var-color(--mode-800);
+      color: var-color(--white);
     }
   }
 
@@ -157,7 +159,7 @@ p {
     position: absolute;
     width: 100%;
     height: 100%;
-    background: var-color(--black, .2);
+    background-image: radial-gradient(var-color(--black, .2), var-color(--black, .6));
   }
 
   .item {
@@ -229,5 +231,16 @@ p {
 
   h6 {
     margin: 4px auto 10px;
+  }
+}
+
+.post-sec {
+  margin: 60px 0 40px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+
+  .btn {
+    margin: 40px 0 0;
   }
 }

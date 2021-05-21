@@ -12,12 +12,19 @@
 .card {
   flex-wrap: wrap;
 
+  a {
+    text-decoration: none;
+  }
+
   h2 {
     color: var-color(--mode-900);
+    font-size: $font-size-base * 1.4;
+    margin-bottom: 4px;
   }
 
   p {
     color: var-color(--mode-700);
+    margin: 0;
   }
 
   .content {
