@@ -73,7 +73,9 @@
     margin: 0;
     margin-bottom: 10px;
 
-    @include clamp(30px, 1);
+    &:not(.no-clamp) {
+      @include clamp(30px, 1);
+    }
 
     a {
       font-family: $headings-font-family;
@@ -82,7 +84,9 @@
   }
 
   p {
-    @include clamp(64px, 3);
+    &:not(.no-clamp) {
+      @include clamp(64px, 3);
+    }
     
     font-size: 1rem;
     line-height: 1.25;
