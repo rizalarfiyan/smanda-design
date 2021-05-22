@@ -4,3 +4,43 @@ img.cover {
   object-position: center;
   object-fit: cover;
 }
+
+.titles {
+  display: inline-flex;
+  position: relative;
+  margin: 12px 0;
+
+  &::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -3px;
+    width: 40%;
+    height: 3px;
+    border-radius: 10px;
+    background: var-color(--main);
+  }
+}
+
+.anchor-anim {
+  display: inline-block;
+  position: relative;
+
+  &::after {
+    content: '';
+    width: 0%;
+    height: 2px;
+    border-radius: 10px;
+    position: absolute;
+    left: 0;
+    bottom: -4px;
+    background: var-color(--main);
+    transition: all .25s ease-in-out;
+  }
+
+  &:hover {
+    &::after {
+      width: 100%;
+    }
+  }
+}
