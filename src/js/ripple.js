@@ -1,4 +1,4 @@
-const buttons = document.querySelectorAll('button');
+const buttons = document.querySelectorAll('.btn');
 buttons.forEach(button => {
   button.onmousedown = function(e) {
     const $this = this
