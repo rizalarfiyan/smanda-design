@@ -17,8 +17,8 @@ function resizeGridItem(item){
   grid = document.getElementsByClassName("achivement-sec")[0];
   rowHeight = parseInt(window.getComputedStyle(grid).getPropertyValue('grid-auto-rows'));
   rowGap = parseInt(window.getComputedStyle(grid).getPropertyValue('grid-row-gap'));
-  image = item.querySelector('.image') !== null ? item.querySelector('.image').getBoundingClientRect().height : 0;
-  rowSpan = Math.ceil((item.querySelector('.content').getBoundingClientRect().height + rowGap + image) / (rowHeight + rowGap - 2));
+  image = item.querySelector('.image') !== null ? item.querySelector('.image').getBoundingClientRect().height + 10 : 10;
+  rowSpan = Math.ceil(Math.floor((item.querySelector('.content').getBoundingClientRect().height + rowGap + image)) / (rowHeight + rowGap));
   item.style.gridRowEnd = `span ${rowSpan}`;
 }
 

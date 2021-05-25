@@ -44,3 +44,28 @@ img.cover {
     }
   }
 }
+
+section {
+  position: relative;
+  z-index: 1;
+  overflow: hidden;
+
+  &[data-content] {
+    display: flex;
+    justify-content: center;
+
+    &:before{
+      content: attr(data-content);
+      font-weight: $font-weight-bold;
+      text-transform: uppercase;
+      font-family: $body-font-family;
+      letter-spacing: 4px;
+      font-size: 8rem;
+      position: absolute;
+      color: RGBA(var(--mode-500), .1);
+      text-align: center;
+      overflow-wrap: anywhere;
+      z-index: -1;
+    }
+  }
+}
