@@ -1,5 +1,5 @@
 {
-  function TOC(options) {
+  function DOCS(options) {
     if (typeof options !== 'object') {
       throw new TypeError('Opsi harus dengan object!');
     }
@@ -7,10 +7,15 @@
     devOpt = {
       element: '#TOCDocs',
       content: '#content',
-      section: 'section',
+      section: 'section[data-heading][data-name]',
       icon: true,
+      defaultIcon: 'fa fa-ban',
       active: "active",
-      offset: 0,
+      offset: 60,
+      elementNav: 'body',
+      contentNav: '.hamburger',
+      esc: true,
+      activeNav: "menu-open",
     }
 
     this.opt = Object.assign({}, devOpt, options)
@@ -18,12 +23,15 @@
     this.elem = document.querySelector(this.opt.element)
     this.target = document.querySelector(this.opt.content)
     this.search = this.target.querySelectorAll(this.opt.section)
+    this.elemNav = document.querySelector(this.opt.elementNav)
+    this.contentNav = document.querySelectorAll(this.opt.contentNav)
     this.idSection = new Array()
     this.elSection = new Array()
+    this._nav()
     this._generate()
   }
   
-  TOC.prototype = {
+  DOCS.prototype = {
     _headingLevel() {
       let headLong = 6
       for (let i = 0; i < this.search.length; i++) {
@@ -72,34 +80,43 @@
       let currentLevel = this._headingLevel() - 1
       let elem = document.createElement("div")
       let currentEl = elem
+      let that = this
       
       this.search.forEach(data => {
         let secEl = data
         let headLevel = this._getHeadingLevel(secEl)
         let diff = headLevel - currentLevel
         let a = document.createElement("a")
+        let name = secEl.getAttribute('data-name')
+
+        let cHead = document.createElement(secEl.getAttribute('data-heading'))
+        cHead.textContent = name
+        secEl.prepend(cHead)
 
         if (!secEl.id) secEl.id = this._generateId(secEl)
         this.idSection.push(secEl.id)
         this.elSection.push(data)
 
         a.href = `#${secEl.id}`
-        a.textContent = secEl.getAttribute('data-name')
+        a.className = 'ripple'
+        a.textContent = name
 
         a.addEventListener('click', function (e) {
           e.preventDefault()
+          that._disableNav()
           window.scrollTo({
             top: secEl.offsetTop - 10,
             behavior: 'smooth'
           })
         })
 
-        if (data.hasAttribute('data-icon') && headLevel === 1) {
+        if (headLevel === 1) {
           let icon = document.createElement('span')
           let fa = document.createElement('i')
           icon.className = 'icon'
-          fa.className = data.getAttribute('data-icon')
+          fa.className = data.getAttribute('data-icon') || this.opt.defaultIcon
           icon.append(fa)
+          a.className += ' has-icon'
           a.prepend(icon)
         }
 
@@ -132,17 +149,18 @@
     _initScrollspy() {
       this._scrollspy()
       window.addEventListener('scroll', () => {
-        this._scrollspy();
+        this._scrollspy()
+        this._disableNav()
       });
     },
 
     _scrollspy() {
-      let sec = this._currentSec();
-      let menu = this._currentMenu(sec);
+      let sec = this._currentSec()
+      let menu = this._currentMenu(sec)
 
       if (menu) {
-        this._removeActive({ ignore: menu });
-        this._active(menu);
+        this._removeActive({ ignore: menu })
+        this._active(menu)
       }
     },
 
@@ -174,8 +192,35 @@
         let aClass = this.opt.active.trim().split(' ')
         aClass.forEach((x) => item.classList.remove(x))
       });
+    },
+
+    _nav() {
+      this.contentNav.forEach(item => {
+        item.addEventListener('click', e => {
+          this.elemNav.classList.toggle(this.opt.activeNav);
+          e.stopPropagation()
+        })
+      })
+    },
+
+    _disableNav() {
+      if (!this.elemNav.classList.contains(this.opt.activeNav)) return
+      return this.elemNav.classList.remove(this.opt.activeNav)
+    },
+
+    _escape() {
+      if (!this.opt.esc) return
+      let that = this
+      document.onkeydown = function(e) {
+        e = e || window.event
+        let isEsc = false
+        isEsc = 'key' in e ? (e.key === 'Escape' || e.key === 'Esc') : (e.keyCode === 27)
+        if (isEsc && that.elemNav.classList.contains(that.opt.activeNav)) {
+          that.elemNav.classList.toggle(that.opt.activeNav);
+        }
+      }
     }
   }
 }
 
-new TOC({ offset: 60 })
+new DOCS({})
