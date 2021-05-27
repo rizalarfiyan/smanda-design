@@ -1,6 +1,17 @@
 @import '../core';
 
+$sidebar-width: 280px;
+$sidebar-top: 64px;
+
 .demo {
+  * {
+    user-select: none;
+  }
+
+  input, textarea, pre, code {
+    user-select: auto;
+  }
+
   &.index {
     header,
     .btn-group {
@@ -36,6 +47,131 @@
 
     i {
       margin-right: 12px!important;
+    }
+  }
+  
+  &.docs {
+    padding-top: $sidebar-top;
+
+    nav.doc-nav {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      background: var-color(--white);
+      box-shadow: 0 5px 40px var-color(--mode-700, .2);
+      z-index: 10;
+    }
+
+    .wrap-nav,
+    .logo {
+      display: flex;
+      align-items: center;
+    }
+
+    .wrap-nav {
+      justify-content: space-between;
+    }
+
+    .logo {
+      margin: 4px;
+      padding: 6px 10px;
+      overflow: hidden;
+      border-radius: 4px;
+      cursor: pointer;
+
+      img {
+        max-width: 34px;
+      }
+
+      h1 {
+        max-width: 130px;
+        font-size: $font-size-base * 1.4;
+        line-height: 1;
+        margin: 0 0 0 12px;
+      }
+    }
+
+    .doc-wrapper {
+      position: relative;
+
+      > * {
+        border: 1px solid red;
+      }
+    }
+
+    .doc-sidebar {
+      max-width: $sidebar-width;
+      position: fixed;
+      top: $sidebar-top;
+      width: 100%;
+      height: calc(100% - #{$sidebar-top});
+      z-index: 9;
+      overflow: auto;
+
+      ul {
+        margin: 8px;
+
+        ul {
+          margin: 12px 0 22px 50px;
+
+          a {
+            font-size: 14px;
+            position: relative;
+            margin: 0;
+            padding: 12px 12px 12px 20px;
+
+            &::before {
+              content: '';
+              background: var-color(--mode-300, .5);
+              display: inline-block;
+              left: 0;
+              top: 0;
+              position: absolute;
+              width: 3px;
+              height: 100%;
+              border-radius: 1rem;
+            }
+
+            &.active {
+              &::before {
+                background: var-color(--main);
+              }
+            }
+          }
+        }
+      }
+
+      a {
+        display: block;
+        padding: 6px;
+        border-radius: 4px;
+        margin-top: 12px;
+        font-size: 18px;
+        color: var-color(--mode-800);
+
+        &.active {
+          color: var-color(--main);
+
+          .icon {
+            background: var-color(--main);
+            color: var-color(--white);
+          }
+        }
+      }
+
+      .icon {
+        margin-right: 12px;
+        padding: 10px;
+        font-size: 14px;
+        background: var-color(--main, .05);
+        color: var-color(--main);
+        display: inline-block;
+        border-radius: 6px;
+      }
+    }
+
+    .doc-content {
+      margin-left: $sidebar-width;
     }
   }
 }
