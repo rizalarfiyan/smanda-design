@@ -8,8 +8,13 @@ $sidebar-top: 64px;
     user-select: none;
   }
 
-  input, textarea, pre, code {
+  input, textarea, pre, pre *, code, code * {
     user-select: auto;
+  }
+
+  pre *,
+  code * {
+    font-family: monospace;
   }
 
   &.index {
@@ -242,6 +247,40 @@ $sidebar-top: 64px;
 
       .fa-heart {
         color: #FE251B;
+      }
+    }
+
+    .docs-tabs {
+      padding: 6px;
+      margin: 20px auto;
+      border-radius: 4px;
+      border: 1px solid var-color(--main);
+
+      button {
+        border: 2px solid transparent;
+
+        &:focus {
+          border: 2px solid var-color(--main);
+        }
+
+        &.active {
+          border: 2px solid var-color(--main);
+        }
+      }
+      
+      pre {
+        display: none;
+        overflow: auto;
+        margin: 6px;
+        border-radius: 4px;
+
+        code {
+          padding: 20px 12px;
+        }
+
+        &.active {
+          display: block;
+        }
       }
     }
   }
