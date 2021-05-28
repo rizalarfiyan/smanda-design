@@ -119,7 +119,7 @@ class DOCS {
       if (headLevel === 1) {
         let icon = document.createElement('span')
         let fa = document.createElement('i')
-        icon.className = 'icon'
+        icon.className = 'spy-icon'
         fa.className = data.getAttribute('data-icon') || this.opt.defaultIcon
         icon.append(fa)
         a.className += ' has-icon'

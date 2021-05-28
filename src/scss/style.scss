@@ -1,15 +1,8 @@
-@import 'core';
+@import 'core/index';
+@import 'base/index';
 
-@import 'reset';
-@import 'root';
-@import 'fonts';
-@import 'typography';
-@import 'utilities';
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css');
 
-@import 'container';
-@import 'components/buttons';
-@import 'components/cards';
-@import 'components/embed';
-@import 'components/footer';
-
-@import 'development';
+@import 'utilites/content.scss';
+@import 'utilites/title.scss';
+@import 'utilites/icon.scss';

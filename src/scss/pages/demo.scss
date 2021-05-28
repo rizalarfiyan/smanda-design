@@ -1,20 +1,15 @@
-@import '../core';
+@import '../core/index';
 
 $sidebar-width: 280px;
 $sidebar-top: 64px;
 
 .demo {
   * {
-    user-select: none;
+    @include unselectable;
   }
-
+  
   input, textarea, pre, pre *, code, code * {
-    user-select: auto;
-  }
-
-  pre *,
-  code * {
-    font-family: monospace;
+    @include selectable;
   }
 
   &.index {
@@ -37,9 +32,9 @@ $sidebar-top: 64px;
     .wrap-index {
       margin: 10px;
       padding: 40px;
-      background: var-color(--white);
+      background: $scheme-main;
       border-radius: 6px;
-      box-shadow: 0 5px 40px var-color(--mode-700, .14);
+      box-shadow: $shadow;
     }
 
     h1 {
@@ -62,8 +57,8 @@ $sidebar-top: 64px;
       position: fixed;
       top: 0;
       width: 100%;
-      background: var-color(--white);
-      box-shadow: 0 5px 40px var-color(--mode-700, .2);
+      background: $scheme-main;
+      box-shadow: $shadow;
       z-index: 10;
     }
 
@@ -73,10 +68,10 @@ $sidebar-top: 64px;
       align-items: center;
       position: relative;
       padding: 14px 16px;
-      border-radius: 4px;
+      border-radius: $radius;
       margin: 0;
       border: none;
-      background: var-color(--main, .05);
+      background: $primary-light;
   
       .my-ham {
         padding: 10px;
@@ -89,10 +84,10 @@ $sidebar-top: 64px;
         left: 0;
         width: 25px;
         height: 3px;
-        border-radius: 4px;
+        border-radius: $radius;
         transition: all .5s ease;
         opacity: 1;
-        background: var-color(--mode-900);
+        background: $scheme-invert;
   
         &:nth-child(1) {
           top: 0px;
@@ -122,7 +117,7 @@ $sidebar-top: 64px;
       margin: 4px;
       padding: 6px 10px;
       overflow: hidden;
-      border-radius: 4px;
+      border-radius: $radius;
       cursor: pointer;
 
       img {
@@ -131,7 +126,7 @@ $sidebar-top: 64px;
 
       h1 {
         max-width: 130px;
-        font-size: $font-size-base * 1.4;
+        font-size: $size-4;
         line-height: 1;
         margin: 0 0 0 12px;
       }
@@ -144,7 +139,7 @@ $sidebar-top: 64px;
     .doc-sidebar,
     .doc-content {
       transition: all .5s ease;
-      background: var-color(--white);
+      background: $scheme-main;
     }
 
     .doc-sidebar {
@@ -154,7 +149,7 @@ $sidebar-top: 64px;
       top: $sidebar-top;
       width: 100%;
       height: calc(100% - #{$sidebar-top});
-      box-shadow: 0 5px 10px var-color(--mode-600, .5);
+      box-shadow: $shadow;
       z-index: 9;
       overflow: auto;
 
@@ -176,7 +171,7 @@ $sidebar-top: 64px;
 
             &::before {
               content: '';
-              background: var-color(--mode-300, .5);
+              background: $grey-lightest;
               display: inline-block;
               left: 0;
               top: 0;
@@ -188,7 +183,7 @@ $sidebar-top: 64px;
 
             &.active {
               &::before {
-                background: var-color(--main);
+                background: $primary;
               }
             }
           }
@@ -198,36 +193,36 @@ $sidebar-top: 64px;
       a {
         display: block;
         padding: 12px;
-        border-radius: 4px;
+        border-radius: $radius;
         margin-top: 12px;
         font-size: 18px;
         text-overflow: ellipsis;
         overflow: hidden;
         white-space: nowrap;
-        color: var-color(--mode-800);
+        color: $scheme-invert-bis;
 
         &.has-icon {
           padding: 6px;
         }
 
         &.active {
-          color: var-color(--main);
+          color: $primary;
 
-          .icon {
-            background: var-color(--main);
-            color: var-color(--white);
+          .spy-icon {
+            background: $primary;
+            color: $scheme-main;
           }
         }
       }
 
-      .icon {
+      .spy-icon {
         margin-right: 12px;
-        padding: 10px;
+        padding: 8px 10px;
         font-size: 14px;
-        background: var-color(--main, .05);
-        color: var-color(--main);
+        background: $primary-light;
+        color: $primary;
         display: inline-block;
-        border-radius: 6px;
+        border-radius: $radius-large;
       }
     }
 
@@ -241,30 +236,30 @@ $sidebar-top: 64px;
       margin: auto;
     }
 
-    section.header {
+    section .header {
       text-align: center;
-      margin: 30px auto;
+      padding: 60px 0;
 
       .fa-heart {
-        color: #FE251B;
+        color: $danger;
       }
     }
 
     .docs-tabs {
       padding: 6px;
       margin: 20px auto;
-      border-radius: 4px;
-      border: 1px solid var-color(--main);
+      border-radius: $radius;
+      border: 1px solid $primary;
 
       button {
         border: 2px solid transparent;
 
         &:focus {
-          border: 2px solid var-color(--main);
+          border: 2px solid $primary;
         }
 
         &.active {
-          border: 2px solid var-color(--main);
+          border: 2px solid $primary;
         }
       }
       
@@ -272,7 +267,7 @@ $sidebar-top: 64px;
         display: none;
         overflow: auto;
         margin: 6px;
-        border-radius: 4px;
+        border-radius: $radius;
 
         code {
           padding: 20px 12px;
