@@ -57,7 +57,7 @@ $subtitle-negative-margin: -1.25rem;
     font-weight: $title-strong-weight;
   }
 
-  &:not(.is-spaced) + .subtitle {
+  &:not(.spaced) + .subtitle {
     margin-top: $subtitle-negative-margin;
   }
 
@@ -85,7 +85,7 @@ $subtitle-negative-margin: -1.25rem;
     font-weight: $subtitle-strong-weight;
   }
 
-  &:not(.is-spaced) + .title {
+  &:not(.spaced) + .title {
     margin-top: $subtitle-negative-margin;
   }
 

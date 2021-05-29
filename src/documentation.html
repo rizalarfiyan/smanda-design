@@ -75,7 +75,7 @@
             <div class="content">
               <ul>
                 <li>
-                  <p><b>Lokasi</b> : <code>scss/element/*</code></p>
+                  <p><b>Lokasi</b> : <code>scss/element/*</code>, </p>
                 </li>
                 <li>
                   <p><b>Isi</b> : </p>
@@ -332,7 +332,7 @@
                 </li>
                 <li>
                   <span>
-                    Dapat memilih menggunakan type (bawaan HTML) atau menggunakan kelas
+                    Dapat memilih menggunakan type (bawaan HTML) atau menggunakan class
                   </span>
                 </li>
               </ul>
@@ -434,6 +434,221 @@
   &#x3C;li&#x3E;Tea&#x3C;/li&#x3E;
   &#x3C;li&#x3E;Milk&#x3C;/li&#x3E;
 &#x3C;/ol&#x3E;</code></pre>
+            </div>
+          </section>
+          <section data-heading="h2" data-name="Title and Subtitle">
+            <div class="content">
+              <p><b>Fungsi:</b></p>
+              <ul>
+                <li>
+                  <span>Dapat digunakan pada <mark>Typography</mark> yang berukuran besar pada suatu <mark>section</mark></span>
+                </li>
+                <li>
+                  <span>Dapat digunakan sebagai pengganti tanpa menggunakan class <code>.content</code></span>
+                </li>
+              </ul>
+              <p><b>Style Guide:</b></p>
+              <ul>
+                <li>
+                  <span>Menggunakan class <code>.title</code> atau <code>.subtitle</code></span>
+                </li>
+                <li>
+                  <span>Class ukuran meliputi <code>.h1</code>, <code>.h2</code>, <code>.h3</code>, <code>.h4</code>, <code>.h5</code>, dan <code>.h6</code></span>
+                </li>
+              </ul>
+              <p><b>Basic Style:</b></p>
+              <div class="title">This is a title</div>
+              <div class="subtitle">Subtitle</div>
+              <pre lang="html"><code>&#x3C;div class=&#x22;<mark>title</mark>&#x22;&#x3E;This is a title&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;<mark>subtitle</mark>&#x22;&#x3E;Subtitle&#x3C;/div&#x3E;</code></pre>
+            </div>
+          </section>
+          <section data-heading="h3" data-name="Title">
+            <div class="content">
+              <ul>
+                <li>
+                  <span>Default style: <code>.h3</code></span>
+                </li>
+              </ul>
+              <div class="title h1">Title 1</div>
+              <div class="title h2">Title 2</div>
+              <div class="title h3">Title 3</div>
+              <div class="title h4">Title 4</div>
+              <div class="title h5">Title 5</div>
+              <div class="title h6">Title 6</div>
+              <pre lang="html"><code>&#x3C;div class=&#x22;title <mark>h1</mark>&#x22;&#x3E;Title 1&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;title <mark>h2</mark>&#x22;&#x3E;Title 2&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;title <mark>h3</mark>&#x22;&#x3E;Title 3&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;title <mark>h4</mark>&#x22;&#x3E;Title 4&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;title <mark>h5</mark>&#x22;&#x3E;Title 5&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;title <mark>h6</mark>&#x22;&#x3E;Title 6&#x3C;/div&#x3E;</code></pre>
+            </div>
+          </section>
+          <section data-heading="h3" data-name="Subtitle">
+            <div class="content">
+              <ul>
+                <li>
+                  <span>Default style: <code>.h5</code></span>
+                </li>
+              </ul>
+              <div class="subtitle h1">Subtitle 1</div>
+              <div class="subtitle h2">Subtitle 2</div>
+              <div class="subtitle h3">Subtitle 3</div>
+              <div class="subtitle h4">Subtitle 4</div>
+              <div class="subtitle h5">Subtitle 5</div>
+              <div class="subtitle h6">Subtitle 6</div>
+              <pre lang="html"><code>&#x3C;div class=&#x22;subtitle <mark>h1</mark>&#x22;&#x3E;Subtitle 1&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;subtitle <mark>h2</mark>&#x22;&#x3E;Subtitle 2&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;subtitle <mark>h3</mark>&#x22;&#x3E;Subtitle 3&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;subtitle <mark>h4</mark>&#x22;&#x3E;Subtitle 4&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;subtitle <mark>h5</mark>&#x22;&#x3E;Subtitle 5&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;subtitle <mark>h6</mark>&#x22;&#x3E;Subtitle 6&#x3C;/div&#x3E;</code></pre>
+            </div>
+          </section>
+          <section data-heading="h3" data-name="Spaced">
+            <div class="content">
+              <p><b>Style Guide:</b></p>
+              <ul>
+                <li>
+                  <span>Tambahkan class <code>.spaced</code> untuk style default (normal spasi)</span>
+                </li>
+              </ul>
+              <div class="title h1 spaced">This is a Heading Titles</div>
+              <div class="subtitle h5">Description of title</div>
+              <pre lang="html"><code>&#x3C;div class=&#x22;title h1 <mark>spaced</mark>&#x22;&#x3E;This is a Heading Titles&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;subtitle h5&#x22;&#x3E;Description of title&#x3C;/div&#x3E;</code></pre>
+            </div>
+          </section>
+          <section data-heading="h2" data-name="Icon">
+            <div class="content">
+              <span class="icon">
+                <i class="fas fa-home"></i>
+              </span>
+              <pre lang="html"><code>&#x3C;span class=&#x22;icon&#x22;&#x3E;
+  &#x3C;i class=&#x22;fas fa-home&#x22;&#x3E;&#x3C;/i&#x3E;
+&#x3C;/span&#x3E;</code></pre>
+            </div>
+          </section>
+          <section data-heading="h3" data-name="Icon Text">
+            <div class="content">
+              <span class="icon-text">
+                <span class="icon">
+                  <i class="fas fa-home"></i>
+                </span>
+                <span>Home</span>
+              </span>
+              <pre lang="html"><code>&#x3C;span class=&#x22;icon-text&#x22;&#x3E;
+  &#x3C;span class=&#x22;icon&#x22;&#x3E;
+    &#x3C;i class=&#x22;fas fa-home&#x22;&#x3E;&#x3C;/i&#x3E;
+  &#x3C;/span&#x3E;
+  &#x3C;span&#x3E;Home&#x3C;/span&#x3E;
+&#x3C;/span&#x3E;</code></pre>
+            </div>
+          </section>
+          <section data-heading="h3" data-name="Multiple Icon">
+            <div class="content">
+              <span class="icon-text">
+                <span class="icon">
+                  <i class="fas fa-train"></i>
+                </span>
+                <span>Kebumen</span>
+                <span class="icon">
+                  <i class="fas fa-arrow-right"></i>
+                </span>
+                <span>Bandung</span>
+                <span class="icon">
+                  <i class="fas fa-arrow-right"></i>
+                </span>
+                <span>Jakarta</span>
+                <span class="icon">
+                  <i class="fas fa-flag-checkered"></i>
+                </span>
+              </span>
+              <pre lang="html"><code>&#x3C;span class=&#x22;icon-text&#x22;&#x3E;
+  &#x3C;span class=&#x22;icon&#x22;&#x3E;
+    &#x3C;i class=&#x22;fas fa-train&#x22;&#x3E;&#x3C;/i&#x3E;
+  &#x3C;/span&#x3E;
+  &#x3C;span&#x3E;Kebumen&#x3C;/span&#x3E;
+  &#x3C;span class=&#x22;icon&#x22;&#x3E;
+    &#x3C;i class=&#x22;fas fa-arrow-right&#x22;&#x3E;&#x3C;/i&#x3E;
+  &#x3C;/span&#x3E;
+  &#x3C;span&#x3E;Bandung&#x3C;/span&#x3E;
+  &#x3C;span class=&#x22;icon&#x22;&#x3E;
+    &#x3C;i class=&#x22;fas fa-arrow-right&#x22;&#x3E;&#x3C;/i&#x3E;
+  &#x3C;/span&#x3E;
+  &#x3C;span&#x3E;Jakarta&#x3C;/span&#x3E;
+  &#x3C;span class=&#x22;icon&#x22;&#x3E;
+    &#x3C;i class=&#x22;fas fa-flag-checkered&#x22;&#x3E;&#x3C;/i&#x3E;
+  &#x3C;/span&#x3E;
+&#x3C;/span&#x3E;</code></pre>
+            </div>
+          </section>
+          <section data-heading="h3" data-name="Paragraph Icon">
+            <div class="content">
+              <p>
+                <div>
+                  Kalau ada jarum yang patah
+                </div>
+                <div>
+                  Jangan simpan dalam peti
+                  <span class="icon-text">
+                    <span class="icon">
+                      <i class="fa fa-box-open"></i>
+                    </span>
+                    <span>peti</span>
+                  </span>
+                </div>
+                <div>
+                  Kalau ada kata 
+                  <span class="icon-text">
+                    <span class="icon">
+                      <i class="fa fa-handshake"></i>
+                    </span>
+                    <span>yang salah</span>
+                  </span>
+                </div>
+                <div>
+                  Jangan simpan dalam
+                  <span class="icon-text">
+                    <span class="icon">
+                      <i class="fa fa-heart"></i>
+                    </span>
+                    <span>hati</span>
+                  </span>
+                </div>
+              </p>
+              <pre lang="html"><code>&#x3C;p&#x3E;
+  &#x3C;div&#x3E;
+    Kalau ada jarum yang patah
+  &#x3C;/div&#x3E;
+  &#x3C;div&#x3E;
+    Jangan simpan dalam peti
+    &#x3C;span class=&#x22;icon-text&#x22;&#x3E;
+      &#x3C;span class=&#x22;icon&#x22;&#x3E;
+        &#x3C;i class=&#x22;fa fa-box-open&#x22;&#x3E;&#x3C;/i&#x3E;
+      &#x3C;/span&#x3E;
+      &#x3C;span&#x3E;peti&#x3C;/span&#x3E;
+    &#x3C;/span&#x3E;
+  &#x3C;/div&#x3E;
+  &#x3C;div&#x3E;
+    Kalau ada kata 
+    &#x3C;span class=&#x22;icon-text&#x22;&#x3E;
+      &#x3C;span class=&#x22;icon&#x22;&#x3E;
+        &#x3C;i class=&#x22;fa fa-handshake&#x22;&#x3E;&#x3C;/i&#x3E;
+      &#x3C;/span&#x3E;
+      &#x3C;span&#x3E;yang salah&#x3C;/span&#x3E;
+    &#x3C;/span&#x3E;
+  &#x3C;/div&#x3E;
+  &#x3C;div&#x3E;
+    Jangan simpan dalam
+    &#x3C;span class=&#x22;icon-text&#x22;&#x3E;
+      &#x3C;span class=&#x22;icon&#x22;&#x3E;
+        &#x3C;i class=&#x22;fa fa-heart&#x22;&#x3E;&#x3C;/i&#x3E;
+      &#x3C;/span&#x3E;
+      &#x3C;span&#x3E;hati&#x3C;/span&#x3E;
+    &#x3C;/span&#x3E;
+  &#x3C;/div&#x3E;
+&#x3C;/p&#x3E;</code></pre>
             </div>
           </section>
         </article>
