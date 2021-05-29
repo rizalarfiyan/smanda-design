@@ -13,9 +13,8 @@ class DOCS {
       esc: true,
       activeNav: 'menu-open',
       elementTabs: '.docs-tabs',
-      menuTabs: '.tabs-menu',
-      tabsSearch: 'pre',
-      codeCopy: 'code',
+      codeCopy: 'pre[lang]',
+      code: 'code',
       codeAction: 'dblclick',
     }
 
@@ -32,7 +31,6 @@ class DOCS {
   init() {
     this._nav()
     this._generate()
-    this._initTabs()
     this._initCode()
   }
   
@@ -93,9 +91,11 @@ class DOCS {
       let a = document.createElement("a")
       let name = secEl.getAttribute('data-name')
 
-      if (secEl.getAttribute('no-heading')) {
+      if (!secEl.hasAttribute('no-heading')) {
         let cHead = document.createElement(secEl.getAttribute('data-heading'))
-        cHead.textContent = name
+        let myHead = headLevel >= 4 ? 'h4' : ''
+        cHead.textContent = `# ${name}`
+        cHead.className = `title ${myHead}`
         secEl.prepend(cHead)
       }
 
@@ -111,7 +111,7 @@ class DOCS {
         e.preventDefault()
         that._disableNav()
         window.scrollTo({
-          top: secEl.offsetTop - 10,
+          top: secEl.offsetTop - (that.opt.offset / 2),
           behavior: 'smooth'
         })
       })
@@ -226,86 +226,10 @@ class DOCS {
     }
   }
 
-  _initTabs() {
-    let elementTabs = this.content.querySelectorAll(this.opt.elementTabs)
-    elementTabs.forEach(element => this._tabs(element))
-  }
-
-  _removeTabs(element) {
-    let button = element.querySelectorAll('button[data-tab]')
-    let tabsSearch = element.querySelectorAll(this.opt.tabsSearch)
-    Array.from([...button, ...tabsSearch]).map(element => {
-      if (element.classList.contains('active')) {
-        element.classList.remove('active')
-      }
-    })
-  }
-
-  _tabsClick(allElement, element, button) {
-    this._removeTabs(allElement)
-    element.classList.add('active')
-    button.classList.add('active')
-  }
-
-  _tabsGenerateButton(allElement, element) {
-    return Array.from(element).map((elem, i) => {
-      let button = document.createElement('button')
-      button.textContent = elem.getAttribute('lang')
-      button.setAttribute(['data-tab'], i)
-      button.addEventListener('click', () => this._tabsClick(allElement, elem, button))
-      if (i === 0) {
-        elem.classList.add('active')
-        button.className = 'active'
-      }
-      return button
-    })
-  }
-
-  _tabsContent(element) {
-    return Array.from(element).map(elem => {
-      elem.classList.add('highlighter')
-      return elem
-    })
-  }
-
-  _tabsElement() {
-    let tabButton = document.createElement('div')
-    tabButton.className = this.opt.classButtonTab
-    return tabButton.outerHTML
-  }
-
-  _tabs(element) {
-    let pre = element.querySelectorAll(this.opt.tabsSearch)
-    let menuTabs = element.querySelector(this.opt.menuTabs)
-    menuTabs.append(...this._tabsGenerateButton(element, pre))
-  }
-
   _initCode() {
     let element = this.content.querySelectorAll(this.opt.codeCopy)
-    Array.from(element).map(el => {
-      hljs.highlightBlock(el);
-      this._copyAction(el)
-    })
-  }
-
-  _copyAction(element) {
-    element.addEventListener(this.opt.codeAction, (e) => {
-      let target = e.target || e.srcElement;
-      let range, selection
-      if (document.body.createTextRange) {
-        range = document.body.createTextRange();
-        range.moveToElementText(target);
-        range.select();
-        document.execCommand('copy')
-      } else if (window.getSelection) {
-        selection = window.getSelection();
-        range = document.createRange();
-        range.selectNodeContents(target);
-        selection.removeAllRanges();
-        selection.addRange(range);
-        document.execCommand('copy')
-      }
-      e.stopPropagation()
+    Array.from(element).map((el, i) => {
+      el.querySelector(this.opt.code).classList.add(`language-${el.getAttribute('lang')}`)
     })
   }
 }

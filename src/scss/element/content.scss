@@ -19,6 +19,8 @@ $content-table-head-cell-color: $text-strong;
 $content-table-foot-cell-border-width: 2px 0 0;
 $content-table-foot-cell-color: $text-strong;
 
+$paragraph-indent: 3.5rem;
+
 .content {
   @include block;
 
@@ -78,6 +80,21 @@ $content-table-foot-cell-color: $text-strong;
   h6 {
     font-size: 1em;
     margin-bottom: 1em;
+  }
+
+  p {
+    &.drop-cap:first-letter {
+      float: left;
+      position: relative;
+      font-weight: $weight-bold;
+      font-size: 400%;
+      margin: -20px 0;
+      padding: 8px 12px;
+    }
+
+    &.indent {
+      text-indent: $paragraph-indent;
+    }
   }
 
   blockquote {
@@ -208,19 +225,28 @@ $content-table-foot-cell-color: $text-strong;
     }
   }
 
-  &.is-small {
+  &.small {
     font-size: $size-small;
   }
 
-  &.is-normal {
+  &.normal {
     font-size: $size-normal;
   }
 
-  &.is-medium {
+  &.medium, &.large {
+    p {
+      &.drop-cap:first-letter {
+        margin: -30px 0;
+        padding: 8px 20px;
+      }
+    }
+  }
+
+  &.medium {
     font-size: $size-medium;
   }
 
-  &.is-large {
+  &.large {
     font-size: $size-large;
   }
 }

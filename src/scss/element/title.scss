@@ -52,7 +52,7 @@ $subtitle-negative-margin: -1.25rem;
   font-weight: $title-weight;
   line-height: $title-line-height;
 
-  strong {
+  b, strong {
     color: $title-strong-color;
     font-weight: $title-strong-weight;
   }
@@ -63,7 +63,7 @@ $subtitle-negative-margin: -1.25rem;
 
   @each $size in $sizes {
     $i: index($sizes, $size);
-    &.is-#{$i} {
+    &.h#{$i} {
       font-size: $size;
     }
   }
@@ -80,7 +80,7 @@ $subtitle-negative-margin: -1.25rem;
   font-weight: $subtitle-weight;
   line-height: $subtitle-line-height;
 
-  strong {
+  b, strong {
     color: $subtitle-strong-color;
     font-weight: $subtitle-strong-weight;
   }
@@ -91,7 +91,7 @@ $subtitle-negative-margin: -1.25rem;
 
   @each $size in $sizes {
     $i: index($sizes, $size);
-    &.is-#{$i} {
+    &.h#{$i} {
       font-size: $size;
     }
   }

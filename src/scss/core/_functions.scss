@@ -5,6 +5,10 @@
   @return $map;
 }
 
+@function color($mycolor) {
+  @return map-get($colors, $mycolor);
+}
+
 @function powerNumber($number, $exp) {
   $value: 1;
   @if $exp > 0 {

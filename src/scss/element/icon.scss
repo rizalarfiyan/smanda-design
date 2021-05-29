@@ -13,17 +13,17 @@ $icon-text-spacing: 0.25em;
   height: $icon-dimensions;
   width: $icon-dimensions;
 
-  &.is-small {
+  &.small {
     height: $icon-dimensions-small;
     width: $icon-dimensions-small;
   }
 
-  &.is-medium {
+  &.medium {
     height: $icon-dimensions-medium;
     width: $icon-dimensions-medium;
   }
 
-  &.is-large {
+  &.large {
     height: $icon-dimensions-large;
     width: $icon-dimensions-large;
   }

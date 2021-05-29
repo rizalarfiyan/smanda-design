@@ -1,76 +1,96 @@
 @import 'initial-variables';
 @import 'functions';
 
-$light: $white-ter;
-$dark: $grey-darker;
+$colors: (
+  // Basic Color
+  'primary': $primary,
+  'info': $info,
+  'success': $success,
+  'warning': $warning,
+  'danger': $danger,
 
-// Invert colors
-$primary-invert: findColorInvert($primary);
-$primary-light: findLightColor($primary);
-$primary-dark: findDarkColor($primary);
+  'light': $light,
+  'dark': $dark,
 
-$info-invert: findColorInvert($info);
-$info-light: findLightColor($info);
-$info-dark: findDarkColor($info);
+  // Invert colors
+  'primary-invert': findColorInvert($primary),
+  'primary-light': findLightColor($primary),
+  'primary-dark': findDarkColor($primary),
 
-$success-invert: findColorInvert($success);
-$success-light: findLightColor($success);
-$success-dark: findDarkColor($success);
+  'info-invert': findColorInvert($info),
+  'info-light': findLightColor($info),
+  'info-dark': findDarkColor($info),
 
-$warning-invert: findColorInvert($warning);
-$warning-light: findLightColor($warning);
-$warning-dark: findDarkColor($warning);
+  'success-invert': findColorInvert($success),
+  'success-light': findLightColor($success),
+  'success-dark': findDarkColor($success),
 
-$danger-invert: findColorInvert($danger);
-$danger-light: findLightColor($danger);
-$danger-dark: findDarkColor($danger);
+  'warning-invert': findColorInvert($warning),
+  'warning-light': findLightColor($warning),
+  'warning-dark': findDarkColor($warning),
 
-$light-invert: findColorInvert($light);
-$dark-invert: findColorInvert($dark);
+  'danger-invert': findColorInvert($danger),
+  'danger-light': findLightColor($danger),
+  'danger-dark': findDarkColor($danger),
 
-// General colors
-$scheme-main: $white;
-$scheme-main-bis: $white-bis;
-$scheme-main-ter: $white-ter;
-$scheme-invert: $black;
-$scheme-invert-bis: $black-bis;
-$scheme-invert-ter: $black-ter;
+  'light-invert': findColorInvert($light),
+  'dark-invert': findColorInvert($dark),
 
-$background: $white-ter;
+  // General colors
+  'white': $white,
+  'white-bis': $white-bis,
+  'white-ter': $white-ter,
+  'black': $black,
+  'black-bis': $black-bis,
+  'black-ter': $black-ter,
 
-$border: $grey-lighter;
-$border-hover: $grey-light;
-$border-light: $grey-lightest;
-$border-light-hover: $grey-light;
+  // Gray Color
+  'gray-darker': $gray-darker,
+  'gray-dark': $gray-dark,
+  'gray': $gray,
+  'gray-light': $gray-light,
+  'gray-lighter': $gray-lighter,
+  'gray-lightest': $gray-lightest,
+
+  // Misc
+  'code': darken($danger, 15%),
+);
+
+$background: color('white-ter');
+
+$border: color('gray-lighter');
+$border-hover: color('gray-light');
+$border-light: color('gray-lightest');
+$border-light-hover: color('gray-light');
 
 // Text colors
-$text: $grey-dark;
+$text: color('gray-dark');
 $text-invert: findColorInvert($text);
-$text-light: $grey;
-$text-strong: $grey-darker;
+$text-light: color('gray');
+$text-strong: color('gray-darker');
 
 // Code colors
-$code: darken($danger, 15%);
+$code: color('code');
 $code-background: $background;
 
 $pre: $text;
 $pre-background: $background;
 
 // Link colors
-$link: $primary;
-$link-invert: $primary-invert;
-$link-light: $primary-light;
-$link-dark: $primary-dark;
-$link-visited: $primary-dark;
+$link: color('primary');
+$link-invert: color('primary-invert');
+$link-light: color('primary-light');
+$link-dark: color('primary-dark');
+$link-visited: color('primary-dark');
 
-$link-hover: $grey-darker;
-$link-hover-border: $grey-light;
+$link-hover: color('gray-darker');
+$link-hover-border: color('gray-light');
 
-$link-focus: $grey-darker;
-$link-focus-border: $primary;
+$link-focus: color('gray-darker');
+$link-focus-border: color('primary');
 
-$link-active: $grey-darker;
-$link-active-border: $grey-dark;
+$link-active: color('gray-darker');
+$link-active-border: color('gray-dark');
 
 // Typography
 $family-primary: $family-sans-serif;
@@ -82,7 +102,7 @@ $size-medium: $size-5;
 $size-large: $size-4;
 
 // Effects
-$shadow: 0 0.5em 1em -0.125em rgba($scheme-invert, 0.1), 0 0px 0 1px rgba($scheme-invert, 0.02);
+$shadow: 0 0.5em 1em -0.125em rgba(color('black'), 0.1), 0 0px 0 1px rgba(color('black'), 0.02);
 
 // Size Title
 $sizes: $size-1 $size-2 $size-3 $size-4 $size-5 $size-6 $size-7;
