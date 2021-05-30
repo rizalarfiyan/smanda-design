@@ -1,0 +1,41 @@
+@import '../core/index';
+
+$position: ('relative');
+@each $value in $position {
+  .#{$value} {
+    position: $value;
+  }
+}
+
+.round {
+  border-radius: $radius;
+}
+
+$border-radius: (
+  'small': $radius-small,
+  'normal': $radius,
+  'large': $radius-small,
+  'full': $radius-rounded,
+);
+
+@each $name, $value in $border-radius {
+  .round-#{$name} {
+    border-radius: $value;
+  }
+}
+
+.pointer {
+  cursor: pointer;
+}
+
+.hidden {
+  overflow: hidden;
+}
+
+.y-auto {
+  overflow-y: auto;
+}
+
+.x-auto {
+  overflow-x: auto;
+}

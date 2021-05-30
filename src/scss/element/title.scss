@@ -1,4 +1,4 @@
-@import '../core/mixins';
+@import '../core/index';
 
 $title-color: $text-strong;
 $title-family: false;
@@ -20,7 +20,7 @@ $subtitle-strong-weight: $weight-semibold;
 $subtitle-negative-margin: -1.25rem;
 
 .title, .subtitle {
-  @include block;
+  @extend %block;
 
   word-break: break-word;
 

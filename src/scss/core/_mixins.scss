@@ -52,3 +52,12 @@
     margin-bottom: $spacing;
   }
 }
+
+// Misc
+@mixin overlay($offset: 0, $position: 'absolute') {
+  bottom: $offset;
+  left: $offset;
+  position: $position;
+  right: $offset;
+  top: $offset;
+}

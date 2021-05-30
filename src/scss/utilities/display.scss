@@ -1,5 +1,4 @@
-$display: ('block', 'flex', 'inline-flex', 'inline-block');
-
+$display: ('block', 'flex', 'inline-flex', 'inline-block', 'none');
 @each $value in $display {
   .#{$value} {
     display: #{$value};
