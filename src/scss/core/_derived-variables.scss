@@ -3,57 +3,73 @@
 
 $colors: (
   // Basic Color
-  'primary': $primary,
-  'info': $info,
-  'success': $success,
-  'warning': $warning,
-  'danger': $danger,
+  'primary': (
+    'main': $primary,
+    'invert': findColorInvert($primary),
+    'light': findLightColor($primary),
+    'dark': findDarkColor($primary),
+  ),
 
-  'light': $light,
-  'dark': $dark,
+  'success': (
+    'main': $success,
+    'invert': findColorInvert($success),
+    'light': findLightColor($success),
+    'dark': findDarkColor($success),
+  ),
 
-  // Invert colors
-  'primary-invert': findColorInvert($primary),
-  'primary-light': findLightColor($primary),
-  'primary-dark': findDarkColor($primary),
+  'info': (
+    'main': $info,
+    'invert': findColorInvert($info),
+    'light': findLightColor($info),
+    'dark': findDarkColor($info),
+  ),
 
-  'info-invert': findColorInvert($info),
-  'info-light': findLightColor($info),
-  'info-dark': findDarkColor($info),
+  'warning': (
+    'main': $warning,
+    'invert': findColorInvert($warning),
+    'light': findLightColor($warning),
+    'dark': findDarkColor($warning),
+  ),
 
-  'success-invert': findColorInvert($success),
-  'success-light': findLightColor($success),
-  'success-dark': findDarkColor($success),
+  'danger': (
+    'main': $danger,
+    'invert': findColorInvert($danger),
+    'light': findLightColor($danger),
+    'dark': findDarkColor($danger),
+  ),
 
-  'warning-invert': findColorInvert($warning),
-  'warning-light': findLightColor($warning),
-  'warning-dark': findDarkColor($warning),
+  'light': (
+    'main': $light,
+    'invert': findColorInvert($light),
+  ),
 
-  'danger-invert': findColorInvert($danger),
-  'danger-light': findLightColor($danger),
-  'danger-dark': findDarkColor($danger),
-
-  'light-invert': findColorInvert($light),
-  'dark-invert': findColorInvert($dark),
+  'dark': (
+    'main': $dark,
+    'invert': findColorInvert($dark),
+  ),
 
   // General colors
-  'white': $white,
-  'white-bis': $white-bis,
-  'white-ter': $white-ter,
-  'black': $black,
-  'black-bis': $black-bis,
-  'black-ter': $black-ter,
+  'white': (
+    'main': $white,
+    'bis': $white-bis,
+    'ter': $white-ter,
+  ),
+
+  'black': (
+    'main': $black,
+    'bis': $black-bis,
+    'ter': $black-ter,
+  ),
 
   // Gray Color
-  'gray-darker': $gray-darker,
-  'gray-dark': $gray-dark,
-  'gray': $gray,
-  'gray-light': $gray-light,
-  'gray-lighter': $gray-lighter,
-  'gray-lightest': $gray-lightest,
-
-  // Misc
-  'code': darken($danger, 15%),
+  'gray': (
+    'darker': $gray-darker,
+    'dark': $gray-dark,
+    'main': $gray,
+    'light': $gray-light,
+    'lighter': $gray-lighter,
+    'lightest': $gray-lightest,
+  ),
 );
 
 $background: color('white-ter');
@@ -70,7 +86,7 @@ $text-light: color('gray');
 $text-strong: color('gray-darker');
 
 // Code colors
-$code: color('code');
+$code: darken($danger, 15%);
 $code-background: $background;
 
 $pre: $text;

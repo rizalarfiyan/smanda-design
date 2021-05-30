@@ -1,5 +1,11 @@
 :root {
-  @each $color, $value in $colors {
-    --#{$color}: #{$value};
+  @each $variant, $mode in $colors {
+    @each $value, $color in $mode {
+      @if ($value == "main") {
+        --#{$variant}: #{$color};
+      } @else {
+        --#{$variant}-#{$value}: #{$color};
+      }
+    }
   }
 }
