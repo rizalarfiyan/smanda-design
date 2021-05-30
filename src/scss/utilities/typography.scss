@@ -1,0 +1,46 @@
+@import '../core/mixins';
+
+// Text Size
+@each $value in $sizes {
+  $i: index($sizes, $value);
+  .size-#{$i} {
+    font-size: $value!important;
+  }
+}
+
+// Text Transform
+$transform: ('uppercase', 'lowercase', 'capitalize', 'italic');
+@each $value in $transform {
+  .#{$value} {
+    text-transform: $value!important;
+  }
+}
+
+// Text Align
+$aligns: ('center', 'left', 'right', 'justify');
+@each $value in $aligns {
+  .text-#{$value} {
+    text-align: $value!important;
+  }
+}
+
+// Text Wight
+.font-light {
+  font-weight: $weight-light!important;
+}
+
+.font-normal {
+  font-weight: $weight-normal!important;
+}
+
+.font-medium {
+  font-weight: $weight-medium!important;
+}
+
+.font-semibold {
+  font-weight: $weight-semibold!important;
+}
+
+.font-bold {
+  font-weight: $weight-bold!important;
+}

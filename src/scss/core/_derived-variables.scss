@@ -102,7 +102,7 @@ $size-medium: $size-5;
 $size-large: $size-4;
 
 // Effects
-$shadow: 0 0.5em 1em -0.125em rgba(color('black'), 0.1), 0 0px 0 1px rgba(color('black'), 0.02);
+$shadow: 0 0.5em 1em -0.125em rgba(0, 0, 0, 0.1), 0 0px 0 1px rgba(0, 0, 0, 0.02);
 
 // Size Title
 $sizes: $size-1 $size-2 $size-3 $size-4 $size-5 $size-6 $size-7;

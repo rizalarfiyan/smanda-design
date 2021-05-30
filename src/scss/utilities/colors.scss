@@ -1,0 +1,10 @@
+$default-color: ('primary', 'info', 'success', 'warning', 'danger', 'light', 'dark');
+@each $value in $default-color {
+  .bg-#{$value} {
+    background-color: color($value)!important;
+  }
+
+  .text-#{$value} {
+    color: color($value)!important;
+  }
+}
