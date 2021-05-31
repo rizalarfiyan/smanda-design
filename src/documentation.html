@@ -1429,6 +1429,188 @@
 &#x3C;/table&#x3E;</code></pre>
             </div>
           </section>
+          <section data-heading="h2" data-name="Image">
+            <div class="content">
+              <p><b>Style Guide</b></p>
+              <ul>
+                <li>
+                  <span>Menggunakan class <code>.image</code> pada orang tua dari gambar tersebut.</span>
+                </li>
+                <li>
+                  <span>Anak dapat berupa gambar (<code>img</code>) atau class <code>.element</code>.</span>
+                </li>
+                <li>
+                  <span>Dapat menggunakan ukuran dari gambar.</span>
+                </li>
+                <li>
+                  <span>Melakukan perbandingan supaya hasil menjadi lebih responsive.</span>
+                </li>
+              </ul>
+              <figure class="image size-128">
+                <img src="https://dummyimage.com/128x128/ccc/9c9c9c" alt="Placeholder">
+              </figure>
+              <pre lang="html"><code>&#x3C;figure class=&#x22;<mark>image</mark> <mark>size-128</mark>&#x22;&#x3E;
+  &#x3C;img src=&#x22;https://dummyimage.com/128x128/ccc/9c9c9c&#x22; alt=&#x22;Placeholder&#x22;&#x3E;
+&#x3C;/figure&#x3E;</code></pre>
+            </div>
+          </section>
+          <section data-heading="h3" data-name="Image Size">
+            <div class="content">
+              <p><b>Style Guide</b></p>
+              <ul>
+                <li>
+                  <span>Terdapat 7 ukuran dimensi gambar.</span>
+                </li>
+              </ul>
+              <table class="table bordered y-centered">
+                <thead>
+                  <td>Class</td>
+                  <td>Gambar</td>
+                  <td>Ukuran</td>
+                </thead>
+                <body>
+                  <tr>
+                    <td>
+                      <span><code>image size-16</code></span>
+                    </td>
+                    <td>
+                      <figure class="image size-16">
+                        <img src="https://dummyimage.com/16x16/ccc/9c9c9c" alt="Placeholder">
+                      </figure>
+                    </td>
+                    <td>
+                      <span>16px x 16px</span>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <span><code>image size-24</code></span>
+                    </td>
+                    <td>
+                      <figure class="image size-24">
+                        <img src="https://dummyimage.com/24x24/ccc/9c9c9c" alt="Placeholder">
+                      </figure>
+                    </td>
+                    <td>
+                      <span>24px x 24px</span>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <span><code>image size-32</code></span>
+                    </td>
+                    <td>
+                      <figure class="image size-32">
+                        <img src="https://dummyimage.com/32x32/ccc/9c9c9c" alt="Placeholder">
+                      </figure>
+                    </td>
+                    <td>
+                      <span>32px x 32px</span>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <span><code>image size-48</code></span>
+                    </td>
+                    <td>
+                      <figure class="image size-48">
+                        <img src="https://dummyimage.com/48x48/ccc/9c9c9c" alt="Placeholder">
+                      </figure>
+                    </td>
+                    <td>
+                      <span>48px x 48px</span>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <span><code>image size-64</code></span>
+                    </td>
+                    <td>
+                      <figure class="image size-64">
+                        <img src="https://dummyimage.com/64x64/ccc/9c9c9c" alt="Placeholder">
+                      </figure>
+                    </td>
+                    <td>
+                      <span>64px x 64px</span>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <span><code>image size-96</code></span>
+                    </td>
+                    <td>
+                      <figure class="image size-96">
+                        <img src="https://dummyimage.com/96x96/ccc/9c9c9c" alt="Placeholder">
+                      </figure>
+                    </td>
+                    <td>
+                      <span>96px x 96px</span>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <span><code>image size-128</code></span>
+                    </td>
+                    <td>
+                      <figure class="image size-128">
+                        <img src="https://dummyimage.com/128x128/ccc/9c9c9c" alt="Placeholder">
+                      </figure>
+                    </td>
+                    <td>
+                      <span>128px x 128px</span>
+                    </td>
+                  </tr>
+                </body>
+              </table>
+            </div>
+          </section>
+          <section data-heading="h3" data-name="Image Ratio">
+            <div class="content">
+              <table class="table bordered">
+                <tbody>
+                  <tr>
+                    <td>
+                      <span><code>image ratio-16x9</code></span>
+                    </td>
+                    <td>
+                      <figure class="image ratio-16x9">
+                        <img src="https://dummyimage.com/256x256/ccc/9c9c9c" alt="Placeholder">
+                      </figure>
+                    </td>
+                    <td>
+                      <span>resolution 16:9</span>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <span><code>image ratio-4x3</code></span>
+                    </td>
+                    <td>
+                      <figure class="image ratio-4x3">
+                        <img src="https://dummyimage.com/256x256/ccc/9c9c9c" alt="Placeholder">
+                      </figure>
+                    </td>
+                    <td>
+                      <span>resolution 4:3</span>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <span><code>image ratio-1x1</code></span>
+                    </td>
+                    <td>
+                      <figure class="image ratio-1x1">
+                        <img src="https://dummyimage.com/256x256/ccc/9c9c9c" alt="Placeholder">
+                      </figure>
+                    </td>
+                    <td>
+                      <span>resolution 1:1</span>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </section>
         </article>
       </div>
     </section>
