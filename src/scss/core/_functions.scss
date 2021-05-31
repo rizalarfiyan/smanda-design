@@ -17,6 +17,17 @@
   @return $value;
 }
 
+@function keyInList($list, $key) {
+  @if type-of($list) == list {
+    @each $value in $list {
+      @if $value == $key {
+        @return true;
+      }
+    }
+  }
+  @return false;
+}
+
 @function powerNumber($number, $exp) {
   $value: 1;
   @if $exp > 0 {

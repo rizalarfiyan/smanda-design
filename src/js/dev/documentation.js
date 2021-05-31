@@ -234,4 +234,31 @@ class DOCS {
   }
 }
 
+class Demo {
+  constructor(options) {
+    let defaultOption = {
+      table: 'thead[data-loop], tr[data-loop]',
+    }
+
+    options ? this.options = Object.assign(defaultOption, options) : this.options = defaultOption
+  }
+
+  init() {
+    this._tableLoop()
+  }
+
+  _tableLoop() {
+    let tableLoop = document.querySelectorAll(this.options.table)
+    tableLoop.forEach((element, index) => {
+      let loop = element.getAttribute('data-loop')
+      for(let i = 0; i < loop; i++) {
+        let th = document.createElement('td')
+        th.textContent = `${index + 1}.${i + 1}`
+        element.append(th)
+      }
+    })
+  }
+}
+
 new DOCS().init()
+new Demo().init()

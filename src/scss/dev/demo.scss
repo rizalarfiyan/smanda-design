@@ -33,17 +33,9 @@ $sidebar-top: 64px;
     .wrap-index {
       margin: 10px;
       padding: 40px;
-      background: color('color');
+      background: color('white');
       border-radius: 6px;
       box-shadow: $shadow;
-    }
-
-    h1 {
-      margin: 0 0 4px;
-    }
-
-    p {
-      margin-bottom: 2rem;
     }
 
     i {
@@ -248,7 +240,12 @@ $sidebar-top: 64px;
       }
     }
 
+    .demo-icon > span {
+      border: 1px solid red;
+    }
+
     pre[lang] {
+      margin-top: $size-4;
       position: relative;
 
       &:hover {

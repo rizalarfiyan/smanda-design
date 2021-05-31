@@ -1,10 +1,11 @@
-$default-color: ('primary', 'info', 'success', 'warning', 'danger', 'light', 'dark');
-@each $value in $default-color {
-  .bg-#{$value} {
-    background-color: color($value)!important;
+@import '../core/index';
+
+@each $name, $value in $colors {
+  .bg-#{$name} {
+    background-color: color($name)!important;
   }
 
-  .text-#{$value} {
-    color: color($value)!important;
+  .text-#{$name} {
+    color: color($name)!important;
   }
 }

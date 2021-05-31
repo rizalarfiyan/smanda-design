@@ -1,0 +1,205 @@
+@import '../core/index';
+
+$table-color: $text-strong;
+$table-background-color: color('white');
+
+$table-cell-border: 1px solid $border;
+$table-cell-border-width: 0 0 1px;
+$table-cell-padding: 0.5em 0.75em;
+$table-cell-heading-color: $text-strong;
+
+$table-head-cell-border-width: 0 0 2px;
+$table-head-cell-color: $text-strong;
+$table-foot-cell-border-width: 2px 0 0;
+$table-foot-cell-color: $text-strong;
+
+$table-head-background-color: transparent;
+$table-body-background-color: transparent;
+$table-foot-background-color: transparent;
+
+$table-row-hover-background-color: color('white-bis');
+
+$table-row-active-background-color: color('primary');
+$table-row-active-color: color('primary-invert');
+
+$table-striped-row-even-background-color: color('white-bis');
+$table-striped-row-even-hover-background-color: color('white-ter');
+
+$table-colors: $colors;
+$allowed-colors: ('primary', 'success', 'info', 'warning', 'danger');
+
+.table {
+  @extend %block;
+
+  background-color: $table-background-color;
+  color: $table-color;
+
+  td, th {
+    border: $table-cell-border;
+    border-width: $table-cell-border-width;
+    padding: $table-cell-padding;
+    vertical-align: top;
+
+    @each $name, $value in $table-colors {
+      @if keyInList($allowed-colors, $name) {
+        &.#{$name} {
+          background-color: color($name);
+          border-color: color($name);
+          color: color('#{$name}-invert');
+        }
+      }
+    }
+
+    &.narrow {
+      white-space: nowrap;
+      width: 1%;
+    }
+
+    &.selected {
+      background-color: $table-row-active-background-color;
+      color: $table-row-active-color;
+
+      a, strong {
+        color: currentColor;
+      }
+    }
+
+    &.y-centered {
+      vertical-align: middle;
+    }
+
+    &.x-centered {
+      text-align: middle;
+    }
+  }
+
+  th {
+    color: $table-cell-heading-color;
+
+    &:not([align]) {
+      text-align: inherit;
+    }
+  }
+
+  tr {
+    &.selected {
+      background-color: $table-row-active-background-color;
+      color: $table-row-active-color;
+
+      a, strong {
+        color: currentColor;
+      }
+
+      td, th {
+        border-color: $table-row-active-color;
+        color: currentColor;
+      }
+    }
+  }
+
+  thead {
+    background-color: $table-head-background-color;
+
+    td, th {
+      border-width: $table-head-cell-border-width;
+      color: $table-head-cell-color;
+    }
+  }
+
+  tfoot {
+    background-color: $table-foot-background-color;
+
+    td, th {
+      border-width: $table-foot-cell-border-width;
+      color: $table-foot-cell-color;
+    }
+  }
+
+  tbody {
+    background-color: $table-body-background-color;
+
+    tr {
+      &:last-child {
+        td, th {
+          border-bottom-width: 0;
+        }
+      }
+    }
+  }
+
+  &.bordered {
+    td, th {
+      border-width: 1px;
+    }
+
+    tr {
+      &:last-child {
+        td, th {
+          border-bottom-width: 1px;
+        }
+      }
+    }
+  }
+
+  &.fullwidth {
+    width: 100%;
+  }
+
+  &.hoverable {
+    tbody {
+      tr:not(.selected) {
+        &:hover {
+          background-color: $table-row-hover-background-color;
+        }
+      }
+    }
+
+    &.striped {
+      tbody {
+        tr:not(.selected) {
+          &:hover {
+            background-color: $table-row-hover-background-color;
+            &:nth-child(even) {
+              background-color: $table-striped-row-even-hover-background-color;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  &.narrow {
+    td, th {
+      padding: 0.25em 0.5em;
+    }
+  }
+
+  &.striped {
+    tbody {
+      tr:not(.selected) {
+        &:nth-child(even) {
+          background-color: $table-striped-row-even-background-color;
+        }
+      }
+    }
+  }
+
+  &.x-centered {
+    text-align: center;
+  }
+
+  &.y-centered {
+    td, th {
+      vertical-align: middle;
+    }
+  }
+}
+
+.table-container {
+  @extend %block;
+  @include overflow-touch;
+
+  overflow: auto;
+  overflow-y: hidden;
+  max-width: 100%;
+}

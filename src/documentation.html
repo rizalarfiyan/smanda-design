@@ -332,7 +332,7 @@
                 </li>
                 <li>
                   <span>
-                    Dapat memilih menggunakan type (bawaan HTML) atau menggunakan class
+                    Dapat memilih menggunakan <mark>type</mark> (bawaan HTML) atau menggunakan <mark>class</mark>
                   </span>
                 </li>
               </ul>
@@ -521,6 +521,22 @@
           </section>
           <section data-heading="h2" data-name="Icon">
             <div class="content">
+              <p><b>Style Guide:</b></p>
+              <ul>
+                <li>
+                  <span>Menggunakan class <code>.icon</code> pada orang tua dari icon dan <code>.icon-text</code> pada kode yang berisi di tengah tengah teks.</span>
+                </li>
+                <li>
+                  <span>Icon yang digunakan adalah <a href="https://fontawesome.com/v5/cheatsheet" target="_blank" rel="noopener noreferrer">Icon Font Awesome 5 Free</a>.</span>
+                </li>
+                <li>
+                  <span>Jenis jenis icon sudah terdapat pada dokumentasi cheatsheet Font Awesome tersebut.</span>
+                </li>
+                <li>
+                  <span>Dapat dikombinasikan dengan menggunakan warna pada icon tersebut. (<mark>utilities/color</mark>)</span>
+                </li>
+              </ul>
+              <p><b>Basic Style</b></p>
               <span class="icon">
                 <i class="fas fa-home"></i>
               </span>
@@ -649,6 +665,768 @@
     &#x3C;/span&#x3E;
   &#x3C;/div&#x3E;
 &#x3C;/p&#x3E;</code></pre>
+            </div>
+          </section>
+          <section data-heading="h3" data-name="Icon Combination">
+            <div class="content">
+              <span class="icon-text">
+                <span class="icon text-info">
+                  <i class="fas fa-info-circle"></i>
+                </span>
+                <span>Informasi</span>
+              </span>
+              <p class="block">
+                Informasi update akan berlangung beberapa jam lagi.
+              </p>
+              
+              <span class="icon-text">
+                <span class="icon text-success">
+                  <i class="fas fa-check-square"></i>
+                </span>
+                <span>Berhasil</span>
+              </span>
+              <p class="block">
+                Anda berhasil masuk menggunakan akun google.
+              </p>
+              
+              <span class="icon-text">
+                <span class="icon text-warning">
+                  <i class="fas fa-exclamation-triangle"></i>
+                </span>
+                <span>Perungatan</span>
+              </span>
+              <p class="block">
+                System mengindikasi bahwa anda melakukan kecurangan sebanyak 2 kali.
+              </p>
+              
+              <span class="icon-text">
+                <span class="icon text-danger">
+                  <i class="fas fa-ban"></i>
+                </span>
+                <span>Error!</span>
+              </span>
+              <p class="block">
+                Terjadi masalah pada perangkat anda! Coba kembali beberapa saat.
+              </p>
+
+              <pre lang="html"><code>&#x3C;span class=&#x22;icon-text&#x22;&#x3E;
+  &#x3C;span class=&#x22;icon text-info&#x22;&#x3E;
+    &#x3C;i class=&#x22;fas fa-info-circle&#x22;&#x3E;&#x3C;/i&#x3E;
+  &#x3C;/span&#x3E;
+  &#x3C;span&#x3E;Informasi&#x3C;/span&#x3E;
+&#x3C;/span&#x3E;
+&#x3C;p class=&#x22;block&#x22;&#x3E;
+  Informasi update akan berlangung beberapa jam lagi.
+&#x3C;/p&#x3E;
+&#x3C;span class=&#x22;icon-text&#x22;&#x3E;
+  &#x3C;span class=&#x22;icon text-success&#x22;&#x3E;
+    &#x3C;i class=&#x22;fas fa-check-square&#x22;&#x3E;&#x3C;/i&#x3E;
+  &#x3C;/span&#x3E;
+  &#x3C;span&#x3E;Berhasil&#x3C;/span&#x3E;
+&#x3C;/span&#x3E;
+&#x3C;p class=&#x22;block&#x22;&#x3E;
+  Anda berhasil masuk menggunakan akun google.
+&#x3C;/p&#x3E;
+&#x3C;span class=&#x22;icon-text&#x22;&#x3E;
+  &#x3C;span class=&#x22;icon text-warning&#x22;&#x3E;
+    &#x3C;i class=&#x22;fas fa-exclamation-triangle&#x22;&#x3E;&#x3C;/i&#x3E;
+  &#x3C;/span&#x3E;
+  &#x3C;span&#x3E;Perungatan&#x3C;/span&#x3E;
+&#x3C;/span&#x3E;
+&#x3C;p class=&#x22;block&#x22;&#x3E;
+  System mengindikasi bahwa anda melakukan kecurangan sebanyak 2 kali.
+&#x3C;/p&#x3E;
+&#x3C;span class=&#x22;icon-text&#x22;&#x3E;
+  &#x3C;span class=&#x22;icon text-danger&#x22;&#x3E;
+    &#x3C;i class=&#x22;fas fa-ban&#x22;&#x3E;&#x3C;/i&#x3E;
+  &#x3C;/span&#x3E;
+  &#x3C;span&#x3E;Error!&#x3C;/span&#x3E;
+&#x3C;/span&#x3E;
+&#x3C;p class=&#x22;block&#x22;&#x3E;
+  Terjadi masalah pada perangkat anda! Coba kembali beberapa saat.
+&#x3C;/p&#x3E;</code></pre>
+            </div>
+          </section>
+          <section data-heading="h3" data-name="Icon Size">
+            <div class="content">
+              <p><b>Style guide:</b></p>
+              <ul>
+                <li>
+                  <span>Menggunakan class <code>small</code>, <code>medium</code>, <code>large</code> untuk menentukan ukuran dari icon tersebut.</span>
+                </li>
+              </ul>
+              <table class="table bordered y-centered">
+                <thead>
+                  <tr>
+                    <th>Container class</th>
+                    <th>Container size</th>
+                    <th>Font Awesome 5 class</th>
+                    <th>Icon size</th>
+                    <th>Result</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>
+                      <code>icon <mark>small</mark></code>
+                    </td>
+                    <td>
+                      <code>1rem x 1rem</code>
+                    </td>
+                    <td>
+                      <code>fas</code>
+                    </td>
+                    <td>
+                      <code>1em</code>
+                    </td>
+                    <td class="demo-icon">
+                      <span class="icon small">
+                        <i class="fas fa-home"></i>
+                      </span>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td rowspan="2">
+                      <code>icon</code>
+                    </td>
+                    <td rowspan="2">
+                      <code>1.5rem x 1.5rem</code>
+                    </td>
+                    <td>
+                      <code>fas</code>
+                    </td>
+                    <td>
+                      <code>1em</code>
+                    </td>
+                    <td class="demo-icon">
+                      <span class="icon">
+                        <i class="fas fa-home"></i>
+                      </span>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <code>fas fa-lg</code>
+                    </td>
+                    <td>
+                      <code>1.33em</code>
+                    </td>
+                    <td class="demo-icon">
+                      <span class="icon">
+                        <i class="fas fa-lg fa-home"></i>
+                      </span>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td rowspan="3">
+                      <code>icon <mark>medium</mark></code>
+                    </td>
+                    <td rowspan="3">
+                      <code>2rem x 2rem</code>
+                    </td>
+                    <td>
+                      <code>fas</code>
+                    </td>
+                    <td>
+                      <code>1em</code>
+                    </td>
+                    <td class="demo-icon">
+                      <span class="icon medium">
+                        <i class="fas fa-home"></i>
+                      </span>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <code>fas fa-lg</code>
+                    </td>
+                    <td>
+                      <code>1.33em</code>
+                    </td>
+                    <td class="demo-icon">
+                      <span class="icon medium">
+                        <i class="fas fa-lg fa-home"></i>
+                      </span>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <code>fas fa-2x</code>
+                    </td>
+                    <td>
+                      <code>2em</code>
+                    </td>
+                    <td class="demo-icon">
+                      <span class="icon medium">
+                        <i class="fas fa-2x fa-home"></i>
+                      </span>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td rowspan="3">
+                      <code>icon <mark>large</mark></code>
+                    </td>
+                    <td rowspan="4">
+                      <code>3rem x 3rem</code>
+                    </td>
+                    <td>
+                      <code>fas</code>
+                    </td>
+                    <td>
+                      <code>1em</code>
+                    </td>
+                    <td class="demo-icon">
+                      <span class="icon large">
+                        <i class="fas fa-home"></i>
+                      </span>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <code>fas fa-lg</code>
+                    </td>
+                    <td>
+                      <code>1.33em</code>
+                    </td>
+                    <td class="demo-icon">
+                      <span class="icon large">
+                        <i class="fas fa-lg fa-home"></i>
+                      </span>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <code>fas fa-2x</code>
+                    </td>
+                    <td>
+                      <code>2em</code>
+                    </td>
+                    <td class="demo-icon">
+                      <span class="icon large">
+                        <i class="fas fa-2x fa-home"></i>
+                      </span>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </section>
+          <section data-heading="h3" data-name="Icon Variation">
+            <div class="content">
+              <table class="table bordered y-centered">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Font Awesome class</th>
+                    <th>Result</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>
+                      Fixed width
+                    </td>
+                    <td>
+                      <code>fas fa-fw</code>
+                    </td>
+                    <td class="demo-icon">
+                      <span class="icon">
+                        <i class="fas fa-home fa-fw"></i>
+                      </span>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      Bordered
+                    </td>
+                    <td>
+                      <code>fas fa-border</code>
+                    </td>
+                    <td>
+                      <span class="icon">
+                        <i class="fas fa-home fa-border"></i>
+                      </span>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      Animated
+                    </td>
+                    <td>
+                      <code>fas fa-spinner fa-pulse</code>
+                    </td>
+                    <td class="demo-icon">
+                      <span class="icon">
+                        <i class="fas fa-spinner fa-pulse"></i>
+                      </span>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </section>
+          <section data-heading="h2" data-name="Box">
+            <p><b>Style guide:</b></p>
+            <ul>
+              <li>
+                <span>Dengan menggunakan class <code>.box</code> akan membentuk box</span>
+              </li>
+            </ul>
+            <div class="box">
+              <div class="title h3">Lorem ipsum dolor.</div>
+              <div class="subtitle h6">Lorem ipsum dolor sit amet consectetur adipisicing elit.</div>
+            </div>
+            <pre lang="html"><code>&#x3C;div class=&#x22;box&#x22;&#x3E;
+  &#x3C;div class=&#x22;title h3&#x22;&#x3E;Lorem ipsum dolor.&#x3C;/div&#x3E;
+  &#x3C;div class=&#x22;subtitle h6&#x22;&#x3E;Lorem ipsum dolor sit amet consectetur adipisicing elit.&#x3C;/div&#x3E;
+&#x3C;/div&#x3E;</code></pre>
+          </section>
+          <section data-heading="h2" data-name="Table">
+            <div class="content">
+              <p><b>Style guide:</b></p>
+              <ul>
+                <li>
+                  <span>Menggunakan class <code>.table</code> pada <code>table</code> tag.</span>
+                </li>
+              </ul>
+              <p><b>Basic style:</b></p>
+              <table class="table">
+                <thead>
+                  <td>
+                    satu
+                  </td>
+                  <td>
+                    dua
+                  </td>
+                </thead>
+                <tbody>
+                  <td>
+                    tiga
+                  </td>
+                  <td>
+                    empat
+                  </td>
+                </tbody>
+              </table>
+              <pre lang="html"><code>&#x3C;table class=&#x22;table&#x22;&#x3E;
+  &#x3C;thead&#x3E;
+    &#x3C;td&#x3E;
+      satu
+    &#x3C;/td&#x3E;
+    &#x3C;td&#x3E;
+      dua
+    &#x3C;/td&#x3E;
+  &#x3C;/thead&#x3E;
+  &#x3C;tbody&#x3E;
+    &#x3C;td&#x3E;
+      tiga
+    &#x3C;/td&#x3E;
+    &#x3C;td&#x3E;
+      empat
+    &#x3C;/td&#x3E;
+    &#x3C;td&#x3E;
+      lima
+    &#x3C;/td&#x3E;
+    &#x3C;td&#x3E;
+      enam
+    &#x3C;/td&#x3E;
+  &#x3C;/tbody&#x3E;
+&#x3C;/table&#x3E;</code></pre>
+            </div>
+          </section>
+          <section data-heading="h3" data-name="Table Variant">
+            <div class="content">
+              <p><b>Style guide:</b></p>
+              <ul>
+                <li>
+                  <span>Menambahkan class variant pada orang tua dari element tersebut</span>
+                </li>
+                <li>
+                  <span>Terdapat beberapa class dalam element berikut:<span>
+                    <ul>
+                      <li>
+                        <span>Pada <code>table</code> terdapat <code>.bordered</code>, <code>.fullwidth</code>, <code>.hoverable</code>, <code>.stripped</code>, <code>.narrow</code>, <code>.x-centered</code>, dan <code>.y-centered</code></span>
+                      </li>
+                      <li>
+                        <span>Pada <code>td</code> dan <code>th</code> terdapat <code>.narrow</code>, <code>.selected</code>, <code>.x-centered</code>, <code>.y-centered</code>, dan variasi warna (<code>primary</code>, <code>success</code>, <code>info</code>, <code>warning</code>, <code>danger</code>)</span>
+                      </li>
+                      <li>
+                        <span>Pada <code>tr</code> terdapat <code>.seleted</code></span>
+                      </li>
+                    </ul>
+                </li>
+              </ul>
+            </div>
+          </section>
+          <section data-heading="h4" data-name="Table Bordered">
+            <div class="content">
+              <table class="table bordered">
+                <thead>
+                  <td>
+                    satu
+                  </td>
+                  <td>
+                    dua
+                  </td>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>
+                      tiga
+                    </td>
+                    <td>
+                      empat
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      lima
+                    </td>
+                    <td>
+                      enam
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+              <pre lang="html"><code>&#x3C;table class=&#x22;table <mark>bordered</mark>&#x22;&#x3E;
+  &#x3C;thead&#x3E;
+    &#x3C;td&#x3E;
+      satu
+    &#x3C;/td&#x3E;
+    &#x3C;td&#x3E;
+      dua
+    &#x3C;/td&#x3E;
+  &#x3C;/thead&#x3E;
+  &#x3C;tbody&#x3E;
+    &#x3C;tr&#x3E;
+      &#x3C;td&#x3E;
+        tiga
+      &#x3C;/td&#x3E;
+      &#x3C;td&#x3E;
+        empat
+      &#x3C;/td&#x3E;
+    &#x3C;/tr&#x3E;
+    &#x3C;tr&#x3E;
+      &#x3C;td&#x3E;
+        lima
+      &#x3C;/td&#x3E;
+      &#x3C;td&#x3E;
+        enam
+      &#x3C;/td&#x3E;
+    &#x3C;/tr&#x3E;
+  &#x3C;/tbody&#x3E;
+&#x3C;/table&#x3E;</code></pre>
+            </div>
+          </section>
+          <section data-heading="h4" data-name="Table Stripped">
+            <div class="content">
+              <table class="table stripped">
+                <thead>
+                  <td>
+                    satu
+                  </td>
+                  <td>
+                    dua
+                  </td>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>
+                      tiga
+                    </td>
+                    <td>
+                      empat
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      lima
+                    </td>
+                    <td>
+                      enam
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+              <pre lang="html"><code>&#x3C;table class=&#x22;table <mark>stripped</mark>&#x22;&#x3E;
+  &#x3C;thead&#x3E;
+    &#x3C;td&#x3E;
+      satu
+    &#x3C;/td&#x3E;
+    &#x3C;td&#x3E;
+      dua
+    &#x3C;/td&#x3E;
+  &#x3C;/thead&#x3E;
+  &#x3C;tbody&#x3E;
+    &#x3C;tr&#x3E;
+      &#x3C;td&#x3E;
+        tiga
+      &#x3C;/td&#x3E;
+      &#x3C;td&#x3E;
+        empat
+      &#x3C;/td&#x3E;
+    &#x3C;/tr&#x3E;
+    &#x3C;tr&#x3E;
+      &#x3C;td&#x3E;
+        lima
+      &#x3C;/td&#x3E;
+      &#x3C;td&#x3E;
+        enam
+      &#x3C;/td&#x3E;
+    &#x3C;/tr&#x3E;
+  &#x3C;/tbody&#x3E;
+&#x3C;/table&#x3E;</code></pre>
+            </div>
+          </section>
+          <section data-heading="h4" data-name="Table Narrow">
+            <div class="content">
+              <table class="table narrow">
+                <thead>
+                  <td class="narrow">
+                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Minima dolorum deleniti?
+                  </td>
+                  <td>
+                    dua
+                  </td>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>
+                      tiga
+                    </td>
+                    <td>
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit enim deserunt perferendis?
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      lima
+                    </td>
+                    <td>
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit enim deserunt perferendis?
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+              <pre lang="html"><code>&#x3C;table class=&#x22;table <mark>narrow</mark>&#x22;&#x3E;
+  &#x3C;thead&#x3E;
+    &#x3C;td class=&#x22;<mark>narrow</mark>&#x22;&#x3E;
+      Lorem ipsum, dolor sit amet consectetur adipisicing elit. Minima dolorum deleniti?
+    &#x3C;/td&#x3E;
+    &#x3C;td&#x3E;
+      dua
+    &#x3C;/td&#x3E;
+  &#x3C;/thead&#x3E;
+  &#x3C;tbody&#x3E;
+    &#x3C;tr&#x3E;
+      &#x3C;td&#x3E;
+        tiga
+      &#x3C;/td&#x3E;
+      &#x3C;td&#x3E;
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit enim deserunt perferendis?
+      &#x3C;/td&#x3E;
+    &#x3C;/tr&#x3E;
+    &#x3C;tr&#x3E;
+      &#x3C;td&#x3E;
+        empat
+      &#x3C;/td&#x3E;
+      &#x3C;td&#x3E;
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit enim deserunt perferendis?
+      &#x3C;/td&#x3E;
+    &#x3C;/tr&#x3E;
+  &#x3C;/tbody&#x3E;
+&#x3C;/table&#x3E;</code></pre>
+            </div>
+          </section>
+          <section data-heading="h4" data-name="Table Full Width">
+            <div class="content">
+              <table class="table fullwidth">
+                <thead>
+                  <td>
+                    satu
+                  </td>
+                  <td>
+                    dua
+                  </td>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>
+                      tiga
+                    </td>
+                    <td>
+                      empat
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      lima
+                    </td>
+                    <td>
+                      enam
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+              <pre lang="html"><code>&#x3C;table class=&#x22;table <mark>fullwidth</mark>&#x22;&#x3E;
+  &#x3C;thead&#x3E;
+    &#x3C;td&#x3E;
+      satu
+    &#x3C;/td&#x3E;
+    &#x3C;td&#x3E;
+      dua
+    &#x3C;/td&#x3E;
+  &#x3C;/thead&#x3E;
+  &#x3C;tbody&#x3E;
+    &#x3C;tr&#x3E;
+      &#x3C;td&#x3E;
+        tiga
+      &#x3C;/td&#x3E;
+      &#x3C;td&#x3E;
+        empat
+      &#x3C;/td&#x3E;
+    &#x3C;/tr&#x3E;
+    &#x3C;tr&#x3E;
+      &#x3C;td&#x3E;
+        lima
+      &#x3C;/td&#x3E;
+      &#x3C;td&#x3E;
+        enam
+      &#x3C;/td&#x3E;
+    &#x3C;/tr&#x3E;
+  &#x3C;/tbody&#x3E;
+&#x3C;/table&#x3E;</code></pre>
+            </div>
+          </section>
+          <section data-heading="h4" data-name="Table Hoverable">
+            <div class="content">
+              <table class="table hoverable">
+                <thead>
+                  <td>
+                    satu
+                  </td>
+                  <td>
+                    dua
+                  </td>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>
+                      tiga
+                    </td>
+                    <td>
+                      empat
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      lima
+                    </td>
+                    <td>
+                      enam
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+              <pre lang="html"><code>&#x3C;table class=&#x22;table <mark>hoverable</mark>&#x22;&#x3E;
+  &#x3C;thead&#x3E;
+    &#x3C;td&#x3E;
+      satu
+    &#x3C;/td&#x3E;
+    &#x3C;td&#x3E;
+      dua
+    &#x3C;/td&#x3E;
+  &#x3C;/thead&#x3E;
+  &#x3C;tbody&#x3E;
+    &#x3C;tr&#x3E;
+      &#x3C;td&#x3E;
+        tiga
+      &#x3C;/td&#x3E;
+      &#x3C;td&#x3E;
+        empat
+      &#x3C;/td&#x3E;
+    &#x3C;/tr&#x3E;
+    &#x3C;tr&#x3E;
+      &#x3C;td&#x3E;
+        lima
+      &#x3C;/td&#x3E;
+      &#x3C;td&#x3E;
+        enam
+      &#x3C;/td&#x3E;
+    &#x3C;/tr&#x3E;
+  &#x3C;/tbody&#x3E;
+&#x3C;/table&#x3E;</code></pre>
+            </div>
+          </section>
+          <section data-heading="h4" data-name="Table Container">
+            <div class="content">
+              <div class="table-container">
+                <table class="table">
+                  <thead data-loop="40">
+                  </thead>
+                  <tbody>
+                    <tr data-loop="40"></tr>
+                    <tr data-loop="40"></tr>
+                  </tbody>
+                </table>
+              </div>
+              <pre lang="html"><code>&#x3C;div class=&#x22;<mark>table-container</mark>&#x22;&#x3E;
+  &#x3C;table class=&#x22;table&#x22;&#x3E;
+    &#x3C;!-- Isi table anda --&#x3E;
+  &#x3C;/table&#x3E;
+&#x3C;/div&#x3E;</code></pre>
+            </div>
+          </section>
+          <section data-heading="h4" data-name="Table Combine">
+            <div class="content">
+              <table class="table bordered">
+                <thead>
+                  <td>Satu</td>
+                  <td>Dua</td>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>Tiga</td>
+                    <td class="warning">Selected</td>
+                  </tr>
+                  <tr>
+                    <td class="danger">Danger</td>
+                    <td>Empat</td>
+                  </tr>
+                  <tr>
+                    <td class="y-centered">Satu</td>
+                    <td>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas officia cumque explicabo sed voluptatum ducimus accusantium repellat ab a aspernatur!</td>
+                  </tr>
+                  <tr class="selected">
+                    <td>Done</td>
+                    <td>Done</td>
+                  </tr>
+                </tbody>
+              </table>
+              <pre lang="html"><code>&#x3C;table class=&#x22;table <mark>bordered</mark>&#x22;&#x3E;
+  &#x3C;thead&#x3E;
+    &#x3C;td&#x3E;Satu&#x3C;/td&#x3E;
+    &#x3C;td&#x3E;Dua&#x3C;/td&#x3E;
+  &#x3C;/thead&#x3E;
+  &#x3C;tbody&#x3E;
+    &#x3C;tr&#x3E;
+      &#x3C;td&#x3E;Tiga&#x3C;/td&#x3E;
+      &#x3C;td class=&#x22;<mark>warning</mark>&#x22;&#x3E;Selected&#x3C;/td&#x3E;
+    &#x3C;/tr&#x3E;
+    &#x3C;tr&#x3E;
+      &#x3C;td class=&#x22;<mark>danger</mark>&#x22;&#x3E;Danger&#x3C;/td&#x3E;
+      &#x3C;td&#x3E;Empat&#x3C;/td&#x3E;
+    &#x3C;/tr&#x3E;
+    &#x3C;tr&#x3E;
+      &#x3C;td class=&#x22;<mark>y-centered</mark>&#x22;&#x3E;Satu&#x3C;/td&#x3E;
+      &#x3C;td&#x3E;Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas officia cumque explicabo sed voluptatum ducimus accusantium repellat ab a aspernatur!&#x3C;/td&#x3E;
+    &#x3C;/tr&#x3E;
+    &#x3C;tr class=&#x22;<mark>selected</mark>&#x22;&#x3E;
+      &#x3C;td&#x3E;Done&#x3C;/td&#x3E;
+      &#x3C;td&#x3E;Done&#x3C;/td&#x3E;
+    &#x3C;/tr&#x3E;
+  &#x3C;/tbody&#x3E;
+&#x3C;/table&#x3E;</code></pre>
             </div>
           </section>
         </article>
