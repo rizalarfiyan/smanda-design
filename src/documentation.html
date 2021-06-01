@@ -1611,6 +1611,114 @@
               </table>
             </div>
           </section>
+          <section data-heading="h2" data-name="Tag">
+            <div class="content">
+              <p><b>Basic Style:</b></p>
+              <span class="tag">
+                Tag label
+              </span>
+              <pre lang="html"><code>&#x3C;span class=&#x22;<mark>tag</mark>&#x22;&#x3E;
+  Tag label
+&#x3C;/span&#x3E;</code></pre>
+            </div>
+          </section>
+          <section data-heading="h3" data-name="Tag Color">
+            <div class="content">
+              <span class="tag">Default</span>
+              <span class="tag primary">Primary</span>
+              <span class="tag info">Info</span>
+              <span class="tag success">Success</span>
+              <span class="tag warning">Warning</span>
+              <span class="tag danger">Danger</span>
+              <span class="tag gray">Danger</span>
+              <pre lang="html"><code>&#x3C;span class=&#x22;tag&#x22;&#x3E;Default&#x3C;/span&#x3E;
+&#x3C;span class=&#x22;tag <mark>primary</mark>&#x22;&#x3E;Primary&#x3C;/span&#x3E;
+&#x3C;span class=&#x22;tag <mark>info</mark>&#x22;&#x3E;Info&#x3C;/span&#x3E;
+&#x3C;span class=&#x22;tag <mark>success</mark>&#x22;&#x3E;Success&#x3C;/span&#x3E;
+&#x3C;span class=&#x22;tag <mark>warning</mark>&#x22;&#x3E;Warning&#x3C;/span&#x3E;
+&#x3C;span class=&#x22;tag <mark>danger</mark>&#x22;&#x3E;Danger&#x3C;/span&#x3E;</code></pre>
+            </div>
+          </section>
+          <section data-heading="h3" data-name="Tag Size">
+            <div class="content">
+              <span class="tag primary normal">Normal</span>
+              <span class="tag primary medium">Medium</span>
+              <span class="tag primary large">Large</span>
+              <pre lang="html"><code>&#x3C;span class=&#x22;tag primary <mark>normal</mark>&#x22;&#x3E;Normal&#x3C;/span&#x3E;
+&#x3C;span class=&#x22;tag primary <mark>medium</mark>&#x22;&#x3E;Medium&#x3C;/span&#x3E;
+&#x3C;span class=&#x22;tag primary <mark>large</mark>&#x22;&#x3E;Large&#x3C;/span&#x3E;</code></pre>
+              <div class="tags medium">
+                <span class="tag primary">Medium</span>
+                <span class="tag primary normal">Normal</span>
+                <span class="tag primary">Medium</span>
+                <span class="tag primary large">Large</span>
+                <span class="tag primary">Medium</span>
+              </div>
+              <pre lang="html"><code>&#x3C;div class=&#x22;tags <mark>medium</mark>&#x22;&#x3E;
+  &#x3C;span class=&#x22;tag primary&#x22;&#x3E;Medium&#x3C;/span&#x3E;
+  &#x3C;span class=&#x22;tag primary <mark>normal</mark>&#x22;&#x3E;Normal&#x3C;/span&#x3E;
+  &#x3C;span class=&#x22;tag primary&#x22;&#x3E;Medium&#x3C;/span&#x3E;
+  &#x3C;span class=&#x22;tag primary <mark>large</mark>&#x22;&#x3E;Large&#x3C;/span&#x3E;
+  &#x3C;span class=&#x22;tag primary&#x22;&#x3E;Medium&#x3C;/span&#x3E;
+&#x3C;/div&#x3E;</code></pre>
+            </div>
+          </section>
+          <section data-heading="h3" data-name="Tag Variant">
+            <div class="content">
+              <div class="tags">
+                <span class="tag primary round-full">
+                  Round Full
+                </span>
+                <span class="tag delete"></span>
+                <span class="tag primary icon">
+                  <i class="fa fa-home"></i>
+                </span>
+              </div>
+              <pre lang="html"><code>&#x3C;div class=&#x22;tags&#x22;&#x3E;
+  &#x3C;span class=&#x22;tag primary <mark>round-full</mark>&#x22;&#x3E;
+    Round Full
+  &#x3C;/span&#x3E;
+  &#x3C;span class=&#x22;tag <mark>delete</mark>&#x22;&#x3E;&#x3C;/span&#x3E;
+  &#x3C;span class=&#x22;tag primary <mark>icon</mark>&#x22;&#x3E;
+    &#x3C;i class=&#x22;<mark>fa fa-home</mark>&#x22;&#x3E;&#x3C;/i&#x3E;
+  &#x3C;/span&#x3E;
+&#x3C;/div&#x3E;</code></pre>
+            </div>
+          </section>
+          <section data-heading="h3" data-name="Tags Lists">
+            <div class="content">
+              <div class="tags">
+                <span class="tag primary">Satu</span>
+                <span class="tag primary">Dua</span>
+                <span class="tag primary">Tiga</span>
+              </div>
+              <pre lang="html"><code>&#x3C;div class=&#x22;<mark>tags</mark>&#x22;&#x3E;
+  &#x3C;span class=&#x22;tag primary&#x22;&#x3E;Satu&#x3C;/span&#x3E;
+  &#x3C;span class=&#x22;tag primary&#x22;&#x3E;Dua&#x3C;/span&#x3E;
+  &#x3C;span class=&#x22;tag primary&#x22;&#x3E;Tiga&#x3C;/span&#x3E;
+&#x3C;/div&#x3E;</code></pre>
+            </div>
+          </section>
+          <section data-heading="h3" data-name="Tags Addons">
+            <div class="content">
+              <div class="tags addons">
+                <span class="tag">Package</span>
+                <span class="tag primary">Front End</span>
+              </div>
+              <pre lang="html"><code>&#x3C;div class=&#x22;<mark>tags</mark> <mark>addons</mark>&#x22;&#x3E;
+  &#x3C;span class=&#x22;tag&#x22;&#x3E;Package&#x3C;/span&#x3E;
+  &#x3C;span class=&#x22;tag primary&#x22;&#x3E;Front End&#x3C;/span&#x3E;
+&#x3C;/div&#x3E;</code></pre>
+              <div class="tags addons">
+                <span class="tag danger">Username</span>
+                <a class="tag delete"></a>
+              </div>
+              <pre lang="html"><code>&#x3C;div class=&#x22;tags <mark>addons</mark>&#x22;&#x3E;
+  &#x3C;span class=&#x22;tag <mark>danger</mark>&#x22;&#x3E;Username&#x3C;/span&#x3E;
+  &#x3C;a class=&#x22;tag <mark>delete</mark>&#x22;&#x3E;&#x3C;/a&#x3E;
+&#x3C;/div&#x3E;</code></pre>
+            </div>
+          </section>
         </article>
       </div>
     </section>

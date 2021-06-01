@@ -3,7 +3,7 @@
 $position: ('relative');
 @each $value in $position {
   .#{$value} {
-    position: $value;
+    position: $value!important;
   }
 }
 
@@ -20,22 +20,22 @@ $border-radius: (
 
 @each $name, $value in $border-radius {
   .round-#{$name} {
-    border-radius: $value;
+    border-radius: $value!important;
   }
 }
 
 .pointer {
-  cursor: pointer;
+  cursor: pointer!important;
 }
 
 .hidden {
-  overflow: hidden;
+  overflow: hidden!important;
 }
 
 .y-auto {
-  overflow-y: auto;
+  overflow-y: auto!important;
 }
 
 .x-auto {
-  overflow-x: auto;
+  overflow-x: auto!important;
 }
