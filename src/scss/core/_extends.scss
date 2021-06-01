@@ -1,4 +1,5 @@
 @import "mixins";
+@import "control";
 
 %block {
   @include block;
@@ -14,4 +15,12 @@
 
 %loader {
   @include loader;
+}
+
+%control {
+  @include control;
+}
+
+%unselectable {
+  @include unselectable;
 }

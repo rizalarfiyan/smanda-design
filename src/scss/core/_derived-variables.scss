@@ -93,6 +93,7 @@ $pre: $text;
 $pre-background: $background;
 
 // Link colors
+$link-parent: $primary;
 $link: color('primary');
 $link-invert: color('primary-invert');
 $link-light: color('primary-light');

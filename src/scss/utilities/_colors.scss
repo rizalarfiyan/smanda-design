@@ -1,4 +1,4 @@
-@import '../core/index';
+@import '../core/mixins';
 
 @each $name, $value in $colors {
   .bg-#{$name} {

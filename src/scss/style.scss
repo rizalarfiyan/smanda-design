@@ -1,16 +1,14 @@
-@import 'core/index';
+@import "core/initial-variables";
+@import "core/functions";
+@import "core/derived-variables";
 @import 'core/root';
+@import "core/mixins";
+@import "core/control";
+@import "core/extends";
+
 @import 'base/index';
 
 @import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css');
 
-@import 'element/content.scss';
-@import 'element/title.scss';
-@import 'element/icon.scss';
-@import 'element/box.scss';
-@import 'element/tables.scss';
-@import 'element/image.scss';
-@import 'element/tags.scss';
-@import 'element/other.scss';
-
-@import 'utilities/all.scss';
+@import 'element/all';
+@import 'utilities/all';
