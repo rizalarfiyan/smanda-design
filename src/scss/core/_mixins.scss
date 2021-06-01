@@ -61,3 +61,90 @@
   right: $offset;
   top: $offset;
 }
+
+@mixin deleteSize($size) {
+  height: $size;
+  max-height: $size;
+  max-width: $size;
+  min-height: $size;
+  min-width: $size;
+  width: $size;
+}
+
+@mixin delete {
+  @include unselectable;
+
+  background-color: rgba($black, 0.25);
+  border: none;
+  border-radius: $radius-rounded;
+  cursor: pointer;
+  pointer-events: auto;
+  display: inline-block;
+  flex-grow: 0;
+  flex-shrink: 0;
+  font-size: 0;
+  height: 20px;
+  max-height: 20px;
+  max-width: 20px;
+  min-height: 20px;
+  min-width: 20px;
+  outline: none;
+  position: relative;
+  vertical-align: top;
+  width: 20px;
+
+  &::before, &::after {
+    background-color: color('white');
+    content: "";
+    display: block;
+    left: 50%;
+    position: absolute;
+    top: 50%;
+    transform: translateX(-50%) translateY(-50%) rotate(45deg);
+    transform-origin: center center;
+  }
+
+  &::before {
+    height: 2px;
+    width: 50%;
+  }
+
+  &::after {
+    height: 50%;
+    width: 2px;
+  }
+
+  &:hover,
+  &:focus {
+    background-color: rgba($black, 0.3);
+  }
+
+  &:active {
+    background-color: rgba($black, 0.4);
+  }
+
+  &.small {
+    @include deleteSize(16px);
+  }
+
+  &.medium {
+    @include deleteSize(24px);
+  }
+
+  &.large {
+    @include deleteSize(32px);
+  }
+}
+
+@mixin loader {
+  animation: spinAround 500ms infinite linear;
+  border: 2px solid color('grey-lighter');
+  border-radius: $radius-rounded;
+  border-right-color: transparent;
+  border-top-color: transparent;
+  content: "";
+  display: block;
+  height: 1em;
+  position: relative;
+  width: 1em;
+}

@@ -7,3 +7,11 @@
 %overlay {
   @include overlay;
 }
+
+%delete {
+  @include delete;
+}
+
+%loader {
+  @include loader;
+}
