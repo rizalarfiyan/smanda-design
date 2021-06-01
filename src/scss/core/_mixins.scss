@@ -138,7 +138,7 @@
 
 @mixin loader {
   animation: spinAround 500ms infinite linear;
-  border: 2px solid color('grey-lighter');
+  border: 2px solid color('gray');
   border-radius: $radius-rounded;
   border-right-color: transparent;
   border-top-color: transparent;

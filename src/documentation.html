@@ -1792,6 +1792,221 @@
 &#x3C;/div&#x3E;;</code></pre>
             </div>
           </section>
+          <section data-heading="h2" data-name="Button">
+            <div class="content">
+              <p><b>Basic Style:</b></p>
+              <button class="btn">Button</button>
+              <pre lang="html"><code>&#x3C;button class=&#x22;<mark>btn</mark>&#x22;&#x3E;Button&#x3C;/button&#x3E;</code></pre>
+              <a class="btn">Anchor</a>
+              <button class="btn">Button</button>
+              <input class="btn" type="submit" value="Submit input">
+              <input class="btn" type="reset" value="Reset input">
+              <pre lang="html"><code>&#x3C;a class=&#x22;<mark>btn</mark>&#x22;&#x3E;Anchor&#x3C;/a&#x3E;
+&#x3C;button class=&#x22;<mark>btn</mark>&#x22;&#x3E;Button&#x3C;/button&#x3E;
+&#x3C;input class=&#x22;<mark>btn</mark>&#x22; type=&#x22;submit&#x22; value=&#x22;Submit input&#x22;&#x3E;
+&#x3C;input class=&#x22;<mark>btn</mark>&#x22; type=&#x22;reset&#x22; value=&#x22;Reset input&#x22;&#x3E;</code></pre>
+            </div>
+          </section>
+          <section data-heading="h3" data-name="Button Color">
+            <div class="content">
+              <div class="btn-group">
+                <button class="btn primary">Primary</button>
+                <button class="btn info">Info</button>
+                <button class="btn success">Success</button>
+                <button class="btn warning">Warning</button>
+                <button class="btn danger">Danger</button>
+              </div>
+              <div class="btn-group">
+                <button class="btn primary light">Primary</button>
+                <button class="btn info light">Info</button>
+                <button class="btn success light">Success</button>
+                <button class="btn warning light">Warning</button>
+                <button class="btn danger light">Danger</button>
+              </div>
+              <pre lang="html"><code>&#x3C;div class=&#x22;btn-group&#x22;&#x3E;
+  &#x3C;button class=&#x22;btn <mark>primary</mark>&#x22;&#x3E;Primary&#x3C;/button&#x3E;
+  &#x3C;button class=&#x22;btn <mark>info</mark>&#x22;&#x3E;Info&#x3C;/button&#x3E;
+  &#x3C;button class=&#x22;btn <mark>success</mark>&#x22;&#x3E;Success&#x3C;/button&#x3E;
+  &#x3C;button class=&#x22;btn <mark>warning</mark>&#x22;&#x3E;Warning&#x3C;/button&#x3E;
+  &#x3C;button class=&#x22;btn <mark>danger</mark>&#x22;&#x3E;Danger&#x3C;/button&#x3E;
+&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;btn-group&#x22;&#x3E;
+  &#x3C;button class=&#x22;btn <mark>primary</mark> <mark>light</mark>&#x22;&#x3E;Primary&#x3C;/button&#x3E;
+  &#x3C;button class=&#x22;btn <mark>info</mark> <mark>light</mark>&#x22;&#x3E;Info&#x3C;/button&#x3E;
+  &#x3C;button class=&#x22;btn <mark>success</mark> <mark>light</mark>&#x22;&#x3E;Success&#x3C;/button&#x3E;
+  &#x3C;button class=&#x22;btn <mark>warning</mark> <mark>light</mark>&#x22;&#x3E;Warning&#x3C;/button&#x3E;
+  &#x3C;button class=&#x22;btn <mark>danger</mark> <mark>light</mark>&#x22;&#x3E;Danger&#x3C;/button&#x3E;
+&#x3C;/div&#x3E;</code></pre>
+            </div>
+          </section>
+          <section data-heading="h3" data-name="Button Size">
+            <div class="content">
+              <div class="btn-group">
+                <button class="btn small">Small</button>
+                <button class="btn">Default</button>
+                <button class="btn normal">Normal</button>
+                <button class="btn medium">Medium</button>
+                <button class="btn large">Large</button>
+              </div>
+              <pre lang="html"><code>&#x3C;div class=&#x22;btn-group&#x22;&#x3E;
+  &#x3C;button class=&#x22;btn <mark>small</mark>&#x22;&#x3E;Small&#x3C;/button&#x3E;
+  &#x3C;button class=&#x22;btn&#x22;&#x3E;Default&#x3C;/button&#x3E;
+  &#x3C;button class=&#x22;btn <mark>normal</mark>&#x22;&#x3E;Normal&#x3C;/button&#x3E;
+  &#x3C;button class=&#x22;btn <mark>medium</mark>&#x22;&#x3E;Medium&#x3C;/button&#x3E;
+  &#x3C;button class=&#x22;btn <mark>large</mark>&#x22;&#x3E;Large&#x3C;/button&#x3E;
+&#x3C;/div&#x3E;</code></pre>
+              <div class="btn-group small">
+                <button class="btn large">Large</button>
+                <button class="btn">Small</button>
+                <button class="btn medium">Medium</button>
+                <button class="btn normal">Normal</button>
+                <button class="btn">Small</button>
+              </div>
+              <pre lang="html"><code>&#x3C;div class=&#x22;btn-group <mark>small</mark>&#x22;&#x3E;
+  &#x3C;button class=&#x22;btn <mark>large</mark>&#x22;&#x3E;Large&#x3C;/button&#x3E;
+  &#x3C;button class=&#x22;btn&#x22;&#x3E;Small&#x3C;/button&#x3E;
+  &#x3C;button class=&#x22;btn <mark>medium</mark>&#x22;&#x3E;Medium&#x3C;/button&#x3E;
+  &#x3C;button class=&#x22;btn <mark>normal</mark>&#x22;&#x3E;Normal&#x3C;/button&#x3E;
+  &#x3C;button class=&#x22;btn&#x22;&#x3E;Small&#x3C;/button&#x3E;
+&#x3C;/div&#x3E;</code></pre>
+            </div>
+          </section>
+          <section data-heading="h3" data-name="Button Full Width">
+            <div class="content">
+              <div class="btn-group">
+                <button class="btn small fullwidth">Small</button>
+                <button class="btn fullwidth">Normal</button>
+                <button class="btn medium fullwidth">Medium</button>
+                <button class="btn large fullwidth">Large</button>
+              </div>
+              <pre lang="html"><code>&#x3C;div class=&#x22;btn-group&#x22;&#x3E;
+  &#x3C;button class=&#x22;btn small <mark>fullwidth</mark>&#x22;&#x3E;Small&#x3C;/button&#x3E;
+  &#x3C;button class=&#x22;btn <mark>fullwidth</mark>&#x22;&#x3E;Normal&#x3C;/button&#x3E;
+  &#x3C;button class=&#x22;btn medium <mark>fullwidth</mark>&#x22;&#x3E;Medium&#x3C;/button&#x3E;
+  &#x3C;button class=&#x22;btn large <mark>fullwidth</mark>&#x22;&#x3E;Large&#x3C;/button&#x3E;
+&#x3C;/div&#x3E;</code></pre>
+            </div>
+          </section>
+          <section data-heading="h3" data-name="Button Variant">
+            <div class="content">
+              <div class="btn-group">
+                <button class="btn outline">Outline</button>
+                <button class="btn primary outline">Outline</button>
+                <button class="btn warning outline">Outline</button>
+                <button class="btn info outline">Outline</button>
+                <button class="btn success outline">Outline</button>
+                <button class="btn danger outline">Outline</button>
+              </div>
+              <pre lang="html"><code>&#x3C;div class=&#x22;btn-groups&#x22;&#x3E;
+  &#x3C;button class=&#x22;btn <mark>outline</mark>&#x22;&#x3E;Outline&#x3C;/button&#x3E;
+  &#x3C;button class=&#x22;btn primary <mark>outline</mark>&#x22;&#x3E;Outline&#x3C;/button&#x3E;
+  &#x3C;button class=&#x22;btn warning <mark>outline</mark>&#x22;&#x3E;Outline&#x3C;/button&#x3E;
+  &#x3C;button class=&#x22;btn info <mark>outline</mark>&#x22;&#x3E;Outline&#x3C;/button&#x3E;
+  &#x3C;button class=&#x22;btn success <mark>outline</mark>&#x22;&#x3E;Outline&#x3C;/button&#x3E;
+  &#x3C;button class=&#x22;btn danger <mark>outline</mark>&#x22;&#x3E;Outline&#x3C;/button&#x3E;
+&#x3C;/div&#x3E;</code></pre>
+              <div class="btn-group">
+                <button class="btn invert">Invert</button>
+                <button class="btn primary invert">Invert</button>
+                <button class="btn warning invert">Invert</button>
+                <button class="btn info invert">Invert</button>
+                <button class="btn success invert">Invert</button>
+                <button class="btn danger invert">Invert</button>
+              </div>
+              <pre lang="html"><code>&#x3C;div class=&#x22;btn-group&#x22;&#x3E;
+  &#x3C;button class=&#x22;btn <mark>invert</mark>&#x22;&#x3E;Invert&#x3C;/button&#x3E;
+  &#x3C;button class=&#x22;btn primary <mark>invert</mark>&#x22;&#x3E;Invert&#x3C;/button&#x3E;
+  &#x3C;button class=&#x22;btn warning <mark>invert</mark>&#x22;&#x3E;Invert&#x3C;/button&#x3E;
+  &#x3C;button class=&#x22;btn info <mark>invert</mark>&#x22;&#x3E;Invert&#x3C;/button&#x3E;
+  &#x3C;button class=&#x22;btn success <mark>invert</mark>&#x22;&#x3E;Invert&#x3C;/button&#x3E;
+  &#x3C;button class=&#x22;btn danger <mark>invert</mark>&#x22;&#x3E;Invert&#x3C;/button&#x3E;
+&#x3C;/div&#x3E;</code></pre>
+              <div class="btn-group">
+                <button class="btn primary rounded">Rounded</button>
+                <button class="btn warning rounded">Rounded</button>
+                <button class="btn info rounded">Rounded</button>
+                <button class="btn success rounded">Rounded</button>
+                <button class="btn danger rounded">Rounded</button>
+              </div>
+              <pre lang="html"><code>&#x3C;div class=&#x22;btn-group&#x22;&#x3E;
+  &#x3C;button class=&#x22;btn primary <mark>rounded</mark>&#x22;&#x3E;Rounded&#x3C;/button&#x3E;
+  &#x3C;button class=&#x22;btn warning <mark>rounded</mark>&#x22;&#x3E;Rounded&#x3C;/button&#x3E;
+  &#x3C;button class=&#x22;btn info <mark>rounded</mark>&#x22;&#x3E;Rounded&#x3C;/button&#x3E;
+  &#x3C;button class=&#x22;btn success <mark>rounded</mark>&#x22;&#x3E;Rounded&#x3C;/button&#x3E;
+  &#x3C;button class=&#x22;btn danger <mark>rounded</mark>&#x22;&#x3E;Rounded&#x3C;/button&#x3E;
+&#x3C;/div&#x3E;</code></pre>
+            </div>
+          </section>
+          <section data-heading="h3" data-name="Button Loading">
+            <div class="content">
+              <div class="btn-group">
+                <button class="btn loading">Loading</button>
+                <button class="btn primary loading">Loading</button>
+                <button class="btn info loading">Loading</button>
+                <button class="btn success loading">Loading</button>
+                <button class="btn warning loading">Loading</button>
+                <button class="btn danger loading">Loading</button>
+              </div>
+              <pre lang="html"><code>&#x3C;div class=&#x22;btn-group&#x22;&#x3E;
+  &#x3C;button class=&#x22;btn loading&#x22;&#x3E;Loading&#x3C;/button&#x3E;
+  &#x3C;button class=&#x22;btn primary loading&#x22;&#x3E;Loading&#x3C;/button&#x3E;
+  &#x3C;button class=&#x22;btn info loading&#x22;&#x3E;Loading&#x3C;/button&#x3E;
+  &#x3C;button class=&#x22;btn success loading&#x22;&#x3E;Loading&#x3C;/button&#x3E;
+  &#x3C;button class=&#x22;btn warning loading&#x22;&#x3E;Loading&#x3C;/button&#x3E;
+  &#x3C;button class=&#x22;btn danger loading&#x22;&#x3E;Loading&#x3C;/button&#x3E;
+&#x3C;/div&#x3E;</code></pre>
+            </div>
+          </section>
+          <section data-heading="h3" data-name="Button Disable">
+            <div class="content">
+              <div class="btn-groups">
+                <button class="btn" disabled>Disabled</button>
+                <button class="btn primary" disabled>Disabled</button>
+                <button class="btn info" disabled>Disabled</button>
+                <button class="btn success" disabled>Disabled</button>
+                <button class="btn warning" disabled>Disabled</button>
+                <button class="btn danger" disabled>Disabled</button>
+              </div>
+              <pre lang="html"><code>&#x3C;div class=&#x22;btn-groups&#x22;&#x3E;
+  &#x3C;button class=&#x22;btn&#x22; disabled&#x3E;Disabled&#x3C;/button&#x3E;
+  &#x3C;button class=&#x22;btn primary&#x22; disabled&#x3E;Disabled&#x3C;/button&#x3E;
+  &#x3C;button class=&#x22;btn info&#x22; disabled&#x3E;Disabled&#x3C;/button&#x3E;
+  &#x3C;button class=&#x22;btn success&#x22; disabled&#x3E;Disabled&#x3C;/button&#x3E;
+  &#x3C;button class=&#x22;btn warning&#x22; disabled&#x3E;Disabled&#x3C;/button&#x3E;
+  &#x3C;button class=&#x22;btn danger&#x22; disabled&#x3E;Disabled&#x3C;/button&#x3E;
+&#x3C;/div&#x3E;</code></pre>
+            </div>
+          </section>
+          <section data-heading="h3" data-name="Button Icon">
+            <div class="content">
+              <div class="btn-group">
+                <button class="btn">
+                  <span class="icon small">
+                    <i class="fas fa-bold"></i>
+                  </span>
+                </button>
+                <button class="btn">
+                  <span class="icon small">
+                    <i class="fas fa-bold"></i>
+                  </span>
+                  <span>Bold</span>
+                </button>
+              </div>
+              <pre lang="html"><code>&#x3C;div class=&#x22;btn-group&#x22;&#x3E;
+  &#x3C;button class=&#x22;btn&#x22;&#x3E;
+    &#x3C;span class=&#x22;icon small&#x22;&#x3E;
+      &#x3C;i class=&#x22;fas fa-bold&#x22;&#x3E;&#x3C;/i&#x3E;
+    &#x3C;/span&#x3E;
+  &#x3C;/button&#x3E;
+  &#x3C;button class=&#x22;btn&#x22;&#x3E;
+    &#x3C;span class=&#x22;icon small&#x22;&#x3E;
+      &#x3C;i class=&#x22;fas fa-bold&#x22;&#x3E;&#x3C;/i&#x3E;
+    &#x3C;/span&#x3E;
+    &#x3C;span&#x3E;Bold&#x3C;/span&#x3E;
+  &#x3C;/button&#x3E;
+&#x3C;/div&#x3E;</code></pre>
+            </div>
+          </section>
         </article>
       </div>
     </section>
