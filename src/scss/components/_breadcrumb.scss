@@ -1,0 +1,78 @@
+@import '../core/mixins';
+
+$breadcrumb-item-color: $link;
+$breadcrumb-item-hover-color: $link-hover;
+$breadcrumb-item-active-color: $text-strong;
+$breadcrumb-item-padding-vertical: 0;
+$breadcrumb-item-padding-horizontal: 0.75em;
+$breadcrumb-item-separator-color: $border-hover;
+
+.breadcrumb {
+  @extend %block;
+  @extend %unselectable;
+
+  font-size: $size-normal;
+  white-space: nowrap;
+
+  a {
+    align-items: center;
+    color: $breadcrumb-item-color;
+    display: flex;
+    justify-content: center;
+    padding: $breadcrumb-item-padding-vertical $breadcrumb-item-padding-horizontal;
+
+    &:hover {
+      color: $breadcrumb-item-hover-color;
+    }
+  }
+
+  li {
+    align-items: center;
+    display: flex;
+
+    &:first-child a {
+      @include ltr-property("padding", 0, false);
+    }
+
+    &.active {
+      a {
+        color: $breadcrumb-item-active-color;
+        cursor: default;
+        pointer-events: none;
+      }
+    }
+
+    & + li::before {
+      color: $breadcrumb-item-separator-color;
+      content: "\0002f";
+    }
+  }
+
+  ul, ol {
+    align-items: center;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+  }
+
+  .icon {
+    &:first-child {
+      @include ltr-property("margin", 0.5em);
+    }
+    &:last-child {
+      @include ltr-property("margin", 0.5em, false);
+    }
+  }
+
+  &.center {
+    ol, ul {
+      justify-content: center;
+    }
+  }
+
+  &.right {
+    ol, ul {
+      justify-content: flex-end;
+    }
+  }
+}

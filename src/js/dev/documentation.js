@@ -238,6 +238,7 @@ class Demo {
   constructor(options) {
     let defaultOption = {
       table: 'thead[data-loop], tr[data-loop]',
+      dropdown: '.dropdown:not(.hover)',
     }
 
     options ? this.options = Object.assign(defaultOption, options) : this.options = defaultOption
@@ -245,6 +246,7 @@ class Demo {
 
   init() {
     this._tableLoop()
+    this._dropdown()
   }
 
   _tableLoop() {
@@ -256,6 +258,15 @@ class Demo {
         th.textContent = `${index + 1}.${i + 1}`
         element.append(th)
       }
+    })
+  }
+
+  _dropdown() {
+    let dropdownElement = document.querySelectorAll(this.options.dropdown)
+    dropdownElement.forEach(element => {
+      element.addEventListener('click', () => {
+        element.classList.toggle('active')
+      })
     })
   }
 }

@@ -2007,6 +2007,473 @@
 &#x3C;/div&#x3E;</code></pre>
             </div>
           </section>
+          <section data-heading="h1" data-name="Component" data-icon="fa fa-home">
+            <div class="content">
+              <ul>
+                <li>
+                  <span><b>Lokasi: <code>scss/component/*</code></b></span>
+                </li>
+              </ul>
+            </div>
+          </section>
+          <section data-heading="h2"  data-name="Breadcrumbs">
+            <div class="content">
+              <ul>
+                <li>
+                  <span><b>Lokasi:</b> <code>scss/component/breadcrumb.scss</code></span>
+                </li>
+                <li>
+                  <span><b>Style guide:</b></span>
+                  <ul>
+                    <li>
+                      <span><b>Posisi breadcrumb:</b> kiri (default), tengah (<code>center</code>), dan kiri (<code>right</code>).</span>
+                    </li>
+                    <li>
+                      <span><b>Breadcrumb with icon:</b> tidak memerlukan kelas tambahan.</span>
+                    </li>
+                  </ul>
+                </li>
+              </ul>
+            </div>
+          </section>
+          <section data-heading="h3" data-name="Position">
+            <div class="content">
+              <ul>
+                <li>
+                  <span><b>Style guide:</b></span>
+                  <ul>
+                    <li>
+                      <span>Kiri (default)</span>
+                    </li>
+                    <li>
+                      <span>Tengah (<code>center</code>)</span>
+                    </li>
+                    <li>
+                      <span>Kanan (<code>right</code>)</span>
+                    </li>
+                  </ul>
+                </li>
+              </ul>
+              <h3>Left Position</h3>
+              <nav class="breadcrumb" aria-label="breadcrumbs">
+                <ul>
+                  <li><a href="#">Home</a></li>
+                  <li><a href="#">Postingan</a></li>
+                  <li class="active"><a href="#" aria-current="page">Judul Postingan</a></li>
+                </ul>
+              </nav>
+              <pre lang="html"><code>&#x3C;nav class=&#x22;<mark>breadcrumb</mark>&#x22; aria-label=&#x22;breadcrumbs&#x22;&#x3E;
+  &#x3C;ul&#x3E;
+    &#x3C;li&#x3E;&#x3C;a href=&#x22;#&#x22;&#x3E;Home&#x3C;/a&#x3E;&#x3C;/li&#x3E;
+    &#x3C;li&#x3E;&#x3C;a href=&#x22;#&#x22;&#x3E;Postingan&#x3C;/a&#x3E;&#x3C;/li&#x3E;
+    &#x3C;li class=&#x22;active&#x22;&#x3E;&#x3C;a href=&#x22;#&#x22; aria-current=&#x22;page&#x22;&#x3E;Judul Postingan&#x3C;/a&#x3E;&#x3C;/li&#x3E;
+  &#x3C;/ul&#x3E;
+&#x3C;/nav&#x3E;</code></pre>
+              <h3>Center Position</h3>
+              <nav class="breadcrumb center" aria-label="breadcrumbs">
+                <ul>
+                  <li><a href="#">Home</a></li>
+                  <li><a href="#">Postingan</a></li>
+                  <li class="active"><a href="#" aria-current="page">Judul Postingan</a></li>
+                </ul>
+              </nav>
+              <pre lang="html"><code>&#x3C;nav class=&#x22;<mark>breadcrumb</mark> <mark>center</mark>&#x22; aria-label=&#x22;breadcrumbs&#x22;&#x3E;
+  &#x3C;ul&#x3E;
+    &#x3C;li&#x3E;&#x3C;a href=&#x22;#&#x22;&#x3E;Home&#x3C;/a&#x3E;&#x3C;/li&#x3E;
+    &#x3C;li&#x3E;&#x3C;a href=&#x22;#&#x22;&#x3E;Postingan&#x3C;/a&#x3E;&#x3C;/li&#x3E;
+    &#x3C;li class=&#x22;active&#x22;&#x3E;&#x3C;a href=&#x22;#&#x22; aria-current=&#x22;page&#x22;&#x3E;Judul Postingan&#x3C;/a&#x3E;&#x3C;/li&#x3E;
+  &#x3C;/ul&#x3E;
+&#x3C;/nav&#x3E;</code></pre>
+              <h3>Right Position</h3>
+              <nav class="breadcrumb right" aria-label="breadcrumbs">
+                <ul>
+                  <li><a href="#">Home</a></li>
+                  <li><a href="#">Postingan</a></li>
+                  <li class="active"><a href="#" aria-current="page">Judul Postingan</a></li>
+                </ul>
+              </nav>
+              <pre lang="html"><code>&#x3C;nav class=&#x22;<mark>breadcrumb</mark> <mark>right</mark>&#x22; aria-label=&#x22;breadcrumbs&#x22;&#x3E;
+  &#x3C;ul&#x3E;
+    &#x3C;li&#x3E;&#x3C;a href=&#x22;#&#x22;&#x3E;Home&#x3C;/a&#x3E;&#x3C;/li&#x3E;
+    &#x3C;li&#x3E;&#x3C;a href=&#x22;#&#x22;&#x3E;Postingan&#x3C;/a&#x3E;&#x3C;/li&#x3E;
+    &#x3C;li class=&#x22;active&#x22;&#x3E;&#x3C;a href=&#x22;#&#x22; aria-current=&#x22;page&#x22;&#x3E;Judul Postingan&#x3C;/a&#x3E;&#x3C;/li&#x3E;
+  &#x3C;/ul&#x3E;
+&#x3C;/nav&#x3E;</code></pre>
+            </div>
+          </section>
+          <section data-heading="h3" data-name="Variant">
+            <div class="content">
+              <ul>
+                <li>
+                  <span><b>Style guide:</b></span>
+                  <ul>
+                    <li>
+                      <span>Menambahkan element diantara tag <code>a</code></span>
+                    </li>
+                  </ul>
+                </li>
+              </ul>
+              <nav class="breadcrumb" aria-label="breadcrumbs">
+                <ul>
+                  <li>
+                    <a href="#">
+                      <span class="icon">
+                        <i class="fa fa-home"></i>
+                      </span>
+                      <span>Home</span>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#">
+                      <span class="icon">
+                        <i class="fa fa-file-alt"></i>
+                      </span>
+                      <span>Postingan</span>
+                    </a>
+                  </li>
+                  <li class="active">
+                    <a href="#" aria-current="page">Judul Postingan</a>
+                  </li>
+                </ul>
+              </nav>
+              <pre lang="html"><code>&#x3C;nav class=&#x22;breadcrumb&#x22; aria-label=&#x22;breadcrumbs&#x22;&#x3E;
+  &#x3C;ul&#x3E;
+    &#x3C;li&#x3E;
+      &#x3C;a href=&#x22;#&#x22;&#x3E;
+        &#x3C;span class=&#x22;icon&#x22;&#x3E;
+          &#x3C;i class=&#x22;fa fa-home&#x22;&#x3E;&#x3C;/i&#x3E;
+        &#x3C;/span&#x3E;
+        &#x3C;span&#x3E;Home&#x3C;/span&#x3E;
+      &#x3C;/a&#x3E;
+    &#x3C;/li&#x3E;
+    &#x3C;li&#x3E;
+      &#x3C;a href=&#x22;#&#x22;&#x3E;
+        &#x3C;span class=&#x22;icon&#x22;&#x3E;
+          &#x3C;i class=&#x22;fa fa-file-alt&#x22;&#x3E;&#x3C;/i&#x3E;
+        &#x3C;/span&#x3E;
+        &#x3C;span&#x3E;Postingan&#x3C;/span&#x3E;
+      &#x3C;/a&#x3E;
+    &#x3C;/li&#x3E;
+    &#x3C;li class=&#x22;active&#x22;&#x3E;
+      &#x3C;a href=&#x22;#&#x22; aria-current=&#x22;page&#x22;&#x3E;Judul Postingan&#x3C;/a&#x3E;
+    &#x3C;/li&#x3E;
+  &#x3C;/ul&#x3E;
+&#x3C;/nav&#x3E;</code></pre>
+            </div>
+          </section>
+          <section data-heading="h2" data-name="Dropdown">
+            <div class="content">
+              <ul>
+                <li>
+                  <span><b>Lokasi:</b> <code>scss/component/dropdown.scss</code></span>
+                </li>
+                <li>
+                  <span><b>Style guide:</b></span>
+                  <ul>
+                    <li>
+                      <span>Terdapat class <code>dropdown</code> pada orang tua.</span>
+                    </li>
+                    <li>
+                      <span>Di dalam <code>dropdown</code> terdapat class <code>dropdown-trigger</code> atau pembungkus lainnya pada orang tua dari tombol.</span>
+                    </li>
+                    <li><span>Di dalam <code>dropdown</code> terdapat class <code>dropdown-menu</code> untuk menyembungikan dropdwon (default).</span></li>
+                    <li><span>Di dalam <code>dropdown-menu</code> terdapat class <code>dropdown-content</code> untuk pemungkus isi dari dropdown.</span></li>
+                    <li><span>Di dalam <code>dropdown-content</code> terdapat class <code>dropdown-item</code> untuk satu elemen seperti <code>a</code>, <code>div</code>, atau lainnya.</span></li>
+                    <li><span>Di dalam <code>dropdown-content</code> terdapat class <code>dropdown-divider</code> untuk menambah garis horizontal.</span></li>
+                  </ul>
+                </li>
+              </ul>
+            </div>
+          </section>
+          <section data-heading="h3" data-name="Basic">
+            <div class="content">
+              <ul>
+                <li>
+                  <span><b>Style guide:</b></span>
+                  <ul>
+                    <li>
+                      <span>Dapat berisi tentang navigasi dari suatu dropdown.</span>
+                    </li>
+                  </ul>
+                </li>
+              </ul>
+              <div class="dropdown">
+                <div class="dropdown-trigger">
+                  <button class="btn" aria-haspopup="true" aria-controls="dropdown-menu">
+                    <span>Tekan</span>
+                  </button>
+                </div>
+                <div class="dropdown-menu" id="dropdown-menu" role="menu">
+                  <div class="dropdown-content">
+                    <a href="#" class="dropdown-item">
+                      Isi dari dropdwon
+                    </a>
+                    <hr class="dropdown-divider">
+                    <a href="#" class="dropdown-item">
+                      Garis
+                    </a>
+                  </div>
+                </div>
+              </div>
+              <pre lang="html"><code>&#x3C;div class=&#x22;<mark>dropdown</mark>&#x22;&#x3E;
+  &#x3C;div class=&#x22;<mark>dropdown-trigger</mark>&#x22;&#x3E;
+    &#x3C;button class=&#x22;btn&#x22; aria-haspopup=&#x22;true&#x22; aria-controls=&#x22;dropdown-menu&#x22;&#x3E;
+      &#x3C;span&#x3E;Tekan&#x3C;/span&#x3E;
+    &#x3C;/button&#x3E;
+  &#x3C;/div&#x3E;
+  &#x3C;div class=&#x22;<mark>dropdown-menu</mark>&#x22; id=&#x22;dropdown-menu&#x22; role=&#x22;menu&#x22;&#x3E;
+    &#x3C;div class=&#x22;<mark>dropdown-content</mark>&#x22;&#x3E;
+      &#x3C;a href=&#x22;#&#x22; class=&#x22;<mark>dropdown-item</mark>&#x22;&#x3E;
+        Isi dari dropdwon
+      &#x3C;/a&#x3E;
+      &#x3C;hr class=&#x22;<mark>dropdown-divider</mark>&#x22;&#x3E;
+      &#x3C;a href=&#x22;#&#x22; class=&#x22;<mark>dropdown-item</mark>&#x22;&#x3E;
+        Garis
+      &#x3C;/a&#x3E;
+    &#x3C;/div&#x3E;
+  &#x3C;/div&#x3E;
+&#x3C;/div&#x3E;</code></pre>
+            </div>
+          </section>
+          <section data-heading="h3" data-name="Content">
+            <div class="content">
+              <ul>
+                <li>
+                  <span><b>Style guide:</b></span>
+                  <ul>
+                    <li>
+                      <span>Dapat berisi tentang konten dari suatu dropdown.</span>
+                    </li>
+                  </ul>
+                </li>
+              </ul>
+              <div class="dropdown">
+                <div class="dropdown-trigger">
+                  <button class="btn" aria-haspopup="true" aria-controls="dropdown-menu-content">
+                    <span>Tekan!</span>
+                  </button>
+                </div>
+                <div class="dropdown-menu" id="dropdown-menu-content" role="menu">
+                  <div class="dropdown-content">
+                    <div class="dropdown-item">
+                      <p>Sebuah tulisan dengan <strong>gaya tebal</strong> dan <em>gaya miring</em> pada sebuah dropdown.</p>
+                    </div>
+                    <hr class="dropdown-divider">
+                    <a href="#" class="dropdown-item">
+                      Sebuah link
+                    </a>
+                  </div>
+                </div>
+              </div>
+              <pre lang="html"><code>&#x3C;div class=&#x22;dropdown&#x22;&#x3E;
+  &#x3C;div class=&#x22;dropdown-trigger&#x22;&#x3E;
+    &#x3C;button class=&#x22;btn&#x22; aria-haspopup=&#x22;true&#x22; aria-controls=&#x22;dropdown-menu-content&#x22;&#x3E;
+      &#x3C;span&#x3E;Tekan!&#x3C;/span&#x3E;
+    &#x3C;/button&#x3E;
+  &#x3C;/div&#x3E;
+  &#x3C;div class=&#x22;dropdown-menu&#x22; id=&#x22;dropdown-menu-content&#x22; role=&#x22;menu&#x22;&#x3E;
+    &#x3C;div class=&#x22;dropdown-content&#x22;&#x3E;
+      &#x3C;div class=&#x22;dropdown-item&#x22;&#x3E;
+        &#x3C;p&#x3E;Sebuah tulisan dengan &#x3C;strong&#x3E;gaya tebal&#x3C;/strong&#x3E; dan &#x3C;em&#x3E;gaya miring&#x3C;/em&#x3E; pada sebuah dropdown.&#x3C;/p&#x3E;
+      &#x3C;/div&#x3E;
+      &#x3C;hr class=&#x22;dropdown-divider&#x22;&#x3E;
+      &#x3C;a href=&#x22;#&#x22; class=&#x22;dropdown-item&#x22;&#x3E;
+        Sebuah link
+      &#x3C;/a&#x3E;
+    &#x3C;/div&#x3E;
+  &#x3C;/div&#x3E;
+&#x3C;/div&#x3E;</code></pre>
+            </div>
+          </section>
+          <section data-heading="h3" data-name="Hover">
+            <div class="content">
+              <ul>
+                <li>
+                  <span><b>Style guide:</b></span>
+                  <ul>
+                    <li>
+                      <span>Menambahkan class <code>hover</code> untuk mengganti aksi di tekan (default) menjadi hover.</span>
+                    </li>
+                  </ul>
+                </li>
+              </ul>
+              <div class="dropdown hover">
+                <div class="dropdown-trigger">
+                  <button class="btn" aria-haspopup="true" aria-controls="dropdown-menu-hover">
+                    <span>Hover!</span>
+                  </button>
+                </div>
+                <div class="dropdown-menu" id="dropdown-menu-hover" role="menu">
+                  <div class="dropdown-content">
+                    <a href="#" class="dropdown-item">
+                      Isi dari dropdown
+                    </a>
+                    <hr class="dropdown-divider">
+                    <a href="#" class="dropdown-item">
+                      Garis
+                    </a>
+                  </div>
+                </div>
+              </div>
+              <pre lang="html"><code>&#x3C;div class=&#x22;dropdown hover&#x22;&#x3E;
+  &#x3C;div class=&#x22;dropdown-trigger&#x22;&#x3E;
+    &#x3C;button class=&#x22;btn&#x22; aria-haspopup=&#x22;true&#x22; aria-controls=&#x22;dropdown-menu-hover&#x22;&#x3E;
+      &#x3C;span&#x3E;Hover!&#x3C;/span&#x3E;
+    &#x3C;/button&#x3E;
+  &#x3C;/div&#x3E;
+  &#x3C;div class=&#x22;dropdown-menu&#x22; id=&#x22;dropdown-menu-hover&#x22; role=&#x22;menu&#x22;&#x3E;
+    &#x3C;div class=&#x22;dropdown-content&#x22;&#x3E;
+      &#x3C;a href=&#x22;#&#x22; class=&#x22;dropdown-item&#x22;&#x3E;
+        Isi dari dropdown
+      &#x3C;/a&#x3E;
+      &#x3C;hr class=&#x22;dropdown-divider&#x22;&#x3E;
+      &#x3C;a href=&#x22;#&#x22; class=&#x22;dropdown-item&#x22;&#x3E;
+        Garis
+      &#x3C;/a&#x3E;
+    &#x3C;/div&#x3E;
+  &#x3C;/div&#x3E;
+&#x3C;/div&#x3E;</code></pre>
+            </div>
+          </section>
+          <section data-heading="h3" data-name="Postitions">
+            <div class="content">
+              <ul>
+                <li>
+                  <span><b>Style guide:</b></span>
+                  <ul>
+                    <li>
+                      <span>Bawah (default)</span>
+                    </li>
+                    <li>
+                      <span>Kanan (default)</span>
+                    </li>
+                    <li>
+                      <span>Kiri (<code>left</code>)</span>
+                    </li>
+                    <li>
+                      <span>Atas (<code>top</code>)</span>
+                    </li>
+                  </ul>
+                </li>
+              </ul>
+              <h3>Bawah</h3>
+              <div class="dropdown">
+                <div class="dropdown-trigger">
+                  <button class="btn" aria-haspopup="true" aria-controls="dropdown-menu-left">
+                    <span>Tekan!</span>
+                  </button>
+                </div>
+                <div class="dropdown-menu" id="dropdown-menu-left" role="menu">
+                  <div class="dropdown-content">
+                    <div class="dropdown-item">
+                      <p>Dropdown dengan posisi <b>Kiri</b> (default)</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <pre lang="html"><code>&#x3C;div class=&#x22;dropdown&#x22;&#x3E;
+  &#x3C;div class=&#x22;dropdown-trigger&#x22;&#x3E;
+    &#x3C;button class=&#x22;btn&#x22; aria-haspopup=&#x22;true&#x22; aria-controls=&#x22;dropdown-menu-left&#x22;&#x3E;
+      &#x3C;span&#x3E;Tekan!&#x3C;/span&#x3E;
+    &#x3C;/button&#x3E;
+  &#x3C;/div&#x3E;
+  &#x3C;div class=&#x22;dropdown-menu&#x22; id=&#x22;dropdown-menu-left&#x22; role=&#x22;menu&#x22;&#x3E;
+    &#x3C;div class=&#x22;dropdown-content&#x22;&#x3E;
+      &#x3C;div class=&#x22;dropdown-item&#x22;&#x3E;
+        &#x3C;p&#x3E;Dropdown dengan posisi &#x3C;b&#x3E;Kiri&#x3C;/b&#x3E; (default)&#x3C;/p&#x3E;
+      &#x3C;/div&#x3E;
+    &#x3C;/div&#x3E;
+  &#x3C;/div&#x3E;
+&#x3C;/div&#x3E;</code></pre>
+              <h3>Kanan</h3>
+              <div class="dropdown">
+                <div class="dropdown-trigger">
+                  <button class="btn" aria-haspopup="true" aria-controls="dropdown-menu-down">
+                    <span>Tekan!</span>
+                  </button>
+                </div>
+                <div class="dropdown-menu" id="dropdown-menu-down" role="menu">
+                  <div class="dropdown-content">
+                    <div class="dropdown-item">
+                      <p>Dropdown dengan posisi <b>Bawah</b> (default)</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <pre lang="html"><code>&#x3C;div class=&#x22;dropdown&#x22;&#x3E;
+  &#x3C;div class=&#x22;dropdown-trigger&#x22;&#x3E;
+    &#x3C;button class=&#x22;btn&#x22; aria-haspopup=&#x22;true&#x22; aria-controls=&#x22;dropdown-menu-down&#x22;&#x3E;
+      &#x3C;span&#x3E;Tekan!&#x3C;/span&#x3E;
+    &#x3C;/button&#x3E;
+  &#x3C;/div&#x3E;
+  &#x3C;div class=&#x22;dropdown-menu&#x22; id=&#x22;dropdown-menu-down&#x22; role=&#x22;menu&#x22;&#x3E;
+    &#x3C;div class=&#x22;dropdown-content&#x22;&#x3E;
+      &#x3C;div class=&#x22;dropdown-item&#x22;&#x3E;
+        &#x3C;p&#x3E;Dropdown dengan posisi &#x3C;b&#x3E;Bawah&#x3C;/b&#x3E; (default)&#x3C;/p&#x3E;
+      &#x3C;/div&#x3E;
+    &#x3C;/div&#x3E;
+  &#x3C;/div&#x3E;
+&#x3C;/div&#x3E;</code></pre>
+              <h3>Kiri</h3>
+              <div class="dropdown right">
+                <div class="dropdown-trigger">
+                  <button class="btn" aria-haspopup="true" aria-controls="dropdown-menu-right">
+                    <span>Tekan!</span>
+                  </button>
+                </div>
+                <div class="dropdown-menu" id="dropdown-menu-right" role="menu">
+                  <div class="dropdown-content">
+                    <div class="dropdown-item">
+                      <p>Dropdown dengan posisi <b>Kanan</b> (<code>right</code>)</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <pre lang="html"><code>&#x3C;div class=&#x22;dropdown right&#x22;&#x3E;
+  &#x3C;div class=&#x22;dropdown-trigger&#x22;&#x3E;
+    &#x3C;button class=&#x22;btn&#x22; aria-haspopup=&#x22;true&#x22; aria-controls=&#x22;dropdown-menu-right&#x22;&#x3E;
+      &#x3C;span&#x3E;Tekan!&#x3C;/span&#x3E;
+    &#x3C;/button&#x3E;
+  &#x3C;/div&#x3E;
+  &#x3C;div class=&#x22;dropdown-menu&#x22; id=&#x22;dropdown-menu-right&#x22; role=&#x22;menu&#x22;&#x3E;
+    &#x3C;div class=&#x22;dropdown-content&#x22;&#x3E;
+      &#x3C;div class=&#x22;dropdown-item&#x22;&#x3E;
+        &#x3C;p&#x3E;Dropdown dengan posisi &#x3C;b&#x3E;Kanan&#x3C;/b&#x3E; (&#x3C;code&#x3E;right&#x3C;/code&#x3E;)&#x3C;/p&#x3E;
+      &#x3C;/div&#x3E;
+    &#x3C;/div&#x3E;
+  &#x3C;/div&#x3E;
+&#x3C;/div&#x3E;</code></pre>
+              <h3>Atas</h3>
+              <div class="dropdown top">
+                <div class="dropdown-trigger">
+                  <button class="btn" aria-haspopup="true" aria-controls="dropdown-menu-top">
+                    <span>Tekan!</span>
+                  </button>
+                </div>
+                <div class="dropdown-menu" id="dropdown-menu-top" role="menu">
+                  <div class="dropdown-content">
+                    <div class="dropdown-item">
+                      <p>Dropdown dengan posisi <b>Atas</b> (<code>top</code>)</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <pre lang="html"><code>&#x3C;div class=&#x22;dropdown top&#x22;&#x3E;
+  &#x3C;div class=&#x22;dropdown-trigger&#x22;&#x3E;
+    &#x3C;button class=&#x22;btn&#x22; aria-haspopup=&#x22;true&#x22; aria-controls=&#x22;dropdown-menu-top&#x22;&#x3E;
+      &#x3C;span&#x3E;Tekan!&#x3C;/span&#x3E;
+    &#x3C;/button&#x3E;
+  &#x3C;/div&#x3E;
+  &#x3C;div class=&#x22;dropdown-menu&#x22; id=&#x22;dropdown-menu-top&#x22; role=&#x22;menu&#x22;&#x3E;
+    &#x3C;div class=&#x22;dropdown-content&#x22;&#x3E;
+      &#x3C;div class=&#x22;dropdown-item&#x22;&#x3E;
+        &#x3C;p&#x3E;Dropdown dengan posisi &#x3C;b&#x3E;Atas&#x3C;/b&#x3E; (&#x3C;code&#x3E;top&#x3C;/code&#x3E;)&#x3C;/p&#x3E;
+      &#x3C;/div&#x3E;
+    &#x3C;/div&#x3E;
+  &#x3C;/div&#x3E;
+&#x3C;/div&#x3E;</code></pre>
+            </div>
+          </section>
         </article>
       </div>
     </section>
