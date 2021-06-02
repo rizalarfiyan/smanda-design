@@ -1,0 +1,13 @@
+@import './landing/parallax';
+
+// Development
+section {
+  min-height: 100vh;
+  position: relative;
+  z-index: 1;
+  background: white;
+
+  &:nth-child(odd) {
+    background: lightgray;
+  }
+}
