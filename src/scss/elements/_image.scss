@@ -38,6 +38,7 @@ $aspect-ratios: (
   display: block;
   position: relative;
   width: 100%;
+  background: color('gray-lightest');
 
   &.fullwidth {
     width: 100%;

@@ -12,6 +12,11 @@ $layer3: "../../images/parallax/layer3.png";
 $layer4: "../../images/parallax/layer4.png";
 $layer5: "../../images/parallax/layer5.png";
 
+#parallax-hero {
+  max-height: 100vh;
+  height: 100vh;
+}
+
 .parallax {
   position: fixed;
   overflow: visible;
