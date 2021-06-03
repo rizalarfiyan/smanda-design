@@ -1,5 +1,8 @@
 @import '../core/mixins';
 
+// Card Design
+@import 'cards/post';
+
 $card-color: $text;
 $card-background-color: color('white');
 $card-shadow: $shadow;
@@ -35,6 +38,16 @@ $card-media-margin: $block-spacing;
   color: $card-color;
   max-width: 100%;
   position: relative;
+
+  .truncate:not(p) {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  p.truncate {
+    @include truncate(72px, 3);
+  }
 }
 
 %card-item {

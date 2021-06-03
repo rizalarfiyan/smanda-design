@@ -56,6 +56,11 @@ body {
   margin: 20px auto 40px;
 }
 
+.content p,
+.subtitle {
+  color: color('gray');
+}
+
 .section-two {
   display: flex;
   flex-wrap: wrap;
@@ -247,6 +252,15 @@ body {
 
   .title {
     margin-bottom: 12px;
+  }
+}
+
+// Postingan Section
+.postingan-section {
+  .load-more {
+    display: flex;
+    justify-content: center;
+    margin: 40px auto;
   }
 }
 

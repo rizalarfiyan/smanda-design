@@ -1,0 +1,124 @@
+@import '../../core/mixins';
+
+$max-width-card: 320px;
+$margin-media: 12px;
+
+$transition-card: all .3s ease;
+$post-size: 14px;
+
+.posts {
+  .card {
+    max-width: $max-width-card;
+    margin: 10px;
+    border-radius: $radius-large;
+    transition: $transition-card;
+
+    &:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 5px 40px color('black', .14);
+    }
+  }
+
+  &:not(.no-anim) {
+    .card {
+      &:hover {
+        .to-post {
+          opacity: 1;
+        }
+  
+        .to-icon {
+          opacity: 1;
+          transform: scale(1);
+        }
+
+        .user-post {
+          left: 10px;
+        }
+      }
+    }
+  }
+
+  &.no-anim {
+    .to-post, .to-icon {
+      opacity: 1;
+    }
+
+    .to-icon {
+      transform: scale(1);
+    }
+
+    .user-post {
+      left: 10px;
+    }
+  }
+
+  .card-image {
+    overflow: hidden;
+    margin: $margin-media;
+    border-radius: $radius;
+  }
+
+  .to-post {
+    @extend %overlay;
+
+    display: block;
+    opacity: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: radial-gradient(color('black', .2), color('black', .6));
+    transition: all .4s ease;
+  }
+  
+  .to-icon {
+    z-index: 1;
+    padding: 18px;
+    opacity: 0;
+    transform: scale(1.3);
+    border: 3px solid color('white');
+    border-radius: 50%;
+    color: color('white');
+    transition: $transition-card;
+  }
+
+  .user-post {
+    position: absolute;
+    background: color('white');
+    bottom: 10px;
+    left: -100%;
+    font-weight: $weight-semibold;
+    transition: left .4s cubic-bezier(0.77, 0, 0.175, 1), background .3s ease, color .3s ease;
+
+    &:hover {
+      background: color('primary');
+      color: color('primary-invert');
+      text-decoration: none;
+    }
+  }
+
+  .icon {
+    margin-right: 4px;
+  }
+
+  .card-content {
+    padding: 10px 16px 16px;
+  }
+
+  .post-footer {
+    display: flex;
+    align-items: center;
+    font-size: $post-size;
+    justify-content: space-between;
+
+    .tagar {
+      margin-right: 10px;
+    }
+
+    .view {
+      display: flex;
+      align-items: center;
+    }
+  }
+}
