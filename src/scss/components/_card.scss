@@ -1,0 +1,125 @@
+@import '../core/mixins';
+
+$card-color: $text;
+$card-background-color: color('white');
+$card-shadow: $shadow;
+$card-radius: 0.25rem;
+
+$card-header-background-color: transparent;
+$card-header-color: $text-strong;
+$card-header-padding: 0.75rem 1rem;
+$card-header-shadow: 0 0.125em 0.25em RGBA(color('black'), 0.1);
+$card-header-weight: $weight-bold;
+
+$card-content-background-color: transparent;
+$card-content-padding: 1.5rem;
+
+$card-footer-background-color: transparent;
+$card-footer-border-top: 1px solid $border-light;
+$card-footer-padding: 0.75rem;
+
+$card-media-margin: $block-spacing;
+
+.card {
+  background-color: $card-background-color;
+  border-radius: $card-radius;
+  box-shadow: $card-shadow;
+  color: $card-color;
+  max-width: 100%;
+  position: relative;
+}
+
+%card-item {
+  &:first-child {
+    border-top-left-radius: $card-radius;
+    border-top-right-radius: $card-radius;
+  }
+
+  &:last-child {
+    border-bottom-left-radius: $card-radius;
+    border-bottom-right-radius: $card-radius;
+  }
+}
+
+.card-header {
+  @extend %card-item;
+
+  background-color: $card-header-background-color;
+  align-items: stretch;
+  box-shadow: $card-header-shadow;
+  display: flex;
+}
+
+.card-header-title {
+  align-items: center;
+  color: $card-header-color;
+  display: flex;
+  flex-grow: 1;
+  font-weight: $card-header-weight;
+  padding: $card-header-padding;
+
+  &.center {
+    justify-content: center;
+  }
+}
+
+.card-header-icon {
+  @extend %reset;
+  align-items: center;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  padding: $card-header-padding;
+}
+
+.card-image {
+  display: block;
+  position: relative;
+
+  &:first-child {
+    img {
+      border-top-left-radius: $card-radius;
+      border-top-right-radius: $card-radius;
+    }
+  }
+
+  &:last-child {
+    img {
+      border-bottom-left-radius: $card-radius;
+      border-bottom-right-radius: $card-radius;
+    }
+  }
+}
+
+.card-content {
+  @extend %card-item;
+  background-color: $card-content-background-color;
+  padding: $card-content-padding;
+}
+
+.card-footer {
+  @extend %card-item;
+  background-color: $card-footer-background-color;
+  border-top: $card-footer-border-top;
+  align-items: stretch;
+  display: flex;
+}
+
+.card-footer-item {
+  align-items: center;
+  display: flex;
+  flex-basis: 0;
+  flex-grow: 1;
+  flex-shrink: 0;
+  justify-content: center;
+  padding: $card-footer-padding;
+
+  &:not(:last-child) {
+    @include ltr-property("border", $card-footer-border-top);
+  }
+}
+.card {
+  .media:not(:last-child) {
+    margin-bottom: $card-media-margin;
+  }
+}

@@ -71,7 +71,6 @@
               </ol>
             </div>
           </section>
-          <!-- FIXME Belum lengkap -->
           <section data-heading="h1" data-name="Element" data-icon="fa fa-stream">
             <div class="content">
               <ul>
@@ -3090,6 +3089,114 @@
     &#x3C;div class=&#x22;dropdown-content&#x22;&#x3E;
       &#x3C;div class=&#x22;dropdown-item&#x22;&#x3E;
         &#x3C;p&#x3E;Dropdown dengan posisi &#x3C;b&#x3E;Atas&#x3C;/b&#x3E; (&#x3C;code&#x3E;top&#x3C;/code&#x3E;)&#x3C;/p&#x3E;
+      &#x3C;/div&#x3E;
+    &#x3C;/div&#x3E;
+  &#x3C;/div&#x3E;
+&#x3C;/div&#x3E;</code></pre>
+            </div>
+          </section>
+          <section data-heading="h2" data-name="Card">
+            <div class="content">
+              <ul>
+                <li>
+                  <span><b>Lokasi:</b> <code>scss/components/card.scss</code></span>
+                </li>
+                <li>
+                  <span><b>Style guide:</b></span>
+                  <ul>
+                    <li>
+                      <span>Terdapat class <code>card</code> pada orang tua.</span>
+                    </li>
+                    <li>
+                      <span>Di dalam <code>card</code> terdapat class <code>card-header</code> untuk membuat horizontal dengan efek bayangan.</span>
+                    </li>
+                    <li>
+                      <span>Di dalam <code>card-header</code> terdapat class <code>card-header-title</code> untuk membuat posisi kiri dan teks tebal.</span>
+                    </li>
+                    <li>
+                      <span>Di dalam <code>card-header</code> terdapat class <code>card-header-icon</code> untuk sebuah placeholder atau icon</span>
+                    </li>
+                    <li>
+                      <span>Di dalam <code>card</code> terdapat class <code>card-image</code> untuk orang tua dari gambar (fullwidth dan responsive)</span>
+                    </li>
+                    <li>
+                      <span>Di dalam <code>card</code> terdapat class <code>card-content</code> untuk sesuatu isi yang berkaitan dengan card tersebut</span>
+                    </li>
+                    <li>
+                      <span>Di dalam <code>card</code> terdapat class <code>card-footer</code> untuk menampilkan aksi horizontal</span>
+                    </li>
+                    <li>
+                      <span>Di dalam <code>card-footer</code> terdapat <code>card-footer-item</code> untuk mengulangi list dari elemen card tersebut</span>
+                    </li>
+                  </ul>
+                </li>
+              </ul>
+              <div class="card">
+                <div class="card-header">
+                  <div class="card-header-title">
+                    Lorem, ipsum.
+                  </div>
+                  <div class="card-header-icon">
+                    <i class="fa fa-ellipsis-v"></i>
+                  </div>
+                </div>
+                <div class="card-image">
+                  <figure class="image ratio-4x3">
+                    <img src="https://dummyimage.com/128x128/ccc/9c9c9c" alt="Placeholder image">
+                  </figure>
+                </div>
+                <div class="card-content">
+                  <div class="content">
+                    <a href="#">
+                      <h3>Lorem ipsum dolor sit.</h3>
+                    </a>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem laboriosam corrupti praesentium?</p>
+                  </div>
+                </div>
+                <div class="card-footer">
+                  <div class="card-footer-item">
+                    <div class="btn">
+                      Kunjungi
+                    </div>
+                  </div>
+                  <div class="card-footer-item">
+                    <div class="btn">
+                      Ikuti
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <pre lang="html"><code>&#x3C;div class=&#x22;<mark>card</mark>&#x22;&#x3E;
+  &#x3C;div class=&#x22;<mark>card-header</mark>&#x22;&#x3E;
+    &#x3C;div class=&#x22;<mark>card-header-title</mark>&#x22;&#x3E;
+      Lorem, ipsum.
+    &#x3C;/div&#x3E;
+    &#x3C;div class=&#x22;<mark>card-header-icon</mark>&#x22;&#x3E;
+      &#x3C;i class=&#x22;fa fa-ellipsis-v&#x22;&#x3E;&#x3C;/i&#x3E;
+    &#x3C;/div&#x3E;
+  &#x3C;/div&#x3E;
+  &#x3C;div class=&#x22;<mark>card-image</mark>&#x22;&#x3E;
+    &#x3C;figure class=&#x22;image ratio-4x3&#x22;&#x3E;
+      &#x3C;img src=&#x22;https://dummyimage.com/128x128/ccc/9c9c9c&#x22; alt=&#x22;Placeholder image&#x22;&#x3E;
+    &#x3C;/figure&#x3E;
+  &#x3C;/div&#x3E;
+  &#x3C;div class=&#x22;<mark>card-content</mark>&#x22;&#x3E;
+    &#x3C;div class=&#x22;content&#x22;&#x3E;
+      &#x3C;a href=&#x22;#&#x22;&#x3E;
+        &#x3C;h3&#x3E;Lorem ipsum dolor sit.&#x3C;/h3&#x3E;
+      &#x3C;/a&#x3E;
+      &#x3C;p&#x3E;Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem laboriosam corrupti praesentium?&#x3C;/p&#x3E;
+    &#x3C;/div&#x3E;
+  &#x3C;/div&#x3E;
+  &#x3C;div class=&#x22;<mark>card-footer</mark>&#x22;&#x3E;
+    &#x3C;div class=&#x22;<mark>card-footer-item</mark>&#x22;&#x3E;
+      &#x3C;div class=&#x22;btn&#x22;&#x3E;
+        Kunjungi
+      &#x3C;/div&#x3E;
+    &#x3C;/div&#x3E;
+    &#x3C;div class=&#x22;<mark>card-footer-item</mark>&#x22;&#x3E;
+      &#x3C;div class=&#x22;btn&#x22;&#x3E;
+        Ikuti
       &#x3C;/div&#x3E;
     &#x3C;/div&#x3E;
   &#x3C;/div&#x3E;

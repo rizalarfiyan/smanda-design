@@ -160,3 +160,16 @@
     top: calc(50% - (#{$width} / 2));
   }
 }
+
+@mixin reset {
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  appearance: none;
+  background: none;
+  border: none;
+  color: currentColor;
+  font-family: inherit;
+  font-size: 1em;
+  margin: 0;
+  padding: 0;
+}

@@ -24,3 +24,7 @@
 %unselectable {
   @include unselectable;
 }
+
+%reset {
+  @include reset;
+}
