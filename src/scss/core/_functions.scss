@@ -5,8 +5,18 @@
   @return $map;
 }
 
-@function color($mycolor) {
-  @return var(--#{$mycolor});
+@function color($mycolor, $alpha: false) {
+  @if $alpha {
+    @return RGBA(var(--#{$mycolor}), $alpha);
+  } @else {
+    @return RGB(var(--#{$mycolor}));
+  }
+}
+
+@function toRgbColor($key) {
+  @if type-of($key) == 'color' {
+    @return round(red($key)) + ", " + round(green($key)) + ", " + round(blue($key));
+  }
 }
 
 @function getLast($value, $separator: '-') {

@@ -1,15 +1,22 @@
 @import '../core/mixins';
 @import './landing/parallax';
 
+$shadow-primary: 0 5px 40px color('primary', .3);
+
 // Development
 section {
   position: relative;
   z-index: 1;
-  padding: 26px 0;
+  padding: 60px 0;
   background: color('white-ter');
   
-  &#sambutan-kepsek {
-    padding: 60px 0 26px;
+  &.kepsek-section,
+  &.profil-section {
+    background: color('white');
+  }
+
+  &.kepsek-section {
+    padding: 60px 0 0;
     border-top: 10px solid color('primary');
   }
 
@@ -24,7 +31,7 @@ section {
       letter-spacing: 4px;
       font-size: 8rem;
       position: absolute;
-      color: RGBA(color('gray-lighter'), .1);
+      color: color('gray-light', .1);
       text-align: center;
       overflow-wrap: anywhere;
       z-index: -1;
@@ -67,6 +74,7 @@ body {
   }
 }
 
+// Kepala Sekolah
 .kepsek {
   .icon-kepsek {
     position: absolute;
@@ -77,7 +85,7 @@ body {
     top: -26px;
     border: 10px solid color('white');
     color: color('white');
-    box-shadow: 0 5px 40px RGBA(color('primary'), .3);
+    box-shadow: $shadow-primary;
   }
 
   .jabatan {
@@ -87,13 +95,13 @@ body {
     left: 30px;
     bottom: -15px;
     background: color('white');
-    box-shadow: 0 5px 40px RGBA(color('primary'));
+    box-shadow: $shadow-primary;
     font-size: $size-5;
     font-weight: $weight-semibold;
   }
 
   .section-media {
-    margin: 40px auto 30px;
+    margin: 50px auto;
   }
 
   .image {
@@ -104,30 +112,31 @@ body {
   
   img {
     border: 10px solid color('white');
-    box-shadow: 0 4px 40px RGBA(color('black'), .12);
+    box-shadow: 0 4px 40px color('black', .12);
   }
 }
 
+// Profil Kepala Sekolah
 .profil {
   .section-media {
-    margin: 50px 30px;
+    margin: 60px 40px;
 
     &::before {
       content: '';
       position: absolute;
-      top: 0;
-      right: -20px;
+      top: -30px;
+      right: -30px;
       z-index: -1;
       width: 100%;
       height: 100%;
-      background: RGBA(color('main'), .075);
+      background: color('primary', .075);
       border-radius: 10px;
     }
   }
 
   .image {
     border-radius: 6px;
-    box-shadow: 0 10px 30px RGBA(color('main'), .3);
+    box-shadow: $shadow-primary;
     overflow: hidden;
     width: 280px;
     max-width: 100%;
@@ -141,7 +150,7 @@ body {
     background: color('white');
     padding: 12px 18px;
     border-radius: 6px;
-    box-shadow: -10px 10px 20px RGBA(color('main'), .15);
+    box-shadow: -10px 10px 40px color('black', .1);
     color: color('black-ter');
     font-size: $size-6;
     font-weight: $weight-semibold;
@@ -156,6 +165,7 @@ body {
   }
 }
 
+// Akses Cepat Section
 .fast-access {
   flex-wrap: wrap;
   margin: 2rem 0;
@@ -168,7 +178,7 @@ body {
     padding: 18px;
     border-radius: 6px;
     text-align: center;
-    box-shadow: 0 25px 40px rgba(0, 0, 0, .1);
+    box-shadow: 0 25px 40px color('black', .1);
     border: 3px solid transparent;
     transition: all .75s ease;
 
@@ -189,7 +199,7 @@ body {
   .icon-access {
     padding: 1.5rem;
     border-radius: 50%;
-    background: color('primary');
+    background: color('primary', .1);
     margin-bottom: 12px;
     display: inline-block;
   }
@@ -198,7 +208,7 @@ body {
     font-size: 1.5rem;
     width: 25px;
     height: 25px;
-    color: color('white');
+    color: color('gray-dark');
   }
 }
 

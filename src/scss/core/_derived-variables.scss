@@ -38,16 +38,6 @@ $colors: (
     'dark': findDarkColor($danger),
   ),
 
-  'light': (
-    'main': $light,
-    'invert': findColorInvert($light),
-  ),
-
-  'dark': (
-    'main': $dark,
-    'invert': findColorInvert($dark),
-  ),
-
   // General colors
   'white': (
     'main': $white,

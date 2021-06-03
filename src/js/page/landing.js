@@ -15,6 +15,7 @@ class Landing {
 
   _parallaxScroll() {
     this.parallaxElement.classList.add(this._parallaxTime())
+    window.addEventListener('load', () => this._parallaxAction())
     window.addEventListener('scroll', () => this._parallaxAction())
   }
 
