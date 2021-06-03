@@ -26,8 +26,8 @@ class Landing {
     for (let i = 0; i < layers.length; i++) {
       layer = layers[i]
       speed = layer.getAttribute('data-parallax-speed')
-      if (y > this.parallaxMaxScroll) return
-      yPos = -(y * speed)
+      if (y > this.options.parallaxMaxScroll) return
+      yPos = Math.floor(-(y * speed))
       layer.setAttribute(
         'style',
         'transform: translate3d(0px, ' + yPos + 'px, 0px)'

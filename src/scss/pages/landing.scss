@@ -11,7 +11,8 @@ section {
   background: color('white-ter');
   
   &.kepsek-section,
-  &.profil-section {
+  &.profil-section,
+  &.ekstra-section {
     background: color('white');
   }
 
@@ -209,6 +210,42 @@ body {
     width: 25px;
     height: 25px;
     color: color('gray-dark');
+  }
+}
+
+// Ekstrakurikuler Section
+.ekstra {
+  .section-media {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    max-width: 420px;
+    margin-top: 60px;
+  }
+
+  .extra-image {
+    background: color('white');
+    box-shadow: 0 20px 40px rgba(0, 0, 0, .14);
+    border-radius: 6px;
+    padding: 4px;
+    display: flex;
+    flex-direction: column;
+    max-width: 120px;
+    max-height: 140px;
+    margin: 8px;
+    text-align: center;
+
+    &:nth-child(3n+1) {
+      margin-top: -60px;
+    }
+
+    &:nth-child(3n) {
+      margin-top: -30px;
+    }
+  }
+
+  .title {
+    margin-bottom: 12px;
   }
 }
 
