@@ -12,7 +12,8 @@ section {
   
   &.kepsek-section,
   &.profil-section,
-  &.ekstra-section {
+  &.ekstra-section,
+  &.koperasi-section {
     background: color('white');
   }
 
@@ -246,6 +247,94 @@ body {
 
   .title {
     margin-bottom: 12px;
+  }
+}
+
+// Koperasi Section
+.koperasi {
+  .section-media {
+    margin: 30px auto;
+  }
+
+  .data-money {
+    background: color('white');
+  }
+
+  .my-data {
+    padding: 20px 20px 0;
+
+    .head-name {
+      font-weight: $weight-semibold;
+    }
+
+    ul {
+      margin: 10px 0;
+    }
+
+    span {
+      background: color('white');
+    }
+
+    .is-name {
+      padding-right: 6px;
+    }
+
+    .out {
+      padding-left: 6px;
+    }
+
+    li {
+      font-size: 12px;
+      display: flex;
+      justify-content: space-between;
+      background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='4' height='16' viewBox='0 0 4 2'%3E %3Ccircle fill='currentColor' cx='1' cy='1' r='1' /%3E %3C/svg%3E") repeat-x top;
+      margin: 6px 0;
+    }
+  }
+
+  .data-money {
+    max-width: 260px;
+    width: 1000px;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 5px 40px color('black', .14);
+
+    .top {
+      text-align: center;
+      border-radius: 0 0 20px 20px;
+      padding: 26px 0;
+      background: color('primary');
+    }
+
+    .my-money {
+      font-size: 1.2rem;
+      font-weight: 600;
+      color: color('white');
+    }
+
+    .checkout {
+      padding: 5px 20px 20px;
+    }
+  }
+}
+
+
+// Responsive
+@media (max-width: 440px) {
+  .ekstra-sec {
+    .section-media {
+      max-width: 400px;
+    }
+
+    .extra-image {
+      &:nth-child(even) {
+        margin-top: -70px;
+      }
+  
+      &:nth-child(odd) {
+        margin-top: 10px;
+      }
+    }
   }
 }
 
