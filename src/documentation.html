@@ -2594,13 +2594,13 @@
                   <span><b>Guide:</b></span>
                   <ul>
                     <li>
-                      <span></span>
+                      <span>Dengan menggunakan <code>icon-only</code> pada sebuah tombol maka hanya icon</span>
                     </li>
                   </ul>
                 </li>
               </ul>
               <div class="btn-group">
-                <button class="btn">
+                <button class="btn icon-only">
                   <span class="icon small">
                     <i class="fas fa-bold"></i>
                   </span>
@@ -2610,6 +2610,12 @@
                     <i class="fas fa-bold"></i>
                   </span>
                   <span>Bold</span>
+                </button>
+                <button class="btn">
+                  <span>Bold</span>
+                  <span class="icon small">
+                    <i class="fas fa-bold"></i>
+                  </span>
                 </button>
               </div>
               <pre lang="html"><code>&#x3C;div class=&#x22;btn-group&#x22;&#x3E;
@@ -2766,11 +2772,11 @@
                   </li>
                 </ul>
               </nav>
-              <pre lang="html"><code>&#x3C;nav class=&#x22;breadcrumb&#x22; aria-label=&#x22;breadcrumbs&#x22;&#x3E;
+              <pre lang="html"><code>&#x3C;nav class=&#x22;<mark>breadcrumb</mark>&#x22; aria-label=&#x22;breadcrumbs&#x22;&#x3E;
   &#x3C;ul&#x3E;
     &#x3C;li&#x3E;
       &#x3C;a href=&#x22;#&#x22;&#x3E;
-        &#x3C;span class=&#x22;icon&#x22;&#x3E;
+        &#x3C;span class=&#x22;<mark>icon</mark>&#x22;&#x3E;
           &#x3C;i class=&#x22;fa fa-home&#x22;&#x3E;&#x3C;/i&#x3E;
         &#x3C;/span&#x3E;
         &#x3C;span&#x3E;Home&#x3C;/span&#x3E;
@@ -2778,7 +2784,7 @@
     &#x3C;/li&#x3E;
     &#x3C;li&#x3E;
       &#x3C;a href=&#x22;#&#x22;&#x3E;
-        &#x3C;span class=&#x22;icon&#x22;&#x3E;
+        &#x3C;span class=&#x22;<mark>icon</mark>&#x22;&#x3E;
           &#x3C;i class=&#x22;fa fa-file-alt&#x22;&#x3E;&#x3C;/i&#x3E;
         &#x3C;/span&#x3E;
         &#x3C;span&#x3E;Postingan&#x3C;/span&#x3E;
@@ -2888,7 +2894,7 @@
     &#x3C;/button&#x3E;
   &#x3C;/div&#x3E;
   &#x3C;div class=&#x22;dropdown-menu&#x22; id=&#x22;dropdown-menu-content&#x22; role=&#x22;menu&#x22;&#x3E;
-    &#x3C;div class=&#x22;dropdown-content&#x22;&#x3E;
+    &#x3C;div class=&#x22;<mark>dropdown-content</mark>&#x22;&#x3E;
       &#x3C;div class=&#x22;dropdown-item&#x22;&#x3E;
         &#x3C;p&#x3E;Sebuah tulisan dengan &#x3C;strong&#x3E;gaya tebal&#x3C;/strong&#x3E; dan &#x3C;em&#x3E;gaya miring&#x3C;/em&#x3E; pada sebuah dropdown.&#x3C;/p&#x3E;
       &#x3C;/div&#x3E;
@@ -2931,7 +2937,7 @@
                   </div>
                 </div>
               </div>
-              <pre lang="html"><code>&#x3C;div class=&#x22;dropdown hover&#x22;&#x3E;
+              <pre lang="html"><code>&#x3C;div class=&#x22;dropdown <mark>hover</mark>&#x22;&#x3E;
   &#x3C;div class=&#x22;dropdown-trigger&#x22;&#x3E;
     &#x3C;button class=&#x22;btn&#x22; aria-haspopup=&#x22;true&#x22; aria-controls=&#x22;dropdown-menu-hover&#x22;&#x3E;
       &#x3C;span&#x3E;Hover!&#x3C;/span&#x3E;
@@ -2987,7 +2993,7 @@
                   </div>
                 </div>
               </div>
-              <pre lang="html"><code>&#x3C;div class=&#x22;dropdown&#x22;&#x3E;
+              <pre lang="html"><code>&#x3C;div class=&#x22;<mark>dropdown</mark>&#x22;&#x3E;
   &#x3C;div class=&#x22;dropdown-trigger&#x22;&#x3E;
     &#x3C;button class=&#x22;btn&#x22; aria-haspopup=&#x22;true&#x22; aria-controls=&#x22;dropdown-menu-left&#x22;&#x3E;
       &#x3C;span&#x3E;Tekan!&#x3C;/span&#x3E;
@@ -3016,7 +3022,7 @@
                   </div>
                 </div>
               </div>
-              <pre lang="html"><code>&#x3C;div class=&#x22;dropdown&#x22;&#x3E;
+              <pre lang="html"><code>&#x3C;div class=&#x22;<mark>dropdown</mark>&#x22;&#x3E;
   &#x3C;div class=&#x22;dropdown-trigger&#x22;&#x3E;
     &#x3C;button class=&#x22;btn&#x22; aria-haspopup=&#x22;true&#x22; aria-controls=&#x22;dropdown-menu-down&#x22;&#x3E;
       &#x3C;span&#x3E;Tekan!&#x3C;/span&#x3E;
@@ -3045,7 +3051,7 @@
                   </div>
                 </div>
               </div>
-              <pre lang="html"><code>&#x3C;div class=&#x22;dropdown right&#x22;&#x3E;
+              <pre lang="html"><code>&#x3C;div class=&#x22;<mark>dropdown</mark> <mark>right</mark>&#x22;&#x3E;
   &#x3C;div class=&#x22;dropdown-trigger&#x22;&#x3E;
     &#x3C;button class=&#x22;btn&#x22; aria-haspopup=&#x22;true&#x22; aria-controls=&#x22;dropdown-menu-right&#x22;&#x3E;
       &#x3C;span&#x3E;Tekan!&#x3C;/span&#x3E;
@@ -3074,7 +3080,7 @@
                   </div>
                 </div>
               </div>
-              <pre lang="html"><code>&#x3C;div class=&#x22;dropdown top&#x22;&#x3E;
+              <pre lang="html"><code>&#x3C;div class=&#x22;<mark>dropdown</mark> <mark>top</mark>&#x22;&#x3E;
   &#x3C;div class=&#x22;dropdown-trigger&#x22;&#x3E;
     &#x3C;button class=&#x22;btn&#x22; aria-haspopup=&#x22;true&#x22; aria-controls=&#x22;dropdown-menu-top&#x22;&#x3E;
       &#x3C;span&#x3E;Tekan!&#x3C;/span&#x3E;

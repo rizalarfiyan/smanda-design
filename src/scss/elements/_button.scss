@@ -90,19 +90,26 @@ $allowed-colors: ('primary', 'success', 'info', 'warning', 'danger');
       width: 1.5em;
     }
 
-    &:first-child:not(:last-child) {
+    &:first-child:not(:nth-child(2)) {
       @include ltr-property("margin", calc(#{-1 / 2 * $button-padding-horizontal} - #{$button-border-width}), false);
       @include ltr-property("margin", $button-padding-horizontal / 4);
     }
 
-    &:last-child:not(:first-child) {
+    &:nth-child(2):not(:first-child) {
       @include ltr-property("margin", $button-padding-horizontal / 4, false);
       @include ltr-property("margin", calc(#{-1 / 2 * $button-padding-horizontal} - #{$button-border-width}));
     }
 
-    &:first-child:last-child {
+    &:first-child:nth-child(2) {
       margin-left: calc(#{-1 / 2 * $button-padding-horizontal} - #{$button-border-width});
       margin-right: calc(#{-1 / 2 * $button-padding-horizontal} - #{$button-border-width});
+    }
+  }
+
+  &.icon-only {
+    .icon {
+      margin-left: calc(#{-1 / 2 * $button-padding-horizontal} - #{$button-border-width})!important;
+      margin-right: calc(#{-1 / 2 * $button-padding-horizontal} - #{$button-border-width})!important;
     }
   }
 
