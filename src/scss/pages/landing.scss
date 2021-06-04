@@ -2,12 +2,13 @@
 @import './landing/parallax';
 
 $shadow-primary: 0 5px 40px color('primary', .3);
+$padding-section: 60px;
 
 // Development
 section {
   position: relative;
   z-index: 1;
-  padding: 60px 0;
+  padding: $padding-section 0;
   background: color('white-ter');
   
   &.kepsek-section,
@@ -18,7 +19,7 @@ section {
   }
 
   &.kepsek-section {
-    padding: 60px 0 0;
+    padding: $padding-section 0 0;
     border-top: 10px solid color('primary');
   }
 
@@ -127,7 +128,7 @@ body {
 // Profil Kepala Sekolah
 .profil {
   .section-media {
-    margin: 60px 40px;
+    margin: $padding-section 40px;
 
     &::before {
       content: '';
@@ -220,6 +221,36 @@ body {
   }
 }
 
+// Featured posts
+.featured-section {
+  padding: 0;
+
+  &.is-embed {
+    padding-top: 60px;
+    
+    .featured-content {
+      padding: 0 0 $padding-section;
+      margin-top: 12%;
+    }
+
+    .featured-youtube {
+      transform: translateY(-40%);
+      margin-bottom: calc(-40vh + 60px);
+    
+      .card, .heading-title {
+        max-width: 720px;
+      }
+    }
+  }
+}
+
+.featured-content {
+  background: color('white');
+  padding: $padding-section 0 80px;
+  margin-top: 0;
+}
+
+
 // Ekstrakurikuler Section
 .ekstra {
   .section-media {
@@ -227,7 +258,7 @@ body {
     flex-wrap: wrap;
     justify-content: center;
     max-width: 420px;
-    margin-top: 60px;
+    margin-top: $padding-section;
   }
 
   .extra-image {

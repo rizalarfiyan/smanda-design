@@ -6,8 +6,13 @@ $margin-media: 12px;
 $transition-card: all .3s ease;
 $post-size: 14px;
 
+$card-border: 4px;
+$primary-shadow: 0 5px 40px color('primary', .15);
+$primary-shadow-hover: 0 15px 30px color('primary', .25);
+
 .posts {
   .card {
+    width: 100%;
     max-width: $max-width-card;
     margin: 10px;
     border-radius: $radius-large;
@@ -52,10 +57,26 @@ $post-size: 14px;
     }
   }
 
+  &.bordered {
+    .card {
+      border: $card-border solid color('gray', .8);
+      box-shadow: $primary-shadow;
+
+      &:hover {
+        box-shadow: $primary-shadow-hover;
+      }
+    }
+
+    .card-image {
+      margin: $card-border;
+    }
+  }
+
   .card-image {
     overflow: hidden;
     margin: $margin-media;
     border-radius: $radius;
+    color: color('white')
   }
 
   .to-post {
