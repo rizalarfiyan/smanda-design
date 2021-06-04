@@ -102,8 +102,10 @@ $post-size: 14px;
     margin-right: 4px;
   }
 
-  .card-content {
-    padding: 10px 16px 16px;
+  .card:not(.text) {
+    .card-content {
+      padding: 10px 16px 16px;
+    }
   }
 
   .post-footer {

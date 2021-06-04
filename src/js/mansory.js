@@ -1,24 +1,23 @@
 export default class Mansory {
   constructor(options) {
     let defaultOptions = {
-      element: '.achivement-sec .card',
-      classSection: 'achivement-sec',
-      isImage: true,
-      content: '.content',
-      image: '.image',
+      element: '.mansory',
     }
 
     options ? this.options = Object.assign(defaultOptions, options) : this.options = defaultOptions
+    this.element = document.querySelector(this.options.element)
   }
 
   init() {
-    document.addEventListener('DOMContentLoaded', this._resizeAllGridItems())
+    document.addEventListener('onload', this._resizeAllGridItems())
     document.addEventListener("resize", this._resizeAllGridItems())
   }
 
   _resizeAllGridItems() {
-    let getElement = document.querySelectorAll(this.options.element);
-    getElement.forEach(element => this._resizeGridItem(element))
+    let getElement = this.element.querySelectorAll(':scope > *');
+    getElement.forEach(elem => {
+      elem.style.gridRowEnd = `span ${this._rowSpan(elem)}`;
+    })
   }
 
   _getRowHeight(grid) {
@@ -29,21 +28,23 @@ export default class Mansory {
     return parseInt(window.getComputedStyle(grid).getPropertyValue('grid-row-gap'))
   }
 
-  _getImageHeight(element) {
-    if (!this.options.isImage) return
-    if (element.querySelector(this.options.image) === null) return 10
-    return element.querySelector(this.options.image).getBoundingClientRect().height + 10
+  _getAllHeight(elem) {
+    let getStyle = elem.currentStyle || window.getComputedStyle(elem)
+    let marginY = parseInt(getStyle.marginTop, 10) + parseInt(getStyle.marginBottom, 10)
+    let height = elem.getBoundingClientRect().height
+    return Math.floor(marginY + height)
   }
 
-  _rowSpan(element) {
-    let grid = document.getElementsByClassName(this.options.classSection)[0]
-    let rowHeight = this._getRowHeight(grid)
-    let rowGap = this._getRowGap(grid)
-    let image = this._getImageHeight(element)
-    return Math.ceil(Math.floor((element.querySelector(this.options.content).getBoundingClientRect().height + rowGap + image)) / (rowHeight + rowGap));
+  _getHeightAll(elem) {
+    let getAllChild = elem.querySelectorAll(':scope > *')
+    let getHeight = Array.from(getAllChild).map(elem => this._getAllHeight(elem))
+    return Math.round(getHeight.reduce((a, b) => a + b))
   }
-
-  _resizeGridItem(element) {
-    element.style.gridRowEnd = `span ${this._rowSpan(element)}`;
+  
+  _rowSpan(elem) {
+    let rowHeight = this._getRowHeight(this.element)
+    let rowGap = this._getRowGap(this.element)
+    let totalHeight = this._getHeightAll(elem)
+    return Math.ceil(Math.floor((totalHeight + rowGap + 20)) / (rowHeight + rowGap))
   }
 }
