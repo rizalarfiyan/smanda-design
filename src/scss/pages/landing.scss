@@ -230,12 +230,12 @@ body {
     
     .featured-content {
       padding: 0 0 $padding-section;
-      margin-top: 12%;
+      margin-top: calc(9/16 * 10% + 40px);
     }
 
     .featured-youtube {
       transform: translateY(-40%);
-      margin-bottom: calc(-40vh + 60px);
+      margin-bottom: calc(9/16 * 10% - 24%);
     
       .card, .heading-title {
         max-width: 720px;
@@ -422,6 +422,12 @@ body {
       &:nth-child(odd) {
         margin-top: 10px;
       }
+    }
+  }
+
+  .featured-section.is-embed {
+    .featured-youtube {
+      transform: translateY(-20%);
     }
   }
 }
