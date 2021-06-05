@@ -99,7 +99,8 @@ $label-colors: $colors;
           }
 
           &:focus, &.focused, &:active, &.active {
-            z-index: 3;
+            z-index: 4;
+
             &:hover {
               z-index: 4;
             }

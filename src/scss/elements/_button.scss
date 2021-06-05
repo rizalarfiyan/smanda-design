@@ -37,6 +37,10 @@ $button-disabled-border-color: $border;
 $button-disabled-shadow: none;
 $button-disabled-opacity: 0.5;
 
+$button-static-color: $text-light;
+$button-static-background-color: color('white-ter');
+$button-static-border-color: $border;
+
 $button-transition: all 0.3s ease;
 
 $button-colors: $colors;
@@ -350,6 +354,14 @@ $allowed-colors: ('primary', 'success', 'info', 'warning', 'danger');
     border-radius: $radius-rounded;
     padding-left: calc(#{$button-padding-horizontal} + 0.25em);
     padding-right: calc(#{$button-padding-horizontal} + 0.25em);
+  }
+
+  &.static {
+    background-color: $button-static-background-color;
+    border-color: $button-static-border-color;
+    color: $button-static-color;
+    box-shadow: none;
+    pointer-events: none;
   }
 }
 
