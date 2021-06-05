@@ -1,0 +1,11 @@
+@import '../core/mixins';
+
+@each $name, $value in $colors {
+  .bg-#{$name} {
+    background-color: color($name)!important;
+  }
+
+  .text-#{$name} {
+    color: color($name)!important;
+  }
+}

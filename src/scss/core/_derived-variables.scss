@@ -1,0 +1,115 @@
+@import 'initial-variables';
+@import 'functions';
+
+$colors: (
+  // Basic Color
+  'primary': (
+    'main': $primary,
+    'invert': findColorInvert($primary),
+    'light': findLightColor($primary),
+    'dark': findDarkColor($primary),
+  ),
+
+  'success': (
+    'main': $success,
+    'invert': findColorInvert($success),
+    'light': findLightColor($success),
+    'dark': findDarkColor($success),
+  ),
+
+  'info': (
+    'main': $info,
+    'invert': findColorInvert($info),
+    'light': findLightColor($info),
+    'dark': findDarkColor($info),
+  ),
+
+  'warning': (
+    'main': $warning,
+    'invert': findColorInvert($warning),
+    'light': findLightColor($warning),
+    'dark': findDarkColor($warning),
+  ),
+
+  'danger': (
+    'main': $danger,
+    'invert': findColorInvert($danger),
+    'light': findLightColor($danger),
+    'dark': findDarkColor($danger),
+  ),
+
+  // General colors
+  'white': (
+    'main': $white,
+    'bis': $white-bis,
+    'ter': $white-ter,
+  ),
+
+  'black': (
+    'main': $black,
+    'bis': $black-bis,
+    'ter': $black-ter,
+  ),
+
+  // Gray Color
+  'gray': (
+    'darker': $gray-darker,
+    'dark': $gray-dark,
+    'main': $gray,
+    'light': $gray-light,
+    'lighter': $gray-lighter,
+    'lightest': $gray-lightest,
+  ),
+);
+
+$background: color('white-ter');
+
+$border: color('gray-lighter');
+$border-hover: color('gray-light');
+$border-light: color('gray-lightest');
+$border-light-hover: color('gray-light');
+
+// Text colors
+$text: color('gray-dark');
+$text-invert: findColorInvert($text);
+$text-light: color('gray');
+$text-strong: color('gray-darker');
+
+// Code colors
+$code: darken($danger, 15%);
+$code-background: $background;
+
+$pre: $text;
+$pre-background: $background;
+
+// Link colors
+$link-parent: $primary;
+$link: color('primary');
+$link-invert: color('primary-invert');
+$link-light: color('primary-light');
+$link-dark: color('primary-dark');
+$link-visited: color('primary-dark');
+
+$link-hover: color('gray-darker');
+$link-hover-border: color('gray-light');
+
+$link-focus: color('gray-darker');
+$link-focus-border: color('primary');
+
+$link-active: color('gray-darker');
+$link-active-border: color('gray-dark');
+
+// Typography
+$family-primary: $family-sans-serif;
+$family-code: $family-monospace;
+
+$size-small: $size-7;
+$size-normal: $size-6;
+$size-medium: $size-5;
+$size-large: $size-4;
+
+// Effects
+$shadow: 0 0.5em 1em -0.125em rgba(0, 0, 0, 0.1), 0 0px 0 1px rgba(0, 0, 0, 0.02);
+
+// Size Title
+$sizes: $size-1 $size-2 $size-3 $size-4 $size-5 $size-6 $size-7;

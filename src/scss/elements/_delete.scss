@@ -1,0 +1,9 @@
+@import '../core/mixins';
+
+.element {
+  @extend %block;
+}
+
+.delete {
+  @extend %delete;
+}

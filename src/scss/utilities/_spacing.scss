@@ -1,0 +1,60 @@
+.no-margin {
+  margin: 0!important;
+}
+
+.no-padding {
+  padding: 0!important;
+}
+
+$spacing-shortcuts: (
+  "margin": "m",
+  "padding": "p"
+);
+$spacing-directions: (
+  "top": "t",
+  "right": "r",
+  "bottom": "b",
+  "left": "l"
+);
+$spacing-horizontal: "x";
+$spacing-vertical: "y";
+$spacing-values: (
+  "0": 0,
+  "1": 0.25rem,
+  "2": 0.5rem,
+  "3": 0.75rem,
+  "4": 1rem,
+  "5": 1.5rem,
+  "6": 3rem,
+  "auto": auto
+);
+
+@each $property, $shortcut in $spacing-shortcuts {
+  @each $name, $value in $spacing-values {
+    @if $name != "auto" and $property != "margin" or $name == "auto" and $property == "margin" {
+      .#{$shortcut}-#{$name} {
+        #{$property}: $value !important;
+      }
+  
+      @each $direction, $suffix in $spacing-directions {
+        .#{$shortcut}#{$suffix}-#{$name} {
+          #{$property}-#{$direction}: $value !important;
+        }
+      }
+  
+      @if $spacing-horizontal != null {
+        .#{$shortcut}#{$spacing-horizontal}-#{$name} {
+          #{$property}-left: $value !important;
+          #{$property}-right: $value !important;
+        }
+      }
+  
+      @if $spacing-vertical != null {
+        .#{$shortcut}#{$spacing-vertical}-#{$name} {
+          #{$property}-top: $value !important;
+          #{$property}-bottom: $value !important;
+        }
+      }
+    }
+  }
+}

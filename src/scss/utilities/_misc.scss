@@ -1,0 +1,41 @@
+@import '../core/mixins';
+
+$position: ('relative');
+@each $value in $position {
+  .#{$value} {
+    position: $value!important;
+  }
+}
+
+.round {
+  border-radius: $radius;
+}
+
+$border-radius: (
+  'small': $radius-small,
+  'normal': $radius,
+  'large': $radius-small,
+  'full': $radius-rounded,
+);
+
+@each $name, $value in $border-radius {
+  .round-#{$name} {
+    border-radius: $value!important;
+  }
+}
+
+.pointer {
+  cursor: pointer!important;
+}
+
+.hidden {
+  overflow: hidden!important;
+}
+
+.y-auto {
+  overflow-y: auto!important;
+}
+
+.x-auto {
+  overflow-x: auto!important;
+}

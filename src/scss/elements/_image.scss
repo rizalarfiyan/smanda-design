@@ -1,0 +1,53 @@
+@import '../core/mixins';
+
+$dimensions: 16 24 32 48 64 96 128;
+$aspect-ratios: (
+  (16 9),
+  (4 3),
+  (1 1),
+);
+
+%ratio {
+  > * {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+  }
+
+  img {
+    object-position: center;
+    object-fit: cover;
+  }
+}
+
+@each $ratio in $aspect-ratios {
+  $ratio-x: nth($ratio, 1);
+  $ratio-y: nth($ratio, 2);
+
+  &.ratio-#{$ratio-x}x#{$ratio-y} {
+    @extend %ratio;
+
+    padding-bottom: percentage($ratio-y / $ratio-x);
+  }
+}
+
+.image {
+  margin: 0!important;
+  display: block;
+  position: relative;
+  width: 100%;
+  background: color('gray-lightest');
+
+  &.fullwidth {
+    width: 100%;
+  }
+
+  @each $dimension in $dimensions {
+    &.size-#{$dimension} {
+      height: $dimension * 1px;
+      width: $dimension * 1px;
+    }
+  }
+}

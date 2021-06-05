@@ -1,242 +1,276 @@
-@import '../core';
+@import '../core/mixins';
+@import './landing/parallax';
 
+$shadow-primary: 0 5px 40px color('primary', .3);
+$padding-section: 60px;
+
+// Development
 section {
   position: relative;
   z-index: 1;
-  overflow: hidden;
-
-  &:not(.hero) {
-    padding: 3rem 0;
-  }
-
-  &.important-section {
-    // padding: 4.5rem 0;
-    // margin-top: 100vh;
-    border-top: 6px solid var-color(--main);
-    background: var-color(--white);
-  }
+  padding: $padding-section 0;
+  background: color('white-ter');
   
-  &.access-section,
-  &.posts-section,
-  &.achivement-section {
-    padding: 6rem 0 3rem;
-    background: var-color(--mode-200);
+  &.kepsek-section,
+  &.profil-section,
+  &.ekstra-section,
+  &.koperasi-section {
+    background: color('white');
+  }
+
+  &.kepsek-section {
+    padding: $padding-section 0 0;
+    border-top: 10px solid color('primary');
+  }
+
+  &[data-content] {
+    display: flex;
+    justify-content: center;
+
+    &:before{
+      content: attr(data-content);
+      font-weight: $weight-bold;
+      text-transform: uppercase;
+      letter-spacing: 4px;
+      font-size: 8rem;
+      position: absolute;
+      color: color('gray-light', .1);
+      text-align: center;
+      overflow-wrap: anywhere;
+      z-index: -1;
+    }
   }
 }
 
-.heading {
+body {
+  overflow: hidden;
+}
+
+.container {
+  width: calc(100% - 20px);
+  max-width: 1100px;
+  margin: auto;
+}
+
+.heading-title {
   text-align: center;
-  max-width: 520px;
-  margin: 0 auto;
+  max-width: 440px;
+  margin: 20px auto 40px;
 }
 
-p {
-  line-height: 1.5;
-  color: var-color(--mode-700);
+.content p,
+.subtitle {
+  color: color('gray');
 }
 
-.sec {
+.section-two {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-evenly;
-  
+
   &.reverse {
     flex-direction: row-reverse;
   }
 
-  .image {
+  .section-media {
     position: relative;
-    margin: auto;
   }
 
-  .content {
+  .section-content {
     max-width: 580px;
     padding: 20px;
     margin: auto;
   }
-
-  h2 {
-    margin-bottom: 1rem;
-  }
-
-  .btn {
-    margin: .5rem auto auto 0;
-  }
 }
 
-.kepsek-sec {
+// Kepala Sekolah
+.kepsek {
   .icon-kepsek {
     position: absolute;
-    padding: 18px 20px;
-    background: var-color(--main);
-    border-radius: 50%;
+    padding: 16px 20px;
+    background: color('primary');
+    border-radius: $radius-rounded;
     right: -26px;
     top: -26px;
-    border: 10px solid var-color(--white);
-    color: var-color(--white);
-    box-shadow: 0 5px 40px var-color(--main, .3);
+    border: 10px solid color('white');
+    color: color('white');
+    box-shadow: $shadow-primary;
   }
 
   .jabatan {
     position: absolute;
-    padding: 10px 16px;
+    padding: 8px 16px;
     border-radius: 6px;
     left: 30px;
     bottom: -15px;
-    background: var-color(--white);
-    box-shadow: 0 5px 40px var-color(--main, .3);
-    font-size: $font-size-base * 1.25;
-    font-weight: $font-weight-semi;
+    background: color('white');
+    box-shadow: $shadow-primary;
+    font-size: $size-5;
+    font-weight: $weight-semibold;
+  }
+
+  .section-media {
+    margin: 50px auto;
   }
 
   .image {
-    margin: 40px auto 30px;
+    width: 280px;
+    z-index: -1;
+    max-width: 100%;
   }
   
   img {
-    border: 10px solid var-color(--white);
-    box-shadow: 0 4px 40px var-color(--black, .12);
+    border: 10px solid color('white');
+    box-shadow: 0 4px 40px color('black', .12);
   }
 }
 
-.profil-sec {
-  .image {
+// Profil Kepala Sekolah
+.profil {
+  .section-media {
+    margin: $padding-section 40px;
+
     &::before {
       content: '';
       position: absolute;
-      top: 0;
-      right: -20px;
+      top: -30px;
+      right: -30px;
       z-index: -1;
-      width: 80%;
-      height: 80%;
-      background: var-color(--main, .075);
+      width: 100%;
+      height: 100%;
+      background: color('primary', .075);
       border-radius: 10px;
     }
   }
 
-  img {
+  .image {
     border-radius: 6px;
-    box-shadow: 0 10px 30px var-color(--main, .3);
-    max-width: 320px;
-    max-height: 320px;
-    margin: 40px 30px 40px 50px;
+    box-shadow: $shadow-primary;
+    overflow: hidden;
+    width: 280px;
+    max-width: 100%;
+    z-index: -1;
   }
 
   ul {
     position: absolute;
-    bottom: 0;
-    left: 15px;
-    background: var-color(--white);
+    bottom: -30px;
+    left: -25px;
+    background: color('white');
     padding: 12px 18px;
     border-radius: 6px;
-    box-shadow: -10px 10px 20px var-color(--main, .15);
-    color: var-color(--mode-800);
+    box-shadow: -10px 10px 40px color('black', .1);
+    color: color('black-ter');
+    font-size: $size-6;
+    font-weight: $weight-semibold;
 
     li {
       padding: 6px;
     }
-    
+
     i {
-      margin-right: 6px;
+      margin-right: 10px;
     }
   }
 }
 
+// Akses Cepat Section
+.fast-access {
+  flex-wrap: wrap;
+  margin: 2rem 0;
+
+  .card {
+    display: block;
+    width: 100%;
+    max-width: 180px;
+    margin: 10px;
+    padding: 18px;
+    border-radius: 6px;
+    text-align: center;
+    box-shadow: 0 25px 40px color('black', .1);
+    border: 3px solid transparent;
+    transition: all .75s ease;
+
+    &:hover {
+      box-sizing: border-box;
+      border: 3px solid color('primary');
+
+      i {
+        animation: topBottom 0.3s forwards;
+      }
+    }
+  }
+
+  .card-content {
+    padding: 0;
+  }
+
+  .icon-access {
+    padding: 1.5rem;
+    border-radius: 50%;
+    background: color('primary', .1);
+    margin-bottom: 12px;
+    display: inline-block;
+  }
+
+  i {
+    font-size: 1.5rem;
+    width: 25px;
+    height: 25px;
+    color: color('gray-dark');
+  }
+}
+
+// Featured posts
 .featured-section {
+  padding: 0;
+
   &.is-embed {
-    padding-top: 190px;
-    background: var-color(--mode-200);
-    padding-bottom: 0;
-    margin-bottom: 3rem;
-
-    .embed {
-      max-width: 650px;
-      margin: auto;
-      border-radius: 4px;
-      transform: translateY(-50%);
-      margin-bottom: -150px;
-      box-shadow: 0 20px 40px rgba(0, 0, 0, .14);
-    }
-  }
-
-  .play-button {
-    position: absolute!important;
-    background: var-color(--main);
-    padding: 10px 15px 10px 25px;
-    border: 2px solid var-color(--white);
-    border-radius: 6px;
-    z-index: 1;
-
-    i {
-      font-size: 20px;
-      color: var-color(--white);
-    }
-  }
-
-  .overlay-embed {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    background-image: radial-gradient(var-color(--black, .2), var-color(--black, .6));
-  }
-
-  .item {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border-radius: 6px;
-    border: 10px solid var-color(--white);
-  }
-
-  .featured-landing {
-    background: var-color(--white);
-    width: 100%;
-  }
-
-  .yt-landing {
-    flex-direction: column;
-
-    h1 {
-      margin: 0 auto 1rem;
+    padding-top: 60px;
+    
+    .featured-content {
+      padding: 0 0 $padding-section;
+      margin-top: calc(9/16 * 10% + 40px);
     }
 
-    .content {
-      max-width: 600px;
-      text-align: center;
+    .featured-youtube {
+      transform: translateY(-40%);
+      margin-bottom: calc(9/16 * 10% - 24%);
+    
+      .card, .heading-title {
+        max-width: 720px;
+      }
     }
-  }
-
-  .posts {
-    margin-top: 40px;
-    padding-bottom: 40px;
   }
 }
 
-.ekstra-sec {
-  img {
-    width: 100%;
-    height: auto;
-  }
-  
-  .image {
+.featured-content {
+  background: color('white');
+  padding: $padding-section 0 80px;
+  margin-top: 0;
+}
+
+// Ekstrakurikuler Section
+.ekstra {
+  .section-media {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     max-width: 420px;
-    margin-top: 60px;
+    margin-top: $padding-section;
   }
 
-  .extra-div {
-    background: var-color(--white);
+  .extra-image {
+    background: color('white');
     box-shadow: 0 20px 40px rgba(0, 0, 0, .14);
     border-radius: 6px;
     padding: 4px;
     display: flex;
     flex-direction: column;
     max-width: 120px;
+    max-height: 140px;
     margin: 8px;
     text-align: center;
-    height: 100%;
 
     &:nth-child(3n+1) {
       margin-top: -60px;
@@ -247,47 +281,78 @@ p {
     }
   }
 
-  h3 {
-    color: var-color(--mode-600);
-    font-size: $font-size-base * 1.125;
-    margin: 4px auto 10px;
+  .title {
+    margin-bottom: 12px;
   }
 }
 
-.achivement-sec {
-  display: grid;
-  grid-gap: 14px;
-  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-  grid-auto-rows: 8px;
-  align-items: inherit;
-  margin: 60px 0 40px;
+// Quote Section
+.quote {
+  position: relative;
+  font-size: $size-4;
+  max-width: 620px;
+  margin: 30px auto 15px;
+  text-align: center;
+  font-family: $family-monospace;
+  
+  &:before,
+  &:after {
+    position: absolute;
+    font-family: 'Font Awesome 5 Free';
+    font-weight: 900;
+    font-size: 5rem;
+    color: color('gray-light', .1);
+  }
+  
+  &:before {
+    content: '\f10d';
+    left: 0;
+    top: -50px;
+  }
+  
+  &:after {
+    content: '\f10e';
+    right: 0;
+    bottom: -30px;
+  }
 
-  &.posts {
-    .card {
-      width: auto;
-      margin: 0;
-      max-width: 100%;
-      align-items: inherit;
-    }
+  cite {
+    margin-top: 12px;
+    font-size: 14px;
+    display: block;
+    text-align: center;
 
-    .content {
-      padding: 12px 6px;
-      justify-content: center;
+    &:before {
+      content: '-';
+      margin-right: 6px;
     }
   }
 }
 
-.koperasi-sec {
+// Postingan Section
+.postingan-section {
+  .load-more {
+    display: flex;
+    justify-content: center;
+    margin: 40px auto;
+  }
+}
 
-  .image {
+// Koperasi Section
+.koperasi {
+  .section-media {
     margin: 30px auto;
+  }
+
+  .data-money {
+    background: color('white');
   }
 
   .my-data {
     padding: 20px 20px 0;
 
     .head-name {
-      font-weight: $font-weight-semi;
+      font-weight: $weight-semibold;
     }
 
     ul {
@@ -295,7 +360,7 @@ p {
     }
 
     span {
-      background: var-color(--white);
+      background: color('white');
     }
 
     .is-name {
@@ -320,19 +385,19 @@ p {
     width: 1000px;
     border-radius: 10px;
     overflow: hidden;
-    box-shadow: 0 5px 40px var-color(--black, .14);
+    box-shadow: 0 5px 40px color('black', .14);
 
     .top {
       text-align: center;
       border-radius: 0 0 20px 20px;
       padding: 26px 0;
-      background: var-color(--main);
+      background: color('primary');
     }
 
     .my-money {
       font-size: 1.2rem;
       font-weight: 600;
-      color: var-color(--white);
+      color: color('white');
     }
 
     .checkout {
@@ -341,49 +406,20 @@ p {
   }
 }
 
-.post-sec {
-  margin: 60px 0 40px;
-  display: flex;
-  align-items: center;
-  flex-direction: column;
-
-  .btn {
-    margin: 40px 0 0;
-  }
+// Footer
+footer {
+  position: relative;
+  z-index: 1;
 }
 
-@media (max-width: 680px) {
-  .featured-section {
-    &.is-embed {
-      padding-top: calc(25% + 20px);
-  
-      .embed {
-        margin-bottom: calc(-22%);
-      }
-    }
-  }
-}
-
+// Responsive
 @media (max-width: 440px) {
-  .profil-sec {
-    .image {
-      &::before {
-        right: -30px;
-        width: 100%;
-      }
-    }
-    
-    img {
-      margin: 30px 0px 50px 0;
-    }
-  }
-
   .ekstra-sec {
-    .image {
+    .section-media {
       max-width: 400px;
     }
 
-    .extra-div {
+    .extra-image {
       &:nth-child(even) {
         margin-top: -70px;
       }
@@ -393,4 +429,24 @@ p {
       }
     }
   }
+
+  .featured-section.is-embed {
+    .featured-youtube {
+      transform: translateY(-20%);
+    }
+  }
+}
+
+// Animation
+@keyframes topBottom {
+	49% {
+		transform: translateY(-100%);
+	}
+	50% {
+		opacity: 0;
+		transform: translateY(100%);
+	}
+	51% {
+		opacity: 1;
+	}
 }

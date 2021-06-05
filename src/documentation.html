@@ -1,0 +1,3214 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Documentation - Design of SMANDA</title>
+    <link rel="stylesheet" href="./css/style.css" />
+    <link rel="stylesheet" href="./css/dev/demo.css" />
+  </head>
+  <body class="demo docs">
+    <nav class="doc-nav">
+      <div class="container">
+        <div class="wrap-nav">
+          <button class="hamburger ripple">
+            <div class="my-ham">
+              <span></span>
+              <span></span>
+              <span></span>
+            </div>
+          </button>
+          <div class="logo ripple">
+            <img src="./images/logo/smanda.png" alt="SMA Negeri 2 Kebumen">
+            <h1 class="title h5">SMA Negeri 2 Kebumen</h1>
+          </div>
+          <div class="search">
+            here
+          </div>
+        </div>
+      </div>
+    </nav>
+    <section class="doc-wrapper">
+      <div class="doc-sidebar">
+        <nav id="TOCDocs"></nav>
+      </div>
+      <div class="doc-content" id="content">
+        <article>
+          <section data-heading="h1" data-name="Introduction" no-heading data-icon="fa fa-star">
+            <div class="header">
+              <h1 class="title h3">Documentation of SMANDA Kebumen</h1>
+              <p class="subtitle h6">Created by <a href="https://github.com/rizalarfiyan" target="_blank" rel="noopener noreferrer">Rizal Arfiyan</a> with <i class="fa fa-heart"></i> adapted from <a href="https://bulma.io/" target="_blank" rel="noopener noreferrer">Bulma</a></p>
+            </div>
+            <div class="content">
+              <p>Tampilan SMANDA dibuat menggunakan teknologi preprocessor CSS yaitu <a href="https://sass-lang.com/" target="_blank" rel="noopener noreferrer">SASS (SCSS)</a> dengan mengadaptasi beberapa fitur dari framework terkenal. Dibuatnya halaman dokumentasi ini adalah bertujuan untuk memudahkan generasi selanjutnya dalam pengembangan website serta menambah wawasan akan penggunaan <a href="https://www.w3schools.com/html/" target="_blank" rel="noopener noreferrer">html</a> dan <a href="https://www.w3schools.com/css/" target="_blank" rel="noopener noreferrer">css</a> itu sendiri. Harapannya dengan adanya dokumentasi ini, generasi selanjutnya akan lebih berkarya dari generasi-generasi sebelumnya. <mark>Salam developer!</mark></p>
+              <p>Penggunaan teknologi dalam sisi desain:</p>
+              <ol>
+                <li>
+                  <span><a href="https://www.w3schools.com/html/" target="_blank" rel="noopener noreferrer">HTML</a></span>
+                </li>
+                <li>
+                  <span><a href="https://www.w3schools.com/css/" target="_blank" rel="noopener noreferrer">CSS</a> <b><a href="https://sass-lang.com/" target="_blank" rel="noopener noreferrer">(SCSS)</a></b></span>
+                </li>
+                <li>
+                  <span><a href="https://www.w3schools.com/javascript/" target="_blank" rel="noopener noreferrer">Javascript</a></span>
+                </li>
+              </ol>
+              <p>Software pendukung:</p>
+              <ol>
+                <li>
+                  <span><a href="https://nodejs.org/en/" target="_blank" rel="noopener noreferrer">Node JS</a> + <a href="https://www.npmjs.com/" target="_blank" rel="noopener noreferrer">NPM</a> (otomatis terinstall jika menginstall Node JS).</span>
+                </li>
+                <li>
+                  <span>Code Editor <a href="https://code.visualstudio.com/" target="_blank" rel="noopener noreferrer">VS Code <b>(rekomendasi)</b></a>, <a href="https://www.sublimetext.com/" target="_blank" rel="noopener noreferrer">Sublime Text</a>, <a href="https://notepad-plus-plus.org/downloads/" target="_blank" rel="noopener noreferrer">Notepad++</a>, dan lain lain. (pilih salah satu)</span>
+                </li>
+              </ol>
+              <p>Pendukung lainnya:</p>
+              <ol>
+                <li>
+                  <span><a href="https://fontawesome.com/v5/cheatsheet" target="_blank" rel="noopener noreferrer">Icon Font Awesome 5 Free</a></span>
+                </li>
+              </ol>
+            </div>
+          </section>
+          <section data-heading="h1" data-name="Element" data-icon="fa fa-stream">
+            <div class="content">
+              <ul>
+                <li>
+                  <p><b>Lokasi:</b> <code>scss/elements/*</code>, </p>
+                </li>
+                <li>
+                  <p><b>Isi:</b></p>
+                  <ul>
+                    <li>
+                      <span><code>box.scss</code></span>
+                    </li>
+                    <li>
+                      <span><code>button.scss</code></span>
+                    </li>
+                    <li>
+                      <span><code>content.scss</code></span>
+                    </li>
+                    <li>
+                      <span><code>delete.scss</code></span>
+                    </li>
+                    <li>
+                      <span><code>icon.scss</code></span>
+                    </li>
+                    <li>
+                      <span><code>image.scss</code></span>
+                    </li>
+                    <li>
+                      <span><code>notification.scss</code></span>
+                    </li>
+                    <li>
+                      <span><code>table.scss</code></span>
+                    </li>
+                    <li>
+                      <span><code>tag.scss</code></span>
+                    </li>
+                    <li>
+                      <span><code>title.scss</code></span>
+                    </li>
+                  </ul>
+                </li>
+              </ul>
+            </div>
+          </section>
+          <section data-heading="h2" data-name="Basic Element">
+            <div class="content">
+              <ul>
+                <li>
+                  <span><b>Lokasi:</b> <code>scss/elements/element.scss</code></span>
+                </li>
+                <li>
+                  <span><b>Guide:</b></span>
+                  <ul>
+                    <li>
+                      <span>Harus dengan class <code>content</code> pada orang tua.</span>
+                    </li>
+                  </ul>
+                </li>
+              </ul>
+            </div>
+          </section>
+          <section data-heading="h3" data-name="Heading">
+            <div class="content">
+              <ul>
+                <li>
+                  <span><b>Guide:</b></span>
+                  <ul>
+                    <li>
+                      <span>Terdapat heading style <code>h1</code>, <code>h2</code>, <code>h3</code>, <code>h4</code>, <code>h5</code>, dan <code>h6</code></span>
+                    </li>
+                  </ul>
+                </li>
+              </ul>
+              <h1>h1. Heading 1</h1>
+              <h2>h2. Heading 2</h2>
+              <h3>h3. Heading 3</h3>
+              <h4>h4. Heading 4</h4>
+              <h5>h5. Heading 5</h5>
+              <h6>h6. Heading 6</h6>
+              <pre lang="html"><code>&#x3C;h1&#x3E;h1. Heading 1&#x3C;/h1&#x3E;
+&#x3C;h2&#x3E;h2. Heading 2&#x3C;/h2&#x3E;
+&#x3C;h3&#x3E;h3. Heading 3&#x3C;/h3&#x3E;
+&#x3C;h4&#x3E;h4. Heading 4&#x3C;/h4&#x3E;
+&#x3C;h5&#x3E;h5. Heading 5&#x3C;/h5&#x3E;
+&#x3C;h6&#x3E;h6. Heading 6&#x3C;/h6&#x3E;</code></pre>
+            </div>
+          </section>
+          <section data-heading="h3" data-name="Typography">
+            <div class="content">
+              <ul>
+                <li>
+                  <span><b>Guide:</b></span>
+                  <ul>
+                    <li>
+                      <span><code>b</code> - teks tebal</span>
+                    </li>
+                    <li>
+                      <span><code>strong</code> - teks penting (tebal)</span>
+                    </li>
+                    <li>
+                      <span><code>em</code> - teks miring</span>
+                    </li>
+                    <li>
+                      <span><code>mark</code> - teks terseleksi</span>
+                    </li>
+                    <li>
+                      <span><code>small</code> - teks kecil</span>
+                    </li>
+                    <li>
+                      <span><code>del</code> - teks garis tengah</span>
+                    </li>
+                    <li>
+                      <span><code>ins</code> - teks garis bawah</span>
+                    </li>
+                    <li>
+                      <span><code>sup</code> - pangkat atas</span>
+                    </li>
+                    <li>
+                      <span><code>sub</code> - pangkat bawah</span>
+                    </li>
+                  </ul>
+                </li>
+              </ul>
+              <div>
+                <p><b>Ini adalah tulisan dengan gaya tebal.</b></p>
+                <p><strong>Ini adalah tulisan penting (tebal).</strong></p>
+                <p><em>Ini adalah tulisan dengan gaya miring.</em></p>
+                <p><mark>Ini adalah tulisan dengan gaya terseleksi.</mark></p>
+                <p><small>Ini adalah tulisan dengan gaya kecil.</small></p>
+                <p><del>Ini adalah tulisan dengan gaya garis tengah.</del></p>
+                <p><ins>Ini adalah tulisan dengan gaya garis bawah.</ins></p>
+                <p>Jakarta <sup>[1]</sup> adalah ibukota Negara Indonesia <sup>[2]</sup>.</p>
+                <p>Rumus kima dari oksigen adalah H<sub>2</sub>O</p>
+              </div>
+              <pre lang="html"><code>&#x3C;p&#x3E;&#x3C;b&#x3E;Ini adalah tulisan dengan gaya tebal.&#x3C;/b&#x3E;&#x3C;/p&#x3E;
+&#x3C;p&#x3E;&#x3C;strong&#x3E;Ini adalah tulisan penting (tebal).&#x3C;/strong&#x3E;&#x3C;/p&#x3E;
+&#x3C;p&#x3E;&#x3C;em&#x3E;Ini adalah tulisan dengan gaya miring.&#x3C;/em&#x3E;&#x3C;/p&#x3E;
+&#x3C;p&#x3E;&#x3C;mark&#x3E;Ini adalah tulisan dengan gaya terseleksi.&#x3C;/mark&#x3E;&#x3C;/p&#x3E;
+&#x3C;p&#x3E;&#x3C;small&#x3E;Ini adalah tulisan dengan gaya kecil.&#x3C;/small&#x3E;&#x3C;/p&#x3E;
+&#x3C;p&#x3E;&#x3C;del&#x3E;Ini adalah tulisan dengan gaya garis tengah.&#x3C;/del&#x3E;&#x3C;/p&#x3E;
+&#x3C;p&#x3E;&#x3C;ins&#x3E;Ini adalah tulisan dengan gaya garis bawah.&#x3C;/ins&#x3E;&#x3C;/p&#x3E;
+&#x3C;p&#x3E;Jakarta &#x3C;sup&#x3E;[1]&#x3C;/sup&#x3E; adalah ibukota Negara Indonesia &#x3C;sup&#x3E;[2]&#x3C;/sup&#x3E;.&#x3C;/p&#x3E;
+&#x3C;p&#x3E;Rumus kima dari oksigen adalah H&#x3C;sub&#x3E;2&#x3C;/sub&#x3E;O&#x3C;/p&#x3E;</code></pre>
+            </div>
+          </section>
+          <section data-heading="h3" data-name="Paragraph">
+            <div class="content">
+              <ul>
+                <li>
+                  <span><b>Guide:</b></span>
+                  <ul>
+                    <li>
+                      <span>Terdapat 3 varian diantaranya:</span>
+                      <ul>
+                        <li>
+                          <span>Gaya paragraf (default)</span>
+                        </li>
+                        <li>
+                          <span>Gaya paragraf dengan class <code>drop-cap</code> (huruf paling depan paragraf akan besar)</span>
+                        </li>
+                        <li>
+                          <span>Gaya paragraf dengan class <code>indent</code> (baris pertama paragraf akan menjorok)</span>
+                        </li>
+                      </ul>
+                    </li>
+                  </ul>
+                </li>
+              </ul>
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium eligendi quas mollitia deserunt iste culpa saepe voluptas delectus sequi consectetur provident, minima sed dolor voluptate asperiores, aliquid labore laboriosam nihil porro? Mollitia, explicabo? Voluptates quidem perferendis, quo, id repellat impedit est voluptatem vel quasi dicta harum, nam nemo libero dolorum. Voluptatum voluptatem labore esse reprehenderit libero blanditiis consequuntur soluta rem ratione earum nisi laborum, aspernatur atque nesciunt qui quis dolores tenetur quas non? Nesciunt debitis similique corrupti libero suscipit perferendis!
+              </p>
+              <p class="drop-cap">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium eligendi quas mollitia deserunt iste culpa saepe voluptas delectus sequi consectetur provident, minima sed dolor voluptate asperiores, aliquid labore laboriosam nihil porro? Mollitia, explicabo? Voluptates quidem perferendis, quo, id repellat impedit est voluptatem vel quasi dicta harum, nam nemo libero dolorum. Voluptatum voluptatem labore esse reprehenderit libero blanditiis consequuntur soluta rem ratione earum nisi laborum, aspernatur atque nesciunt qui quis dolores tenetur quas non? Nesciunt debitis similique corrupti libero suscipit perferendis!
+              </p>
+              <p class="indent">
+                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Saepe dolor optio ut officia sequi accusantium est architecto molestiae eum vitae esse doloribus maxime aut praesentium, iste vel possimus laudantium perferendis alias voluptatibus cupiditate ab? Velit necessitatibus pariatur est neque id eum laborum, unde modi laboriosam nesciunt dicta beatae praesentium aperiam blanditiis similique perferendis cupiditate error! Culpa architecto officia at, porro doloribus dignissimos? Minus, perspiciatis? Unde libero commodi tempora eum in qui, perferendis minus dolorum aliquam sint, voluptatibus quam consequatur inventore!
+              </p>
+              <pre lang="html"><code>&#x3C;p&#x3E;
+  Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium eligendi quas mollitia deserunt iste culpa saepe voluptas delectus sequi consectetur provident, minima sed dolor voluptate asperiores, aliquid labore laboriosam nihil porro? Mollitia, explicabo? Voluptates quidem perferendis, quo, id repellat impedit est voluptatem vel quasi dicta harum, nam nemo libero dolorum. Voluptatum voluptatem labore esse reprehenderit libero blanditiis consequuntur soluta rem ratione earum nisi laborum, aspernatur atque nesciunt qui quis dolores tenetur quas non? Nesciunt debitis similique corrupti libero suscipit perferendis!
+&#x3C;/p&#x3E;
+&#x3C;p class=&#x22;<mark>drop-cap</mark>&#x22;&#x3E;
+  Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium eligendi quas mollitia deserunt iste culpa saepe voluptas delectus sequi consectetur provident, minima sed dolor voluptate asperiores, aliquid labore laboriosam nihil porro? Mollitia, explicabo? Voluptates quidem perferendis, quo, id repellat impedit est voluptatem vel quasi dicta harum, nam nemo libero dolorum. Voluptatum voluptatem labore esse reprehenderit libero blanditiis consequuntur soluta rem ratione earum nisi laborum, aspernatur atque nesciunt qui quis dolores tenetur quas non? Nesciunt debitis similique corrupti libero suscipit perferendis!
+&#x3C;/p&#x3E;
+&#x3C;p class=&#x22;<mark>indent</mark>&#x22;&#x3E;
+  Lorem ipsum dolor sit, amet consectetur adipisicing elit. Saepe dolor optio ut officia sequi accusantium est architecto molestiae eum vitae esse doloribus maxime aut praesentium, iste vel possimus laudantium perferendis alias voluptatibus cupiditate ab? Velit necessitatibus pariatur est neque id eum laborum, unde modi laboriosam nesciunt dicta beatae praesentium aperiam blanditiis similique perferendis cupiditate error! Culpa architecto officia at, porro doloribus dignissimos? Minus, perspiciatis? Unde libero commodi tempora eum in qui, perferendis minus dolorum aliquam sint, voluptatibus quam consequatur inventore!
+&#x3C;/p&#x3E;</code></pre>
+            </div>
+          </section>
+          <section data-heading="h3" data-name="Blockquote">
+            <div class="content">
+              <ul>
+                <li>
+                  <span><b>Guide:</b></span>
+                  <ul>
+                    <li>
+                      <span>Dapat digunakan sebagai kata-kata penting pada suatu artikel</span>
+                    </li>
+                  </ul>
+                </li>
+              </ul>
+              <blockquote>Ut venenatis, nisl scelerisque sollicitudin fermentum, quam libero hendrerit ipsum, ut blandit est tellus sit amet turpis.</blockquote>
+              <pre lang="html"><code>&#x3C;blockquote&#x3E;
+  Ut venenatis, nisl scelerisque sollicitudin fermentum, quam libero hendrerit ipsum, ut blandit est tellus sit amet turpis.
+&#x3C;/blockquote&#x3E;</code></pre>
+            </div>
+          </section>
+          <section data-heading="h3" data-name="List Description">
+            <div class="content">
+              <ul>
+                <li>
+                  <span><b>Guide:</b></span>
+                  <ul>
+                    <li>
+                      <span>Dapat digunakan sebagai deskripsi dari suatu kata</span>
+                    </li>
+                  </ul>
+                </li>
+              </ul>
+              <dl>
+                <dt>Jakarta</dt>
+                <dd>sebuah kota yang berada di Pulau Jawa dan menjadi ibu kota Negara Republik Indonesia<dd>
+                <dt>SMA</dt>
+                <dd>(Sekolah Menengah Keatas) adalah sebuah jenjang menegah pada pendidikan formal di Indonesia setelah lulus dari Sekolah Menegah Pertama (SMP)</dd>
+                <dt>Ekstrakurikuler</dt>
+                <dd>sebuah wadah pengembangan potensi peserta didik yang dapat memberikan dampak penguatan pendidikan dan berorganisasi</dd>
+              </dl>
+              <pre lang="html"><code>&#x3C;dl&#x3E;
+  &#x3C;dt&#x3E;Jakarta&#x3C;/dt&#x3E;
+  &#x3C;dd&#x3E;sebuah kota yang berada di Pulau Jawa dan menjadi ibu kota Negara Republik Indonesia&#x3C;dd&#x3E;
+  &#x3C;dt&#x3E;SMA&#x3C;/dt&#x3E;
+  &#x3C;dd&#x3E;(Sekolah Menengah Keatas) adalah sebuah jenjang menegah pada pendidikan formal di Indonesia setelah lulus dari Sekolah Menegah Pertama (SMP)&#x3C;/dd&#x3E;
+  &#x3C;dt&#x3E;Ekstrakurikuler&#x3C;/dt&#x3E;
+  &#x3C;dd&#x3E;sebuah wadah pengembangan potensi peserta didik yang dapat memberikan dampak penguatan pendidikan dan berorganisasi&#x3C;/dd&#x3E;
+&#x3C;/dl&#x3E;</code></pre>
+            </div>
+          </section>
+          <section data-heading="h3" data-name="Pre Code">
+            <div class="content">
+              <ul>
+                <li>
+                  <span><b>Guide:</b></span>
+                  <ul>
+                    <li>
+                      <span><code>pre</code> adalah sebuah tag HTML yang berfungsi sebagai pembungkus dengan hasil tampak seperi aslinya (seadanya).</span>
+                    </li>
+                    <li>
+                      <span><code>code</code> adalah sebuah tag HTML yang berfungsi sebagai pembungkus barisan kode.</span>
+                    </li>
+                  </ul>
+                </li>
+              </ul>
+              <p>Ini adalah sebuah <code>code</code> HTML tag.</p>
+              <pre>&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+  &lt;head&gt;
+    &lt;title&gt;Hello World&lt;/title&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec viverra nec nulla vitae mollis.&lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;</pre>
+              <pre lang="html"><code>&#x3C;p&#x3E;Ini adalah sebuah &#x3C;code&#x3E;code&#x3C;/code&#x3E; HTML tag.&#x3C;/p&#x3E;
+&#x3C;pre&#x3E;
+&#x26;lt;!DOCTYPE html&#x26;gt;
+  &#x26;lt;html&#x26;gt;
+    &#x26;lt;head&#x26;gt;
+      &#x26;lt;title&#x26;gt;Hello World&#x26;lt;/title&#x26;gt;
+    &#x26;lt;/head&#x26;gt;
+    &#x26;lt;body&#x26;gt;
+      &#x26;lt;p&#x26;gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec viverra nec nulla vitae mollis.&#x26;lt;/p&#x26;gt;
+    &#x26;lt;/body&#x26;gt;
+  &#x26;lt;/html&#x26;gt;
+&#x3C;/pre&#x3E;</code></pre>
+            </div>
+          </section>
+          <section data-heading="h3" data-name="Table">
+            <div class="content">
+              <ul>
+                <li>
+                  <span><b>Guide:</b></span>
+                  <ul>
+                    <li>
+                      <span>Mendefinisikan sebuah tabel</span>
+                    </li>
+                  </ul>
+                </li>
+              </ul>
+              <table>
+                <thead>
+                  <tr>
+                    <th>One</th>
+                    <th>Two</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>Three</td>
+                    <td>Four</td>
+                  </tr>
+                  <tr>
+                    <td>Five</td>
+                    <td>Six</td>
+                  </tr>
+                  <tr>
+                    <td>Seven</td>
+                    <td>Eight</td>
+                  </tr>
+                  <tr>
+                    <td>Nine</td>
+                    <td>Ten</td>
+                  </tr>
+                  <tr>
+                    <td>Eleven</td>
+                    <td>Twelve</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <pre lang="html"><code>&#x3C;table&#x3E;
+  &#x3C;thead&#x3E;
+    &#x3C;tr&#x3E;
+      &#x3C;th&#x3E;One&#x3C;/th&#x3E;
+      &#x3C;th&#x3E;Two&#x3C;/th&#x3E;
+    &#x3C;/tr&#x3E;
+  &#x3C;/thead&#x3E;
+  &#x3C;tbody&#x3E;
+    &#x3C;tr&#x3E;
+      &#x3C;td&#x3E;Three&#x3C;/td&#x3E;
+      &#x3C;td&#x3E;Four&#x3C;/td&#x3E;
+    &#x3C;/tr&#x3E;
+    &#x3C;tr&#x3E;
+      &#x3C;td&#x3E;Five&#x3C;/td&#x3E;
+      &#x3C;td&#x3E;Six&#x3C;/td&#x3E;
+    &#x3C;/tr&#x3E;
+    &#x3C;tr&#x3E;
+      &#x3C;td&#x3E;Seven&#x3C;/td&#x3E;
+      &#x3C;td&#x3E;Eight&#x3C;/td&#x3E;
+    &#x3C;/tr&#x3E;
+    &#x3C;tr&#x3E;
+      &#x3C;td&#x3E;Nine&#x3C;/td&#x3E;
+      &#x3C;td&#x3E;Ten&#x3C;/td&#x3E;
+    &#x3C;/tr&#x3E;
+    &#x3C;tr&#x3E;
+      &#x3C;td&#x3E;Eleven&#x3C;/td&#x3E;
+      &#x3C;td&#x3E;Twelve&#x3C;/td&#x3E;
+    &#x3C;/tr&#x3E;
+  &#x3C;/tbody&#x3E;
+&#x3C;/table&#x3E;</code></pre>
+          </section>
+          <section data-heading="h3" data-name="Figure">
+            <div class="content">
+              <ul>
+                <li>
+                  <span><b>Guide:</b></span>
+                  <ul>
+                    <li>
+                      <span>Jika gambar lebih dari satu maka menggunakan tag <code>figure</code> pada orang tua</span>
+                    </li>
+                    <li>
+                      <span>Jika gambar terdapat deskripsi menggunakan tag <code>figure</code> pada orang tua dan <code>figcaption</code> pada deskripsi gambar</span>
+                    </li>
+                  </ul>
+                </li>
+              </ul>
+              <figure>
+                <img src="https://dummyimage.com/256x256/ccc/9c9c9c">
+                <img src="https://dummyimage.com/256x256/ccc/9c9c9c">
+                <figcaption>
+                  Gambar 1: Ini adalah deskripsi gambar
+                </figcaption>
+              </figure>
+              <pre lang="html"><code>&#x3C;<abbr title="Figure HTML tag">figure</abbr>&#x3E;
+  &#x3C;img src=&#x22;https://dummyimage.com/256x256/ccc/9c9c9c&#x22;&#x3E;
+  &#x3C;img src=&#x22;https://dummyimage.com/256x256/ccc/9c9c9c&#x22;&#x3E;
+  &#x3C;<abbr title="Deskripsi gambar">figcaption</abbr>&#x3E;
+    Gambar 1: Ini adalah deskripsi gambar
+  &#x3C;<abbr title="Penutup deskripsi gambar">/figcaption</abbr>&#x3E;
+&#x3C;<abbr title="Figure close HTML tag">/figure</abbr>&#x3E;</code></pre>
+            </div>
+          </section>
+          <section data-heading="h3" data-name="Order List">
+            <div class="content">
+              <ul>
+                <li>
+                  <span><b>Guide:</b></span>
+                  <ul>
+                    <li>
+                      <span>
+                        Order list adalah tag HTML berupa <code>&#x3C;ol&#x3E;</code>
+                      </span>
+                    </li>
+                    <li>
+                      <span>
+                        Dapat memilih menggunakan type (bawaan HTML) atau menggunakan class
+                      </span>
+                    </li>
+                  </ul>
+                </li>
+              </ul>
+            </div>
+          </section>
+          <section data-heading="h4" data-name="Type">
+            <div class="content">
+              <ul>
+                <li>
+                  <span><b>Guide:</b></span>
+                  <ul>
+                    <li>
+                      <span><b>1</b> : (default) bilangan desimal (1, 2, 3, 4)</span>
+                    </li>
+                    <li>
+                      <span><b>a</b> : Alfabet tersusun, huruf kecil (a, b, c, d)</span>
+                    </li>
+                    <li>
+                      <span><b>A</b> : Alfabet tersusun, huruf besar (A, B, C, D)</span>
+                    </li>
+                    <li>
+                      <span><b>i</b> : Bilangan romawi, huruf kecil (i, ii, iii, iv)</span>
+                    </li>
+                    <li>
+                      <span><b>I</b> : Bilangan romawi, huruf besar (I, II, III, IV)</span>
+                    </li>
+                  </ul>
+                </li>
+              </ul>
+              <ol type="1">
+                <li>HTML</li>
+                <li>CSS</li>
+                <li>Javascript</li>
+              </ol>
+              <ol type="a">
+                <li>HTML</li>
+                <li>CSS</li>
+                <li>Javascript</li>
+              </ol>
+              <ol type="A">
+                <li>HTML</li>
+                <li>CSS</li>
+                <li>Javascript</li>
+              </ol>
+              <ol type="i">
+                <li>HTML</li>
+                <li>CSS</li>
+                <li>Javascript</li>
+              </ol>
+              <ol type="I">
+                <li>HTML</li>
+                <li>CSS</li>
+                <li>Javascript</li>
+              </ol>
+              <pre lang="html"><code>&#x3C;ol type=&#x22;<mark>1</mark>&#x22;&#x3E;
+  &#x3C;li&#x3E;HTML&#x3C;/li&#x3E;
+  &#x3C;li&#x3E;CSS&#x3C;/li&#x3E;
+  &#x3C;li&#x3E;Javascript&#x3C;/li&#x3E;
+&#x3C;/ol&#x3E;
+&#x3C;ol type=&#x22;<mark>a</mark>&#x22;&#x3E;
+  &#x3C;li&#x3E;HTML&#x3C;/li&#x3E;
+  &#x3C;li&#x3E;CSS&#x3C;/li&#x3E;
+  &#x3C;li&#x3E;Javascript&#x3C;/li&#x3E;
+&#x3C;/ol&#x3E;
+&#x3C;ol type=&#x22;<mark>A</mark>&#x22;&#x3E;
+  &#x3C;li&#x3E;HTML&#x3C;/li&#x3E;
+  &#x3C;li&#x3E;CSS&#x3C;/li&#x3E;
+  &#x3C;li&#x3E;Javascript&#x3C;/li&#x3E;
+&#x3C;/ol&#x3E;
+&#x3C;ol type=&#x22;<mark>i</mark>&#x22;&#x3E;
+  &#x3C;li&#x3E;HTML&#x3C;/li&#x3E;
+  &#x3C;li&#x3E;CSS&#x3C;/li&#x3E;
+  &#x3C;li&#x3E;Javascript&#x3C;/li&#x3E;
+&#x3C;/ol&#x3E;
+&#x3C;ol type=&#x22;<mark>I</mark>&#x22;&#x3E;
+  &#x3C;li&#x3E;HTML&#x3C;/li&#x3E;
+  &#x3C;li&#x3E;CSS&#x3C;/li&#x3E;
+  &#x3C;li&#x3E;Javascript&#x3C;/li&#x3E;
+&#x3C;/ol&#x3E;</code></pre>
+            </div>
+          </section>
+          <section data-heading="h4" data-name="Class">
+            <div class="content">
+              <ul>
+                <li>
+                  <span><b>Guide:</b></span>
+                  <ul>
+                    <li>
+                      <span><code>lower-alpha</code> : Alfabet tersusun, huruf kecil (a, b, c, d)</span>
+                    </li>
+                    <li>
+                      <span><code>upper-alpha</code> : Alfabet tersusun, huruf besar (A, B, C, D)</span>
+                    </li>
+                    <li>
+                      <span><code>lower-roman</code> : Bilangan romawi, huruf kecil (i, ii, iii, iv)</span>
+                    </li>
+                    <li>
+                      <span><code>upper-roman</code> : Bilangan romawi, huruf besar (I, II, III, IV)</span>
+                    </li>
+                  </ul>
+                </li>
+              </ul>
+              <ol class="lower-alpha">
+                <li>HTML</li>
+                <li>CSS</li>
+                <li>Javascript</li>
+              </ol>
+              <ol class="upper-alpha">
+                <li>HTML</li>
+                <li>CSS</li>
+                <li>Javascript</li>
+              </ol>
+              <ol class="lower-roman">
+                <li>HTML</li>
+                <li>CSS</li>
+                <li>Javascript</li>
+              </ol>
+              <ol class="upper-roman">
+                <li>HTML</li>
+                <li>CSS</li>
+                <li>Javascript</li>
+              </ol>
+              <pre lang="html"><code>&#x3C;ol class=&#x22;<mark>lower-alpha</mark>&#x22;&#x3E;
+  &#x3C;li&#x3E;HTML&#x3C;/li&#x3E;
+  &#x3C;li&#x3E;CSS&#x3C;/li&#x3E;
+  &#x3C;li&#x3E;Javascript&#x3C;/li&#x3E;
+&#x3C;/ol&#x3E;
+&#x3C;ol class=&#x22;<mark>upper-alpha</mark>&#x22;&#x3E;
+  &#x3C;li&#x3E;HTML&#x3C;/li&#x3E;
+  &#x3C;li&#x3E;CSS&#x3C;/li&#x3E;
+  &#x3C;li&#x3E;Javascript&#x3C;/li&#x3E;
+&#x3C;/ol&#x3E;
+&#x3C;ol class=&#x22;<mark>lower-roman</mark>&#x22;&#x3E;
+  &#x3C;li&#x3E;HTML&#x3C;/li&#x3E;
+  &#x3C;li&#x3E;CSS&#x3C;/li&#x3E;
+  &#x3C;li&#x3E;Javascript&#x3C;/li&#x3E;
+&#x3C;/ol&#x3E;
+&#x3C;ol class=&#x22;<mark>upper-roman</mark>&#x22;&#x3E;
+  &#x3C;li&#x3E;HTML&#x3C;/li&#x3E;
+  &#x3C;li&#x3E;CSS&#x3C;/li&#x3E;
+  &#x3C;li&#x3E;Javascript&#x3C;/li&#x3E;
+&#x3C;/ol&#x3E;</code></pre>
+            </div>
+          </section>
+          <section data-heading="h2" data-name="Title and Subtitle">
+            <div class="content">
+              <ul>
+                <li>
+                  <span><b>Lokasi:</b> <code>scss/elements/title.scss</code></span>
+                </li>
+                <li>
+                  <span><b>Guide:</b></span>
+                  <ul>
+                    <li>
+                      <span>Menggunakan class <code>.title</code> atau <code>.subtitle</code></span>
+                    </li>
+                    <li>
+                      <span>Class ukuran meliputi <code>.h1</code>, <code>.h2</code>, <code>.h3</code>, <code>.h4</code>, <code>.h5</code>, dan <code>.h6</code></span>
+                    </li>
+                    <li>
+                      <span>Dapat digunakan pada Typography yang berukuran besar pada suatu section</span>
+                    </li>
+                    <li>
+                      <span>Dapat digunakan sebagai pengganti tanpa menggunakan class <code>.content</code></span>
+                    </li>
+                  </ul>
+                </li>
+              </ul>
+              <div class="title">Sebuah Judul</div>
+              <div class="subtitle">Sub Judul</div>
+              <pre lang="html"><code>&#x3C;div class=&#x22;<mark>title</mark>&#x22;&#x3E;Sebuah Judul&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;<mark>subtitle</mark>&#x22;&#x3E;Sub Judul&#x3C;/div&#x3E;</code></pre>
+            </div>
+          </section>
+          <section data-heading="h3" data-name="Title">
+            <div class="content">
+              <ul>
+                <li>
+                  <span><b>Guide:</b></span>
+                  <ul>
+                    <li>
+                      <span>Menambahkan class <code>title</code> pada element tersebut</span>
+                    </li>
+                    <li>
+                      <span>Terdapat beberapa class dari ukuran heading diantaranya <code>h1</code>, <code>h2</code>, <code>h3</code> (default), <code>h4</code>, <code>h5</code>, dan <code>h6</code></span>
+                    </li>
+                  </ul>
+                </li>
+              </ul>
+              <div class="title h1">Judul 1</div>
+              <div class="title h2">Judul 2</div>
+              <div class="title h3">Judul 3</div>
+              <div class="title h4">Judul 4</div>
+              <div class="title h5">Judul 5</div>
+              <div class="title h6">Judul 6</div>
+              <pre lang="html"><code>&#x3C;div class=&#x22;<mark>title</mark> <mark>h1</mark>&#x22;&#x3E;Judul 1&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;<mark>title</mark> <mark>h2</mark>&#x22;&#x3E;Judul 2&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;<mark>title</mark> <mark>h3</mark>&#x22;&#x3E;Judul 3&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;<mark>title</mark> <mark>h4</mark>&#x22;&#x3E;Judul 4&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;<mark>title</mark> <mark>h5</mark>&#x22;&#x3E;Judul 5&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;<mark>title</mark> <mark>h6</mark>&#x22;&#x3E;Judul 6&#x3C;/div&#x3E;</code></pre>
+            </div>
+          </section>
+          <section data-heading="h3" data-name="Subtitle">
+            <div class="content">
+              <ul>
+                <li>
+                  <span><b>Guide:</b></span>
+                  <ul>
+                    <li>
+                      <span>Menambahkan class <code>subtitle</code> pada element tersebut</span>
+                    </li>
+                    <li>
+                      <span>Terdapat beberapa class dari ukuran heading diantaranya <code>h1</code>, <code>h2</code>, <code>h3</code>, <code>h4</code>, <code>h5</code> (default), dan <code>h6</code></span>
+                    </li>
+                  </ul>
+                </li>
+              </ul>
+              <div class="subtitle h1">Sub Judul 1</div>
+              <div class="subtitle h2">Sub Judul 2</div>
+              <div class="subtitle h3">Sub Judul 3</div>
+              <div class="subtitle h4">Sub Judul 4</div>
+              <div class="subtitle h5">Sub Judul 5</div>
+              <div class="subtitle h6">Sub Judul 6</div>
+              <pre lang="html"><code>&#x3C;div class=&#x22;<mark>subtitle</mark> <mark>h1</mark>&#x22;&#x3E;Sub Judul 1&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;<mark>subtitle</mark> <mark>h2</mark>&#x22;&#x3E;Sub Judul 2&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;<mark>subtitle</mark> <mark>h3</mark>&#x22;&#x3E;Sub Judul 3&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;<mark>subtitle</mark> <mark>h4</mark>&#x22;&#x3E;Sub Judul 4&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;<mark>subtitle</mark> <mark>h5</mark>&#x22;&#x3E;Sub Judul 5&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;<mark>subtitle</mark> <mark>h6</mark>&#x22;&#x3E;Sub Judul 6&#x3C;/div&#x3E;</code></pre>
+            </div>
+          </section>
+          <section data-heading="h3" data-name="Spaced">
+            <div class="content">
+              <ul>
+                <li>
+                  <span><b>Guide:</b></span>
+                  <ul>
+                    <li>
+                      <span>Tambahkan class <code>.spaced</code> untuk style default (normal spasi)</span>
+                    </li>
+                  </ul>
+                </li>
+              </ul>
+              <div class="title h1 spaced">Sebuah Judul</div>
+              <div class="subtitle h5">Sub Judul</div>
+              <pre lang="html"><code>&#x3C;div class=&#x22;mark h1 <mark>spaced</mark>&#x22;&#x3E;Sebuah Judul&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;subtitle h5&#x22;&#x3E;Sub Judul&#x3C;/div&#x3E;</code></pre>
+            </div>
+          </section>
+          <section data-heading="h2" data-name="Icon">
+            <div class="content">
+              <ul>
+                <li>
+                  <span><b>Lokasi:</b> <code>scss/elements/icon.scss</code></span>
+                </li>
+                <li>
+                  <span><b>Guide:</b></span>
+                  <ul>
+                    <li>
+                      <span>Menggunakan class <code>.icon</code> pada orang tua dari icon dan <code>.icon-text</code> pada kode yang berisi di tengah tengah teks.</span>
+                    </li>
+                    <li>
+                      <span>Icon yang digunakan adalah <a href="https://fontawesome.com/v5/cheatsheet" target="_blank" rel="noopener noreferrer">Icon Font Awesome 5 Free</a>.</span>
+                    </li>
+                    <li>
+                      <span>Jenis jenis icon sudah terdapat pada dokumentasi cheatsheet Font Awesome tersebut.</span>
+                    </li>
+                    <li>
+                      <span>Dapat dikombinasikan dengan menggunakan warna pada icon tersebut. (<mark>utilities/color</mark>)</span>
+                    </li>
+                  </ul>
+                </li>
+              </ul>
+              <span class="icon">
+                <i class="fa fa-home"></i>
+              </span>
+              <pre lang="html"><code>&#x3C;span class=&#x22;<mark>icon</mark>&#x22;&#x3E;
+  &#x3C;i class=&#x22;fa fa-home&#x22;&#x3E;&#x3C;/i&#x3E;
+&#x3C;/span&#x3E;</code></pre>
+            </div>
+          </section>
+          <section data-heading="h3" data-name="Icon With Text">
+            <div class="content">
+              <ul>
+                <li>
+                  <span><b>Guide:</b></span>
+                  <ul>
+                    <li>
+                      <span>Menggunakan class <code>icon-text</code> dari orang tua dari <code>icon</code> tersebut</span>
+                    </li>
+                  </ul>
+                </li>
+              </ul>
+              <span class="icon-text">
+                <span class="icon">
+                  <i class="fa fa-home"></i>
+                </span>
+                <span>Home</span>
+              </span>
+              <pre lang="html"><code>&#x3C;span class=&#x22;<mark>icon-text</mark>&#x22;&#x3E;
+  &#x3C;span class=&#x22;icon&#x22;&#x3E;
+    &#x3C;i class=&#x22;fa fa-home&#x22;&#x3E;&#x3C;/i&#x3E;
+  &#x3C;/span&#x3E;
+  &#x3C;span&#x3E;Home&#x3C;/span&#x3E;
+&#x3C;/span&#x3E;</code></pre>
+            </div>
+          </section>
+          <section data-heading="h3" data-name="Icon Multiple">
+            <div class="content">
+              <ul>
+                <li>
+                  <span><b>Guide:</b></span>
+                  <ul>
+                    <li>
+                      <span>Menggunakan class <code>icon-text</code> dari orang tua dari <code>icon</code> tersebut</span>
+                    </li>
+                  </ul>
+                </li>
+              </ul>
+              <span class="icon-text">
+                <span class="icon">
+                  <i class="fas fa-train"></i>
+                </span>
+                <span>Kebumen</span>
+                <span class="icon">
+                  <i class="fas fa-arrow-right"></i>
+                </span>
+                <span>Bandung</span>
+                <span class="icon">
+                  <i class="fas fa-arrow-right"></i>
+                </span>
+                <span>Jakarta</span>
+                <span class="icon">
+                  <i class="fas fa-flag-checkered"></i>
+                </span>
+              </span>
+              <pre lang="html"><code>&#x3C;span class=&#x22;icon-text&#x22;&#x3E;
+  &#x3C;span class=&#x22;icon&#x22;&#x3E;
+    &#x3C;i class=&#x22;fas fa-train&#x22;&#x3E;&#x3C;/i&#x3E;
+  &#x3C;/span&#x3E;
+  &#x3C;span&#x3E;Kebumen&#x3C;/span&#x3E;
+  &#x3C;span class=&#x22;icon&#x22;&#x3E;
+    &#x3C;i class=&#x22;fas fa-arrow-right&#x22;&#x3E;&#x3C;/i&#x3E;
+  &#x3C;/span&#x3E;
+  &#x3C;span&#x3E;Bandung&#x3C;/span&#x3E;
+  &#x3C;span class=&#x22;icon&#x22;&#x3E;
+    &#x3C;i class=&#x22;fas fa-arrow-right&#x22;&#x3E;&#x3C;/i&#x3E;
+  &#x3C;/span&#x3E;
+  &#x3C;span&#x3E;Jakarta&#x3C;/span&#x3E;
+  &#x3C;span class=&#x22;icon&#x22;&#x3E;
+    &#x3C;i class=&#x22;fas fa-flag-checkered&#x22;&#x3E;&#x3C;/i&#x3E;
+  &#x3C;/span&#x3E;
+&#x3C;/span&#x3E;</code></pre>
+            </div>
+          </section>
+          <section data-heading="h3" data-name="Icon Paragraph">
+            <div class="content">
+              <ul>
+                <li>
+                  <span><b>Guide:</b></span>
+                  <ul>
+                    <li>
+                      <span>Di bungkus dengan menggunakan <code>p</code> paragraf tag</span>
+                    </li>
+                    <li>
+                      <span>Menggunakan class <code>icon-text</code> dari orang tua dari <code>icon</code> tersebut</span>
+                    </li>
+                  </ul>
+                </li>
+              </ul>
+              <p>
+                <div>
+                  Kalau ada jarum yang patah
+                </div>
+                <div>
+                  Jangan simpan dalam peti
+                  <span class="icon-text">
+                    <span class="icon">
+                      <i class="fa fa-box-open"></i>
+                    </span>
+                    <span>peti</span>
+                  </span>
+                </div>
+                <div>
+                  Kalau ada kata 
+                  <span class="icon-text">
+                    <span class="icon">
+                      <i class="fa fa-handshake"></i>
+                    </span>
+                    <span>yang salah</span>
+                  </span>
+                </div>
+                <div>
+                  Jangan simpan dalam
+                  <span class="icon-text">
+                    <span class="icon">
+                      <i class="fa fa-heart"></i>
+                    </span>
+                    <span>hati</span>
+                  </span>
+                </div>
+              </p>
+              <pre lang="html"><code>&#x3C;p&#x3E;
+  &#x3C;div&#x3E;
+    Kalau ada jarum yang patah
+  &#x3C;/div&#x3E;
+  &#x3C;div&#x3E;
+    Jangan simpan dalam peti
+    &#x3C;span class=&#x22;icon-text&#x22;&#x3E;
+      &#x3C;span class=&#x22;icon&#x22;&#x3E;
+        &#x3C;i class=&#x22;fa fa-box-open&#x22;&#x3E;&#x3C;/i&#x3E;
+      &#x3C;/span&#x3E;
+      &#x3C;span&#x3E;peti&#x3C;/span&#x3E;
+    &#x3C;/span&#x3E;
+  &#x3C;/div&#x3E;
+  &#x3C;div&#x3E;
+    Kalau ada kata 
+    &#x3C;span class=&#x22;icon-text&#x22;&#x3E;
+      &#x3C;span class=&#x22;icon&#x22;&#x3E;
+        &#x3C;i class=&#x22;fa fa-handshake&#x22;&#x3E;&#x3C;/i&#x3E;
+      &#x3C;/span&#x3E;
+      &#x3C;span&#x3E;yang salah&#x3C;/span&#x3E;
+    &#x3C;/span&#x3E;
+  &#x3C;/div&#x3E;
+  &#x3C;div&#x3E;
+    Jangan simpan dalam
+    &#x3C;span class=&#x22;icon-text&#x22;&#x3E;
+      &#x3C;span class=&#x22;icon&#x22;&#x3E;
+        &#x3C;i class=&#x22;fa fa-heart&#x22;&#x3E;&#x3C;/i&#x3E;
+      &#x3C;/span&#x3E;
+      &#x3C;span&#x3E;hati&#x3C;/span&#x3E;
+    &#x3C;/span&#x3E;
+  &#x3C;/div&#x3E;
+&#x3C;/p&#x3E;</code></pre>
+            </div>
+          </section>
+          <section data-heading="h3" data-name="Icon Combination">
+            <div class="content">
+              <ul>
+                <li>
+                  <span><b>Guide:</b></span>
+                  <ul>
+                    <li>
+                      <span>Menggunakan class <code>text-<mark>warna</mark></code> pada <code>icon</code> tersebut</span>
+                    </li>
+                    <li>
+                      <span>Terdapat warna <code>text-primary</code>, <code>text-success</code>, <code>text-info</code>, <code>text-warning</code>, dan <code>text-danger</code></span>
+                    </li>
+                  </ul>
+                </li>
+              </ul>
+
+              <span class="icon-text">
+                <span class="icon text-info">
+                  <i class="fas fa-info-circle"></i>
+                </span>
+                <span>Informasi</span>
+              </span>
+              <p class="block">
+                Informasi update akan berlangung beberapa jam lagi.
+              </p>
+              
+              <span class="icon-text">
+                <span class="icon text-success">
+                  <i class="fas fa-check-square"></i>
+                </span>
+                <span>Berhasil</span>
+              </span>
+              <p class="block">
+                Anda berhasil masuk menggunakan akun google.
+              </p>
+              
+              <span class="icon-text">
+                <span class="icon text-warning">
+                  <i class="fas fa-exclamation-triangle"></i>
+                </span>
+                <span>Peringatan</span>
+              </span>
+              <p class="block">
+                System mengindikasi bahwa anda melakukan kecurangan sebanyak 2 kali.
+              </p>
+              
+              <span class="icon-text">
+                <span class="icon text-danger">
+                  <i class="fas fa-ban"></i>
+                </span>
+                <span>Error!</span>
+              </span>
+              <p class="block">
+                Terjadi masalah pada perangkat anda! Coba kembali beberapa saat.
+              </p>
+
+              <pre lang="html"><code>&#x3C;span class=&#x22;icon-text&#x22;&#x3E;
+  &#x3C;span class=&#x22;icon text-info&#x22;&#x3E;
+    &#x3C;i class=&#x22;fas fa-info-circle&#x22;&#x3E;&#x3C;/i&#x3E;
+  &#x3C;/span&#x3E;
+  &#x3C;span&#x3E;Informasi&#x3C;/span&#x3E;
+&#x3C;/span&#x3E;
+&#x3C;p class=&#x22;block&#x22;&#x3E;
+  Informasi update akan berlangung beberapa jam lagi.
+&#x3C;/p&#x3E;
+&#x3C;span class=&#x22;icon-text&#x22;&#x3E;
+  &#x3C;span class=&#x22;icon text-success&#x22;&#x3E;
+    &#x3C;i class=&#x22;fas fa-check-square&#x22;&#x3E;&#x3C;/i&#x3E;
+  &#x3C;/span&#x3E;
+  &#x3C;span&#x3E;Berhasil&#x3C;/span&#x3E;
+&#x3C;/span&#x3E;
+&#x3C;p class=&#x22;block&#x22;&#x3E;
+  Anda berhasil masuk menggunakan akun google.
+&#x3C;/p&#x3E;
+&#x3C;span class=&#x22;icon-text&#x22;&#x3E;
+  &#x3C;span class=&#x22;icon text-warning&#x22;&#x3E;
+    &#x3C;i class=&#x22;fas fa-exclamation-triangle&#x22;&#x3E;&#x3C;/i&#x3E;
+  &#x3C;/span&#x3E;
+  &#x3C;span&#x3E;Peringatan&#x3C;/span&#x3E;
+&#x3C;/span&#x3E;
+&#x3C;p class=&#x22;block&#x22;&#x3E;
+  System mengindikasi bahwa anda melakukan kecurangan sebanyak 2 kali.
+&#x3C;/p&#x3E;
+&#x3C;span class=&#x22;icon-text&#x22;&#x3E;
+  &#x3C;span class=&#x22;icon text-danger&#x22;&#x3E;
+    &#x3C;i class=&#x22;fas fa-ban&#x22;&#x3E;&#x3C;/i&#x3E;
+  &#x3C;/span&#x3E;
+  &#x3C;span&#x3E;Error!&#x3C;/span&#x3E;
+&#x3C;/span&#x3E;
+&#x3C;p class=&#x22;block&#x22;&#x3E;
+  Terjadi masalah pada perangkat anda! Coba kembali beberapa saat.
+&#x3C;/p&#x3E;</code></pre>
+            </div>
+          </section>
+          <section data-heading="h3" data-name="Icon Size">
+            <div class="content">
+              <ul>
+                <li>
+                  <span><b>Guide:</b></span>
+                  <ul>
+                    <li>
+                      <span>Menggunakan class <code>small</code>, <code>medium</code>, <code>large</code> untuk menentukan ukuran dari icon tersebut.</span>
+                    </li>
+                  </ul>
+                </li>
+              </ul>
+              <table class="table bordered y-centered mx-auto">
+                <thead>
+                  <tr>
+                    <th>Class orang tua</th>
+                    <th>Ukuran orang tua</th>
+                    <th>Font Awesome 5 class</th>
+                    <th>Ukuran icon</th>
+                    <th>Hasil</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>
+                      <code>icon <mark>small</mark></code>
+                    </td>
+                    <td>
+                      <code>1rem x 1rem</code>
+                    </td>
+                    <td>
+                      <code>fas</code>
+                    </td>
+                    <td>
+                      <code>1em</code>
+                    </td>
+                    <td class="demo-icon">
+                      <span class="icon small">
+                        <i class="fas fa-home"></i>
+                      </span>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td rowspan="2">
+                      <code>icon</code>
+                    </td>
+                    <td rowspan="2">
+                      <code>1.5rem x 1.5rem</code>
+                    </td>
+                    <td>
+                      <code>fas</code>
+                    </td>
+                    <td>
+                      <code>1em</code>
+                    </td>
+                    <td class="demo-icon">
+                      <span class="icon">
+                        <i class="fas fa-home"></i>
+                      </span>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <code>fas fa-lg</code>
+                    </td>
+                    <td>
+                      <code>1.33em</code>
+                    </td>
+                    <td class="demo-icon">
+                      <span class="icon">
+                        <i class="fas fa-lg fa-home"></i>
+                      </span>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td rowspan="3">
+                      <code>icon <mark>medium</mark></code>
+                    </td>
+                    <td rowspan="3">
+                      <code>2rem x 2rem</code>
+                    </td>
+                    <td>
+                      <code>fas</code>
+                    </td>
+                    <td>
+                      <code>1em</code>
+                    </td>
+                    <td class="demo-icon">
+                      <span class="icon medium">
+                        <i class="fas fa-home"></i>
+                      </span>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <code>fas fa-lg</code>
+                    </td>
+                    <td>
+                      <code>1.33em</code>
+                    </td>
+                    <td class="demo-icon">
+                      <span class="icon medium">
+                        <i class="fas fa-lg fa-home"></i>
+                      </span>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <code>fas fa-2x</code>
+                    </td>
+                    <td>
+                      <code>2em</code>
+                    </td>
+                    <td class="demo-icon">
+                      <span class="icon medium">
+                        <i class="fas fa-2x fa-home"></i>
+                      </span>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td rowspan="3">
+                      <code>icon <mark>large</mark></code>
+                    </td>
+                    <td rowspan="4">
+                      <code>3rem x 3rem</code>
+                    </td>
+                    <td>
+                      <code>fas</code>
+                    </td>
+                    <td>
+                      <code>1em</code>
+                    </td>
+                    <td class="demo-icon">
+                      <span class="icon large">
+                        <i class="fas fa-home"></i>
+                      </span>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <code>fas fa-lg</code>
+                    </td>
+                    <td>
+                      <code>1.33em</code>
+                    </td>
+                    <td class="demo-icon">
+                      <span class="icon large">
+                        <i class="fas fa-lg fa-home"></i>
+                      </span>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <code>fas fa-2x</code>
+                    </td>
+                    <td>
+                      <code>2em</code>
+                    </td>
+                    <td class="demo-icon">
+                      <span class="icon large">
+                        <i class="fas fa-2x fa-home"></i>
+                      </span>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </section>
+          <section data-heading="h3" data-name="Icon Variation">
+            <div class="content">
+              <ul>
+                <li>
+                  <span><b>Guide:</b></span>
+                  <ul>
+                    <li>
+                      <span>Menggunakan class <code>small</code>, <code>medium</code>, <code>large</code> untuk menentukan ukuran dari icon tersebut.</span>
+                      <ul>
+                        <li>
+                          <span><code>fa-fw</code> : untuk ukuran fixed width</span>
+                        </li>
+                      </ul>
+                      <ul>
+                        <li>
+                          <span><code>fa-border</code> : untuk menampilkan border</span>
+                        </li>
+                      </ul>
+                      <ul>
+                        <li>
+                          <span><code>fa-spinner fa-pulse</code> : untuk animasi berputar</span>
+                        </li>
+                      </ul>
+                    </li>
+                  </ul>
+                </li>
+              </ul>
+              <table class="table bordered y-centered mx-auto">
+                <thead>
+                  <tr>
+                    <th>Tipe</th>
+                    <th>Font Awesome class</th>
+                    <th>Hasil</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>
+                      Fixed width
+                    </td>
+                    <td>
+                      <code>fas fa-fw</code>
+                    </td>
+                    <td class="demo-icon">
+                      <span class="icon">
+                        <i class="fas fa-home fa-fw"></i>
+                      </span>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      Bordered
+                    </td>
+                    <td>
+                      <code>fas fa-border</code>
+                    </td>
+                    <td>
+                      <span class="icon">
+                        <i class="fas fa-home fa-border"></i>
+                      </span>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      Animated
+                    </td>
+                    <td>
+                      <code>fas fa-spinner fa-pulse</code>
+                    </td>
+                    <td class="demo-icon">
+                      <span class="icon">
+                        <i class="fas fa-spinner fa-pulse"></i>
+                      </span>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </section>
+          <section data-heading="h2" data-name="Box">
+            <ul>
+              <li>
+                <span><b>Lokasi:</b> <code>scss/elements/box.scss</code></span>
+              </li>
+              <li>
+                <span><b>Guide:</b></span>
+                <ul>
+                  <li>
+                    <span>Dengan menggunakan class <code>box</code> akan membentuk kotak</span>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+            <div class="box">
+              <div class="title h3">Lorem ipsum dolor.</div>
+              <div class="subtitle h6">Lorem ipsum dolor sit amet consectetur adipisicing elit.</div>
+            </div>
+            <pre lang="html"><code>&#x3C;div class=&#x22;<mark>box</mark>&#x22;&#x3E;
+  &#x3C;div class=&#x22;title h3&#x22;&#x3E;Lorem ipsum dolor.&#x3C;/div&#x3E;
+  &#x3C;div class=&#x22;subtitle h6&#x22;&#x3E;Lorem ipsum dolor sit amet consectetur adipisicing elit.&#x3C;/div&#x3E;
+&#x3C;/div&#x3E;</code></pre>
+          </section>
+          <section data-heading="h2" data-name="Table">
+            <div class="content">
+              <ul>
+                <li>
+                  <span><b>Lokasi:</b> <code>scss/elements/table.scss</code></span>
+                </li>
+                <li>
+                  <span><b>Guide:</b></span>
+                  <ul>
+                    <li>
+                      <span>Menggunakan class <code>.table</code> pada <code>table</code> tag</span>
+                    </li>
+                    <li>
+                      <span>Dapat menampilkan dabel yang berisi data, penyusunan teks dalam kolom dan baris, atau membuat laporan lainnya</span>
+                    </li>
+                  </ul>
+                </li>
+              </ul>
+              <table class="table">
+                <thead>
+                  <td>
+                    satu
+                  </td>
+                  <td>
+                    dua
+                  </td>
+                </thead>
+                <tbody>
+                  <td>
+                    tiga
+                  </td>
+                  <td>
+                    empat
+                  </td>
+                </tbody>
+              </table>
+              <pre lang="html"><code>&#x3C;table class=&#x22;table&#x22;&#x3E;
+  &#x3C;thead&#x3E;
+    &#x3C;td&#x3E;
+      satu
+    &#x3C;/td&#x3E;
+    &#x3C;td&#x3E;
+      dua
+    &#x3C;/td&#x3E;
+  &#x3C;/thead&#x3E;
+  &#x3C;tbody&#x3E;
+    &#x3C;td&#x3E;
+      tiga
+    &#x3C;/td&#x3E;
+    &#x3C;td&#x3E;
+      empat
+    &#x3C;/td&#x3E;
+    &#x3C;td&#x3E;
+      lima
+    &#x3C;/td&#x3E;
+    &#x3C;td&#x3E;
+      enam
+    &#x3C;/td&#x3E;
+  &#x3C;/tbody&#x3E;
+&#x3C;/table&#x3E;</code></pre>
+            </div>
+          </section>
+          <section data-heading="h3" data-name="Table Variant">
+            <div class="content">
+              <ul>
+                <li>
+                  <span><b>Guide:</b></span>
+                  <ul>
+                    <li>
+                      <span>Menambahkan class variant pada orang tua dari element tersebut</span>
+                    </li>
+                    <li>
+                      <span>Terdapat beberapa class dalam element berikut:<span>
+                        <ul>
+                          <li>
+                            <span>Pada <code>table</code> terdapat <code>.bordered</code>, <code>.fullwidth</code>, <code>.hoverable</code>, <code>.stripped</code>, <code>.narrow</code>, <code>.x-centered</code>, dan <code>.y-centered</code></span>
+                          </li>
+                          <li>
+                            <span>Pada <code>td</code> dan <code>th</code> terdapat <code>.narrow</code>, <code>.selected</code>, <code>.x-centered</code>, <code>.y-centered</code>, dan variasi warna (<code>primary</code>, <code>success</code>, <code>info</code>, <code>warning</code>, <code>danger</code>)</span>
+                          </li>
+                          <li>
+                            <span>Pada <code>tr</code> terdapat <code>.seleted</code></span>
+                          </li>
+                        </ul>
+                    </li>
+                  </ul>
+                </li>
+              </ul>
+            </div>
+          </section>
+          <section data-heading="h3" data-name="Table Bordered">
+            <div class="content">
+              <ul>
+                <li>
+                  <span><b>Guide:</b></span>
+                  <ul>
+                    <li>
+                      <span>Menambah class <code>bordered</code> pada class <code>table</code></span>
+                    </li>
+                  </ul>
+                </li>
+              </ul>
+              <table class="table bordered">
+                <thead>
+                  <td>
+                    satu
+                  </td>
+                  <td>
+                    dua
+                  </td>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>
+                      tiga
+                    </td>
+                    <td>
+                      empat
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      lima
+                    </td>
+                    <td>
+                      enam
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+              <pre lang="html"><code>&#x3C;table class=&#x22;table <mark>bordered</mark>&#x22;&#x3E;
+  &#x3C;thead&#x3E;
+    &#x3C;td&#x3E;
+      satu
+    &#x3C;/td&#x3E;
+    &#x3C;td&#x3E;
+      dua
+    &#x3C;/td&#x3E;
+  &#x3C;/thead&#x3E;
+  &#x3C;tbody&#x3E;
+    &#x3C;tr&#x3E;
+      &#x3C;td&#x3E;
+        tiga
+      &#x3C;/td&#x3E;
+      &#x3C;td&#x3E;
+        empat
+      &#x3C;/td&#x3E;
+    &#x3C;/tr&#x3E;
+    &#x3C;tr&#x3E;
+      &#x3C;td&#x3E;
+        lima
+      &#x3C;/td&#x3E;
+      &#x3C;td&#x3E;
+        enam
+      &#x3C;/td&#x3E;
+    &#x3C;/tr&#x3E;
+  &#x3C;/tbody&#x3E;
+&#x3C;/table&#x3E;</code></pre>
+            </div>
+          </section>
+          <section data-heading="h3" data-name="Table Stripped">
+            <div class="content">
+              <ul>
+                <li>
+                  <span><b>Guide:</b></span>
+                  <ul>
+                    <li>
+                      <span>Menambah class <code>stripped</code> pada class <code>table</code></span>
+                    </li>
+                  </ul>
+                </li>
+              </ul>
+              <table class="table stripped">
+                <thead>
+                  <td>
+                    satu
+                  </td>
+                  <td>
+                    dua
+                  </td>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>
+                      tiga
+                    </td>
+                    <td>
+                      empat
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      lima
+                    </td>
+                    <td>
+                      enam
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+              <pre lang="html"><code>&#x3C;table class=&#x22;table <mark>stripped</mark>&#x22;&#x3E;
+  &#x3C;thead&#x3E;
+    &#x3C;td&#x3E;
+      satu
+    &#x3C;/td&#x3E;
+    &#x3C;td&#x3E;
+      dua
+    &#x3C;/td&#x3E;
+  &#x3C;/thead&#x3E;
+  &#x3C;tbody&#x3E;
+    &#x3C;tr&#x3E;
+      &#x3C;td&#x3E;
+        tiga
+      &#x3C;/td&#x3E;
+      &#x3C;td&#x3E;
+        empat
+      &#x3C;/td&#x3E;
+    &#x3C;/tr&#x3E;
+    &#x3C;tr&#x3E;
+      &#x3C;td&#x3E;
+        lima
+      &#x3C;/td&#x3E;
+      &#x3C;td&#x3E;
+        enam
+      &#x3C;/td&#x3E;
+    &#x3C;/tr&#x3E;
+  &#x3C;/tbody&#x3E;
+&#x3C;/table&#x3E;</code></pre>
+            </div>
+          </section>
+          <section data-heading="h3" data-name="Table Narrow">
+            <div class="content">
+              <ul>
+                <li>
+                  <span><b>Guide:</b></span>
+                  <ul>
+                    <li>
+                      <span>Menambah class <code>narrow</code> pada class <code>table</code></span>
+                    </li>
+                  </ul>
+                </li>
+              </ul>
+              <table class="table narrow">
+                <thead>
+                  <td class="narrow">
+                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Minima dolorum deleniti?
+                  </td>
+                  <td>
+                    dua
+                  </td>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>
+                      tiga
+                    </td>
+                    <td>
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit enim deserunt perferendis?
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      lima
+                    </td>
+                    <td>
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit enim deserunt perferendis?
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+              <pre lang="html"><code>&#x3C;table class=&#x22;table <mark>narrow</mark>&#x22;&#x3E;
+  &#x3C;thead&#x3E;
+    &#x3C;td class=&#x22;<mark>narrow</mark>&#x22;&#x3E;
+      Lorem ipsum, dolor sit amet consectetur adipisicing elit. Minima dolorum deleniti?
+    &#x3C;/td&#x3E;
+    &#x3C;td&#x3E;
+      dua
+    &#x3C;/td&#x3E;
+  &#x3C;/thead&#x3E;
+  &#x3C;tbody&#x3E;
+    &#x3C;tr&#x3E;
+      &#x3C;td&#x3E;
+        tiga
+      &#x3C;/td&#x3E;
+      &#x3C;td&#x3E;
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit enim deserunt perferendis?
+      &#x3C;/td&#x3E;
+    &#x3C;/tr&#x3E;
+    &#x3C;tr&#x3E;
+      &#x3C;td&#x3E;
+        empat
+      &#x3C;/td&#x3E;
+      &#x3C;td&#x3E;
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit enim deserunt perferendis?
+      &#x3C;/td&#x3E;
+    &#x3C;/tr&#x3E;
+  &#x3C;/tbody&#x3E;
+&#x3C;/table&#x3E;</code></pre>
+            </div>
+          </section>
+          <section data-heading="h3" data-name="Table Full Width">
+            <div class="content">
+              <ul>
+                <li>
+                  <span><b>Guide:</b></span>
+                  <ul>
+                    <li>
+                      <span>Menambah class <code>fullwidth</code> pada class <code>table</code></span>
+                    </li>
+                  </ul>
+                </li>
+              </ul>
+              <table class="table fullwidth">
+                <thead>
+                  <td>
+                    satu
+                  </td>
+                  <td>
+                    dua
+                  </td>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>
+                      tiga
+                    </td>
+                    <td>
+                      empat
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      lima
+                    </td>
+                    <td>
+                      enam
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+              <pre lang="html"><code>&#x3C;table class=&#x22;table <mark>fullwidth</mark>&#x22;&#x3E;
+  &#x3C;thead&#x3E;
+    &#x3C;td&#x3E;
+      satu
+    &#x3C;/td&#x3E;
+    &#x3C;td&#x3E;
+      dua
+    &#x3C;/td&#x3E;
+  &#x3C;/thead&#x3E;
+  &#x3C;tbody&#x3E;
+    &#x3C;tr&#x3E;
+      &#x3C;td&#x3E;
+        tiga
+      &#x3C;/td&#x3E;
+      &#x3C;td&#x3E;
+        empat
+      &#x3C;/td&#x3E;
+    &#x3C;/tr&#x3E;
+    &#x3C;tr&#x3E;
+      &#x3C;td&#x3E;
+        lima
+      &#x3C;/td&#x3E;
+      &#x3C;td&#x3E;
+        enam
+      &#x3C;/td&#x3E;
+    &#x3C;/tr&#x3E;
+  &#x3C;/tbody&#x3E;
+&#x3C;/table&#x3E;</code></pre>
+            </div>
+          </section>
+          <section data-heading="h3" data-name="Table Hoverable">
+            <div class="content">
+              <ul>
+                <li>
+                  <span><b>Guide:</b></span>
+                  <ul>
+                    <li>
+                      <span>Menambah class <code>hoverable</code> pada class <code>table</code></span>
+                    </li>
+                  </ul>
+                </li>
+              </ul>
+              <table class="table hoverable">
+                <thead>
+                  <td>
+                    satu
+                  </td>
+                  <td>
+                    dua
+                  </td>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>
+                      tiga
+                    </td>
+                    <td>
+                      empat
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      lima
+                    </td>
+                    <td>
+                      enam
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+              <pre lang="html"><code>&#x3C;table class=&#x22;table <mark>hoverable</mark>&#x22;&#x3E;
+  &#x3C;thead&#x3E;
+    &#x3C;td&#x3E;
+      satu
+    &#x3C;/td&#x3E;
+    &#x3C;td&#x3E;
+      dua
+    &#x3C;/td&#x3E;
+  &#x3C;/thead&#x3E;
+  &#x3C;tbody&#x3E;
+    &#x3C;tr&#x3E;
+      &#x3C;td&#x3E;
+        tiga
+      &#x3C;/td&#x3E;
+      &#x3C;td&#x3E;
+        empat
+      &#x3C;/td&#x3E;
+    &#x3C;/tr&#x3E;
+    &#x3C;tr&#x3E;
+      &#x3C;td&#x3E;
+        lima
+      &#x3C;/td&#x3E;
+      &#x3C;td&#x3E;
+        enam
+      &#x3C;/td&#x3E;
+    &#x3C;/tr&#x3E;
+  &#x3C;/tbody&#x3E;
+&#x3C;/table&#x3E;</code></pre>
+            </div>
+          </section>
+          <section data-heading="h3" data-name="Table Container">
+            <div class="content">
+              <ul>
+                <li>
+                  <span><b>Guide:</b></span>
+                  <ul>
+                    <li>
+                      <span>Menambah class <code>table-container</code> pada orang tua <code>table</code></span>
+                    </li>
+                  </ul>
+                </li>
+              </ul>
+              <div class="table-container">
+                <table class="table">
+                  <thead data-loop="40">
+                  </thead>
+                  <tbody>
+                    <tr data-loop="40"></tr>
+                    <tr data-loop="40"></tr>
+                  </tbody>
+                </table>
+              </div>
+              <pre lang="html"><code>&#x3C;div class=&#x22;<mark>table-container</mark>&#x22;&#x3E;
+  &#x3C;table class=&#x22;table&#x22;&#x3E;
+    &#x3C;!-- Isi table anda --&#x3E;
+  &#x3C;/table&#x3E;
+&#x3C;/div&#x3E;</code></pre>
+            </div>
+          </section>
+          <section data-heading="h3" data-name="Table Combination">
+            <div class="content">
+              <ul>
+                <li>
+                  <span><b>Guide:</b></span>
+                  <ul>
+                    <li>
+                      <span>Kombinasi beberapa variasi (terdapat di bagian variant)</span>
+                    </li>
+                  </ul>
+                </li>
+              </ul>
+              <table class="table bordered">
+                <thead>
+                  <td>Satu</td>
+                  <td>Dua</td>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>Tiga</td>
+                    <td class="warning">Selected</td>
+                  </tr>
+                  <tr>
+                    <td class="danger">Danger</td>
+                    <td>Empat</td>
+                  </tr>
+                  <tr>
+                    <td class="y-centered">Satu</td>
+                    <td>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas officia cumque explicabo sed voluptatum ducimus accusantium repellat ab a aspernatur!</td>
+                  </tr>
+                  <tr class="selected">
+                    <td>Done</td>
+                    <td>Done</td>
+                  </tr>
+                </tbody>
+              </table>
+              <pre lang="html"><code>&#x3C;table class=&#x22;table <mark>bordered</mark>&#x22;&#x3E;
+  &#x3C;thead&#x3E;
+    &#x3C;td&#x3E;Satu&#x3C;/td&#x3E;
+    &#x3C;td&#x3E;Dua&#x3C;/td&#x3E;
+  &#x3C;/thead&#x3E;
+  &#x3C;tbody&#x3E;
+    &#x3C;tr&#x3E;
+      &#x3C;td&#x3E;Tiga&#x3C;/td&#x3E;
+      &#x3C;td class=&#x22;<mark>warning</mark>&#x22;&#x3E;Selected&#x3C;/td&#x3E;
+    &#x3C;/tr&#x3E;
+    &#x3C;tr&#x3E;
+      &#x3C;td class=&#x22;<mark>danger</mark>&#x22;&#x3E;Danger&#x3C;/td&#x3E;
+      &#x3C;td&#x3E;Empat&#x3C;/td&#x3E;
+    &#x3C;/tr&#x3E;
+    &#x3C;tr&#x3E;
+      &#x3C;td class=&#x22;<mark>y-centered</mark>&#x22;&#x3E;Satu&#x3C;/td&#x3E;
+      &#x3C;td&#x3E;Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas officia cumque explicabo sed voluptatum ducimus accusantium repellat ab a aspernatur!&#x3C;/td&#x3E;
+    &#x3C;/tr&#x3E;
+    &#x3C;tr class=&#x22;<mark>selected</mark>&#x22;&#x3E;
+      &#x3C;td&#x3E;Done&#x3C;/td&#x3E;
+      &#x3C;td&#x3E;Done&#x3C;/td&#x3E;
+    &#x3C;/tr&#x3E;
+  &#x3C;/tbody&#x3E;
+&#x3C;/table&#x3E;</code></pre>
+            </div>
+          </section>
+          <section data-heading="h2" data-name="Image">
+            <div class="content">
+              <ul>
+                <li>
+                  <span><b>Lokasi:</b> <code>scss/elements/image.scss</code></span>
+                </li>
+                <li>
+                  <span><b>Guide:</b></span>
+                  <ul>
+                    <li>
+                      <span>Menggunakan class <code>.image</code> pada orang tua dari gambar tersebut.</span>
+                    </li>
+                    <li>
+                      <span>Element dapat berupa gambar (<code>img</code>) atau class <code>.element</code>.</span>
+                    </li>
+                    <li>
+                      <span>Dapat menggunakan ukuran dari gambar.</span>
+                    </li>
+                    <li>
+                      <span>Melakukan perbandingan supaya hasil menjadi lebih responsive.</span>
+                    </li>
+                  </ul>
+                </li>
+              </ul>
+              <figure class="image size-128">
+                <img src="https://dummyimage.com/128x128/ccc/9c9c9c" alt="Placeholder">
+              </figure>
+              <pre lang="html"><code>&#x3C;figure class=&#x22;<mark>image</mark> <mark>size-128</mark>&#x22;&#x3E;
+  &#x3C;img src=&#x22;https://dummyimage.com/128x128/ccc/9c9c9c&#x22; alt=&#x22;Placeholder&#x22;&#x3E;
+&#x3C;/figure&#x3E;</code></pre>
+            </div>
+          </section>
+          <section data-heading="h3" data-name="Image Size">
+            <div class="content">
+              <ul>
+                <li>
+                  <span><b>Guide:</b></span>
+                  <ul>
+                    <li>
+                      <span>Terdapat 7 ukuran dimensi gambar.</span>
+                    </li>
+                  </ul>
+                </li>
+              </ul>
+              <table class="table bordered hoverable y-centered mx-auto">
+                <thead>
+                  <th>Class</t>
+                  <th>Gambar</td>
+                  <th>Ukuran</td>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>
+                      <span><code>image size-16</code></span>
+                    </td>
+                    <td>
+                      <figure class="image size-16">
+                        <img src="https://dummyimage.com/16x16/ccc/9c9c9c" alt="Placeholder">
+                      </figure>
+                    </td>
+                    <td>
+                      <span>16px x 16px</span>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <span><code>image size-24</code></span>
+                    </td>
+                    <td>
+                      <figure class="image size-24">
+                        <img src="https://dummyimage.com/24x24/ccc/9c9c9c" alt="Placeholder">
+                      </figure>
+                    </td>
+                    <td>
+                      <span>24px x 24px</span>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <span><code>image size-32</code></span>
+                    </td>
+                    <td>
+                      <figure class="image size-32">
+                        <img src="https://dummyimage.com/32x32/ccc/9c9c9c" alt="Placeholder">
+                      </figure>
+                    </td>
+                    <td>
+                      <span>32px x 32px</span>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <span><code>image size-48</code></span>
+                    </td>
+                    <td>
+                      <figure class="image size-48">
+                        <img src="https://dummyimage.com/48x48/ccc/9c9c9c" alt="Placeholder">
+                      </figure>
+                    </td>
+                    <td>
+                      <span>48px x 48px</span>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <span><code>image size-64</code></span>
+                    </td>
+                    <td>
+                      <figure class="image size-64">
+                        <img src="https://dummyimage.com/64x64/ccc/9c9c9c" alt="Placeholder">
+                      </figure>
+                    </td>
+                    <td>
+                      <span>64px x 64px</span>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <span><code>image size-96</code></span>
+                    </td>
+                    <td>
+                      <figure class="image size-96">
+                        <img src="https://dummyimage.com/96x96/ccc/9c9c9c" alt="Placeholder">
+                      </figure>
+                    </td>
+                    <td>
+                      <span>96px x 96px</span>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <span><code>image size-128</code></span>
+                    </td>
+                    <td>
+                      <figure class="image size-128">
+                        <img src="https://dummyimage.com/128x128/ccc/9c9c9c" alt="Placeholder">
+                      </figure>
+                    </td>
+                    <td>
+                      <span>128px x 128px</span>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </section>
+          <section data-heading="h3" data-name="Image Ratio">
+            <div class="content">
+              <ul>
+                <li>
+                  <span><b>Guide:</b></span>
+                  <ul>
+                    <li>
+                      <span>Terdapat 3 ukuran ratio gambar.</span>
+                    </li>
+                  </ul>
+                </li>
+              </ul>
+              <table class="table bordered hoverable y-centered mx-auto">
+                <thead>
+                  <th>Class</th>
+                  <th>Gambar</th>
+                  <th>Resolusi</th>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>
+                      <span><code>image ratio-16x9</code></span>
+                    </td>
+                    <td>
+                      <figure class="image ratio-16x9">
+                        <img src="https://dummyimage.com/256x256/ccc/9c9c9c" alt="Placeholder">
+                      </figure>
+                    </td>
+                    <td>
+                      <span>resolusi 16:9</span>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <span><code>image ratio-4x3</code></span>
+                    </td>
+                    <td>
+                      <figure class="image ratio-4x3">
+                        <img src="https://dummyimage.com/256x256/ccc/9c9c9c" alt="Placeholder">
+                      </figure>
+                    </td>
+                    <td>
+                      <span>resolusi 4:3</span>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <span><code>image ratio-1x1</code></span>
+                    </td>
+                    <td>
+                      <figure class="image ratio-1x1">
+                        <img src="https://dummyimage.com/256x256/ccc/9c9c9c" alt="Placeholder">
+                      </figure>
+                    </td>
+                    <td>
+                      <span>resolusi 1:1</span>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </section>
+          <section data-heading="h2" data-name="Tag">
+            <div class="content">
+              <ul>
+                <li>
+                  <span><b>Lokasi:</b> <code>scss/elements/tag.scss</code></span>
+                </li>
+                <li>
+                  <span><b>Guide:</b></span>
+                  <ul>
+                    <li>
+                      <span>Menggunakan class <code>tag</code> pada element tag</span>
+                    </li>
+                    <li>
+                      <span>Dapat digunakan untuk menandai suatu title, subtitle, atau dikombinasikan dengan lainnya</span>
+                    </li>
+                  </ul>
+                </li>
+              </ul>
+              <span class="tag">
+                Tag label
+              </span>
+              <pre lang="html"><code>&#x3C;span class=&#x22;<mark>tag</mark>&#x22;&#x3E;
+  Tag label
+&#x3C;/span&#x3E;</code></pre>
+            </div>
+          </section>
+          <section data-heading="h3" data-name="Tag Lists">
+            <div class="content">
+              <ul>
+                <li>
+                  <span><b>Guide:</b></span>
+                  <ul>
+                    <li>
+                      <span>Mengunakan class <code>tags</code> pada orang tua elemen tag</span>
+                    </li>
+                  </ul>
+                </li>
+              </ul>
+              <div class="tags">
+                <span class="tag primary">Satu</span>
+                <span class="tag primary">Dua</span>
+                <span class="tag primary">Tiga</span>
+              </div>
+              <pre lang="html"><code>&#x3C;div class=&#x22;<mark>tags</mark>&#x22;&#x3E;
+  &#x3C;span class=&#x22;tag primary&#x22;&#x3E;Satu&#x3C;/span&#x3E;
+  &#x3C;span class=&#x22;tag primary&#x22;&#x3E;Dua&#x3C;/span&#x3E;
+  &#x3C;span class=&#x22;tag primary&#x22;&#x3E;Tiga&#x3C;/span&#x3E;
+&#x3C;/div&#x3E;</code></pre>
+            </div>
+          </section>
+          <section data-heading="h3" data-name="Tag Color">
+            <div class="content">
+              <ul>
+                <li>
+                  <span><b>Guide:</b></span>
+                  <ul>
+                    <li>
+                      <span>Terdapat warna <code>primary</code>, <code>success</code>, <code>info</code>, <code>warning</code>, dan <code>danger</code></span>
+                    </li>
+                  </ul>
+                </li>
+              </ul>
+              <span class="tag">Default</span>
+              <span class="tag primary">Primary</span>
+              <span class="tag success">Success</span>
+              <span class="tag info">Info</span>
+              <span class="tag warning">Warning</span>
+              <span class="tag danger">Danger</span>
+              <span class="tag gray">Danger</span>
+              <pre lang="html"><code>&#x3C;span class=&#x22;tag&#x22;&#x3E;Default&#x3C;/span&#x3E;
+&#x3C;span class=&#x22;tag <mark>primary</mark>&#x22;&#x3E;Primary&#x3C;/span&#x3E;
+&#x3C;span class=&#x22;tag <mark>success</mark>&#x22;&#x3E;Success&#x3C;/span&#x3E;
+&#x3C;span class=&#x22;tag <mark>info</mark>&#x22;&#x3E;Info&#x3C;/span&#x3E;
+&#x3C;span class=&#x22;tag <mark>warning</mark>&#x22;&#x3E;Warning&#x3C;/span&#x3E;
+&#x3C;span class=&#x22;tag <mark>danger</mark>&#x22;&#x3E;Danger&#x3C;/span&#x3E;</code></pre>
+            </div>
+          </section>
+          <section data-heading="h3" data-name="Tag Size">
+            <div class="content">
+              <ul>
+                <li>
+                  <span><b>Guide:</b></span>
+                  <ul>
+                    <li>
+                      <span>Terdapat ukuran <code>normal</code>, <code>medium</code>, dan <code>large</code></span>
+                    </li>
+                  </ul>
+                </li>
+              </ul>
+              <span class="tag primary normal">Normal</span>
+              <span class="tag primary medium">Medium</span>
+              <span class="tag primary large">Large</span>
+              <pre lang="html"><code>&#x3C;span class=&#x22;tag primary <mark>normal</mark>&#x22;&#x3E;Normal&#x3C;/span&#x3E;
+&#x3C;span class=&#x22;tag primary <mark>medium</mark>&#x22;&#x3E;Medium&#x3C;/span&#x3E;
+&#x3C;span class=&#x22;tag primary <mark>large</mark>&#x22;&#x3E;Large&#x3C;/span&#x3E;</code></pre>
+              <div class="tags medium">
+                <span class="tag primary">Medium</span>
+                <span class="tag primary normal">Normal</span>
+                <span class="tag primary">Medium</span>
+                <span class="tag primary large">Large</span>
+                <span class="tag primary">Medium</span>
+              </div>
+              <pre lang="html"><code>&#x3C;div class=&#x22;tags <mark>medium</mark>&#x22;&#x3E;
+  &#x3C;span class=&#x22;tag primary&#x22;&#x3E;Medium&#x3C;/span&#x3E;
+  &#x3C;span class=&#x22;tag primary <mark>normal</mark>&#x22;&#x3E;Normal&#x3C;/span&#x3E;
+  &#x3C;span class=&#x22;tag primary&#x22;&#x3E;Medium&#x3C;/span&#x3E;
+  &#x3C;span class=&#x22;tag primary <mark>large</mark>&#x22;&#x3E;Large&#x3C;/span&#x3E;
+  &#x3C;span class=&#x22;tag primary&#x22;&#x3E;Medium&#x3C;/span&#x3E;
+&#x3C;/div&#x3E;</code></pre>
+            </div>
+          </section>
+          <section data-heading="h3" data-name="Tag Variant">
+            <div class="content">
+              <ul>
+                <li>
+                  <span><b>Guide:</b></span>
+                  <ul>
+                    <li>
+                      <span>Terdapat beberapa variant diantaranya:</span>
+                      <ul>
+                        <li>
+                          <span><b>round-full</b>: mengubah border-radius menjadi round lingkaran</span>
+                        </li>
+                        <li>
+                          <span><b>delete</b>: menjadi tombol silang</span>
+                        </li>
+                        <li>
+                          <span><b>icon</b>: menjadikan tag sebagai icon</span>
+                        </li>
+                      </ul>
+                    </li>
+                  </ul>
+                </li>
+              </ul>
+              <div class="tags">
+                <span class="tag primary round-full">
+                  Round Full
+                </span>
+                <span class="tag delete"></span>
+                <span class="tag primary icon">
+                  <i class="fa fa-home"></i>
+                </span>
+              </div>
+              <pre lang="html"><code>&#x3C;div class=&#x22;tags&#x22;&#x3E;
+  &#x3C;span class=&#x22;tag primary <mark>round-full</mark>&#x22;&#x3E;
+    Round Full
+  &#x3C;/span&#x3E;
+  &#x3C;span class=&#x22;tag <mark>delete</mark>&#x22;&#x3E;&#x3C;/span&#x3E;
+  &#x3C;span class=&#x22;tag primary <mark>icon</mark>&#x22;&#x3E;
+    &#x3C;i class=&#x22;<mark>fa fa-home</mark>&#x22;&#x3E;&#x3C;/i&#x3E;
+  &#x3C;/span&#x3E;
+&#x3C;/div&#x3E;</code></pre>
+            </div>
+          </section>
+          <section data-heading="h3" data-name="Tag Addons">
+            <div class="content">
+              <ul>
+                <li>
+                  <span><b>Guide:</b></span>
+                  <ul>
+                    <li>
+                      <span>Menambahkan class <code>addons</code> dapat menjadikan <code>tags</code> menjadi satu bentuk</span>
+                    </li>
+                  </ul>
+                </li>
+              </ul>
+              <div class="tags addons">
+                <span class="tag">Package</span>
+                <span class="tag primary">Front End</span>
+              </div>
+              <pre lang="html"><code>&#x3C;div class=&#x22;<mark>tags</mark> <mark>addons</mark>&#x22;&#x3E;
+  &#x3C;span class=&#x22;tag&#x22;&#x3E;Package&#x3C;/span&#x3E;
+  &#x3C;span class=&#x22;tag primary&#x22;&#x3E;Front End&#x3C;/span&#x3E;
+&#x3C;/div&#x3E;</code></pre>
+              <div class="tags addons">
+                <span class="tag danger">Username</span>
+                <a class="tag delete"></a>
+              </div>
+              <pre lang="html"><code>&#x3C;div class=&#x22;tags <mark>addons</mark>&#x22;&#x3E;
+  &#x3C;span class=&#x22;tag <mark>danger</mark>&#x22;&#x3E;Username&#x3C;/span&#x3E;
+  &#x3C;a class=&#x22;tag <mark>delete</mark>&#x22;&#x3E;&#x3C;/a&#x3E;
+&#x3C;/div&#x3E;</code></pre>
+            </div>
+          </section>
+          <section data-heading="h2" data-name="Delete Button">
+            <div class="content">
+              <ul>
+                <li>
+                  <span><b>Lokasi:</b> <code>scss/elements/delete.scss</code></span>
+                </li>
+                <li>
+                  <span><b>Guide:</b></span>
+                  <ul>
+                    <li>
+                      <span>Menggunakan class <code>delete</code> pada elemen tersebut</span>
+                    </li>
+                    <li>
+                      <span>Dapat digunakan sebagai kombinasi dengan elemen lain</span>
+                    </li>
+                  </ul>
+                </li>
+              </ul>
+              <button class="delete"></button>
+              <pre lang="html"><code>&#x3C;button class=&#x22;<mark>delete</mark>&#x22;&#x3E;&#x3C;/button&#x3E;</code></pre>
+            </div>
+          </section>
+          <section data-heading="h3" data-name="Delete Button Size">
+            <div class="content">
+              <ul>
+                <li>
+                  <span><b>Guide:</b></span>
+                  <ul>
+                    <li>
+                      <span>Terdapat ukuran <code>normal</code>, <code>medium</code>, dan <code>large</code></span>
+                    </li>
+                  </ul>
+                </li>
+              </ul>
+              <button class="delete small"></button>
+              <button class="delete"></button>
+              <button class="delete medium"></button>
+              <button class="delete large"></button>
+              <pre lang="html"><code>&#x3C;button class=&#x22;delete <mark>small</mark>&#x22;&#x3E;&#x3C;/button&#x3E;
+&#x3C;button class=&#x22;delete&#x22;&#x3E;&#x3C;/button&#x3E;
+&#x3C;button class=&#x22;delete <mark>medium</mark>&#x22;&#x3E;&#x3C;/button&#x3E;
+&#x3C;button class=&#x22;delete <mark>large</mark>&#x22;&#x3E;&#x3C;/button&#x3E;</code></pre>
+            </div>
+          </section>
+          <section data-heading="h2" data-name="Notification">
+            <div class="content">
+              <ul>
+                <li>
+                  <span><b>Lokasi:</b> <code>scss/elements/notification.scss</code></span>
+                </li>
+                <li>
+                  <span><b>Guide:</b></span>
+                  <ul>
+                    <li>
+                      <span>Menggunkan class <code>notification</code> pada elemen tersebut</span>
+                    </li>
+                    <li>
+                      <span>Dapat digunakan sebagai pesan notifikasi pada sebuah artikel</span>
+                    </li>
+                  </ul>
+                </li>
+              </ul>
+              <div class="notification">
+                <button class="delete"></button>
+                <span>
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit lorem ipsum dolor. <strong>Pellentesque risus mi</strong>, tempus quis placerat ut, porta nec nulla. Vestibulum rhoncus ac ex sit amet fringilla. Nullam gravida purus diam, et dictum <a>felis venenatis</a> efficitur.
+                </span>
+              </div>
+              <pre lang="html"><code>&#x3C;div class=&#x22;<mark>notification</mark>&#x22;&#x3E;
+  &#x3C;button class=&#x22;delete&#x22;&#x3E;&#x3C;/button&#x3E;
+  &#x3C;span&#x3E;
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit lorem ipsum dolor. &#x3C;strong&#x3E;Pellentesque risus mi&#x3C;/strong&#x3E;, tempus quis placerat ut, porta nec nulla. Vestibulum rhoncus ac ex sit amet fringilla. Nullam gravida purus diam, et dictum &#x3C;a&#x3E;felis venenatis&#x3C;/a&#x3E; efficitur.
+  &#x3C;/span&#x3E;
+&#x3C;/div&#x3E;;</code></pre>
+            </div>
+          </section>
+          <section data-heading="h3" data-name="Notification Color">
+            <div class="content">
+              <ul>
+                <li>
+                  <span><b>Guide:</b></span>
+                  <ul>
+                    <li>
+                      <span>Terdapat beberapa warna diantaranya <code>primary</code>, <code>info</code>, <code>warning</code>, dan <code>danger</code>.</span>
+                    </li>
+                    <li>
+                      <span>Terdapat variant <code>light</code> diantara semua kode.</span>
+                    </li>
+                  </ul>
+                </li>
+              </ul>
+              <div class="notification primary">
+                <button class="delete"></button>
+                <span>
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit lorem ipsum dolor. <strong>Pellentesque risus mi</strong>, tempus quis placerat ut, porta nec nulla. Vestibulum rhoncus ac ex sit amet fringilla. Nullam gravida purus diam, et dictum <a>felis venenatis</a> efficitur.
+                </span>
+              </div>
+              <pre lang="html"><code>&#x3C;div class=&#x22;<mark>primary</mark>&#x22;&#x3E;
+  &#x3C;button class=&#x22;delete&#x22;&#x3E;&#x3C;/button&#x3E;
+  &#x3C;span&#x3E;
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit lorem ipsum dolor. &#x3C;strong&#x3E;Pellentesque risus mi&#x3C;/strong&#x3E;, tempus quis placerat ut, porta nec nulla. Vestibulum rhoncus ac ex sit amet fringilla. Nullam gravida purus diam, et dictum &#x3C;a&#x3E;felis venenatis&#x3C;/a&#x3E; efficitur.
+  &#x3C;/span&#x3E;
+&#x3C;/div&#x3E;;</code></pre>
+              <div class="notification primary light">
+                <button class="delete"></button>
+                <span>
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit lorem ipsum dolor. <strong>Pellentesque risus mi</strong>, tempus quis placerat ut, porta nec nulla. Vestibulum rhoncus ac ex sit amet fringilla. Nullam gravida purus diam, et dictum <a>felis venenatis</a> efficitur.
+                </span>
+              </div>
+              <pre lang="html"><code>&#x3C;div class=&#x22;notification primary <mark>light</mark>&#x22;&#x3E;
+  &#x3C;button class=&#x22;delete&#x22;&#x3E;&#x3C;/button&#x3E;
+  &#x3C;span&#x3E;
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit lorem ipsum dolor. &#x3C;strong&#x3E;Pellentesque risus mi&#x3C;/strong&#x3E;, tempus quis placerat ut, porta nec nulla. Vestibulum rhoncus ac ex sit amet fringilla. Nullam gravida purus diam, et dictum &#x3C;a&#x3E;felis venenatis&#x3C;/a&#x3E; efficitur.
+  &#x3C;/span&#x3E;
+&#x3C;/div&#x3E;;</code></pre>
+            </div>
+          </section>
+          <section data-heading="h2" data-name="Button">
+            <div class="content">
+              <ul>
+                <li>
+                  <span><b>Lokasi:</b> <code>scss/elements/button.scss</code></span>
+                </li>
+                <li>
+                  <span><b>Guide:</b></span>
+                  <ul>
+                    <li>
+                      <span>Button harus menggunakan class <code>btn</code></span>
+                    </li>
+                    <li>
+                      <span>Jika terdapat banyak butotn harus menggunakan orang tua <code>btn-group</code></span>
+                    </li>
+                    <li>
+                      <span>Button (tombol) dapat digunakan sebagai action ketika melakukan sesuatu</span>
+                    </li>
+                  </ul>
+                </li>
+              </ul>
+              <button class="btn">Button</button>
+              <pre lang="html"><code>&#x3C;button class=&#x22;<mark>btn</mark>&#x22;&#x3E;Button&#x3C;/button&#x3E;</code></pre>
+              <a href="#" class="btn">Anchor</a>
+              <button class="btn">Button</button>
+              <input class="btn" type="submit" value="Submit input">
+              <input class="btn" type="reset" value="Reset input">
+              <pre lang="html"><code>&#x3C;a class=&#x22;<mark>btn</mark>&#x22;&#x3E;Anchor&#x3C;/a&#x3E;
+&#x3C;button class=&#x22;<mark>btn</mark>&#x22;&#x3E;Button&#x3C;/button&#x3E;
+&#x3C;input class=&#x22;<mark>btn</mark>&#x22; type=&#x22;submit&#x22; value=&#x22;Submit input&#x22;&#x3E;
+&#x3C;input class=&#x22;<mark>btn</mark>&#x22; type=&#x22;reset&#x22; value=&#x22;Reset input&#x22;&#x3E;</code></pre>
+            </div>
+          </section>
+          <section data-heading="h3" data-name="Button Color">
+            <div class="content">
+              <ul>
+                <li>
+                  <span><b>Guide:</b></span>
+                  <ul>
+                    <li>
+                      <span>Terdapat beberapa warna diantaranya <code>primary</code>, <code>info</code>, <code>warning</code>, dan <code>danger</code>.</span>
+                    </li>
+                    <li>
+                      <span>Terdapat variant <code>light</code> diantara semua kode.</span>
+                    </li>
+                  </ul>
+                </li>
+              </ul>
+              <div class="btn-group">
+                <button class="btn primary">Primary</button>
+                <button class="btn info">Info</button>
+                <button class="btn success">Success</button>
+                <button class="btn warning">Warning</button>
+                <button class="btn danger">Danger</button>
+              </div>
+              <div class="btn-group">
+                <button class="btn primary light">Primary</button>
+                <button class="btn info light">Info</button>
+                <button class="btn success light">Success</button>
+                <button class="btn warning light">Warning</button>
+                <button class="btn danger light">Danger</button>
+              </div>
+              <pre lang="html"><code>&#x3C;div class=&#x22;btn-group&#x22;&#x3E;
+  &#x3C;button class=&#x22;btn <mark>primary</mark>&#x22;&#x3E;Primary&#x3C;/button&#x3E;
+  &#x3C;button class=&#x22;btn <mark>info</mark>&#x22;&#x3E;Info&#x3C;/button&#x3E;
+  &#x3C;button class=&#x22;btn <mark>success</mark>&#x22;&#x3E;Success&#x3C;/button&#x3E;
+  &#x3C;button class=&#x22;btn <mark>warning</mark>&#x22;&#x3E;Warning&#x3C;/button&#x3E;
+  &#x3C;button class=&#x22;btn <mark>danger</mark>&#x22;&#x3E;Danger&#x3C;/button&#x3E;
+&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;btn-group&#x22;&#x3E;
+  &#x3C;button class=&#x22;btn <mark>primary</mark> <mark>light</mark>&#x22;&#x3E;Primary&#x3C;/button&#x3E;
+  &#x3C;button class=&#x22;btn <mark>info</mark> <mark>light</mark>&#x22;&#x3E;Info&#x3C;/button&#x3E;
+  &#x3C;button class=&#x22;btn <mark>success</mark> <mark>light</mark>&#x22;&#x3E;Success&#x3C;/button&#x3E;
+  &#x3C;button class=&#x22;btn <mark>warning</mark> <mark>light</mark>&#x22;&#x3E;Warning&#x3C;/button&#x3E;
+  &#x3C;button class=&#x22;btn <mark>danger</mark> <mark>light</mark>&#x22;&#x3E;Danger&#x3C;/button&#x3E;
+&#x3C;/div&#x3E;</code></pre>
+            </div>
+          </section>
+          <section data-heading="h3" data-name="Button Size">
+            <div class="content">
+              <div class="content">
+                <ul>
+                  <li>
+                    <span><b>Guide:</b></span>
+                    <ul>
+                      <li>
+                        <span>Terdapat ukuran <code>small</code>, <code>normal</code>, <code>medium</code>, dan <code>large</code></span>
+                      </li>
+                    </ul>
+                  </li>
+                </ul>
+              <div class="btn-group">
+                <button class="btn small">Small</button>
+                <button class="btn">Default</button>
+                <button class="btn normal">Normal</button>
+                <button class="btn medium">Medium</button>
+                <button class="btn large">Large</button>
+              </div>
+              <pre lang="html"><code>&#x3C;div class=&#x22;btn-group&#x22;&#x3E;
+  &#x3C;button class=&#x22;btn <mark>small</mark>&#x22;&#x3E;Small&#x3C;/button&#x3E;
+  &#x3C;button class=&#x22;btn&#x22;&#x3E;Default&#x3C;/button&#x3E;
+  &#x3C;button class=&#x22;btn <mark>normal</mark>&#x22;&#x3E;Normal&#x3C;/button&#x3E;
+  &#x3C;button class=&#x22;btn <mark>medium</mark>&#x22;&#x3E;Medium&#x3C;/button&#x3E;
+  &#x3C;button class=&#x22;btn <mark>large</mark>&#x22;&#x3E;Large&#x3C;/button&#x3E;
+&#x3C;/div&#x3E;</code></pre>
+              <div class="btn-group small">
+                <button class="btn large">Large</button>
+                <button class="btn">Small</button>
+                <button class="btn medium">Medium</button>
+                <button class="btn normal">Normal</button>
+                <button class="btn">Small</button>
+              </div>
+              <pre lang="html"><code>&#x3C;div class=&#x22;btn-group <mark>small</mark>&#x22;&#x3E;
+  &#x3C;button class=&#x22;btn <mark>large</mark>&#x22;&#x3E;Large&#x3C;/button&#x3E;
+  &#x3C;button class=&#x22;btn&#x22;&#x3E;Small&#x3C;/button&#x3E;
+  &#x3C;button class=&#x22;btn <mark>medium</mark>&#x22;&#x3E;Medium&#x3C;/button&#x3E;
+  &#x3C;button class=&#x22;btn <mark>normal</mark>&#x22;&#x3E;Normal&#x3C;/button&#x3E;
+  &#x3C;button class=&#x22;btn&#x22;&#x3E;Small&#x3C;/button&#x3E;
+&#x3C;/div&#x3E;</code></pre>
+            </div>
+          </section>
+          <section data-heading="h3" data-name="Button Full Width">
+            <div class="content">
+              <ul>
+                <li>
+                  <span><b>Guide:</b></span>
+                  <ul>
+                    <li>
+                      <span>Menggunakan class <code>fullwidth</code> untuk menjadikan 100% lebar seperti orang tuanya</span>
+                    </li>
+                  </ul>
+                </li>
+              </ul>
+              <div class="btn-group">
+                <button class="btn small fullwidth">Small</button>
+                <button class="btn fullwidth">Normal</button>
+                <button class="btn medium fullwidth">Medium</button>
+                <button class="btn large fullwidth">Large</button>
+              </div>
+              <pre lang="html"><code>&#x3C;div class=&#x22;btn-group&#x22;&#x3E;
+  &#x3C;button class=&#x22;btn small <mark>fullwidth</mark>&#x22;&#x3E;Small&#x3C;/button&#x3E;
+  &#x3C;button class=&#x22;btn <mark>fullwidth</mark>&#x22;&#x3E;Normal&#x3C;/button&#x3E;
+  &#x3C;button class=&#x22;btn medium <mark>fullwidth</mark>&#x22;&#x3E;Medium&#x3C;/button&#x3E;
+  &#x3C;button class=&#x22;btn large <mark>fullwidth</mark>&#x22;&#x3E;Large&#x3C;/button&#x3E;
+&#x3C;/div&#x3E;</code></pre>
+            </div>
+          </section>
+          <section data-heading="h3" data-name="Button Variant">
+            <div class="content">
+              <ul>
+                <li>
+                  <span><b>Guide:</b></span>
+                  <ul>
+                    <li>
+                      <span>Terdapat 3 variasi diantaranya:</span>
+                      <ul>
+                        <li>
+                          <span><code>outline</code>: Button menjadi line</span>
+                        </li>
+                        <li>
+                          <span><code>Invert</code>: Button menjadi warna dasar tanpa outline</span>
+                        </li>
+                        <li>
+                          <span><code>Rounded</code>: Button menjadi terisi dengan warna dasar</span>
+                        </li>
+                      </ul>
+                    </li>
+                  </ul>
+                </li>
+              </ul>
+              <div class="btn-group">
+                <button class="btn outline">Outline</button>
+                <button class="btn primary outline">Outline</button>
+                <button class="btn warning outline">Outline</button>
+                <button class="btn info outline">Outline</button>
+                <button class="btn success outline">Outline</button>
+                <button class="btn danger outline">Outline</button>
+              </div>
+              <pre lang="html"><code>&#x3C;div class=&#x22;btn-groups&#x22;&#x3E;
+  &#x3C;button class=&#x22;btn <mark>outline</mark>&#x22;&#x3E;Outline&#x3C;/button&#x3E;
+  &#x3C;button class=&#x22;btn primary <mark>outline</mark>&#x22;&#x3E;Outline&#x3C;/button&#x3E;
+  &#x3C;button class=&#x22;btn warning <mark>outline</mark>&#x22;&#x3E;Outline&#x3C;/button&#x3E;
+  &#x3C;button class=&#x22;btn info <mark>outline</mark>&#x22;&#x3E;Outline&#x3C;/button&#x3E;
+  &#x3C;button class=&#x22;btn success <mark>outline</mark>&#x22;&#x3E;Outline&#x3C;/button&#x3E;
+  &#x3C;button class=&#x22;btn danger <mark>outline</mark>&#x22;&#x3E;Outline&#x3C;/button&#x3E;
+&#x3C;/div&#x3E;</code></pre>
+              <div class="btn-group">
+                <button class="btn invert">Invert</button>
+                <button class="btn primary invert">Invert</button>
+                <button class="btn warning invert">Invert</button>
+                <button class="btn info invert">Invert</button>
+                <button class="btn success invert">Invert</button>
+                <button class="btn danger invert">Invert</button>
+              </div>
+              <pre lang="html"><code>&#x3C;div class=&#x22;btn-group&#x22;&#x3E;
+  &#x3C;button class=&#x22;btn <mark>invert</mark>&#x22;&#x3E;Invert&#x3C;/button&#x3E;
+  &#x3C;button class=&#x22;btn primary <mark>invert</mark>&#x22;&#x3E;Invert&#x3C;/button&#x3E;
+  &#x3C;button class=&#x22;btn warning <mark>invert</mark>&#x22;&#x3E;Invert&#x3C;/button&#x3E;
+  &#x3C;button class=&#x22;btn info <mark>invert</mark>&#x22;&#x3E;Invert&#x3C;/button&#x3E;
+  &#x3C;button class=&#x22;btn success <mark>invert</mark>&#x22;&#x3E;Invert&#x3C;/button&#x3E;
+  &#x3C;button class=&#x22;btn danger <mark>invert</mark>&#x22;&#x3E;Invert&#x3C;/button&#x3E;
+&#x3C;/div&#x3E;</code></pre>
+              <div class="btn-group">
+                <button class="btn primary rounded">Rounded</button>
+                <button class="btn warning rounded">Rounded</button>
+                <button class="btn info rounded">Rounded</button>
+                <button class="btn success rounded">Rounded</button>
+                <button class="btn danger rounded">Rounded</button>
+              </div>
+              <pre lang="html"><code>&#x3C;div class=&#x22;btn-group&#x22;&#x3E;
+  &#x3C;button class=&#x22;btn primary <mark>rounded</mark>&#x22;&#x3E;Rounded&#x3C;/button&#x3E;
+  &#x3C;button class=&#x22;btn warning <mark>rounded</mark>&#x22;&#x3E;Rounded&#x3C;/button&#x3E;
+  &#x3C;button class=&#x22;btn info <mark>rounded</mark>&#x22;&#x3E;Rounded&#x3C;/button&#x3E;
+  &#x3C;button class=&#x22;btn success <mark>rounded</mark>&#x22;&#x3E;Rounded&#x3C;/button&#x3E;
+  &#x3C;button class=&#x22;btn danger <mark>rounded</mark>&#x22;&#x3E;Rounded&#x3C;/button&#x3E;
+&#x3C;/div&#x3E;</code></pre>
+            </div>
+          </section>
+          <section data-heading="h3" data-name="Button Loading">
+            <div class="content">
+              <ul>
+                <li>
+                  <span><b>Guide:</b></span>
+                  <ul>
+                    <li>
+                      <span>Dengan menambahkan class <code>loading</code> pada elemen button tersebut</span>
+                    </li>
+                  </ul>
+                </li>
+              </ul>
+              <div class="btn-group">
+                <button class="btn loading">Loading</button>
+                <button class="btn primary loading">Loading</button>
+                <button class="btn info loading">Loading</button>
+                <button class="btn success loading">Loading</button>
+                <button class="btn warning loading">Loading</button>
+                <button class="btn danger loading">Loading</button>
+              </div>
+              <pre lang="html"><code>&#x3C;div class=&#x22;btn-group&#x22;&#x3E;
+  &#x3C;button class=&#x22;btn <mark>loading</mark>&#x22;&#x3E;Loading&#x3C;/button&#x3E;
+  &#x3C;button class=&#x22;btn primary <mark>loading</mark>&#x22;&#x3E;Loading&#x3C;/button&#x3E;
+  &#x3C;button class=&#x22;btn info <mark>loading</mark>&#x22;&#x3E;Loading&#x3C;/button&#x3E;
+  &#x3C;button class=&#x22;btn success <mark>loading</mark>&#x22;&#x3E;Loading&#x3C;/button&#x3E;
+  &#x3C;button class=&#x22;btn warning <mark>loading</mark>&#x22;&#x3E;Loading&#x3C;/button&#x3E;
+  &#x3C;button class=&#x22;btn danger <mark>loading</mark>&#x22;&#x3E;Loading&#x3C;/button&#x3E;
+&#x3C;/div&#x3E;</code></pre>
+            </div>
+          </section>
+          <section data-heading="h3" data-name="Button Disable">
+            <div class="content">
+              <ul>
+                <li>
+                  <span><b>Guide:</b></span>
+                  <ul>
+                    <li>
+                      <span>Dengan menambah attribute <code>disabled</code> pada elemen button tersebut</span>
+                    </li>
+                  </ul>
+                </li>
+              </ul>
+              <div class="btn-groups">
+                <button class="btn" disabled>Disabled</button>
+                <button class="btn primary" disabled>Disabled</button>
+                <button class="btn info" disabled>Disabled</button>
+                <button class="btn success" disabled>Disabled</button>
+                <button class="btn warning" disabled>Disabled</button>
+                <button class="btn danger" disabled>Disabled</button>
+              </div>
+              <pre lang="html"><code>&#x3C;div class=&#x22;btn-groups&#x22;&#x3E;
+  &#x3C;button class=&#x22;btn&#x22; <mark>disabled</mark>&#x3E;Disabled&#x3C;/button&#x3E;
+  &#x3C;button class=&#x22;btn primary&#x22; <mark>disabled</mark>&#x3E;Disabled&#x3C;/button&#x3E;
+  &#x3C;button class=&#x22;btn info&#x22; <mark>disabled</mark>&#x3E;Disabled&#x3C;/button&#x3E;
+  &#x3C;button class=&#x22;btn success&#x22; <mark>disabled</mark>&#x3E;Disabled&#x3C;/button&#x3E;
+  &#x3C;button class=&#x22;btn warning&#x22; <mark>disabled</mark>&#x3E;Disabled&#x3C;/button&#x3E;
+  &#x3C;button class=&#x22;btn danger&#x22; <mark>disabled</mark>&#x3E;Disabled&#x3C;/button&#x3E;
+&#x3C;/div&#x3E;</code></pre>
+            </div>
+          </section>
+          <section data-heading="h3" data-name="Button Icon">
+            <div class="content">
+              <ul>
+                <li>
+                  <span><b>Guide:</b></span>
+                  <ul>
+                    <li>
+                      <span>Dengan menggunakan <code>icon-only</code> pada sebuah tombol maka hanya icon</span>
+                    </li>
+                  </ul>
+                </li>
+              </ul>
+              <div class="btn-group">
+                <button class="btn icon-only">
+                  <span class="icon small">
+                    <i class="fas fa-bold"></i>
+                  </span>
+                </button>
+                <button class="btn">
+                  <span class="icon small">
+                    <i class="fas fa-bold"></i>
+                  </span>
+                  <span>Bold</span>
+                </button>
+                <button class="btn">
+                  <span>Bold</span>
+                  <span class="icon small">
+                    <i class="fas fa-bold"></i>
+                  </span>
+                </button>
+              </div>
+              <pre lang="html"><code>&#x3C;div class=&#x22;btn-group&#x22;&#x3E;
+  &#x3C;button class=&#x22;btn&#x22;&#x3E;
+    &#x3C;span class=&#x22;<mark>icon</mark> small&#x22;&#x3E;
+      &#x3C;i class=&#x22;fa fa-bold&#x22;&#x3E;&#x3C;/i&#x3E;
+    &#x3C;/span&#x3E;
+  &#x3C;/button&#x3E;
+  &#x3C;button class=&#x22;btn&#x22;&#x3E;
+    &#x3C;span class=&#x22;<mark>icon</mark> small&#x22;&#x3E;
+      &#x3C;i class=&#x22;fa fa-bold&#x22;&#x3E;&#x3C;/i&#x3E;
+    &#x3C;/span&#x3E;
+    &#x3C;span&#x3E;Bold&#x3C;/span&#x3E;
+  &#x3C;/button&#x3E;
+&#x3C;/div&#x3E;</code></pre>
+            </div>
+          </section>
+          <section data-heading="h1" data-name="Component" data-icon="fa fa-cube">
+            <div class="content">
+              <ul>
+                <li>
+                  <span><b>Lokasi: <code>scss/components/*</code></b></span>
+                </li>
+                <li>
+                  <p><b>Isi:</b></p>
+                  <ul>
+                    <li>
+                      <span><code>breadcrumb.scss</code></span>
+                    </li>
+                    <li>
+                      <span><code>dropdown.scss</code></span>
+                    </li>
+                  </ul>
+              </ul>
+            </div>
+          </section>
+          <section data-heading="h2"  data-name="Breadcrumbs">
+            <div class="content">
+              <ul>
+                <li>
+                  <span><b>Lokasi:</b> <code>scss/component/breadcrumb.scss</code></span>
+                </li>
+                <li>
+                  <span><b>Guide:</b></span>
+                  <ul>
+                    <li>
+                      <span><b>Posisi breadcrumb:</b> kiri (default), tengah (<code>center</code>), dan kiri (<code>right</code>).</span>
+                    </li>
+                    <li>
+                      <span><b>Breadcrumb with icon:</b> tidak memerlukan kelas tambahan.</span>
+                    </li>
+                  </ul>
+                </li>
+              </ul>
+            </div>
+          </section>
+          <section data-heading="h3" data-name="Breadcrumbs Position">
+            <div class="content">
+              <ul>
+                <li>
+                  <span><b>Guide:</b></span>
+                  <ul>
+                    <li>
+                      <span>Kiri (default)</span>
+                    </li>
+                    <li>
+                      <span>Tengah (<code>center</code>)</span>
+                    </li>
+                    <li>
+                      <span>Kanan (<code>right</code>)</span>
+                    </li>
+                  </ul>
+                </li>
+              </ul>
+              <h3>Left Position</h3>
+              <nav class="breadcrumb" aria-label="breadcrumbs">
+                <ul>
+                  <li><a href="#">Home</a></li>
+                  <li><a href="#">Postingan</a></li>
+                  <li class="active"><a href="#" aria-current="page">Judul Postingan</a></li>
+                </ul>
+              </nav>
+              <pre lang="html"><code>&#x3C;nav class=&#x22;<mark>breadcrumb</mark>&#x22; aria-label=&#x22;breadcrumbs&#x22;&#x3E;
+  &#x3C;ul&#x3E;
+    &#x3C;li&#x3E;&#x3C;a href=&#x22;#&#x22;&#x3E;Home&#x3C;/a&#x3E;&#x3C;/li&#x3E;
+    &#x3C;li&#x3E;&#x3C;a href=&#x22;#&#x22;&#x3E;Postingan&#x3C;/a&#x3E;&#x3C;/li&#x3E;
+    &#x3C;li class=&#x22;active&#x22;&#x3E;&#x3C;a href=&#x22;#&#x22; aria-current=&#x22;page&#x22;&#x3E;Judul Postingan&#x3C;/a&#x3E;&#x3C;/li&#x3E;
+  &#x3C;/ul&#x3E;
+&#x3C;/nav&#x3E;</code></pre>
+              <h3>Center Position</h3>
+              <nav class="breadcrumb center" aria-label="breadcrumbs">
+                <ul>
+                  <li><a href="#">Home</a></li>
+                  <li><a href="#">Postingan</a></li>
+                  <li class="active"><a href="#" aria-current="page">Judul Postingan</a></li>
+                </ul>
+              </nav>
+              <pre lang="html"><code>&#x3C;nav class=&#x22;<mark>breadcrumb</mark> <mark>center</mark>&#x22; aria-label=&#x22;breadcrumbs&#x22;&#x3E;
+  &#x3C;ul&#x3E;
+    &#x3C;li&#x3E;&#x3C;a href=&#x22;#&#x22;&#x3E;Home&#x3C;/a&#x3E;&#x3C;/li&#x3E;
+    &#x3C;li&#x3E;&#x3C;a href=&#x22;#&#x22;&#x3E;Postingan&#x3C;/a&#x3E;&#x3C;/li&#x3E;
+    &#x3C;li class=&#x22;active&#x22;&#x3E;&#x3C;a href=&#x22;#&#x22; aria-current=&#x22;page&#x22;&#x3E;Judul Postingan&#x3C;/a&#x3E;&#x3C;/li&#x3E;
+  &#x3C;/ul&#x3E;
+&#x3C;/nav&#x3E;</code></pre>
+              <h3>Right Position</h3>
+              <nav class="breadcrumb right" aria-label="breadcrumbs">
+                <ul>
+                  <li><a href="#">Home</a></li>
+                  <li><a href="#">Postingan</a></li>
+                  <li class="active"><a href="#" aria-current="page">Judul Postingan</a></li>
+                </ul>
+              </nav>
+              <pre lang="html"><code>&#x3C;nav class=&#x22;<mark>breadcrumb</mark> <mark>right</mark>&#x22; aria-label=&#x22;breadcrumbs&#x22;&#x3E;
+  &#x3C;ul&#x3E;
+    &#x3C;li&#x3E;&#x3C;a href=&#x22;#&#x22;&#x3E;Home&#x3C;/a&#x3E;&#x3C;/li&#x3E;
+    &#x3C;li&#x3E;&#x3C;a href=&#x22;#&#x22;&#x3E;Postingan&#x3C;/a&#x3E;&#x3C;/li&#x3E;
+    &#x3C;li class=&#x22;active&#x22;&#x3E;&#x3C;a href=&#x22;#&#x22; aria-current=&#x22;page&#x22;&#x3E;Judul Postingan&#x3C;/a&#x3E;&#x3C;/li&#x3E;
+  &#x3C;/ul&#x3E;
+&#x3C;/nav&#x3E;</code></pre>
+            </div>
+          </section>
+          <section data-heading="h3" data-name="Breadcrumbs Variant">
+            <div class="content">
+              <ul>
+                <li>
+                  <span><b>Guide:</b></span>
+                  <ul>
+                    <li>
+                      <span>Menambahkan element diantara tag <code>a</code></span>
+                    </li>
+                  </ul>
+                </li>
+              </ul>
+              <nav class="breadcrumb" aria-label="breadcrumbs">
+                <ul>
+                  <li>
+                    <a href="#">
+                      <span class="icon">
+                        <i class="fa fa-home"></i>
+                      </span>
+                      <span>Home</span>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#">
+                      <span class="icon">
+                        <i class="fa fa-file-alt"></i>
+                      </span>
+                      <span>Postingan</span>
+                    </a>
+                  </li>
+                  <li class="active">
+                    <a href="#" aria-current="page">Judul Postingan</a>
+                  </li>
+                </ul>
+              </nav>
+              <pre lang="html"><code>&#x3C;nav class=&#x22;<mark>breadcrumb</mark>&#x22; aria-label=&#x22;breadcrumbs&#x22;&#x3E;
+  &#x3C;ul&#x3E;
+    &#x3C;li&#x3E;
+      &#x3C;a href=&#x22;#&#x22;&#x3E;
+        &#x3C;span class=&#x22;<mark>icon</mark>&#x22;&#x3E;
+          &#x3C;i class=&#x22;fa fa-home&#x22;&#x3E;&#x3C;/i&#x3E;
+        &#x3C;/span&#x3E;
+        &#x3C;span&#x3E;Home&#x3C;/span&#x3E;
+      &#x3C;/a&#x3E;
+    &#x3C;/li&#x3E;
+    &#x3C;li&#x3E;
+      &#x3C;a href=&#x22;#&#x22;&#x3E;
+        &#x3C;span class=&#x22;<mark>icon</mark>&#x22;&#x3E;
+          &#x3C;i class=&#x22;fa fa-file-alt&#x22;&#x3E;&#x3C;/i&#x3E;
+        &#x3C;/span&#x3E;
+        &#x3C;span&#x3E;Postingan&#x3C;/span&#x3E;
+      &#x3C;/a&#x3E;
+    &#x3C;/li&#x3E;
+    &#x3C;li class=&#x22;active&#x22;&#x3E;
+      &#x3C;a href=&#x22;#&#x22; aria-current=&#x22;page&#x22;&#x3E;Judul Postingan&#x3C;/a&#x3E;
+    &#x3C;/li&#x3E;
+  &#x3C;/ul&#x3E;
+&#x3C;/nav&#x3E;</code></pre>
+            </div>
+          </section>
+          <section data-heading="h2" data-name="Dropdown">
+            <div class="content">
+              <ul>
+                <li>
+                  <span><b>Lokasi:</b> <code>scss/component/dropdown.scss</code></span>
+                </li>
+                <li>
+                  <span><b>Guide:</b></span>
+                  <ul>
+                    <li>
+                      <span>Terdapat class <code>dropdown</code> pada orang tua.</span>
+                    </li>
+                    <li>
+                      <span>Di dalam <code>dropdown</code> terdapat class <code>dropdown-trigger</code> atau pembungkus lainnya pada orang tua dari tombol.</span>
+                    </li>
+                    <li><span>Di dalam <code>dropdown</code> terdapat class <code>dropdown-menu</code> untuk menyembungikan dropdwon (default).</span></li>
+                    <li><span>Di dalam <code>dropdown-menu</code> terdapat class <code>dropdown-content</code> untuk pemungkus isi dari dropdown.</span></li>
+                    <li><span>Di dalam <code>dropdown-content</code> terdapat class <code>dropdown-item</code> untuk satu elemen seperti <code>a</code>, <code>div</code>, atau lainnya.</span></li>
+                    <li><span>Di dalam <code>dropdown-content</code> terdapat class <code>dropdown-divider</code> untuk menambah garis horizontal.</span></li>
+                  </ul>
+                </li>
+              </ul>
+              <div class="dropdown">
+                <div class="dropdown-trigger">
+                  <button class="btn" aria-haspopup="true" aria-controls="dropdown-menu">
+                    <span>Tekan</span>
+                  </button>
+                </div>
+                <div class="dropdown-menu" id="dropdown-menu" role="menu">
+                  <div class="dropdown-content">
+                    <a href="#" class="dropdown-item">
+                      Isi dari dropdwon
+                    </a>
+                    <hr class="dropdown-divider">
+                    <a href="#" class="dropdown-item">
+                      Garis
+                    </a>
+                  </div>
+                </div>
+              </div>
+              <pre lang="html"><code>&#x3C;div class=&#x22;<mark>dropdown</mark>&#x22;&#x3E;
+  &#x3C;div class=&#x22;<mark>dropdown-trigger</mark>&#x22;&#x3E;
+    &#x3C;button class=&#x22;btn&#x22; aria-haspopup=&#x22;true&#x22; aria-controls=&#x22;dropdown-menu&#x22;&#x3E;
+      &#x3C;span&#x3E;Tekan&#x3C;/span&#x3E;
+    &#x3C;/button&#x3E;
+  &#x3C;/div&#x3E;
+  &#x3C;div class=&#x22;<mark>dropdown-menu</mark>&#x22; id=&#x22;dropdown-menu&#x22; role=&#x22;menu&#x22;&#x3E;
+    &#x3C;div class=&#x22;<mark>dropdown-content</mark>&#x22;&#x3E;
+      &#x3C;a href=&#x22;#&#x22; class=&#x22;<mark>dropdown-item</mark>&#x22;&#x3E;
+        Isi dari dropdwon
+      &#x3C;/a&#x3E;
+      &#x3C;hr class=&#x22;<mark>dropdown-divider</mark>&#x22;&#x3E;
+      &#x3C;a href=&#x22;#&#x22; class=&#x22;<mark>dropdown-item</mark>&#x22;&#x3E;
+        Garis
+      &#x3C;/a&#x3E;
+    &#x3C;/div&#x3E;
+  &#x3C;/div&#x3E;
+&#x3C;/div&#x3E;</code></pre>
+            </div>
+          </section>
+          <section data-heading="h3" data-name="Dropdown Content">
+            <div class="content">
+              <ul>
+                <li>
+                  <span><b>Guide:</b></span>
+                  <ul>
+                    <li>
+                      <span>Dapat berisi tentang konten dari suatu dropdown.</span>
+                    </li>
+                  </ul>
+                </li>
+              </ul>
+              <div class="dropdown">
+                <div class="dropdown-trigger">
+                  <button class="btn" aria-haspopup="true" aria-controls="dropdown-menu-content">
+                    <span>Tekan!</span>
+                  </button>
+                </div>
+                <div class="dropdown-menu" id="dropdown-menu-content" role="menu">
+                  <div class="dropdown-content">
+                    <div class="dropdown-item">
+                      <p>Sebuah tulisan dengan <strong>gaya tebal</strong> dan <em>gaya miring</em> pada sebuah dropdown.</p>
+                    </div>
+                    <hr class="dropdown-divider">
+                    <a href="#" class="dropdown-item">
+                      Sebuah link
+                    </a>
+                  </div>
+                </div>
+              </div>
+              <pre lang="html"><code>&#x3C;div class=&#x22;dropdown&#x22;&#x3E;
+  &#x3C;div class=&#x22;dropdown-trigger&#x22;&#x3E;
+    &#x3C;button class=&#x22;btn&#x22; aria-haspopup=&#x22;true&#x22; aria-controls=&#x22;dropdown-menu-content&#x22;&#x3E;
+      &#x3C;span&#x3E;Tekan!&#x3C;/span&#x3E;
+    &#x3C;/button&#x3E;
+  &#x3C;/div&#x3E;
+  &#x3C;div class=&#x22;dropdown-menu&#x22; id=&#x22;dropdown-menu-content&#x22; role=&#x22;menu&#x22;&#x3E;
+    &#x3C;div class=&#x22;<mark>dropdown-content</mark>&#x22;&#x3E;
+      &#x3C;div class=&#x22;dropdown-item&#x22;&#x3E;
+        &#x3C;p&#x3E;Sebuah tulisan dengan &#x3C;strong&#x3E;gaya tebal&#x3C;/strong&#x3E; dan &#x3C;em&#x3E;gaya miring&#x3C;/em&#x3E; pada sebuah dropdown.&#x3C;/p&#x3E;
+      &#x3C;/div&#x3E;
+      &#x3C;hr class=&#x22;dropdown-divider&#x22;&#x3E;
+      &#x3C;a href=&#x22;#&#x22; class=&#x22;dropdown-item&#x22;&#x3E;
+        Sebuah link
+      &#x3C;/a&#x3E;
+    &#x3C;/div&#x3E;
+  &#x3C;/div&#x3E;
+&#x3C;/div&#x3E;</code></pre>
+            </div>
+          </section>
+          <section data-heading="h3" data-name="Dropdown Hover">
+            <div class="content">
+              <ul>
+                <li>
+                  <span><b>Guide:</b></span>
+                  <ul>
+                    <li>
+                      <span>Menambahkan class <code>hover</code> untuk mengganti aksi di tekan (default) menjadi hover.</span>
+                    </li>
+                  </ul>
+                </li>
+              </ul>
+              <div class="dropdown hover">
+                <div class="dropdown-trigger">
+                  <button class="btn" aria-haspopup="true" aria-controls="dropdown-menu-hover">
+                    <span>Hover!</span>
+                  </button>
+                </div>
+                <div class="dropdown-menu" id="dropdown-menu-hover" role="menu">
+                  <div class="dropdown-content">
+                    <a href="#" class="dropdown-item">
+                      Isi dari dropdown
+                    </a>
+                    <hr class="dropdown-divider">
+                    <a href="#" class="dropdown-item">
+                      Garis
+                    </a>
+                  </div>
+                </div>
+              </div>
+              <pre lang="html"><code>&#x3C;div class=&#x22;dropdown <mark>hover</mark>&#x22;&#x3E;
+  &#x3C;div class=&#x22;dropdown-trigger&#x22;&#x3E;
+    &#x3C;button class=&#x22;btn&#x22; aria-haspopup=&#x22;true&#x22; aria-controls=&#x22;dropdown-menu-hover&#x22;&#x3E;
+      &#x3C;span&#x3E;Hover!&#x3C;/span&#x3E;
+    &#x3C;/button&#x3E;
+  &#x3C;/div&#x3E;
+  &#x3C;div class=&#x22;dropdown-menu&#x22; id=&#x22;dropdown-menu-hover&#x22; role=&#x22;menu&#x22;&#x3E;
+    &#x3C;div class=&#x22;dropdown-content&#x22;&#x3E;
+      &#x3C;a href=&#x22;#&#x22; class=&#x22;dropdown-item&#x22;&#x3E;
+        Isi dari dropdown
+      &#x3C;/a&#x3E;
+      &#x3C;hr class=&#x22;dropdown-divider&#x22;&#x3E;
+      &#x3C;a href=&#x22;#&#x22; class=&#x22;dropdown-item&#x22;&#x3E;
+        Garis
+      &#x3C;/a&#x3E;
+    &#x3C;/div&#x3E;
+  &#x3C;/div&#x3E;
+&#x3C;/div&#x3E;</code></pre>
+            </div>
+          </section>
+          <section data-heading="h3" data-name="Dropdown Postitions">
+            <div class="content">
+              <ul>
+                <li>
+                  <span><b>Guide:</b></span>
+                  <ul>
+                    <li>
+                      <span>Bawah (default)</span>
+                    </li>
+                    <li>
+                      <span>Kanan (default)</span>
+                    </li>
+                    <li>
+                      <span>Kiri (<code>left</code>)</span>
+                    </li>
+                    <li>
+                      <span>Atas (<code>top</code>)</span>
+                    </li>
+                  </ul>
+                </li>
+              </ul>
+              <h3>Bawah</h3>
+              <div class="dropdown">
+                <div class="dropdown-trigger">
+                  <button class="btn" aria-haspopup="true" aria-controls="dropdown-menu-left">
+                    <span>Tekan!</span>
+                  </button>
+                </div>
+                <div class="dropdown-menu" id="dropdown-menu-left" role="menu">
+                  <div class="dropdown-content">
+                    <div class="dropdown-item">
+                      <p>Dropdown dengan posisi <b>Kiri</b> (default)</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <pre lang="html"><code>&#x3C;div class=&#x22;<mark>dropdown</mark>&#x22;&#x3E;
+  &#x3C;div class=&#x22;dropdown-trigger&#x22;&#x3E;
+    &#x3C;button class=&#x22;btn&#x22; aria-haspopup=&#x22;true&#x22; aria-controls=&#x22;dropdown-menu-left&#x22;&#x3E;
+      &#x3C;span&#x3E;Tekan!&#x3C;/span&#x3E;
+    &#x3C;/button&#x3E;
+  &#x3C;/div&#x3E;
+  &#x3C;div class=&#x22;dropdown-menu&#x22; id=&#x22;dropdown-menu-left&#x22; role=&#x22;menu&#x22;&#x3E;
+    &#x3C;div class=&#x22;dropdown-content&#x22;&#x3E;
+      &#x3C;div class=&#x22;dropdown-item&#x22;&#x3E;
+        &#x3C;p&#x3E;Dropdown dengan posisi &#x3C;b&#x3E;Kiri&#x3C;/b&#x3E; (default)&#x3C;/p&#x3E;
+      &#x3C;/div&#x3E;
+    &#x3C;/div&#x3E;
+  &#x3C;/div&#x3E;
+&#x3C;/div&#x3E;</code></pre>
+              <h3>Kanan</h3>
+              <div class="dropdown">
+                <div class="dropdown-trigger">
+                  <button class="btn" aria-haspopup="true" aria-controls="dropdown-menu-down">
+                    <span>Tekan!</span>
+                  </button>
+                </div>
+                <div class="dropdown-menu" id="dropdown-menu-down" role="menu">
+                  <div class="dropdown-content">
+                    <div class="dropdown-item">
+                      <p>Dropdown dengan posisi <b>Bawah</b> (default)</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <pre lang="html"><code>&#x3C;div class=&#x22;<mark>dropdown</mark>&#x22;&#x3E;
+  &#x3C;div class=&#x22;dropdown-trigger&#x22;&#x3E;
+    &#x3C;button class=&#x22;btn&#x22; aria-haspopup=&#x22;true&#x22; aria-controls=&#x22;dropdown-menu-down&#x22;&#x3E;
+      &#x3C;span&#x3E;Tekan!&#x3C;/span&#x3E;
+    &#x3C;/button&#x3E;
+  &#x3C;/div&#x3E;
+  &#x3C;div class=&#x22;dropdown-menu&#x22; id=&#x22;dropdown-menu-down&#x22; role=&#x22;menu&#x22;&#x3E;
+    &#x3C;div class=&#x22;dropdown-content&#x22;&#x3E;
+      &#x3C;div class=&#x22;dropdown-item&#x22;&#x3E;
+        &#x3C;p&#x3E;Dropdown dengan posisi &#x3C;b&#x3E;Bawah&#x3C;/b&#x3E; (default)&#x3C;/p&#x3E;
+      &#x3C;/div&#x3E;
+    &#x3C;/div&#x3E;
+  &#x3C;/div&#x3E;
+&#x3C;/div&#x3E;</code></pre>
+              <h3>Kiri</h3>
+              <div class="dropdown right">
+                <div class="dropdown-trigger">
+                  <button class="btn" aria-haspopup="true" aria-controls="dropdown-menu-right">
+                    <span>Tekan!</span>
+                  </button>
+                </div>
+                <div class="dropdown-menu" id="dropdown-menu-right" role="menu">
+                  <div class="dropdown-content">
+                    <div class="dropdown-item">
+                      <p>Dropdown dengan posisi <b>Kanan</b> (<code>right</code>)</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <pre lang="html"><code>&#x3C;div class=&#x22;<mark>dropdown</mark> <mark>right</mark>&#x22;&#x3E;
+  &#x3C;div class=&#x22;dropdown-trigger&#x22;&#x3E;
+    &#x3C;button class=&#x22;btn&#x22; aria-haspopup=&#x22;true&#x22; aria-controls=&#x22;dropdown-menu-right&#x22;&#x3E;
+      &#x3C;span&#x3E;Tekan!&#x3C;/span&#x3E;
+    &#x3C;/button&#x3E;
+  &#x3C;/div&#x3E;
+  &#x3C;div class=&#x22;dropdown-menu&#x22; id=&#x22;dropdown-menu-right&#x22; role=&#x22;menu&#x22;&#x3E;
+    &#x3C;div class=&#x22;dropdown-content&#x22;&#x3E;
+      &#x3C;div class=&#x22;dropdown-item&#x22;&#x3E;
+        &#x3C;p&#x3E;Dropdown dengan posisi &#x3C;b&#x3E;Kanan&#x3C;/b&#x3E; (&#x3C;code&#x3E;right&#x3C;/code&#x3E;)&#x3C;/p&#x3E;
+      &#x3C;/div&#x3E;
+    &#x3C;/div&#x3E;
+  &#x3C;/div&#x3E;
+&#x3C;/div&#x3E;</code></pre>
+              <h3>Atas</h3>
+              <div class="dropdown top">
+                <div class="dropdown-trigger">
+                  <button class="btn" aria-haspopup="true" aria-controls="dropdown-menu-top">
+                    <span>Tekan!</span>
+                  </button>
+                </div>
+                <div class="dropdown-menu" id="dropdown-menu-top" role="menu">
+                  <div class="dropdown-content">
+                    <div class="dropdown-item">
+                      <p>Dropdown dengan posisi <b>Atas</b> (<code>top</code>)</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <pre lang="html"><code>&#x3C;div class=&#x22;<mark>dropdown</mark> <mark>top</mark>&#x22;&#x3E;
+  &#x3C;div class=&#x22;dropdown-trigger&#x22;&#x3E;
+    &#x3C;button class=&#x22;btn&#x22; aria-haspopup=&#x22;true&#x22; aria-controls=&#x22;dropdown-menu-top&#x22;&#x3E;
+      &#x3C;span&#x3E;Tekan!&#x3C;/span&#x3E;
+    &#x3C;/button&#x3E;
+  &#x3C;/div&#x3E;
+  &#x3C;div class=&#x22;dropdown-menu&#x22; id=&#x22;dropdown-menu-top&#x22; role=&#x22;menu&#x22;&#x3E;
+    &#x3C;div class=&#x22;dropdown-content&#x22;&#x3E;
+      &#x3C;div class=&#x22;dropdown-item&#x22;&#x3E;
+        &#x3C;p&#x3E;Dropdown dengan posisi &#x3C;b&#x3E;Atas&#x3C;/b&#x3E; (&#x3C;code&#x3E;top&#x3C;/code&#x3E;)&#x3C;/p&#x3E;
+      &#x3C;/div&#x3E;
+    &#x3C;/div&#x3E;
+  &#x3C;/div&#x3E;
+&#x3C;/div&#x3E;</code></pre>
+            </div>
+          </section>
+          <section data-heading="h2" data-name="Card">
+            <div class="content">
+              <ul>
+                <li>
+                  <span><b>Lokasi:</b> <code>scss/components/card.scss</code></span>
+                </li>
+                <li>
+                  <span><b>Style guide:</b></span>
+                  <ul>
+                    <li>
+                      <span>Terdapat class <code>card</code> pada orang tua.</span>
+                    </li>
+                    <li>
+                      <span>Di dalam <code>card</code> terdapat class <code>card-header</code> untuk membuat horizontal dengan efek bayangan.</span>
+                    </li>
+                    <li>
+                      <span>Di dalam <code>card-header</code> terdapat class <code>card-header-title</code> untuk membuat posisi kiri dan teks tebal.</span>
+                    </li>
+                    <li>
+                      <span>Di dalam <code>card-header</code> terdapat class <code>card-header-icon</code> untuk sebuah placeholder atau icon</span>
+                    </li>
+                    <li>
+                      <span>Di dalam <code>card</code> terdapat class <code>card-image</code> untuk orang tua dari gambar (fullwidth dan responsive)</span>
+                    </li>
+                    <li>
+                      <span>Di dalam <code>card</code> terdapat class <code>card-content</code> untuk sesuatu isi yang berkaitan dengan card tersebut</span>
+                    </li>
+                    <li>
+                      <span>Di dalam <code>card</code> terdapat class <code>card-footer</code> untuk menampilkan aksi horizontal</span>
+                    </li>
+                    <li>
+                      <span>Di dalam <code>card-footer</code> terdapat <code>card-footer-item</code> untuk mengulangi list dari elemen card tersebut</span>
+                    </li>
+                  </ul>
+                </li>
+              </ul>
+              <div class="card">
+                <div class="card-header">
+                  <div class="card-header-title">
+                    Lorem, ipsum.
+                  </div>
+                  <div class="card-header-icon">
+                    <i class="fa fa-ellipsis-v"></i>
+                  </div>
+                </div>
+                <div class="card-image">
+                  <figure class="image ratio-4x3">
+                    <img src="https://dummyimage.com/128x128/ccc/9c9c9c" alt="Placeholder image">
+                  </figure>
+                </div>
+                <div class="card-content">
+                  <div class="content">
+                    <a href="#">
+                      <h3>Lorem ipsum dolor sit.</h3>
+                    </a>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem laboriosam corrupti praesentium?</p>
+                  </div>
+                </div>
+                <div class="card-footer">
+                  <div class="card-footer-item">
+                    <div class="btn">
+                      Kunjungi
+                    </div>
+                  </div>
+                  <div class="card-footer-item">
+                    <div class="btn">
+                      Ikuti
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <pre lang="html"><code>&#x3C;div class=&#x22;<mark>card</mark>&#x22;&#x3E;
+  &#x3C;div class=&#x22;<mark>card-header</mark>&#x22;&#x3E;
+    &#x3C;div class=&#x22;<mark>card-header-title</mark>&#x22;&#x3E;
+      Lorem, ipsum.
+    &#x3C;/div&#x3E;
+    &#x3C;div class=&#x22;<mark>card-header-icon</mark>&#x22;&#x3E;
+      &#x3C;i class=&#x22;fa fa-ellipsis-v&#x22;&#x3E;&#x3C;/i&#x3E;
+    &#x3C;/div&#x3E;
+  &#x3C;/div&#x3E;
+  &#x3C;div class=&#x22;<mark>card-image</mark>&#x22;&#x3E;
+    &#x3C;figure class=&#x22;image ratio-4x3&#x22;&#x3E;
+      &#x3C;img src=&#x22;https://dummyimage.com/128x128/ccc/9c9c9c&#x22; alt=&#x22;Placeholder image&#x22;&#x3E;
+    &#x3C;/figure&#x3E;
+  &#x3C;/div&#x3E;
+  &#x3C;div class=&#x22;<mark>card-content</mark>&#x22;&#x3E;
+    &#x3C;div class=&#x22;content&#x22;&#x3E;
+      &#x3C;a href=&#x22;#&#x22;&#x3E;
+        &#x3C;h3&#x3E;Lorem ipsum dolor sit.&#x3C;/h3&#x3E;
+      &#x3C;/a&#x3E;
+      &#x3C;p&#x3E;Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem laboriosam corrupti praesentium?&#x3C;/p&#x3E;
+    &#x3C;/div&#x3E;
+  &#x3C;/div&#x3E;
+  &#x3C;div class=&#x22;<mark>card-footer</mark>&#x22;&#x3E;
+    &#x3C;div class=&#x22;<mark>card-footer-item</mark>&#x22;&#x3E;
+      &#x3C;div class=&#x22;btn&#x22;&#x3E;
+        Kunjungi
+      &#x3C;/div&#x3E;
+    &#x3C;/div&#x3E;
+    &#x3C;div class=&#x22;<mark>card-footer-item</mark>&#x22;&#x3E;
+      &#x3C;div class=&#x22;btn&#x22;&#x3E;
+        Ikuti
+      &#x3C;/div&#x3E;
+    &#x3C;/div&#x3E;
+  &#x3C;/div&#x3E;
+&#x3C;/div&#x3E;</code></pre>
+            </div>
+          </section>
+        </article>
+      </div>
+    </section>
+
+    <script type="module" src="js/scripts.js"></script>
+    <script src="js/dev/documentation.js" type="text/javascript"></script>
+    <script src="js/dev/prism.min.js" type="text/javascript"></script>
+  </body>
+</html>

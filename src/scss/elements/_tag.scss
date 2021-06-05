@@ -1,0 +1,207 @@
+@import '../core/mixins';
+
+$tag-background-color: $background;
+$tag-change: color('gray-lightest');
+$tag-color: $text;
+$tag-radius: $radius;
+$tag-delete-margin: 1px;
+
+$tag-colors: $colors;
+$allowed-colors: ('primary', 'success', 'info', 'warning', 'danger');
+  
+.tags {
+  align-items: center;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+
+  .tag {
+    margin-bottom: 0.5rem;
+    &:not(:last-child) {
+      @include ltr-property("margin", 0.5rem);
+    }
+  }
+
+  &:last-child {
+    margin-bottom: -0.5rem;
+  }
+
+  &:not(:last-child) {
+    margin-bottom: 1rem;
+  }
+
+  &.medium {
+    .tag:not(.normal):not(.large) {
+      font-size: $size-normal;
+    }
+  }
+
+  &.large {
+    .tag:not(.normal):not(.medium) {
+      font-size: $size-medium;
+    }
+  }
+
+  &.centered {
+    justify-content: center;
+
+    .tag {
+      margin-right: 0.25rem;
+      margin-left: 0.25rem;
+    }
+  }
+
+  &.right {
+    justify-content: flex-end;
+
+    .tag {
+      &:not(:first-child) {
+        margin-left: 0.5rem;
+      }
+
+      &:not(:last-child) {
+        margin-right: 0;
+      }
+    }
+  }
+
+  &.addons {
+    .tag {
+      @include ltr-property("margin", 0);
+
+      &:not(:first-child) {
+        @include ltr-property("margin", 0, false);
+
+        @include ltr {
+          border-top-left-radius: 0;
+          border-bottom-left-radius: 0;
+        }
+
+        @include rtl {
+          border-top-right-radius: 0;
+          border-bottom-right-radius: 0;
+        }
+      }
+
+      &:not(:last-child) {
+
+        @include ltr {
+          border-top-right-radius: 0;
+          border-bottom-right-radius: 0;
+        }
+
+        @include rtl {
+          border-top-left-radius: 0;
+          border-bottom-left-radius: 0;
+        }
+      }
+    }
+  }
+}
+
+.tag:not(body):not(.token) {
+  align-items: center;
+  background-color: $tag-background-color;
+  border-radius: $tag-radius;
+  color: $tag-color;
+  display: inline-flex;
+  font-size: $size-small;
+  height: 2em;
+  justify-content: center;
+  line-height: 1.5;
+  padding-left: 0.75em;
+  padding-right: 0.75em;
+  white-space: nowrap;
+
+  .delete {
+    @include ltr-property("margin", 0.25rem, false);
+    @include ltr-property("margin", -0.375rem);
+  }
+
+  @each $name, $value in $tag-colors {
+    @if keyInList($allowed-colors, $name) {
+      &.#{$name} {
+        background-color: color($name);
+        color: color('#{$name}-invert');
+  
+        @if length($value) > 3 {
+          &.light {
+            background-color: color('#{$name}-light');
+            color: color('#{$name}-dark');
+          }
+        }
+      }
+    }
+  }
+
+  &.normal {
+    font-size: $size-small;
+  }
+
+  &.medium {
+    font-size: $size-normal;
+  }
+
+  &.large {
+    font-size: $size-medium;
+  }
+
+  .icon {
+    &:first-child:not(:last-child) {
+      @include ltr-property("margin", -0.375em, false);
+      @include ltr-property("margin", 0.1875em);
+    }
+
+    &:last-child:not(:first-child) {
+      @include ltr-property("margin", 0.1875em, false);
+      @include ltr-property("margin", -0.375em);
+    }
+
+    &:first-child:last-child {
+      @include ltr-property("margin", -0.375em, false);
+      @include ltr-property("margin", -0.375em);
+    }
+  }
+
+  &.delete {
+    @include ltr-property("margin", $tag-delete-margin, false);
+    padding: 0;
+    position: relative;
+    width: 2em;
+    cursor: pointer;
+
+    &::before,
+    &::after {
+      background-color: currentColor;
+      content: "";
+      display: block;
+      left: 50%;
+      position: absolute;
+      top: 50%;
+      transform: translateX(-50%) translateY(-50%) rotate(45deg);
+      transform-origin: center center;
+    }
+
+    &::before {
+      height: 1px;
+      width: 50%;
+    }
+
+    &::after {
+      height: 50%;
+      width: 1px;
+    }
+
+    &:hover,
+    &:active,
+    &:focus {
+      background-color: $tag-change;
+    }
+  }
+}
+
+a.tag {
+  &:hover {
+    text-decoration: underline;
+  }
+}

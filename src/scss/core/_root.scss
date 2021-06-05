@@ -1,0 +1,11 @@
+:root {
+  @each $variant, $mode in $colors {
+    @each $value, $color in $mode {
+      @if ($value == "main") {
+        --#{$variant}: #{toRgbColor($color)};
+      } @else {
+        --#{$variant}-#{$value}: #{toRgbColor($color)};
+      }
+    }
+  }
+}

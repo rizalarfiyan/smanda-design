@@ -1,0 +1,137 @@
+$pagi1: "../../images/parallax/pagi_layer1.png";
+$pagi2: "../../images/parallax/pagi_layer2.png";
+$siang1: "../../images/parallax/siang_layer1.png";
+$siang2: "../../images/parallax/siang_layer2.png";
+$sore1: "../../images/parallax/sore_layer1.png";
+$sore2: "../../images/parallax/sore_layer2.png";
+$malam1: "../../images/parallax/malam_layer1.png";
+$malam2: "../../images/parallax/malam_layer2.png";
+
+$layer0: "../../images/parallax/layer0.png";
+$layer3: "../../images/parallax/layer3.png";
+$layer4: "../../images/parallax/layer4.png";
+$layer5: "../../images/parallax/layer5.png";
+
+#parallax-hero {
+  max-height: 100vh;
+  height: 100vh;
+}
+
+.parallax {
+  position: fixed;
+  overflow: visible;
+  width: 100%;
+  height: 100vh;
+  z-index: 1;
+
+  .layer {
+    width: 100%;
+    height: 100vh;
+    position: fixed;
+    left: 0;
+    top: 0;
+    background-position: bottom center;
+    background-repeat: repeat-x;
+    background-size: 2200px auto;
+
+    &.sky {
+      z-index: 2;
+    }
+
+    &.layer_0,
+    &.layer_1 {
+      background-position: 0;
+      top: 0;
+      background-size: contain;
+    }
+
+    &.layer_0 {
+      z-index: 3;
+    }
+
+    &.layer_1 {
+      z-index: 4;
+    }
+
+    &.layer_2 {
+      top: 100px;
+      z-index: 5;
+      background: url($layer0) no-repeat top 100px center;
+      background-size: 230px 92px;
+    }
+
+    &.layer_3 {
+      top: -25px;
+      z-index: 6;
+      background-image: url($layer3);
+    }
+
+    &.layer_4 {
+      top: -30px;
+      z-index: 7;
+      background-image: url($layer4);
+    }
+
+    &.layer_5 {
+      top: 0;
+      z-index: 8;
+      background-image: url($layer5);
+    }
+  }
+
+  &.pagi {
+    .sky {
+      background: linear-gradient(#f59eaa, #fef5bf 65%);
+    }
+
+    .layer_0 {
+      background-image: url($pagi1);
+    }
+
+    .layer_1 {
+      background-image: url($pagi2);
+    }
+  }
+
+  &.siang {
+    .sky {
+      background: linear-gradient(#0db3fc, #dcf4ff 65%);
+    }
+
+    .layer_0 {
+      background-image: url($siang1);
+    }
+
+    .layer_1 {
+      background-image: url($siang2);
+    }
+  }
+
+  &.sore {
+    .sky {
+      background: linear-gradient(#b84579, #ffb06f 65%);
+    }
+
+    .layer_0 {
+      background-image: url($sore1);
+    }
+
+    .layer_1 {
+      background-image: url($sore2);
+    }
+  }
+
+  &.malam {
+    .sky {
+      background: linear-gradient(#443580, #787ddd 65%);
+    }
+
+    .layer_0 {
+      background-image: url($malam1);
+    }
+
+    .layer_1 {
+      background-image: url($malam2);
+    }
+  }
+}
