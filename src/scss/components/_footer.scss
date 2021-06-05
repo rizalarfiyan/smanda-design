@@ -1,0 +1,132 @@
+footer {
+  &.public {
+    background: color('white');
+    padding: 40px 0 0;
+
+    .footer-content {
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+    }
+
+    .content {
+      max-width: 180px;
+      width: 100%;
+      justify-content: flex-start;
+      padding: 10px;
+
+      ul {
+        list-style: none;
+        margin: 0;
+      }
+      
+      &:first-of-type {
+        max-width: 440px;
+      }
+      
+      &:last-of-type {
+        max-width: 270px;
+      }
+    }
+
+    .sites, .social {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+    }
+
+    .social {
+      .btn:not(:first-child) {
+        margin-left: 10px;
+      }
+    }
+
+    .sites {
+      justify-content: center;
+      margin: 20px 0;
+
+      > * {
+        margin: 5px;
+      }
+    }
+
+    .copyright {
+      border-top: 1px solid color('gray', .5);
+    }
+  }
+
+  .copyright {
+    text-align: center;
+    padding: 12px 0 24px;
+
+    a {
+      text-decoration: underline;
+    }
+  }
+}
+
+@media (max-width: 1110px) {
+  footer {
+    &.public {
+      .footer-content {
+        justify-content: center;
+      }
+
+      .content {
+        margin: 10px;
+        max-width: 220px;
+
+        &:last-of-type {
+          max-width: 480px;
+          text-align: center;
+
+          ul {
+            column-count: 2;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 780px) {
+  footer {
+    &.public {
+      .content {
+        &:first-of-type {
+          max-width: 480px;
+        }
+
+        &:not(:first-of-type) {
+          text-align: center;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 425px) {
+  footer {
+    &.public {
+      .footer-content {
+        justify-content: center;
+      }
+
+      .content {
+        max-width: 260px;
+
+        &:not(:first-of-type) {
+          h2 {
+            text-align: center;
+          }
+        }
+
+        &:last-of-type {
+          ul {
+            column-count: auto;
+          }
+        }
+      }
+    }
+  }
+}

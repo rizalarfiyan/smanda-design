@@ -406,6 +406,11 @@ body {
   }
 }
 
+// Footer
+footer {
+  position: relative;
+  z-index: 1;
+}
 
 // Responsive
 @media (max-width: 440px) {
