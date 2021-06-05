@@ -1,0 +1,126 @@
+$select-colors: $form-colors;
+
+.select {
+  display: inline-block;
+  max-width: 100%;
+  position: relative;
+  vertical-align: top;
+
+  &:not(.multiple) {
+    height: $input-height;
+  }
+
+  &:not(.multiple):not(.loading) {
+    &::after {
+      @extend %arrow;
+      @include ltr-position(1.125em);
+      border-color: $input-arrow;
+      z-index: 4;
+    }
+  }
+
+  select {
+    @extend %input;
+    cursor: pointer;
+    display: block;
+    font-size: 1em;
+    max-width: 100%;
+    outline: none;
+
+    &::-ms-expand {
+      display: none;
+    }
+
+    &[disabled]:hover, fieldset[disabled] &:hover {
+      border-color: $input-disabled-border-color;
+    }
+
+    &:not([multiple]) {
+      @include ltr-property("padding", 2.5em);
+    }
+
+    &[multiple] {
+      height: auto;
+      padding: 0;
+      option {
+        padding: 0.5em 1em;
+      }
+    }
+  }
+
+  &:not(.multiple):not(.loading):hover {
+    &::after {
+      border-color: $input-hover-color;
+    }
+  }
+
+  @each $name, $value in $select-colors {
+    @if keyInList($allowed-colors, $name) {
+      &.#{$name} {
+        &:not(:hover)::after {
+          border-color: color($name);
+        }
+  
+        select {
+          border-color: color($name);
+  
+          &:hover {
+            border-color: color('#{$name}-dark');
+          }
+  
+          &:focus, &:active {
+            box-shadow: $input-focus-box-shadow-size color($name, 0.25);
+          }
+        }
+      }
+    }
+  }
+
+  &.small {
+    @include control-small;
+  }
+
+  &.medium {
+    @include control-medium;
+  }
+
+  &.large {
+    @include control-large;
+  }
+
+  &.disabled {
+    &::after {
+      border-color: $input-disabled-color;
+    }
+  }
+
+  &.fullwidth {
+    width: 100%;
+    select {
+      width: 100%;
+    }
+  }
+
+  &.loading {
+    &::after {
+      @extend %loader;
+      margin-top: 0;
+      position: absolute;
+      @include ltr-position(0.625em);
+      top: 0.625em;
+      transform: none;
+    }
+
+    &.small:after {
+      font-size: $size-small;
+    }
+
+    &.medium:after {
+      font-size: $size-medium;
+    }
+
+    &.large:after {
+      font-size: $size-large;
+    }
+  }
+}

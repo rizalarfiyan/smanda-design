@@ -3203,6 +3203,325 @@
 &#x3C;/div&#x3E;</code></pre>
             </div>
           </section>
+          <section data-heading="h1" data-name="Form" data-icon="fa fa-minus-square">
+            <div class="content">
+              <ul>
+                <li>
+                  <span><b>Lokasi utama:</b> <code>scss/component/form.scss</code></span>
+                  <span><b>Lokasi komponen:</b> <code>scss/component/forms/*</code></span>
+                </li>
+                <li>
+                  <span><b>Isi:</b></span>
+                  <ul>
+                    <li>
+                      <span><code>checkbox.scss</code></span>
+                    </li>
+                    <li>
+                      <span><code>file.scss</code></span>
+                    </li>
+                    <li>
+                      <span><code>helper.scss</code></span>
+                    </li>
+                    <li>
+                      <span><code>input.scss</code></span>
+                    </li>
+                    <li>
+                      <span><code>select.scss</code></span>
+                    </li>
+                    <li>
+                      <span><code>shared.scss</code></span>
+                    </li>
+                  </ul>
+                </li>
+              </ul>
+            </div>
+          </section>
+          <section data-heading="h2" data-name="Checkbox">
+            <div class="content">
+              <ul>
+                <li>
+                  <span><b>Lokasi:</b> <code>scss/components/forms/checkbox.scss</code></span>
+                </li>
+                <li>
+                  <span><b>Style guide:</b></span>
+                  <ul>
+                    <li>
+                      <span>Dengan menggunakan class <code>checkbox</code> maka element akan menjadi checkbox</span>
+                    </li>
+                  </ul>
+                </li>
+              </ul>
+              <label class="checkbox">
+                <input type="checkbox">
+                <span>Saya menyetujui <a href="#">syarat dan ketentuan</a></span>
+              </label>
+              <pre lang="html"><code>&#x3C;label class=&#x22;<mark>checkbox</mark>&#x22;&#x3E;
+  &#x3C;input type=&#x22;checkbox&#x22;&#x3E;
+  &#x3C;span&#x3E;Saya menyetujui &#x3C;a href=&#x22;#&#x22;&#x3E;syarat dan ketentuan&#x3C;/a&#x3E;&#x3C;/span&#x3E;
+&#x3C;/label&#x3E;</code></pre>
+            </div>
+          </section>
+          <section data-heading="h3" data-name="Checkbox Disable">
+            <div class="content">
+              <ul>
+                <li>
+                  <span><b>Style guide:</b></span>
+                  <ul>
+                    <li>
+                      <span>Dengan menambah attribute <code>disabled</code> pada element checkbox tersebut</span>
+                    </li>
+                  </ul>
+                </li>
+              </ul>
+              <label class="checkbox" disabled>
+                <input type="checkbox" disabled>
+                Tidak boleh dicentang!
+              </label>
+              <pre lang="html"><code>&#x3C;label class=&#x22;checkbox&#x22; <mark>disabled</mark>&#x3E;
+  &#x3C;input type=&#x22;checkbox&#x22; <mark>disabled</mark>&#x3E;
+  Tidak boleh dicentang!
+&#x3C;/label&#x3E;</code></pre>
+            </div>
+          </section>
+          <section data-heading="h2" data-name="Radio">
+            <div class="content">
+              <ul>
+                <li>
+                  <span><b>Lokasi:</b> <code>scss/component/forms/radio.scss</code></span>
+                </li>
+                <li>
+                  <span><b>Style guide:</b></span>
+                  <ul>
+                    <li>
+                      <span>Dengan menggunakan class <code>control</code> pada orang tua element radio</span>
+                    </li>
+                    <li>
+                      <span>Dengan menggunakan class <code>radio</code> pada element radio</span>
+                    </li>
+                  </ul>
+                </li>
+              </ul>
+              <div class="control">
+                <label class="radio">
+                  <input type="radio" name="jawaban">
+                  Ya
+                </label>
+                <label class="radio">
+                  <input type="radio" name="jawaban">
+                  Tidak
+                </label>
+              </div>
+              <pre lang="html"><code>&#x3C;div class=&#x22;<mark>control</mark>&#x22;&#x3E;
+  &#x3C;label class=&#x22;<mark>radio</mark>&#x22;&#x3E;
+    &#x3C;input type=&#x22;radio&#x22; name=&#x22;jawaban&#x22;&#x3E;
+    Ya
+  &#x3C;/label&#x3E;
+  &#x3C;label class=&#x22;<mark>radio</mark>&#x22;&#x3E;
+    &#x3C;input type=&#x22;radio&#x22; name=&#x22;jawaban&#x22;&#x3E;
+    Tidak
+  &#x3C;/label&#x3E;
+&#x3C;/div&#x3E;</code></pre>
+            </div>
+          </section>
+          <section data-heading="h3" data-name="Radio Checked">
+            <div class="content">
+              <ul>
+                <li>
+                  <span><b>Style guide:</b></span>
+                  <ul>
+                    <li>
+                      <span>Dengan menggunakan attribute <code>checked</code> pada element radio tersebut</span>
+                    </li>
+                  </ul>
+                </li>
+              </ul>
+              <div class="control">
+                <label class="radio">
+                  <input type="radio" name="kelamin" checked>
+                  Laki-laki
+                </label>
+                <label class="radio">
+                  <input type="radio" name="kelamin">
+                  Perempuan
+                </label>
+              </div>
+              <pre lang="html"><code>&#x3C;div class=&#x22;control&#x22;&#x3E;
+  &#x3C;label class=&#x22;radio&#x22;&#x3E;
+    &#x3C;input type=&#x22;radio&#x22; name=&#x22;kelamin&#x22; <mark>checked</mark>&#x3E;
+    Laki-laki
+  &#x3C;/label&#x3E;
+  &#x3C;label class=&#x22;radio&#x22;&#x3E;
+    &#x3C;input type=&#x22;radio&#x22; name=&#x22;kelamin&#x22;&#x3E;
+    Perempuan
+  &#x3C;/label&#x3E;
+&#x3C;/div&#x3E;</code></pre>
+            </div>
+          </section>
+          <section data-heading="h3" data-name="Radio Disable">
+            <div class="content">
+              <ul>
+                <li>
+                  <span><b>Style guide:</b></span>
+                  <ul>
+                    <li>
+                      <span>Dengan menggunakan attribute <code>disabled</code> pada element radio tersebut</span>
+                    </li>
+                  </ul>
+                </li>
+              </ul>
+              <div class="control">
+                <label class="radio">
+                  <input type="radio" name="buah">
+                  Jeruk
+                </label>
+                <label class="radio">
+                  <input type="radio" name="buah">
+                  Pisang
+                </label>
+                <label class="radio">
+                  <input type="radio" name="buah" disabled>
+                  Mangga
+                </label>
+              </div>
+              <pre lang="html"><code>&#x3C;div class=&#x22;control&#x22;&#x3E;
+  &#x3C;label class=&#x22;radio&#x22;&#x3E;
+    &#x3C;input type=&#x22;radio&#x22; name=&#x22;buah&#x22;&#x3E;
+    Jeruk
+  &#x3C;/label&#x3E;
+  &#x3C;label class=&#x22;radio&#x22;&#x3E;
+    &#x3C;input type=&#x22;radio&#x22; name=&#x22;buah&#x22;&#x3E;
+    Pisang
+  &#x3C;/label&#x3E;
+  &#x3C;label class=&#x22;radio&#x22;&#x3E;
+    &#x3C;input type=&#x22;radio&#x22; name=&#x22;buah&#x22; <mark>disabled</mark>&#x3E;
+    Mangga
+  &#x3C;/label&#x3E;
+&#x3C;/div&#x3E;</code></pre>
+            </div>
+          </section>
+          <section data-heading="h2" data-name="Select">
+            <div class="content">
+              <ul>
+                <li>
+                  <span><b>Lokasi:</b> <code>scss/component/forms/select.scss</code></span>
+                </li>
+                <li>
+                  <span><b>Style guide:</b></span>
+                  <ul>
+                    <li>
+                      <span>Dengan menggunakan class <code>select</code> pada orang tua <code>select</code></span>
+                    </li>
+                  </ul>
+                </li>
+              </ul>
+              <div class="select">
+                <select>
+                  <option>Ini dropdown 1</option>
+                  <option>Ini dropdown 2</option>
+                  <option>Ini dropdown 3</option>
+                  <option>Ini dropdown 4</option>
+                </select>
+              </div>
+              <pre lang="html"><code>&#x3C;div class=&#x22;select&#x22;&#x3E;
+  &#x3C;select&#x3E;
+    &#x3C;option&#x3E;Ini dropdown 1&#x3C;/option&#x3E;
+    &#x3C;option&#x3E;Ini dropdown 2&#x3C;/option&#x3E;
+    &#x3C;option&#x3E;Ini dropdown 3&#x3C;/option&#x3E;
+    &#x3C;option&#x3E;Ini dropdown 4&#x3C;/option&#x3E;
+  &#x3C;/select&#x3E;
+&#x3C;/div&#x3E;</code></pre>
+            </div>
+          </section>
+          <section data-heading="h3" data-name="Select Color">
+            <div class="content">
+              <ul>
+                <li>
+                  <span><b>Style guide:</b></span>
+                  <ul>
+                    <li>
+                      <span>Terdapat variasi warna sesuai dengan status dari select tersebut <code>success</code>, <code>info</code>, <code>warning</code>, dan <code>danger</code></span>
+                    </li>
+                  </ul>
+                </li>
+              </ul>
+              <div class="select success">
+                <select>
+                  <option>Ini dropdown 1</option>
+                  <option>Ini dropdown 2</option>
+                  <option>Ini dropdown 3</option>
+                  <option>Ini dropdown 4</option>
+                </select>
+              </div>
+              <pre lang="html"><code>&#x3C;div class=&#x22;select <mark>success</mark>&#x22;&#x3E;
+  &#x3C;select&#x3E;
+    &#x3C;option&#x3E;Ini dropdown 1&#x3C;/option&#x3E;
+    &#x3C;option&#x3E;Ini dropdown 2&#x3C;/option&#x3E;
+    &#x3C;option&#x3E;Ini dropdown 3&#x3C;/option&#x3E;
+    &#x3C;option&#x3E;Ini dropdown 4&#x3C;/option&#x3E;
+  &#x3C;/select&#x3E;
+&#x3C;/div&#x3E;</code></pre>
+            </div>
+          </section>
+          <section data-heading="h3" data-name="Select Size">
+            <div class="content">
+              <ul>
+                <li>
+                  <span><b>Style guide:</b></span>
+                  <ul>
+                    <li>
+                      <span>Dengan menggunakan class <code>small</code>, <code>normal</code>, <code>medium</code>, <code>large</code> pada elemen select tersebut</span>
+                    </li>
+                  </ul>
+                </li>
+              </ul>
+              <div class="select medium">
+                <select>
+                  <option>Ini dropdown 1</option>
+                  <option>Ini dropdown 2</option>
+                  <option>Ini dropdown 3</option>
+                  <option>Ini dropdown 4</option>
+                </select>
+              </div>
+              <pre lang="html"><code>&#x3C;div class=&#x22;select <mark>medium</mark>&#x22;&#x3E;
+  &#x3C;select&#x3E;
+    &#x3C;option&#x3E;Ini dropdown 1&#x3C;/option&#x3E;
+    &#x3C;option&#x3E;Ini dropdown 2&#x3C;/option&#x3E;
+    &#x3C;option&#x3E;Ini dropdown 3&#x3C;/option&#x3E;
+    &#x3C;option&#x3E;Ini dropdown 4&#x3C;/option&#x3E;
+  &#x3C;/select&#x3E;
+&#x3C;/div&#x3E;</code></pre>
+            </div>
+          </section>
+          <section data-heading="h3" data-name="Select Loading">
+            <div class="content">
+              <ul>
+                <li>
+                  <span><b>Style guide:</b></span>
+                  <ul>
+                    <li>
+                      <span>Dengan menggunakan class <code>loading</code> pada elemen select tersebut</span>
+                    </li>
+                  </ul>
+                </li>
+              </ul>
+              <div class="select loading">
+                <select>
+                  <option>Ini dropdown 1</option>
+                  <option>Ini dropdown 2</option>
+                  <option>Ini dropdown 3</option>
+                  <option>Ini dropdown 4</option>
+                </select>
+              </div>
+              <pre lang="html"><code>&#x3C;div class=&#x22;select <mark>loading</mark>&#x22;&#x3E;
+  &#x3C;select&#x3E;
+    &#x3C;option&#x3E;Ini dropdown 1&#x3C;/option&#x3E;
+    &#x3C;option&#x3E;Ini dropdown 2&#x3C;/option&#x3E;
+    &#x3C;option&#x3E;Ini dropdown 3&#x3C;/option&#x3E;
+    &#x3C;option&#x3E;Ini dropdown 4&#x3C;/option&#x3E;
+  &#x3C;/select&#x3E;
+&#x3C;/div&#x3E;</code></pre>
+            </div>
+          </section>
         </article>
       </div>
     </section>

@@ -1,0 +1,317 @@
+@import '../../core/mixins';
+
+$label-color: $text-strong;
+$label-weight: $weight-bold;
+
+$help-size: $size-small;
+
+$label-colors: $colors;
+
+.label {
+  color: $label-color;
+  display: block;
+  font-size: $size-normal;
+  font-weight: $label-weight;
+
+  &:not(:last-child) {
+    margin-bottom: 0.5em;
+  }
+
+  &.small {
+    font-size: $size-small;
+  }
+
+  &.medium {
+    font-size: $size-medium;
+  }
+
+  &.large {
+    font-size: $size-large;
+  }
+}
+
+.help {
+  display: block;
+  font-size: $help-size;
+  margin-top: 0.25rem;
+
+  @each $name, $value in $label-colors {
+    @if keyInList($allowed-colors, $name) {
+      &.#{$name} {
+        color: color($name);
+      }
+    }
+  }
+}
+
+.field {
+  &:not(:last-child) {
+    margin-bottom: 0.75rem;
+  }
+
+  &.addons {
+    display: flex;
+    justify-content: flex-start;
+
+    .control {
+      &:not(:last-child) {
+        @include ltr-property("margin", -1px);
+      }
+
+      &:not(:first-child):not(:last-child) {
+        .button, .input, .select select {
+          border-radius: 0;
+        }
+      }
+
+      &:first-child:not(:only-child) {
+        .button, .input, .select select {
+          @include ltr {
+            border-bottom-right-radius: 0;
+            border-top-right-radius: 0;
+          }
+
+          @include rtl {
+            border-bottom-left-radius: 0;
+            border-top-left-radius: 0;
+          }
+        }
+      }
+
+      &:last-child:not(:only-child) {
+        .button, .input, .select select {
+          @include ltr {
+            border-bottom-left-radius: 0;
+            border-top-left-radius: 0;
+          }
+
+          @include rtl {
+            border-bottom-right-radius: 0;
+            border-top-right-radius: 0;
+          }
+        }
+      }
+
+      .button, .input, .select select {
+        &:not([disabled]) {
+          &:hover, &.hovered {
+            z-index: 2;
+          }
+
+          &:focus, &.focused, &:active, &.active {
+            z-index: 3;
+            &:hover {
+              z-index: 4;
+            }
+          }
+        }
+      }
+
+      &.expanded {
+        flex-grow: 1;
+        flex-shrink: 1;
+      }
+    }
+
+    &.addons-centered {
+      justify-content: center;
+    }
+
+    &.addons-right {
+      justify-content: flex-end;
+    }
+
+    &.addons-fullwidth {
+      .control {
+        flex-grow: 1;
+        flex-shrink: 0;
+      }
+    }
+  }
+
+  &.grouped {
+    display: flex;
+    justify-content: flex-start;
+
+    & > .control {
+      flex-shrink: 0;
+
+      &:not(:last-child) {
+        margin-bottom: 0;
+        @include ltr-property("margin", 0.75rem);
+      }
+
+      &.expanded {
+        flex-grow: 1;
+        flex-shrink: 1;
+      }
+    }
+
+    &.grouped-centered {
+      justify-content: center;
+    }
+
+    &.grouped-right {
+      justify-content: flex-end;
+    }
+
+    &.grouped-multiline {
+      flex-wrap: wrap;
+      & > .control {
+        &:last-child,
+        &:not(:last-child) {
+          margin-bottom: 0.75rem;
+        }
+      }
+      &:last-child {
+        margin-bottom: -0.75rem;
+      }
+      &:not(:last-child) {
+        margin-bottom: 0;
+      }
+    }
+  }
+
+  // &.horizontal {
+  //   @include tablet {
+  //     display: flex;
+  //   }
+  // }
+}
+
+.field-label {
+
+  .label {
+    font-size: inherit;
+  }
+
+  // @include mobile {
+  //   margin-bottom: 0.5rem;
+  // }
+
+  // @include tablet {
+  //   flex-basis: 0;
+  //   flex-grow: 1;
+  //   flex-shrink: 0;
+  //   @include ltr-property("margin", 1.5rem);
+  //   text-align: right;
+  //   &.small {
+  //     font-size: $size-small;
+  //     padding-top: 0.375em;
+  //   }
+  //   &.normal {
+  //     padding-top: 0.375em;
+  //   }
+  //   &.medium {
+  //     font-size: $size-medium;
+  //     padding-top: 0.375em;
+  //   }
+  //   &.large {
+  //     font-size: $size-large;
+  //     padding-top: 0.375em;
+  //   }
+  // }
+}
+
+.field-body {
+  .field .field {
+    margin-bottom: 0;
+  }
+
+  // @include tablet {
+  //   display: flex;
+  //   flex-basis: 0;
+  //   flex-grow: 5;
+  //   flex-shrink: 1;
+
+  //   .field {
+  //     margin-bottom: 0;
+  //   }
+
+  //   & > .field {
+  //     flex-shrink: 1;
+
+  //     &:not(.narrow) {
+  //       flex-grow: 1;
+  //     }
+
+  //     &:not(:last-child) {
+  //       @include ltr-property("margin", 0.75rem);
+  //     }
+  //   }
+  // }
+}
+
+.control {
+  box-sizing: border-box;
+  clear: both;
+  font-size: $size-normal;
+  position: relative;
+  text-align: inherit;
+
+  &.icons-left,
+  &.icons-right {
+    .input,
+    .select {
+      &:focus {
+        & ~ .icon {
+          color: $input-icon-active-color;
+        }
+      }
+      &.small ~ .icon {
+        font-size: $size-small;
+      }
+      &.medium ~ .icon {
+        font-size: $size-medium;
+      }
+      &.large ~ .icon {
+        font-size: $size-large;
+      }
+    }
+    .icon {
+      color: $input-icon-color;
+      height: $input-height;
+      pointer-events: none;
+      position: absolute;
+      top: 0;
+      width: $input-height;
+      z-index: 4;
+    }
+  }
+  &.icons-left {
+    .input,
+    .select select {
+      padding-left: $input-height;
+    }
+    .icon.left {
+      left: 0;
+    }
+  }
+  &.icons-right {
+    .input,
+    .select select {
+      padding-right: $input-height;
+    }
+    .icon.right {
+      right: 0;
+    }
+  }
+  &.loading {
+    &::after {
+      @extend %loader;
+      position: absolute !important;
+      @include ltr-position(0.625em);
+      top: 0.625em;
+      z-index: 4;
+    }
+    &.small:after {
+      font-size: $size-small;
+    }
+    &.medium:after {
+      font-size: $size-medium;
+    }
+    &.large:after {
+      font-size: $size-large;
+    }
+  }
+}
