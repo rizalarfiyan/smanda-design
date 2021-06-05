@@ -250,7 +250,6 @@ body {
   margin-top: 0;
 }
 
-
 // Ekstrakurikuler Section
 .ekstra {
   .section-media {
@@ -284,6 +283,49 @@ body {
 
   .title {
     margin-bottom: 12px;
+  }
+}
+
+// Quote Section
+.quote {
+  position: relative;
+  font-size: $size-4;
+  max-width: 620px;
+  margin: 30px auto 15px;
+  text-align: center;
+  font-family: $family-monospace;
+  
+  &:before,
+  &:after {
+    position: absolute;
+    font-family: 'Font Awesome 5 Free';
+    font-weight: 900;
+    font-size: 5rem;
+    color: color('gray-light', .1);
+  }
+  
+  &:before {
+    content: '\f10d';
+    left: 0;
+    top: -50px;
+  }
+  
+  &:after {
+    content: '\f10e';
+    right: 0;
+    bottom: -30px;
+  }
+
+  cite {
+    margin-top: 12px;
+    font-size: 14px;
+    display: block;
+    text-align: center;
+
+    &:before {
+      content: '-';
+      margin-right: 6px;
+    }
   }
 }
 
