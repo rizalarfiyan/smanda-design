@@ -4,34 +4,39 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Login - Design of SMANDA</title>
+    <title>Register - Design of SMANDA</title>
     <link rel="stylesheet" href="./css/style.css" />
     <link rel="stylesheet" href="./css/pages/auth.css" />
   </head>
   <body>
     <div class="auth-wrapper">
       <div class="auth">
-        <div class="box login">
+        <div class="box register">
           <div class="content">
             <div class="heading-title">
-              <h1 class="title h3">Login</h1>
-              <p class="subtitle h6">Masuk ke akun anda untuk melanjutkan.</p>
-            </div>
-            <div class="social-login">
-              <button class="btn primary outline">
-                <span>Login with Google</span>
-                <span class="icon">
-                  <i class="fab fa-google"></i>
-                </span>
-              </button>
-              <button class="btn primary outline icon-only">
-                <span class="icon">
-                  <i class="fab fa-github"></i>
-                </span>
-              </button>
+              <h1 class="title h3">Register</h1>
+              <p class="subtitle h6">Buatlah akun SMANDA dengan isi formulir di bawah ini.</p>
             </div>
             <hr />
             <form>
+              <div class="coltwo">
+                <div class="field">
+                  <div class="control icons-left">
+                    <input class="input" type="text" name="first_name" placeholder="First Name">
+                    <span class="icon small left">
+                      <i class="fas fa-user"></i>
+                    </span>
+                  </div>
+                </div>
+                <div class="field">
+                  <div class="control icons-left">
+                    <input class="input" type="text" name="last_name" placeholder="Last Name">
+                    <span class="icon small left">
+                      <i class="fas fa-user"></i>
+                    </span>
+                  </div>
+                </div>
+              </div>
               <div class="field">
                 <div class="control icons-left">
                   <input class="input" type="email" name="email" placeholder="Email">
@@ -55,19 +60,27 @@
                   </button>
                 </div>
               </div>
+              <div class="field">
+                <div class="control icons-left">
+                  <input class="input" type="password" name="password_confirmation" placeholder="Repeat Password">
+                  <span class="icon small left">
+                    <i class="fas fa-lock"></i>
+                  </span>
+                </div>
+              </div>
               <button class="btn primary fullwidth" type="submit">
-                <span>Login</span>
+                <span>Register</span>
                 <span class="icon">
-                  <i class="fa fa-sign-in-alt"></i>
+                  <i class="fa fa-user-plus"></i>
                 </span>
               </button>
             </form>
             <div class="footer-auth">
-              <a href="register.html" class="tag">
+              <a href="login.html" class="tag">
                 <span class="icon">
-                  <i class="fa fa-user-plus"></i>
+                  <i class="fa fa-sign-in-alt"></i>
                 </span>
-                <span>Sign up</span>
+                <span>Login</span>
               </a>
               <a href="reset-password.html" class="tag">
                 <span class="icon">

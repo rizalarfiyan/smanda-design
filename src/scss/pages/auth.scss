@@ -19,66 +19,95 @@ $base-margin : 16px;
   }
 }
 
-.box {
-  &.login {
-    max-width: 420px;
-  }
-  
-  .label {
-    display: none;
-  }
-
-  .tag {
-    background-color: color('white')!important;
-
-    &:hover {
-      background-color: color('gray-lightest')!important;
-    }
-  }
-}
-
 .auth {
   margin: auto;
   padding: 60px 20px;
 
+  .box {
+    max-width: 420px;
+
+    &.login {
+      .heading-title {
+        margin: auto 25px;
+      }
+    }
+
+    .label {
+      display: none;
+    }
+
+    .tag {
+      background-color: color('white')!important;
+      
+      &:hover {
+        background-color: color('gray-lightest')!important;
+      }
+    }
+  }
+
   .heading-title {
     text-align: center;
-    margin: 0 20px;
+    margin: auto;
+    max-width: 320px;
+  }
+
+  .coltwo {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+    .field {
+      margin-bottom: .75rem;
+    }
+
+    > * {
+      width: calc(50% - 5px);
+    }
+  }
+
+  .footer-auth, .social-login {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  .social-login {
+    justify-items: center;
+    margin: $base-margin 0 10px;
+
+    .btn {
+      margin: 5px;
+    }
+  }
+
+  hr {
+    margin: $base-margin 0;
+  }
+
+  .footer-auth {
+    justify-content: space-between;
+    margin-top: 12px;
+  }
+
+  .back-home {
+    text-align: center;
+
+    .tag {
+      background-color: color('gray-lightest')!important;
+
+      &:hover {
+        background-color: color('gray-lighter')!important;
+      }
+    }
   }
 }
 
-.footer-auth, .social-login {
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-}
-
-.social-login {
-  justify-items: center;
-  margin: $base-margin 0 10px;
-
-  .btn {
-    margin: 5px;
-  }
-}
-
-hr {
-  margin: $base-margin 0;
-}
-
-.footer-auth {
-  justify-content: space-between;
-  margin-top: 12px;
-}
-
-.back-home {
-  text-align: center;
-  
-  .tag {
-    background-color: color('gray-lightest')!important;
-
-    &:hover {
-      background-color: color('gray-lighter')!important;
+@media (max-width: 525px) {
+  .auth {
+    .coltwo {
+      > * {
+        width: 100%;
+      }
     }
   }
 }
