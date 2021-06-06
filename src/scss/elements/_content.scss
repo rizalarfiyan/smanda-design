@@ -244,3 +244,7 @@ $paragraph-indent: 3.5rem;
     font-size: $size-large;
   }
 }
+
+.truncate {
+  @include truncate-one;
+}

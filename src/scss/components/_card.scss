@@ -39,13 +39,8 @@ $card-media-margin: $block-spacing;
   max-width: 100%;
   position: relative;
 
-  .truncate:not(p) {
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
-  }
-
   p.truncate {
+    white-space: initial;
     @include truncate(72px, 3);
   }
 }

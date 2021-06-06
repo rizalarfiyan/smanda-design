@@ -1,5 +1,3 @@
-import Mansory from '../mansory.js';
-
 class Landing {
   constructor(options) {
     let defaultOptions = {

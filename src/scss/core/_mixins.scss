@@ -184,6 +184,12 @@
   -webkit-box-orient: vertical;
 }
 
+@mixin truncate-one() {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
 @mixin placeholder {
   $placeholders: ':-moz' ':-webkit-input' '-moz' '-ms-input';
   @each $placeholder in $placeholders {

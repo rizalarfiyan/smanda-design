@@ -292,7 +292,7 @@ body {
   &:before,
   &:after {
     position: absolute;
-    font-family: 'Font Awesome 5 Free';
+    font-family: $font-awesome;
     font-weight: 900;
     font-size: 5rem;
     color: color('gray-light', .1);
