@@ -1,0 +1,223 @@
+.anim-icon {
+	border-radius: 50%;
+	border: 4px solid color('gray');
+	box-sizing: content-box;
+	height: 80px;
+	margin: 30px auto;
+	padding: 0;
+	position: relative;
+	width: 80px;
+  border-color: color('success');
+
+	// Success icon
+	&.success,
+	&.danger {
+
+		&:after,
+		&:before {
+			background: color('white');
+			content: '';
+			height: 120px;
+			position: absolute;
+			transform: rotate(45deg);
+			width: 60px;
+		}
+
+		&:before {
+			border-radius: 120px 0 0 120px;
+			left: -33px;
+			top: -7px;
+			transform-origin: 60px 60px;
+			transform: rotate(-45deg);
+		}
+
+		&:after {
+			border-radius: 0 120px 120px 0;
+			left: 30px;
+			top: -11px;
+			transform-origin: 0 60px;
+			transform: rotate(-45deg);
+      animation: rotatePlaceholder 4.25s ease-in;
+		}
+
+		.anim-border {
+			border-radius: 50%;
+			border: 4px solid color('gray', .2);
+			box-sizing: content-box;
+			height: 80px;
+			left: -4px;
+			position: absolute;
+			top: -4px;
+			width: 80px;
+			z-index: 2;
+		}
+
+		.anim-fix {
+			background-color: color('white');
+			height: 90px;
+			left: 28px;
+			position: absolute;
+			top: 8px;
+			transform: rotate(-45deg);
+			width: 5px;
+			z-index: 1;
+		}
+
+    .anim-line {
+      background-color: color('success');
+      border-radius: 2px;
+      display: block;
+      height: 5px;
+      position: absolute;
+      z-index: 2;
+    }
+	}
+
+  &.success {
+    .anim-tip {
+      left: 14px;
+      top: 46px;
+      transform: rotate(45deg);
+      width: 25px;
+      animation: animateSuccessTip .75s;
+    }
+    
+    .anim-long {
+      right: 8px;
+      top: 38px;
+      transform: rotate(-45deg);
+      width: 47px;
+      animation: animateSuccessLong .75s;
+    }
+  }
+
+	&.danger {
+		border-color: color('danger');
+
+		.anim-x-mark {
+			display: block;
+			position: relative;
+			z-index: 2;
+		}
+
+		.anim-border {
+			border: 4px solid color('danger', .2);
+		}
+
+		.anim-line {
+			background-color: color('danger');
+			top: 37px;
+			width: 47px;
+		}
+
+    .anim-left {
+      left: 17px;
+      transform: rotate(45deg);
+      animation: animateXLeft .75s;
+    }
+
+    .anim-right {
+      right: 16px;
+      transform: rotate(-45deg);
+      animation: animateXRight .75s;
+    }
+	}
+}
+
+@keyframes animateSuccessTip {
+	0%, 54% {
+		width: 0;
+		left: 1px;
+		top: 19px;
+	}
+
+	70% {
+		width: 50px;
+		left: -8px;
+		top: 37px;
+	}
+
+	84% {
+		width: 17px;
+		left: 21px;
+		top: 48px;
+	}
+
+	100% {
+		width: 25px;
+		left: 14px;
+		top: 45px;
+	}
+}
+
+@keyframes animateSuccessLong {
+	0%,65% {
+		width: 0;
+		right: 46px;
+		top: 54px;
+	}
+
+	84% {
+		width: 55px;
+		right: 0;
+		top: 35px;
+	}
+
+	100% {
+		width: 47px;
+		right: 8px;
+		top: 38px;
+	}
+}
+
+@keyframes rotatePlaceholder {
+	0%,5% {
+		transform: rotate(-45deg);
+	}
+
+	100%,12% {
+		transform: rotate(-405deg);
+	}
+}
+
+@keyframes animateXLeft {
+	0%,
+	65% {
+		left: 82px;
+		top: 95px;
+		width: 0;
+	}
+
+	84% {
+		left: 14px;
+		top: 33px;
+		width: 47px;
+	}
+
+	100% {
+		left: 17px;
+		top: 37px;
+		width: 47px;
+	}
+}
+
+@keyframes animateXRight {
+	0%,
+	65% {
+		right: 82px;
+		top: 95px;
+		width: 0;
+	}
+
+	84% {
+		right: 14px;
+		top: 33px;
+		width: 47px;
+	}
+
+	100% {
+		right: 16px;
+		top: 37px;
+		width: 47px;
+	}
+}

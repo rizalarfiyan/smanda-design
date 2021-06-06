@@ -78,6 +78,27 @@ $base-margin : 16px;
     margin: $base-margin 0;
   }
 
+  .check-validate {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 180px;
+
+    .loader {
+      height: 35px;
+      width: 35px;
+      margin: auto;
+    }
+
+    .title {
+      margin-top: 12px;
+    }
+  }
+
+  .message-status {
+    text-align: center;
+  }
+
   .footer-auth {
     justify-content: space-between;
     margin-top: 12px;
