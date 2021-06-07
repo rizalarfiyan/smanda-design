@@ -1,0 +1,27 @@
+@import '../core/mixins';
+
+.error-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: color('white-ter');
+}
+
+.error {
+  margin: auto;
+  padding: 30px 10px;
+  max-width: 380px;
+  text-align: center;
+
+  .status-code {
+    overflow: hidden;
+    font-size: 9rem;
+    font-weight: $weight-bold;
+    color: color('gray-lighter');
+  }
+
+  .error-titles {
+    margin: -80px auto 20px;
+  }
+}
