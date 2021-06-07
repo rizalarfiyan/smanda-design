@@ -7,7 +7,6 @@
     "dev": "gulp"
   },
   "keywords": [],
-  "author": "Rizal Arfiyan",
   "license": "ISC",
   "devDependencies": {
     "autoprefixer": "^10.2.5",
@@ -19,8 +18,5 @@
     "gulp-postcss": "^9.0.0",
     "gulp-sass": "^4.1.0",
     "postcss": "^8.2.13"
-  },
-  "files": [
-    "src/scss/**/*.scss",
-  ]
+  }
 }
