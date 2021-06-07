@@ -4,8 +4,12 @@ class Public {
       dropdown: '.dropdown:not(.hover)',
       mainNav: '.main-nav',
       contentNav: '.content-nav',
+      mobileAction: '.mobile-action',
+      showMobileNav: '.toggle-menu-action',
+      buttonMobileAction: '.toggle-show button',
     }
     options ? this.options = Object.assign(defaultOption, options) : this.options = defaultOption
+    this.html = document.querySelector('html')
     this.mainNav = document.querySelector(this.options.mainNav)
     this.contentNav = document.querySelector(this.options.contentNav)
     this.lastScroll = 0
@@ -14,6 +18,8 @@ class Public {
   init() {
     this._dropdown()
     this._initNavScroll()
+    this._showMobileNav()
+    this._mobileAction()
   }
 
   _dropdown() {
@@ -51,6 +57,33 @@ class Public {
       contentNav.remove('hide')
     }
     this.lastScroll = y
+  }
+
+  _showMobileNav() {
+    let mobileElement = document.querySelectorAll(this.options.showMobileNav)
+    mobileElement.forEach(elem => {
+      elem.addEventListener('click', () => {
+        if (this.contentNav.classList.contains('is-open')) {
+          this.contentNav.classList.remove('is-open')
+          this.html.style.overflow = "auto"
+        } else {
+          this.contentNav.classList.add('is-open')
+          this.html.style.overflow = "hidden"
+        }
+      })
+    })
+  }
+
+  _mobileAction() {
+    let mobileAction = document.querySelector(this.options.mobileAction)
+    let button = mobileAction.querySelector(this.options.buttonMobileAction)
+    button.addEventListener('click', () => {
+      if (mobileAction.classList.contains('active')) {
+        mobileAction.classList.remove('active')
+      } else {
+        mobileAction.classList.add('active')
+      }
+    })
   }
 }
 

@@ -17,6 +17,8 @@
   ul {
     @extend %flex;
     justify-content: flex-end;
+    max-height: 32px;
+    overflow: hidden;
   }
 
   li {
@@ -41,6 +43,54 @@
   transition: top .5s cubic-bezier(0.19,1,0.22,1);
 }
 
+.logo,
+.user-avatar {
+  @extend %flex;
+  padding: 6px;
+  border-radius: $radius;
+  margin: 4px;
+  overflow: hidden;
+}
+
+.logo {
+  img {
+    max-width: 37px;
+  }
+
+  .title {
+    max-width: 120px;
+    line-height: 1;
+    margin-left: 10px;
+    margin-bottom: 0;
+  }
+}
+
+.user-avatar {
+  border: 0;
+  background: color('white');
+  text-align: inherit;
+  cursor: pointer;
+
+  .image {
+    height: 42px;
+    width: 42px;
+    border-radius: $radius;
+    overflow: hidden;
+  }
+
+  .user-name {
+    margin-left: 10px;
+  }
+
+  .title {
+    max-width: 110px;
+  }
+
+  .subtitle {
+    max-width: 80px;
+  }
+}
+
 .main-nav {
   position: fixed;
   top: 32px;
@@ -58,25 +108,9 @@
     justify-content: space-between;
   }
 
-  .logo,
-  .user-avatar {
-    @extend %flex;
-    padding: 6px;
-    border-radius: $radius;
-    margin: 4px;
-    overflow: hidden;
-  }
-
-  .logo {
-    img {
-      max-width: 32px;
-    }
-
-    .title {
-      max-width: 120px;
-      line-height: 1;
-      margin-left: 10px;
-      margin-bottom: 0;
+  ul {
+    &.mobile {
+      display: none
     }
   }
 
@@ -89,32 +123,6 @@
       margin-right: 10px;
     }
   }
-
-  .user-avatar {
-    border: 0;
-    background: color('white');
-    text-align: inherit;
-    cursor: pointer;
-
-    .image {
-      height: 42px;
-      width: 42px;
-      border-radius: $radius;
-      overflow: hidden;
-    }
-
-    .user-name {
-      margin-left: 10px;
-    }
-
-    .title {
-      max-width: 110px;
-    }
-
-    .subtitle {
-      max-width: 80px;
-    }
-  }
 }
 
 .content-nav {
@@ -122,6 +130,10 @@
   top: 98px;
   width: 100%;
   background: color('white');
+
+  .top-avatar {
+    display: none;
+  }
 
   &.active {
     top: 66px;
@@ -133,7 +145,7 @@
 
   .main-menu > li {
     &:hover {
-      a {
+      span a {
         &::before {
           left: 10px;
           right: 10px;
@@ -141,7 +153,7 @@
       }
     }
 
-    > a {
+    > span a {
       &::before {
         background: color('primary');
         content: '';
@@ -183,12 +195,16 @@
       transform: scale(0.9);
       transform-style: preserve-3d;
       backface-visibility: hidden;
+    }
+  }
 
-      ul {
-        margin: 0;
-        left: 100%;
-        top: 0;
-      }
+  .menu-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    a {
+      width: 100%;
     }
   }
 
@@ -212,10 +228,129 @@
     }
   }
 
+  button:not(.user-avatar) {
+    display: none;
+  }
+
   .submenu-item {
     li {
       background-color: color('white');
       width: 100%;
     }
+  }
+}
+
+.mobile-action {
+  display: none;
+  position: fixed;
+  bottom: -60px;
+  width: 100%;
+  background: white;
+  border-top: 5px solid RGB(var(--primary));
+  transition: bottom .5s cubic-bezier(.19,1,.22,1);
+
+  &.active {
+    bottom: 0;
+
+    .toggle-show {  
+      i {
+        transform: rotate(180deg);
+      }
+    }
+  }
+
+  .wrap-action {
+    margin-right: 70px;
+    border-right: 1px solid color('white-lighter');
+  }
+
+  .action {
+    display: flex;
+    justify-content: space-around;
+    max-width: 320px;
+    margin: auto;
+    padding: 10px;
+    border-radius: 6px 6px 0 0;
+  }
+
+  .toggle-show {
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+
+    i {
+      transition: all .4s ease;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .main-nav {
+    ul {
+      &:not(.mobile) {
+        display: none;
+      }
+
+      &.mobile {
+        display: block;
+      }
+    }
+  }
+
+  .content-nav {
+    z-index: 2;
+    max-width: 320px;
+    height: 100%;
+    overflow: auto;
+    top: 0!important;
+    left: -360px;
+    transition: left .5s cubic-bezier(.19,1,.22,1);
+
+    &.is-open {
+      left: 0;
+    }
+
+    .top-avatar {
+      display: flex;
+      background-image: url(https://thumbs.dreamstime.com/b/purple-blue-green-geometric-background-dynamic-shapes-composition-vector-website-pattern-banner-header-sidebar-graphic-149243598.jpg);
+      height: 150px;
+
+      .dropdown, .logo {
+        margin: auto;
+      }
+
+      .user-avatar {
+        background: color('white', .6);
+        color: color('white');
+
+        .title, .subtitle {
+          max-width: 220px;
+        }
+      }
+    }
+
+    .main-menu {
+      display: flex;
+      flex-direction: column;
+    }
+
+    ul ul {
+      opacity: 1;
+      visibility: visible;
+      transform: scale(1);
+      position: relative;
+    }
+
+    button:not(.user-avatar) {
+      display: block;
+    }
+
+    .submenu > .menu-item > a .icon{
+      display: none;
+    }
+  }
+
+  .mobile-action {
+    display: block;
   }
 }
