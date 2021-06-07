@@ -1,23 +1,23 @@
 @import '../core/mixins';
 
-$dropdown-menu-min-width: 12rem;
+$dropdown-menu-min-width: 12rem !default;
 
-$dropdown-content-background-color: color('white');
-$dropdown-content-arrow: $link;
-$dropdown-content-offset: 4px;
-$dropdown-content-padding-bottom: 0.5rem;
-$dropdown-content-padding-top: 0.5rem;
-$dropdown-content-radius: $radius;
-$dropdown-content-shadow: $shadow;
-$dropdown-content-z: 20;
+$dropdown-content-background-color: color('white') !default;
+$dropdown-content-arrow: $link !default;
+$dropdown-content-offset: 4px !default;
+$dropdown-content-padding-bottom: 0.5rem !default;
+$dropdown-content-padding-top: 0.5rem !default;
+$dropdown-content-radius: $radius !default;
+$dropdown-content-shadow: $shadow !default;
+$dropdown-content-z: 20 !default;
 
-$dropdown-item-color: $text;
-$dropdown-item-hover-color: color('black');
-$dropdown-item-hover-background-color: $background;
-$dropdown-item-active-color: $link-invert;
-$dropdown-item-active-background-color: $link;
+$dropdown-item-color: $text !default;
+$dropdown-item-hover-color: color('black') !default;
+$dropdown-item-hover-background-color: $background !default;
+$dropdown-item-active-color: $link-invert !default;
+$dropdown-item-active-background-color: $link !default;
 
-$dropdown-divider-background-color: $border-light;
+$dropdown-divider-background-color: $border-light !default;
 
 .dropdown {
   display: inline-flex;

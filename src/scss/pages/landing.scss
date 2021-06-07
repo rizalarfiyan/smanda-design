@@ -1,8 +1,8 @@
 @import '../core/mixins';
 @import './landing/parallax';
 
-$shadow-primary: 0 5px 40px color('primary', .3);
-$padding-section: 60px;
+$shadow-primary: 0 5px 40px color('primary', .3)!default;
+$padding-section: 60px!default;
 
 // Development
 section {

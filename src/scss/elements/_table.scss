@@ -1,32 +1,32 @@
 @import '../core/mixins';
 
-$table-color: $text-strong;
-$table-background-color: color('white');
+$table-color: $text-strong !default;
+$table-background-color: color('white') !default;
 
-$table-cell-border: 1px solid $border;
-$table-cell-border-width: 0 0 1px;
-$table-cell-padding: 0.5em 0.75em;
-$table-cell-heading-color: $text-strong;
+$table-cell-border: 1px solid $border !default;
+$table-cell-border-width: 0 0 1px !default;
+$table-cell-padding: 0.5em 0.75em !default;
+$table-cell-heading-color: $text-strong !default;
 
-$table-head-cell-border-width: 0 0 2px;
-$table-head-cell-color: $text-strong;
-$table-foot-cell-border-width: 2px 0 0;
-$table-foot-cell-color: $text-strong;
+$table-head-cell-border-width: 0 0 2px !default;
+$table-head-cell-color: $text-strong !default;
+$table-foot-cell-border-width: 2px 0 0 !default;
+$table-foot-cell-color: $text-strong !default;
 
-$table-head-background-color: transparent;
-$table-body-background-color: transparent;
-$table-foot-background-color: transparent;
+$table-head-background-color: transparent !default;
+$table-body-background-color: transparent !default;
+$table-foot-background-color: transparent !default;
 
-$table-row-hover-background-color: color('white-bis');
+$table-row-hover-background-color: color('white-bis') !default;
 
-$table-row-active-background-color: color('primary');
-$table-row-active-color: color('primary-invert');
+$table-row-active-background-color: color('primary') !default;
+$table-row-active-color: color('primary-invert') !default;
 
-$table-striped-row-even-background-color: color('white-bis');
-$table-striped-row-even-hover-background-color: color('white-ter');
+$table-striped-row-even-background-color: color('white-bis') !default;
+$table-striped-row-even-hover-background-color: color('white-ter') !default;
 
-$table-colors: $colors;
-$allowed-colors: ('primary', 'success', 'info', 'warning', 'danger');
+$table-colors: $colors !default;
+$allowed-colors: ('primary', 'success', 'info', 'warning', 'danger') !default;
 
 .table {
   @extend %block;

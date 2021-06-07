@@ -1,17 +1,17 @@
-$file-border-color: $border;
-$file-radius: $radius;
+$file-border-color: $border !default;
+$file-radius: $radius !default;
 
-$file-cta-background-color: color('white-ter');
-$file-cta-color: $text;
-$file-cta-hover-color: $text-strong;
-$file-cta-active-color: $text-strong;
+$file-cta-background-color: color('white-ter') !default;
+$file-cta-color: $text !default;
+$file-cta-hover-color: $text-strong !default;
+$file-cta-active-color: $text-strong !default;
 
-$file-name-border-color: $border;
-$file-name-border-style: solid;
-$file-name-border-width: 1px 1px 1px 0;
-$file-name-max-width: 16em;
+$file-name-border-color: $border !default;
+$file-name-border-style: solid !default;
+$file-name-border-width: 1px 1px 1px 0 !default;
+$file-name-max-width: 16em !default;
 
-$file-colors: $form-colors;
+$file-colors: $form-colors !default;
 
 .file {
   @extend %unselectable;

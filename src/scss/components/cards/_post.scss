@@ -1,14 +1,14 @@
 @import '../../core/mixins';
 
-$max-width-card: 320px;
-$margin-media: 12px;
+$max-width-card: 320px !default;
+$margin-media: 12px !default;
 
-$transition-card: all .3s ease;
-$post-size: 14px;
+$transition-card: all .3s ease !default;
+$post-size: 14px !default;
 
-$card-border: 4px;
-$primary-shadow: 0 5px 40px color('primary', .15);
-$primary-shadow-hover: 0 15px 30px color('primary', .25);
+$card-border: 4px !default;
+$primary-shadow: 0 5px 40px color('primary', .15) !default;
+$primary-shadow-hover: 0 15px 30px color('primary', .25) !default;
 
 .posts {
   .card {

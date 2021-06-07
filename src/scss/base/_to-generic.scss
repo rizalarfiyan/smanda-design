@@ -1,33 +1,33 @@
-$body-background-color: color('white');
-$body-size: 16px;
-$body-min-width: 300px;
-$body-rendering: optimizeLegibility;
-$body-family: $family-primary;
-$body-overflow-x: hidden;
-$body-overflow-y: auto;
+$body-background-color: color('white') !default;
+$body-size: 16px !default;
+$body-min-width: 300px !default;
+$body-rendering: optimizeLegibility !default;
+$body-family: $family-primary !default;
+$body-overflow-x: hidden !default;
+$body-overflow-y: auto !default;
 
-$body-color: $text;
-$body-font-size: 1em;
-$body-weight: $weight-normal;
-$body-line-height: 1.5;
+$body-color: $text !default;
+$body-font-size: 1em !default;
+$body-weight: $weight-normal !default;
+$body-line-height: 1.5 !default;
 
-$code-family: $family-code;
-$code-padding: 0.25em 0.5em 0.25em;
-$code-weight: normal;
-$code-size: 0.875em;
+$code-family: $family-code !default;
+$code-padding: 0.25em 0.5em 0.25em !default;
+$code-weight: normal !default;
+$code-size: 0.875em !default;
 
-$small-font-size: 0.875em;
+$small-font-size: 0.875em !default;
 
-$hr-background-color: $background;
-$hr-height: 2px;
-$hr-margin: 1.5rem 0;
+$hr-background-color: $background !default;
+$hr-height: 2px !default;
+$hr-margin: 1.5rem 0 !default;
 
-$strong-color: $text-strong;
-$strong-weight: $weight-bold;
+$strong-color: $text-strong !default;
+$strong-weight: $weight-bold !default;
 
-$pre-font-size: 0.875em;
-$pre-padding: 1.25rem 1.5rem;
-$pre-code-font-size: 1em;
+$pre-font-size: 0.875em !default;
+$pre-padding: 1.25rem 1.5rem !default;
+$pre-code-font-size: 1em !default;
 
 html {
   background-color: $body-background-color;

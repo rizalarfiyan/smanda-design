@@ -1,4 +1,4 @@
-$select-colors: $form-colors;
+$select-colors: $form-colors !default;
 
 .select {
   display: inline-block;

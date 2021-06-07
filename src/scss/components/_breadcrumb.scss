@@ -1,11 +1,11 @@
 @import '../core/mixins';
 
-$breadcrumb-item-color: $link;
-$breadcrumb-item-hover-color: $link-hover;
-$breadcrumb-item-active-color: $text-strong;
-$breadcrumb-item-padding-vertical: 0;
-$breadcrumb-item-padding-horizontal: 0.75em;
-$breadcrumb-item-separator-color: $border-hover;
+$breadcrumb-item-color: $link !default;
+$breadcrumb-item-hover-color: $link-hover !default;
+$breadcrumb-item-active-color: $text-strong !default;
+$breadcrumb-item-padding-vertical: 0 !default;
+$breadcrumb-item-padding-horizontal: 0.75em !default;
+$breadcrumb-item-separator-color: $border-hover !default;
 
 .breadcrumb {
   @extend %block;

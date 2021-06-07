@@ -1,14 +1,14 @@
 @import '../core/mixins';
 
-$notification-background-color: $background;
-$notification-code-background-color: color('white');
-$notification-radius: $radius;
-$notification-padding: 1.25rem 2.5rem 1.25rem 1.5rem;
-$notification-padding-ltr: 1.25rem 2.5rem 1.25rem 1.5rem;
-$notification-padding-rtl: 1.25rem 1.5rem 1.25rem 2.5rem;
+$notification-background-color: $background !default;
+$notification-code-background-color: color('white') !default;
+$notification-radius: $radius !default;
+$notification-padding: 1.25rem 2.5rem 1.25rem 1.5rem !default;
+$notification-padding-ltr: 1.25rem 2.5rem 1.25rem 1.5rem !default;
+$notification-padding-rtl: 1.25rem 1.5rem 1.25rem 2.5rem !default;
 
-$notification-colors: $colors;
-$allowed-colors: ('primary', 'success', 'info', 'warning', 'danger');
+$notification-colors: $colors !default;
+$allowed-colors: ('primary', 'success', 'info', 'warning', 'danger') !default;
 
 .notification {
   @extend %block;

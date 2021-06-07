@@ -1,11 +1,11 @@
 @import '../../core/mixins';
 
-$label-color: $text-strong;
-$label-weight: $weight-bold;
+$label-color: $text-strong !default;
+$label-weight: $weight-bold !default;
 
-$help-size: $size-small;
+$help-size: $size-small !default;
 
-$label-colors: $colors;
+$label-colors: $colors !default;
 
 .label {
   color: $label-color;

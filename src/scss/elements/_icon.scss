@@ -1,10 +1,10 @@
 @import '../core/mixins';
 
-$icon-dimensions: 1.5rem;
-$icon-dimensions-small: 1rem;
-$icon-dimensions-medium: 2rem;
-$icon-dimensions-large: 3rem;
-$icon-text-spacing: 0.25em;
+$icon-dimensions: 1.5rem !default;
+$icon-dimensions-small: 1rem !default;
+$icon-dimensions-medium: 2rem !default;
+$icon-dimensions-large: 3rem !default;
+$icon-text-spacing: 0.25em !default;
 
 .icon {
   align-items: center;

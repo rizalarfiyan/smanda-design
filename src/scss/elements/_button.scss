@@ -1,50 +1,50 @@
 @import '../core/derived-variables';
 
-$button-color: $text-strong;
-$button-background-color: color(--white);
+$button-color: $text-strong !default;
+$button-background-color: color(--white) !default;
 
-$button-border-color: $border;
-$button-border-width: $control-border-width;
+$button-border-color: $border !default;
+$button-border-width: $control-border-width !default;
 
-$button-padding-vertical: calc(0.5em - #{$button-border-width});
-$button-padding-horizontal: 1em;
+$button-padding-vertical: calc(0.5em - #{$button-border-width}) !default;
+$button-padding-horizontal: 1em !default;
 
-$button-hover-color: $link-hover;
-$button-hover-border-color: $link-hover-border;
+$button-hover-color: $link-hover !default;
+$button-hover-border-color: $link-hover-border !default;
 
-$button-focus-color: $link-focus;
-$button-focus-border-color: $link-focus-border;
-$button-focus-box-shadow-size: 0 0 0 0.125em;
-$button-focus-box-shadow-color: rgba($link-parent, 0.25);
+$button-focus-color: $link-focus !default;
+$button-focus-border-color: $link-focus-border !default;
+$button-focus-box-shadow-size: 0 0 0 0.125em !default;
+$button-focus-box-shadow-color: rgba($link-parent, 0.25) !default;
 
-$button-active-color: $link-active;
-$button-active-border-color: $link-active-border;
+$button-active-color: $link-active !default;
+$button-active-border-color: $link-active-border !default;
 
-$button-text-color: $text;
-$button-text-decoration: underline;
-$button-text-hover-background-color: $background;
-$button-text-hover-color: $text-strong;
+$button-text-color: $text !default;
+$button-text-decoration: underline !default;
+$button-text-hover-background-color: $background !default;
+$button-text-hover-color: $text-strong !default;
 
-$button-ghost-background: none;
-$button-ghost-border-color: transparent;
-$button-ghost-color: $link;
-$button-ghost-decoration: none;
-$button-ghost-hover-color: $link;
-$button-ghost-hover-decoration: underline;
+$button-ghost-background: none !default;
+$button-ghost-border-color: transparent !default;
+$button-ghost-color: $link !default;
+$button-ghost-decoration: none !default;
+$button-ghost-hover-color: $link !default;
+$button-ghost-hover-decoration: underline !default;
 
-$button-disabled-background-color: color('white');
-$button-disabled-border-color: $border;
-$button-disabled-shadow: none;
-$button-disabled-opacity: 0.5;
+$button-disabled-background-color: color('white') !default;
+$button-disabled-border-color: $border !default;
+$button-disabled-shadow: none !default;
+$button-disabled-opacity: 0.5 !default;
 
-$button-static-color: $text-light;
-$button-static-background-color: color('white-ter');
-$button-static-border-color: $border;
+$button-static-color: $text-light !default;
+$button-static-background-color: color('white-ter') !default;
+$button-static-border-color: $border !default;
 
-$button-transition: all 0.3s ease;
+$button-transition: all 0.3s ease !default;
 
-$button-colors: $colors;
-$allowed-colors: ('primary', 'success', 'info', 'warning', 'danger');
+$button-colors: $colors !default;
+$allowed-colors: ('primary', 'success', 'info', 'warning', 'danger') !default;
 
 @mixin button-small {
   &:not(.rounded) {

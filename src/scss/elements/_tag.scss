@@ -1,13 +1,13 @@
 @import '../core/mixins';
 
-$tag-background-color: $background;
-$tag-change: color('gray-lightest');
-$tag-color: $text;
-$tag-radius: $radius;
-$tag-delete-margin: 1px;
+$tag-background-color: $background !default;
+$tag-change: color('gray-lightest') !default;
+$tag-color: $text !default;
+$tag-radius: $radius !default;
+$tag-delete-margin: 1px !default;
 
-$tag-colors: $colors;
-$allowed-colors: ('primary', 'success', 'info', 'warning', 'danger');
+$tag-colors: $colors !default;
+$allowed-colors: ('primary', 'success', 'info', 'warning', 'danger') !default;
   
 .tags {
   align-items: center;
