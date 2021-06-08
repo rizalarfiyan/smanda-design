@@ -11,66 +11,80 @@
   <body>
     <section class="post-page">
       <div class="container">
-        <div class="post-name">
-          <div class="labeled">
-            <span class="info">
-              <time datetime="2003-05-23 08:00">Jumat, 23 Mei 2003</time>
+        <div class="post-title">
+          <div class="top-desc tags">
+            <span class="tag primary">
+              <span class="icon">
+                <i class="fa fa-calendar-alt"></i>
+              </span>
+              <time datetime="2003-05-23 08:00">
+                Jumat, 23 Mei 2003
+              </time>
             </span>
-            <a href="#" class="info">
-              Label
+            <a href="#" class="tag primary">
+              <span class="icon">
+                <i class="fa fa-tag"></i>
+              </span>
+              <span>
+                Label
+              </span>
             </a>
           </div>
-          <h1>Lorem ipsum dolor sit amet consectetur adipisicing.</h1>
+          <h1 class="title h3">Lorem ipsum dolor sit amet consectetur adipisicing.</h1>
           <div class="desc">
-            <div class="avatar">
-              <div class="avatar-fill">
-                <div class="image">
-                  <img class="cover" src="https://smandakebumen.sch.id/assets/img/profile/1572838168.png" alt="Rizal Arfiyan">
-                </div>
+            <div class="avatar media">
+              <div class="media-left">
+                <figure class="image size-48">
+                  <img src="https://smandakebumen.sch.id/assets/img/profile/1572838168.png" alt="Rizal Arfiyan">
+                </figure>
               </div>
-              <div class="prof">
-                <h6>Rizal Arfiyan</h6>
-                <span class="info">admin</span>
+              <div class="media-content">
+                <a href="#" class="title h5">Rizal Arfiyan</a>
+                <a href="#" class="subtitle h6">admin</a>
               </div>
             </div>
-            <div class="datas">
-              <div class="d-post">
+            <div class="data-post">
+              <div>
                 <span>
                   Time
                 </span>
-                <h6>
+                <span>
                   2 min read
-                </h6>
+                </span>
               </div>
-              <div class="d-post">
+              <div>
                 <span>
                   Read
                 </span>
-                <h6>
+                <span>
                   7.2 People
-                </h6>
+                </span>
               </div>
-              <a href="#" class="d-post">
-                <i class="far fa-comment"></i>
+              <a href="#" class="btn icon-only">
+                <span class="icon">
+                  <i class="far fa-comment"></i>
+                </span>
               </a>
-              <a href="#" class="d-post">
-                <i class="fa fa-share-alt"></i>
+              <a href="#" class="btn icon-only">
+                <span class="icon">
+                  <i class="fa fa-share-alt"></i>
+                </span>
               </a>
             </div>
           </div>
         </div>
         <div class="content-wrap">
           <div class="is-main">
-            <div class="wrap-breadcrumb fill-bg">
-              <nav class="breadcrumb">
-                <ol>
-                  <li><a href="#" class="btn secondary"><i class="fa fa-home"></i>Beranda</a></li>
-                  <li><a href="#" class="btn secondary">Postingan</a></li>
-                  <li><span class="btn secondary">Lorem ipsum dolor sit amet consectetur.</span></li>
-                </ol>
+            <div class="box wrap-breadcrumb">
+              <nav class="breadcrumb" aria-label="breadcrumbs">
+                <ul>
+                  <li><a href="#">Home</a></li>
+                  <li><a href="#">Postingan</a></li>
+                  <li class="active"><a href="#" aria-current="page">Judul Postingan</a></li>
+                </ul>
               </nav>
             </div>
-            <div class="post-content fill-bg">
+            <div class="post-content box">
               <main>
                 <article>
                   <p>
@@ -78,204 +92,234 @@
                   </p>
                 </article>
               </main>
-              <div class="foot-post">
-                <div class="tag-wrap">
-                  Tags:
-                  <ul class="tags">
-                    <li><a href="#">Lorem</a></li>
-                    <li><a href="#">Lorem</a></li>
-                    <li><a href="#">Lorem</a></li>
-                    <li><a href="#">Lorem</a></li>
-                    <li><a href="#">Lorem</a></li>
-                    <li><a href="#">Lorem</a></li>
-                    <li><a href="#">Lorem</a></li>
-                    <li><a href="#">Lorem</a></li>
-                    <li><a href="#">Lorem</a></li>
-                    <li><a href="#">Lorem</a></li>
-                    <li><a href="#">Lorem</a></li>
-                    <li><a href="#">Lorem</a></li>
-                    <li><a href="#">Lorem</a></li>
-                    <li><a href="#">Lorem</a></li>
-                  </ul>
+              <div class="post-footer">
+                <div class="media">
+                  <div class="media-left">
+                    <span>Tags:</span>
+                  </div>
+                  <div class="media-content">
+                    <div class="tags">
+                      <a class="tag primary" href="#">Lorem</a>
+                      <a class="tag primary" href="#">Lorem</a>
+                      <a class="tag primary" href="#">Lorem</a>
+                      <a class="tag primary" href="#">Lorem</a>
+                      <a class="tag primary" href="#">Lorem</a>
+                      <a class="tag primary" href="#">Lorem</a>
+                      <a class="tag primary" href="#">Lorem</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="prev-next">
+              <a href="#" class="prev">
+                <span class="icon large">
+                  <i class="fa fa-2x fa-chevron-left"></i>
+                </span>
+                <span class="subtitle h5">Lorem ipsum dolor sit amet consectetur.</span>
+              </a>
+              <a href="#" class="next">
+                <span class="subtitle h5">Lorem ipsum dolor sit amet consectetur.</span>
+                <span class="icon large">
+                  <i class="fa fa-2x fa-chevron-right"></i>
+                </span>
+              </a>
+            </div>
+            <div class="related-post">
+              <div class="card-wrap">
+                <div class="card related-post">
+                  <div class="card-image">
+                    <a href="#" class="wrap-image">
+                      <figure class="image ratio-4x3">
+                        <img src="https://smandakebumen.sch.id/assets/img/postingan/0f760e31d768bd1adfd1665c0775b170bea76c4a.jpg" alt="SMA Negeri 2 Kebumen">
+                      </figure>
+                    </a>
+                  </div>
+                  <div class="card-content">
+                    <a href="#" class="title h5">Lorem ipsum dolor sit amet.</a>
+                    <div class="user-detail">
+                      <div class="image">
+                        <figure class="image ratio-1x1">
+                          <img src="https://smandakebumen.sch.id/assets/img/profile/1572838168.png" alt="Rizal Arfiyan">
+                        </figure>
+                      </div>
+                      <div class="user-name">
+                        <a href="#" class="title h6 truncate">Rizal Arfiyan</a>
+                        <div class="subtitle h6 truncate">23 Mei 2003</div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="card related-post">
+                  <div class="card-image">
+                    <a href="#" class="wrap-image">
+                      <figure class="image ratio-4x3">
+                        <img src="https://smandakebumen.sch.id/assets/img/postingan/0f760e31d768bd1adfd1665c0775b170bea76c4a.jpg" alt="SMA Negeri 2 Kebumen">
+                      </figure>
+                    </a>
+                  </div>
+                  <div class="card-content">
+                    <a href="#" class="title h5">Lorem ipsum dolor sit amet.</a>
+                    <div class="user-detail">
+                      <div class="image">
+                        <figure class="image ratio-1x1">
+                          <img src="https://smandakebumen.sch.id/assets/img/profile/1572838168.png" alt="Rizal Arfiyan">
+                        </figure>
+                      </div>
+                      <div class="user-name">
+                        <a href="#" class="title h6 truncate">Rizal Arfiyan</a>
+                        <div class="subtitle h6 truncate">23 Mei 2003</div>
+                      </div>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
           </div>
           <div class="is-sidebar">
-            <div class="fill-bg">
-              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aspernatur deserunt perspiciatis praesentium quibusdam earum suscipit obcaecati, architecto tempora hic odio distinctio minus nesciunt in, ab dignissimos quasi libero iusto ipsum.
+            <div>
+              <div class="card user-post">
+                <div class="card-image">
+                  <div class="bg-card-user"></div>
+                  <div class="image size-96">
+                    <figure class="image ratio-1x1">
+                      <img src="https://smandakebumen.sch.id/assets/img/profile/1572838168.png" alt="Rizal Arfiyan">
+                    </figure>
+                  </div>
+                </div>
+                <div class="card-content">
+                  <a href="#" class="title h4">Rizal Arfiyan</a>
+                  <a href="#" class="subtitle h6">Admin</a>
+                </div>
+                <div class="card-footer">
+                  <div class="card-footer-item">
+                    <div class="title h5">42</div>
+                    <div class="subtitle h6">Post</div>
+                  </div>
+                  <div class="card-footer-item">
+                    <div class="title h5">24k</div>
+                    <div class="subtitle h6">Like</div>
+                  </div>
+                  <div class="card-footer-item">
+                    <div class="title h5">129k</div>
+                    <div class="subtitle h6">Views</div>
+                  </div>
+                </div>
+              </div>
             </div>
-            <div class="fill-bg">
-              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aspernatur deserunt perspiciatis praesentium quibusdam earum suscipit obcaecati, architecto tempora hic odio distinctio minus nesciunt in, ab dignissimos quasi libero iusto ipsum.
+            <div class="box">
+              <div class="content">
+                <h2>Lorem, ipsum dolor.</h2>
+                <p>
+                  Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aspernatur deserunt perspiciatis praesentium quibusdam earum suscipit obcaecati, architecto tempora hic odio distinctio minus nesciunt in, ab dignissimos quasi libero iusto ipsum.
+                </p>
+              </div>
             </div>
-            <div class="fill-bg">
-              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aspernatur deserunt perspiciatis praesentium quibusdam earum suscipit obcaecati, architecto tempora hic odio distinctio minus nesciunt in, ab dignissimos quasi libero iusto ipsum.
+            <div class="box">
+              <div class="content">
+                <h2>Lorem, ipsum dolor.</h2>
+                <p>
+                  Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aspernatur deserunt perspiciatis praesentium quibusdam earum suscipit obcaecati, architecto tempora hic odio distinctio minus nesciunt in, ab dignissimos quasi libero iusto ipsum.
+                </p>
+              </div>
             </div>
-          </div>
-        </div>
-      </div>
-    </section>
-    <section class="recomended-post" data-content="Recomended">
-      <div class="container">
-        <h1>Recomended Post</h1>
-        <div class="card-wrap recomended">
-          <div class="card">
-            <div class="image">
-              <a href="#" class="wrap-image">
-                <img class="cover" src="https://smandakebumen.sch.id/assets/img/postingan/c2a6c38518fe4fdde236771f566a847a.png" alt="Postingan 1">
-              </a>
-            </div>
-            <div class="content">
-              <a href="#">
-                <h2>
-                  Lorem ipsum dolor sit lorem ipsum dolor sit.
-                </h2>
-              </a>
-              <span class="by">by<a href="#">Admin SMANDA</a></span>
-            </div>
-          </div>
-          <div class="card">
-            <div class="image">
-              <a href="#" class="wrap-image">
-                <img class="cover" src="https://smandakebumen.sch.id/assets/img/postingan/c2a6c38518fe4fdde236771f566a847a.png" alt="Postingan 1">
-              </a>
-            </div>
-            <div class="content">
-              <a href="#">
-                <h2>
-                  Lorem ipsum dolor sit.
-                </h2>
-              </a>
-              <span class="by">by<a href="#">Admin SMANDA</a></span>
-            </div>
-          </div>
-          <div class="card">
-            <div class="image">
-              <a href="#" class="wrap-image">
-                <img class="cover" src="https://smandakebumen.sch.id/assets/img/postingan/c2a6c38518fe4fdde236771f566a847a.png" alt="Postingan 1">
-              </a>
-            </div>
-            <div class="content">
-              <a href="#">
-                <h2>
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                </h2>
-              </a>
-              <span class="by">by<a href="#">Admin SMANDA</a></span>
-            </div>
-          </div>
-          <div class="card">
-            <div class="image">
-              <a href="#" class="wrap-image">
-                <img class="cover" src="https://smandakebumen.sch.id/assets/img/postingan/c2a6c38518fe4fdde236771f566a847a.png" alt="Postingan 1">
-              </a>
-            </div>
-            <div class="content">
-              <a href="#">
-                <h2>
-                  Lorem ipsum dolor sit lorem ipsum dolor sit.
-                </h2>
-              </a>
-              <span class="by">by<a href="#">Admin SMANDA</a></span>
-            </div>
-          </div>
-          <div class="card">
-            <div class="image">
-              <a href="#" class="wrap-image">
-                <img class="cover" src="https://smandakebumen.sch.id/assets/img/postingan/c2a6c38518fe4fdde236771f566a847a.png" alt="Postingan 1">
-              </a>
-            </div>
-            <div class="content">
-              <a href="#">
-                <h2>
-                  Lorem ipsum dolor sit.
-                </h2>
-              </a>
-              <span class="by">by<a href="#">Admin SMANDA</a></span>
-            </div>
-          </div>
-          <div class="card">
-            <div class="image">
-              <a href="#" class="wrap-image">
-                <img class="cover" src="https://smandakebumen.sch.id/assets/img/postingan/c2a6c38518fe4fdde236771f566a847a.png" alt="Postingan 1">
-              </a>
-            </div>
-            <div class="content">
-              <a href="#">
-                <h2>
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                </h2>
-              </a>
-              <span class="by">by<a href="#">Admin SMANDA</a></span>
+            <div class="box">
+              <div class="content">
+                <h2>Lorem, ipsum dolor.</h2>
+                <p>
+                  Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aspernatur deserunt perspiciatis praesentium quibusdam earum suscipit obcaecati, architecto tempora hic odio distinctio minus nesciunt in, ab dignissimos quasi libero iusto ipsum.
+                </p>
+              </div>
             </div>
           </div>
         </div>
       </div>
     </section>
     <footer class="public">
-      <div class="container">
-        <div class="card-wrap content">
-          <div class="card">
-            <h1 class="titles">SMA Negeri 2 Kebumen</h1>
-            <p>
-              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolores, qui quasi pariatur, aliquam quaerat quod minima excepturi at praesentium magni odit suscipit necessitatibus rerum eum molestias blanditiis voluptatem a voluptas ab.
-            </p>
-            <div class="social">
-              <a href="#" class="btn primary icon shadow"><i class="fab fa-facebook-f"></i></a>
-              <a href="#" class="btn primary icon shadow"><i class="fab fa-twitter"></i></a>
-              <a href="#" class="btn primary icon shadow"><i class="fab fa-instagram"></i></a>
-              <a href="#" class="btn primary icon shadow"><i class="fa fa-info"></i></a>
+      <svg class="devider" viewBox="0 0 1440 67" xmlns="http://www.w3.org/2000/svg">
+        <path d="M 1440 67 L 0 67 C 180.5 33.5 361 0 601 0 C 841 0 1140.5 33.5 1440 67 Z"></path>
+      </svg>
+      <div class="footer-wrap">
+        <div class="container">
+          <div class="footer-content">
+            <div class="content name">
+              <h2 class="line">SMA Negeri 2 Kebumen</h2>
+              <p>
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolores, qui quasi pariatur, aliquam quaerat quod minima excepturi at praesentium magni odit suscipit necessitatibus rerum eum molestias blanditiis voluptatem a voluptas ab.
+              </p>
+              <div class="social">
+                <a href="#" class="btn primary icon-only">
+                  <span class="icon">
+                    <i class="fab fa-facebook-f"></i>
+                  </span>
+                </a>
+                <a href="#" class="btn primary icon-only">
+                  <span class="icon">
+                    <i class="fab fa-twitter"></i>
+                  </span>
+                </a>
+                <a href="#" class="btn primary icon-only">
+                  <span class="icon">
+                    <i class="fab fa-instagram"></i>
+                  </span>
+                </a>
+                <a href="#" class="btn primary icon-only">
+                  <span class="icon">
+                    <i class="fa fa-info"></i>
+                  </span>
+                </a>
+              </div>
+            </div>
+            <div class="content about">
+              <h2 class="line">Tentang</h2>
+              <ul>
+                <li><a href="#" class="anchor-anim">Kepala Sekolah</a></li>
+                <li><a href="#" class="anchor-anim">Visi dan Misi</a></li>
+                <li><a href="#" class="anchor-anim">Sejarah</a></li>
+              </ul>
+            </div>
+            <div class="content label">
+              <h2 class="line">Label</h2>
+              <ul>
+                <li><a href="#" class="anchor-anim">#smanda</a></li>
+                <li><a href="#" class="anchor-anim">#covid19</a></li>
+                <li><a href="#" class="anchor-anim">#daring_online</a></li>
+                <li><a href="#" class="anchor-anim">#osis</a></li>
+                <li><a href="#" class="anchor-anim">#social_distancing</a></li>
+                <li><a href="#" class="anchor-anim">#kbm</a></li>
+                <li><a href="#" class="anchor-anim">#smanda_cerita</a></li>
+              </ul>
+            </div>
+            <div class="content website">
+              <h2 class="line">Website</h2>
+              <ul>
+                <li><a href="#" class="anchor-anim">Perpustakaan Candakarana</a></li>
+                <li><a href="#" class="anchor-anim">OSIS SMANDA</a></li>
+                <li><a href="#" class="anchor-anim">SMITC SMANDA</a></li>
+                <li><a href="#" class="anchor-anim">Kejuaraan</a></li>
+                <li><a href="#" class="anchor-anim">Ekstrakurikuler</a></li>
+                <li><a href="#" class="anchor-anim">Postingan</a></li>
+                <li><a href="#" class="anchor-anim">Agenda</a></li>
+              </ul>
             </div>
           </div>
-          <div class="card">
-            <h1 class="titles">Label</h1>
-            <ul>
-              <li><a href="#" class="anchor-anim">#smanda</a></li>
-              <li><a href="#" class="anchor-anim">#covid19</a></li>
-              <li><a href="#" class="anchor-anim">#daring_online</a></li>
-              <li><a href="#" class="anchor-anim">#osis</a></li>
-              <li><a href="#" class="anchor-anim">#social_distancing</a></li>
-              <li><a href="#" class="anchor-anim">#kbm</a></li>
-              <li><a href="#" class="anchor-anim">#smanda_cerita</a></li>
-            </ul>
+          <div class="sites">
+            <a href="#" class="btn">About SMANDA</a>
+            <a href="#" class="btn">About Developer</a>
+            <a href="#" class="btn">Privacy Policy</a>
+            <a href="#" class="btn">Term of Services</a>
+            <a href="#" class="btn">Sitemaps</a>
+            <a href="#" class="btn">Contact</a>
           </div>
-          <div class="card">
-            <h1 class="titles">Tentang</h1>
-            <ul>
-              <li><a href="#" class="anchor-anim">Kepala Sekolah</a></li>
-              <li><a href="#" class="anchor-anim">Visi dan Misi</a></li>
-              <li><a href="#" class="anchor-anim">Sejarah</a></li>
-            </ul>
+          <div class="copyright">
+            <div>
+              Copyright &#169; <b>2021</b> Sistem Informasi Management (SIM)
+              Sekolah <b>SMA Negeri 2 Kebumen</b>
+            </div>
+            <div>
+              Powered by <b><a href="#">SMITC (SMANDA IT CLUB)</a></b> created by <i class="fa fa-heart"></i>
+            </div>
           </div>
-          <div class="card">
-            <h1 class="titles">Website</h1>
-            <ul>
-              <li><a href="#" class="anchor-anim">Perpustakaan Candakarana</a></li>
-              <li><a href="#" class="anchor-anim">OSIS SMANDA</a></li>
-              <li><a href="#" class="anchor-anim">SMITC SMANDA</a></li>
-              <li><a href="#" class="anchor-anim">Kejuaraan</a></li>
-              <li><a href="#" class="anchor-anim">Ekstrakurikuler</a></li>
-              <li><a href="#" class="anchor-anim">Postingan</a></li>
-              <li><a href="#" class="anchor-anim">Agenda</a></li>
-            </ul>
-          </div>
-        </div>
-        <ul class="sites">
-          <li><a href="#" class="btn secondary">About SMANDA</a></li>
-          <li><a href="#" class="btn secondary">About Developer</a></li>
-          <li><a href="#" class="btn secondary">Privacy Policy</a></li>
-          <li><a href="#" class="btn secondary">Term of Services</a></li>
-          <li><a href="#" class="btn secondary">Sitemaps</a></li>
-          <li><a href="#" class="btn secondary">Contact</a></li>
-        </ul>
-        <div class="copyright">
-          <span>
-            Copyright &#169; <b>2021</b> Sistem Informasi Management (SIM)
-            Sekolah <b>SMA Negeri 2 Kebumen</b>
-          </span>
-          <span>
-            Powered by <b><a href="#">SMITC (SMANDA IT CLUB)</a></b> created by <i class="fa fa-heart"></i>
-          </span>
         </div>
       </div>
     </footer>

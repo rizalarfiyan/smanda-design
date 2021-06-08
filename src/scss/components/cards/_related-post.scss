@@ -1,0 +1,47 @@
+.card.related-post {
+  display: flex;
+  align-items: center;
+  max-width: 360px;
+  width: 100%;
+  margin: 10px;
+
+  a {
+    display: block;
+  }
+
+  .wrap-image {
+    margin: 10px;
+    border-radius: 4px;
+    overflow: hidden;
+    width: 140px;
+  }
+
+  .card-content {
+    padding: 10px;
+
+    > .title {
+      margin-bottom: 10px;
+      @include truncate(44px, 2);
+    }
+  }
+
+  .user-detail {
+    display: flex;
+
+    > .image {
+      width: 38px;
+      height: 38px;
+      overflow: hidden;
+      border-radius: $radius-rounded;
+    }
+
+    .user-name {
+      margin-left: 10px;
+      max-width: 120px;
+    }
+
+    .subtitle {
+      font-size: 14px;
+    }
+  }
+}

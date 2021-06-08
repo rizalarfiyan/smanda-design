@@ -1,0 +1,45 @@
+.card.user-post {
+  text-align: center;
+
+  .card-image {
+    display: flex;
+
+    > .image {
+      margin: 40px auto 0!important;
+      border-radius: 999px;
+      overflow: hidden;
+    }
+  }
+
+  .bg-card-user {
+    position: absolute;
+    height: 120px;
+    width: 100%;
+    background: url('https://img.freepik.com/free-vector/abstract-organic-lines-background_1017-26669.jpg?size=626&ext=jpg');
+
+    &::before {
+      content: '';
+      clip-path: polygon(100% 100%, 50% 0%, 0% 100%);
+      position: absolute;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      padding-bottom: 40px;
+      background: color('white');
+    }
+  }
+
+  .card-content,
+  .card-footer-item {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+  }
+
+  .card-content {
+    a {
+      margin-left: auto;
+      margin-right: auto;
+    }
+  }
+}

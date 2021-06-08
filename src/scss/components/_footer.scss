@@ -1,7 +1,17 @@
 footer {
   &.public {
-    background: color('white');
-    padding: 40px 0 0;
+    background: color('white-ter');
+    padding: 20px 0 0;
+    
+    .devider {
+      fill: color('white');
+      display: block;
+    }
+
+    .footer-wrap {
+      background: color('white');
+      padding-top: 40px;
+    }
 
     .footer-content {
       display: flex;
