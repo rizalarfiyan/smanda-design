@@ -1,0 +1,36 @@
+$badge-font-size: .75rem !default;
+$badge-height: 16px !default;
+$badge-padding: .1rem .2rem !default;
+$badge-shadow: 0 0 0 2px color('white') !default;
+
+$badge-colors: $colors !default;
+$allowed-colors: ('primary', 'success', 'info', 'warning', 'danger') !default;
+
+.badge {
+  background-color: color('primary');
+  border: 2px solid transparent;
+  border-radius: $badge-height;
+  box-shadow: $badge-shadow;
+  color: color('white');
+  font-size: $badge-font-size;
+  height: $badge-height;
+  line-height: calc(#{$badge-height / 2} + 1px);
+  min-width: $badge-height;
+  overflow: hidden;
+  padding: $badge-padding;
+  position: absolute;
+  right: 0;
+  text-overflow: ellipsis;
+  top: 0;
+  transform: translate(50%, -50%);
+  white-space: nowrap;
+
+  @each $name, $value in $badge-colors {
+    @if keyInList($allowed-colors, $name) {
+      &.#{$name} {
+        background-color: color($name);
+        color: color('#{$name}-invert');
+      }
+    }
+  }
+}

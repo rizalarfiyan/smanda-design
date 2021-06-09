@@ -173,9 +173,6 @@ $allowed-colors: ('primary', 'success', 'info', 'warning', 'danger') !default;
 
   @each $name, $value in $button-colors {
     @if keyInList($allowed-colors, $name) {
-      $color: nth($value, 1);
-      $color-invert: nth($value, 2);
-  
       &.#{$name} {
         background-color: color($name);
         border-color: transparent;
