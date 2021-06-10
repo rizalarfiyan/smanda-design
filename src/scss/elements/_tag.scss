@@ -5,6 +5,8 @@ $tag-change: color('gray-lightest') !default;
 $tag-color: $text !default;
 $tag-radius: $radius !default;
 $tag-delete-margin: 1px !default;
+$tag-animation: all .3s ease !default;
+$tag-decoration: none !default;
 
 $tag-colors: $colors !default;
 $allowed-colors: ('primary', 'success', 'info', 'warning', 'danger') !default;
@@ -112,6 +114,7 @@ $allowed-colors: ('primary', 'success', 'info', 'warning', 'danger') !default;
   padding-left: 0.75em;
   padding-right: 0.75em;
   white-space: nowrap;
+  transition: $tag-animation;
 
   .delete {
     @include ltr-property("margin", 0.25rem, false);
@@ -202,6 +205,6 @@ $allowed-colors: ('primary', 'success', 'info', 'warning', 'danger') !default;
 
 a.tag {
   &:hover {
-    text-decoration: underline;
+    text-decoration: $tag-decoration;
   }
 }

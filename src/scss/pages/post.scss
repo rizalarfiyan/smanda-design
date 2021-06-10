@@ -93,23 +93,6 @@ section {
   justify-content: space-between;
 }
 
-.is-main {
-  max-width: calc(100% - 320px - 16px);
-  width: 100%;
-
-  .post-footer {
-    margin-top: 20px;
-  }
-}
-
-.is-sidebar {
-  max-width: 320px;
-
-  > *:not(:last-child) {
-    margin-bottom: 16px;
-  }
-}
-
 .reactions {
   @extend %flex;
 
@@ -200,6 +183,7 @@ section {
     .field {
       width: 100%;
       max-width: 420px;
+      margin: 0;
     }
 
     .btn {
