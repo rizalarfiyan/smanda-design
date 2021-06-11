@@ -355,6 +355,60 @@
   }
 }
 
+// Layout
+.content-wrap {
+  @extend %flex;
+
+  align-items: flex-start;
+  justify-content: space-between;
+}
+
+section {
+  background: color('white-ter');
+
+  &.description-page {
+    background: color('white');
+    margin-top: 152px;
+    border-top: 1px solid red;
+
+    .container {
+      background: url('https://codex-themes.com/thegem/sites/lms-landing/wp-content/uploads/2020/11/10.png');
+      background-position: right top;
+      background-repeat: no-repeat;
+      background-size: 260px;
+    }
+
+    .text-heading {
+      padding: 80px 0;
+      max-width: 480px;
+    }
+  }
+
+  &.post-page {
+    padding: 60px 0;
+  }
+
+  &.wrap-breadcrumb {
+    
+    .breadcrumb {
+      padding: 16px 0;
+      border-bottom: 1px solid color('gray-light', .25);
+    }
+  }
+}
+
+.post-short {
+  @extend %flex;
+  justify-content: space-between;
+  margin: 0 auto 30px;
+}
+
+.load-more {
+  display: flex;
+  justify-content: center;
+  margin: 40px auto;
+}
+
 // Main Content
 .is-main {
   max-width: calc(100% - 320px - 16px);

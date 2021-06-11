@@ -12,8 +12,7 @@
 
 section {
   &.post-page {
-    background: color('white-ter');
-    padding: 152px 0 40px;
+    padding-top: 152px;
   }
 }
 
@@ -85,13 +84,6 @@ section {
       margin-right: 6px;
     }
   }
-}
-
-.content-wrap {
-  @extend %flex;
-
-  align-items: flex-start;
-  justify-content: space-between;
 }
 
 .reactions {
