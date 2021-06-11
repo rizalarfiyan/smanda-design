@@ -372,6 +372,11 @@
     margin-bottom: 16px;
   }
 
+  .sidebar-recent-post,
+  .sidebar-popular-post {
+    padding: 20px 0 10px;
+  }
+
   .popular-tags {
     .tag {
       font-size: 14px;
@@ -413,9 +418,5 @@
         display: inline-block;
       }
     }
-  }
-
-  .sidebar-recent-post {
-    padding: 20px 0;
   }
 }
