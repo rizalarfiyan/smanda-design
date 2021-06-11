@@ -387,4 +387,31 @@
       }
     }
   }
+
+  .archives {
+    .wrap-archive {
+      @extend %flex;
+    }
+
+    .archive {
+      @extend %flex;
+      justify-content: space-between;
+      width: 100%;
+      color: color('gray-dark');
+      background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='4' height='12' viewBox='0 0 4 2'%3E %3Ccircle fill='currentColor' cx='1' cy='1' r='1' /%3E %3C/svg%3E") repeat-x bottom;
+
+      > * {
+        background: color('white');
+        padding: 0 4px;
+      }
+    }
+
+    .count {
+      &:after {
+        content: attr(data-name);
+        margin-left: 6px;
+        display: inline-block;
+      }
+    }
+  }
 }
